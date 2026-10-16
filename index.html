@@ -2,739 +2,156 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2027/6/16–6/29 澳洲親子行程｜華航雪梨進・布里斯本出</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#183e3a">
+<meta name="description" content="2027/6/16–6/29 澳洲親子行程。華航雪梨進、布里斯本出，每日景點、餐廳、Google Maps 與旅人遊記整合，手機大字版。">
+<title>澳洲親子慢旅行｜2027/6/16–6/29 每日行程</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
-
-  :root{
-    --paper:#eef0e6;
-    --ink:#20241f;
-    --ink-soft:#4a5049;
-    --surface:#fbfaf2;
-    --surface-2:#ffffff;
-    --line:rgba(32,36,31,.14);
-    --line-strong:rgba(32,36,31,.28);
-
-    --sydney:#5a3a96;
-    --sydney-soft:#efe9fb;
-    --cairns:#0e7c78;
-    --cairns-soft:#e2f3f0;
-    --gold:#c85a1e;
-    --gold-soft:#fbe9db;
-    --vivid:#d6127a;
-    --vivid-ink:#fff2f8;
-    --bluemtn:#2f6f57;
-    --bluemtn-soft:#e5f0ea;
-
-    --shadow: 0 1px 2px rgba(32,36,31,.06), 0 6px 20px rgba(32,36,31,.06);
-  }
-
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#14171a;
-      --ink:#e9e7dc;
-      --ink-soft:#aab0a6;
-      --surface:#1b1f1e;
-      --surface-2:#20241f;
-      --line:rgba(233,231,220,.14);
-      --line-strong:rgba(233,231,220,.28);
-
-      --sydney:#a48ee3;
-      --sydney-soft:#241f38;
-      --cairns:#4fd0c6;
-      --cairns-soft:#132825;
-      --gold:#f0925a;
-      --gold-soft:#2c1f16;
-      --vivid:#ff5aa8;
-      --vivid-ink:#2b1420;
-      --bluemtn:#6fc2a0;
-      --bluemtn-soft:#152420;
-
-      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper:#14171a;
-    --ink:#e9e7dc;
-    --ink-soft:#aab0a6;
-    --surface:#1b1f1e;
-    --surface-2:#20241f;
-    --line:rgba(233,231,220,.14);
-    --line-strong:rgba(233,231,220,.28);
-
-    --sydney:#a48ee3;
-    --sydney-soft:#241f38;
-    --cairns:#4fd0c6;
-    --cairns-soft:#132825;
-    --gold:#f0925a;
-    --gold-soft:#2c1f16;
-    --vivid:#ff5aa8;
-    --vivid-ink:#2b1420;
-
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
-  }
-
-  *{box-sizing:border-box;}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:'Public Sans', system-ui, -apple-system, "PingFang TC","Noto Sans TC",sans-serif;
-    padding:0 20px;
-  }
-  .wrap{max-width:920px; margin:0 auto; padding-block:32px 80px;}
-  .mono{font-family:'Space Mono', ui-monospace, monospace;}
-
-  h1,h2,h3{font-family:'Big Shoulders Display', system-ui, sans-serif; text-wrap:balance; letter-spacing:.01em; margin:0;}
-  a{color:inherit;}
-
-  /* ---------- header / ticket strip ---------- */
-  .ticket{
-    background:var(--surface-2); border:1px solid var(--line); border-radius:16px;
-    box-shadow:var(--shadow); overflow:hidden; margin-bottom:28px;
-  }
-  .ticket-top{
-    display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between;
-    padding:22px 26px 18px; border-bottom:1px dashed var(--line-strong);
-  }
-  .eyebrow{
-    font-family:'Space Mono',monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--ink-soft);
-  }
-  .ticket-title{font-size:clamp(28px,5vw,40px); font-weight:800; line-height:1.05; margin-top:4px;}
-  .party-badge{
-    font-family:'Space Mono',monospace; font-size:12.5px; background:var(--paper); border:1px solid var(--line-strong);
-    border-radius:999px; padding:7px 14px; white-space:nowrap;
-  }
-  .route{
-    display:flex; align-items:center; gap:0; padding:20px 26px 24px; flex-wrap:wrap; row-gap:14px;
-  }
-  .route-stop{display:flex; flex-direction:column; gap:2px; min-width:64px;}
-  .route-code{font-family:'Big Shoulders Display'; font-weight:800; font-size:22px;}
-  .route-date{font-family:'Space Mono',monospace; font-size:11px; color:var(--ink-soft);}
-  .route-line{flex:1; min-width:28px; height:1px; background:var(--line-strong); position:relative; margin:0 6px; top:-9px;}
-  .route-line::after{content:"✈"; position:absolute; right:0; top:-9px; font-size:12px; color:var(--ink-soft); background:var(--surface-2); padding:0 4px;}
-
-  /* ---------- overview legs ---------- */
-  .legs{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:36px;}
-  @media (max-width:720px){ .legs{grid-template-columns:1fr;} }
-  .leg{
-    border-radius:14px; padding:18px 18px 16px; border:1px solid var(--line); background:var(--surface-2);
-    border-top:5px solid var(--c);
-  }
-  .leg[data-city="sydney"]{--c:var(--sydney);}
-  .leg[data-city="cairns"]{--c:var(--cairns);}
-  .leg[data-city="gold"]{--c:var(--gold);}
-  .leg h3{font-size:22px; color:var(--c);}
-  .leg .nights{font-family:'Space Mono',monospace; font-size:12px; color:var(--ink-soft); margin-top:2px;}
-  .leg p{font-size:13.5px; line-height:1.55; color:var(--ink-soft); margin:10px 0 0;}
-
-  /* ---------- section headers ---------- */
-  .section-head{display:flex; align-items:baseline; gap:12px; margin:52px 0 18px;}
-  .section-head .num{font-family:'Space Mono',monospace; font-size:13px; color:var(--ink-soft);}
-  .section-head h2{font-size:clamp(22px,4vw,30px);}
-  .section-note{font-size:13.5px; color:var(--ink-soft); margin:-8px 0 20px; max-width:62ch; line-height:1.6;}
-
-  /* ---------- Vivid feature ---------- */
-  .vivid-card{
-    background:var(--vivid-ink); border:1px solid var(--vivid); border-radius:18px; padding:26px 26px 24px;
-    position:relative; overflow:hidden;
-  }
-  .vivid-card::before{
-    content:""; position:absolute; inset:0;
-    background:
-      radial-gradient(420px 220px at 88% -10%, color-mix(in srgb, var(--vivid) 30%, transparent), transparent 70%),
-      radial-gradient(360px 200px at 6% 116%, color-mix(in srgb, var(--sydney) 32%, transparent), transparent 70%);
-    pointer-events:none;
-  }
-  .vivid-head{display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; position:relative;}
-  .vivid-tag{font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--vivid); border:1px solid var(--vivid); border-radius:999px; padding:4px 10px;}
-  .vivid-card h3{font-size:clamp(24px,4vw,32px); color:var(--ink); position:relative;}
-  .vivid-dates{font-family:'Space Mono',monospace; font-size:13px; color:var(--ink-soft); position:relative;}
-  .vivid-body{display:grid; grid-template-columns:1.1fr .9fr; gap:22px; margin-top:16px; position:relative;}
-  @media (max-width:680px){ .vivid-body{grid-template-columns:1fr;} }
-  .vivid-body p{font-size:14.5px; line-height:1.7; margin:0 0 10px; color:var(--ink);}
-  .vivid-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px;}
-  .vivid-list li{font-size:13.5px; line-height:1.55; padding-left:18px; position:relative;}
-  .vivid-list li::before{content:"◆"; position:absolute; left:0; top:1px; font-size:9px; color:var(--vivid);}
-  .vivid-panel{background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:16px 18px;}
-  .vivid-panel h4{font-family:'Public Sans'; font-size:13px; font-weight:700; margin:0 0 10px; color:var(--vivid);}
-
-  /* ---------- day cards ---------- */
-  .city-block{margin-bottom:8px;}
-  .city-block-head{
-    display:flex; align-items:center; gap:10px; margin:34px 0 14px; padding-bottom:8px; border-bottom:2px solid var(--c);
-  }
-  .city-block-head h3{font-size:20px; color:var(--c);}
-  .city-block-head .tag{font-family:'Space Mono',monospace; font-size:11.5px; color:var(--ink-soft);}
-  .city-block[data-city="sydney"]{--c:var(--sydney);}
-  .city-block[data-city="cairns"]{--c:var(--cairns);}
-  .city-block[data-city="gold"]{--c:var(--gold);}
-
-  .day{
-    display:grid; grid-template-columns:76px 1fr; gap:16px; padding:16px 0; border-top:1px solid var(--line);
-  }
-  .day:first-of-type{border-top:none;}
-  .day-mark{display:flex; flex-direction:column; align-items:flex-start; gap:2px; padding-top:2px;}
-  .day-num{font-family:'Big Shoulders Display'; font-weight:800; font-size:30px; color:var(--c); line-height:1;}
-  .day-date{font-family:'Space Mono',monospace; font-size:11px; color:var(--ink-soft);}
-  .day-body h4{font-family:'Public Sans'; font-weight:700; font-size:15.5px; margin:0 0 8px;}
-  .day-rows{display:flex; flex-direction:column; gap:6px;}
-  .row{display:grid; grid-template-columns:52px 1fr; gap:10px; font-size:13.5px; line-height:1.55;}
-  .row .slot{font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.06em; color:var(--ink-soft); padding-top:2px; text-transform:uppercase;}
-  .day-meta{margin-top:9px; display:flex; flex-wrap:wrap; gap:7px;}
-  .chip{font-size:11px; font-family:'Space Mono',monospace; background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:3px 8px; color:var(--ink-soft);}
-
-  /* ---------- alt itinerary card ---------- */
-  .alt-card{
-    margin:14px 0 16px; padding:18px 20px; border-radius:14px;
-    background:var(--sydney-soft); border:1.5px dashed var(--sydney);
-  }
-  .alt-head{display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin-bottom:6px;}
-  .alt-tag{font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--sydney); border:1px solid var(--sydney); border-radius:999px; padding:3px 9px;}
-  .alt-head h4{font-family:'Big Shoulders Display'; font-weight:700; font-size:19px; color:var(--sydney);}
-  .alt-note{font-size:13px; line-height:1.6; color:var(--ink-soft); margin:0 0 14px; max-width:70ch;}
-  .alt-days{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  @media (max-width:680px){ .alt-days{grid-template-columns:1fr;} }
-  .alt-day{background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:14px 16px;}
-  .alt-day-num{font-size:10.5px; color:var(--sydney); letter-spacing:.06em; margin-bottom:4px;}
-  .alt-day h5{font-family:'Public Sans'; font-weight:700; font-size:14px; margin:0 0 8px; color:var(--ink);}
-  .alt-day ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px;}
-  .alt-day li{font-size:12.5px; line-height:1.55;}
-
-  /* ---------- lodging ---------- */
-  .lodge-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  @media (max-width:680px){ .lodge-grid{grid-template-columns:1fr;} }
-  .lodge-card{
-    background:var(--surface-2); border:1px solid var(--line); border-radius:14px; padding:18px;
-  }
-  .lodge-card .opt{font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--c);}
-  .lodge-card h4{font-family:'Public Sans'; font-weight:700; font-size:16px; margin:6px 0 2px;}
-  .lodge-card .price{font-family:'Space Mono',monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:8px;}
-  .lodge-card p{font-size:13.5px; line-height:1.6; margin:0; color:var(--ink);}
-  .lodge-city{margin-bottom:14px;}
-  .lodge-city-title{display:flex; align-items:center; gap:8px; margin-bottom:10px;}
-  .lodge-city-title span.dot{width:10px; height:10px; border-radius:50%; background:var(--c); display:inline-block;}
-  .lodge-city-title h4{font-family:'Public Sans'; font-size:15px; font-weight:700;}
-  .lodge-city[data-city="sydney"]{--c:var(--sydney);}
-  .lodge-city[data-city="bluemtn"]{--c:var(--bluemtn);}
-  .lodge-city[data-city="gold"]{--c:var(--gold);}
-  .lodge-city{margin-bottom:26px;}
-
-  /* ---------- restaurants ---------- */
-  .food-city{margin-bottom:26px;}
-  .food-city[data-city="sydney"]{--c:var(--sydney);}
-  .food-city[data-city="bluemtn"]{--c:var(--bluemtn);}
-  .food-city[data-city="gold"]{--c:var(--gold);}
-  .food-list{display:flex; flex-direction:column;}
-  .food-item{
-    display:grid; grid-template-columns:1fr auto; gap:6px 14px; padding:12px 0; border-top:1px solid var(--line);
-    align-items:baseline;
-  }
-  .food-city .food-list .food-item:first-child{border-top:none;}
-  .food-item .name{font-weight:700; font-size:14.5px;}
-  .food-item .kind{font-family:'Space Mono',monospace; font-size:10.5px; color:var(--c); text-transform:uppercase; letter-spacing:.06em;}
-  .food-item p{grid-column:1/-1; margin:0; font-size:13px; line-height:1.55; color:var(--ink-soft);}
-
-  /* ---------- inline place links ---------- */
-  a.mlink{
-    color:var(--c, var(--sydney)); text-decoration:none; border-bottom:1px dotted currentColor; font-weight:600;
-  }
-  a.mlink:hover{border-bottom-style:solid;}
-  a.slink{
-    text-decoration:none; color:var(--ink-soft); font-size:.82em; margin-left:1px; opacity:.75;
-  }
-  a.slink:hover{opacity:1;}
-
-  /* ---------- tips ---------- */
-  .tips-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px;}
-  @media (max-width:680px){ .tips-grid{grid-template-columns:1fr;} }
-  .tip{background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:14px 16px;}
-  .tip .k{font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:5px;}
-  .tip p{margin:0; font-size:13.5px; line-height:1.6;}
-
-  /* ---------- budget table ---------- */
-  .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:12px;}
-  .budget-table{width:100%; border-collapse:collapse; font-size:13px; min-width:560px;}
-  .budget-table th{
-    text-align:left; font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
-    color:var(--ink-soft); background:var(--surface); padding:10px 14px; border-bottom:1px solid var(--line);
-  }
-  .budget-table td{padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.5;}
-  .budget-table tr:last-child td{border-bottom:none;}
-  .budget-table td.amt{font-family:'Space Mono',monospace; font-variant-numeric:tabular-nums; white-space:nowrap; font-weight:700;}
-  .budget-table td.src{color:var(--ink-soft); font-size:12px;}
-  .budget-group th{background:var(--paper); font-size:11px; color:var(--ink); font-weight:700; letter-spacing:.04em;}
-  .budget-total{
-    margin-top:16px; padding:16px 18px; border-radius:12px; background:var(--sydney-soft); border:1px solid var(--sydney);
-    font-size:13.5px; line-height:1.7;
-  }
-  .budget-total b{font-family:'Space Mono',monospace; font-variant-numeric:tabular-nums;}
-
-  footer{margin-top:56px; padding-top:20px; border-top:1px dashed var(--line-strong); font-size:12px; color:var(--ink-soft); line-height:1.7;}
+:root{color-scheme:light;--paper:#f5f3eb;--card:#fffef9;--ink:#203c37;--muted:#55665f;--line:#d6ded4;--accent:#b84622;--soft:#eaf0e6;--warm:#fcf0e3;scroll-behavior:smooth;scroll-padding-top:100px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;font-size:19px;line-height:1.85;overflow-wrap:anywhere}a{color:#19584b;text-underline-offset:4px}a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #b84622;outline-offset:4px}h1,h2,h3,h4,h5,p{margin-top:0}h1,h2,h3,h4,h5{line-height:1.4}button,select{font:inherit}a,button,summary,select{-webkit-tap-highlight-color:transparent}main{max-width:980px;margin:auto;padding:28px 24px 72px}.skip{position:absolute;left:12px;top:-100px;background:white;padding:10px;z-index:9}.skip:focus{top:10px}.hero{padding:38px 34px;background:var(--ink);color:#fffdf2;border-radius:24px;position:relative;overflow:hidden}.eyebrow{font-size:14px;letter-spacing:.12em;font-weight:700;color:#c7dbc6;margin-bottom:16px}.hero h1{font-size:clamp(34px,6vw,54px);margin-bottom:14px;letter-spacing:.03em}.hero .intro{max-width:38em;color:#e7ecdf;margin-bottom:24px}.date-banner{display:inline-block;background:#f7d6a5;color:#243b32;padding:8px 16px;border-radius:8px;font-weight:800;font-size:22px;margin-bottom:16px}.hero-meta{font-size:17px;color:#d3e1d1;margin:0}.route-strip{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid #6c8277}.route-stop b{display:block;font-size:24px}.route-stop small{display:block;font-size:16px;color:#d3e1d1}.route-arrow{color:#f7d6a5}.planning{margin:24px 0;padding:22px 24px;border:1px solid #dbceb7;background:var(--warm);border-radius:16px}.planning h2{font-size:23px;margin-bottom:10px}.planning p:last-child{margin-bottom:0}.small{font-size:16px;color:var(--muted);line-height:1.8}.sticky{position:sticky;top:0;z-index:5;background:rgba(245,243,235,.98);border-bottom:1px solid var(--line)}.toolbar{max-width:980px;margin:auto;padding:12px 24px;display:flex;gap:14px;align-items:center}.toolbar label{font-size:16px;font-weight:750;white-space:nowrap}.toolbar select{min-width:0;flex:1;border:1px solid #a9b8aa;background:var(--card);color:var(--ink);border-radius:9px;padding:10px 12px;min-height:48px;font-size:17px;max-width:100%}.top-link{font-size:16px;white-space:nowrap;min-height:44px;display:flex;align-items:center}.index{margin:34px 0}.section-kicker{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:800}.index h2,.guide h2{font-size:29px;margin-bottom:10px}.day-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.day-jump{display:block;text-decoration:none;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:14px 12px;min-height:90px}.day-jump b{display:block;font-size:20px}.day-jump span{font-size:15px;color:var(--muted)}.day-jump:hover{background:var(--soft);border-color:#8a9d89}.guide{margin:28px 0 40px;padding:24px;border-radius:16px;background:var(--soft)}.guide p{margin-bottom:8px}.day-card{border:1px solid var(--line);background:var(--card);border-radius:22px;margin:28px 0 40px;overflow:hidden;box-shadow:0 4px 16px #203c3707}.day-head{padding:28px 30px;background:#edf1e7;border-bottom:1px solid var(--line)}.day-kicker{display:flex;gap:12px;justify-content:space-between;font-size:17px;font-weight:800;color:var(--accent);margin-bottom:14px}.city{font-size:16px;color:var(--muted);margin-bottom:10px}.day-head h3{font-size:30px;margin-bottom:14px}.lead{margin-bottom:18px}.stay{display:inline-block;font-size:16px;background:white;padding:6px 12px;border-radius:8px;margin-bottom:0}.day-content{padding:26px 30px 12px}.day-content section{margin-bottom:28px}.part-title{font-size:23px;margin:0 0 18px;display:flex;align-items:center;gap:10px}.part-title:before{content:"";width:5px;height:24px;border-radius:4px;background:var(--accent);flex-shrink:0}.stop{position:relative;border-left:2px solid var(--line);margin-left:14px;padding:0 0 26px 24px}.stop:last-child{padding-bottom:8px}.time{font-size:16px;font-weight:750;color:var(--accent);display:flex;align-items:center;gap:12px;margin-bottom:8px}.time span{position:absolute;left:-15px;top:0;background:var(--card);border:1px solid #bfcbb9;width:28px;height:28px;border-radius:50%;text-align:center;font-size:14px;line-height:26px;color:var(--ink)}.stop h5,.meal h5{font-size:21px;margin-bottom:8px}.stop p:not(.time),.meal p{margin-bottom:12px}.map-link,.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:8px 15px;border-radius:8px;text-decoration:none;background:var(--ink);color:white;font-size:16px;font-weight:700;max-width:100%;text-align:center}.map-link:hover{background:#2f6254}.text-link{display:inline-flex;align-items:center;min-height:44px;font-size:17px;font-weight:650}.actions{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}.meals{background:#fff5e8;border:1px solid #e7d8c5;border-radius:14px;padding:20px}.meal{border-top:1px solid #e6d7c4;padding-top:18px;margin-top:18px}.meal-tag{display:block;font-size:15px;color:#8b3a22;font-weight:800;margin-bottom:7px}.logistics{padding:20px;border:1px solid var(--line);border-radius:14px}.logistics p:last-child{margin-bottom:0}.review{border-top:1px solid var(--line);padding-top:16px;margin-top:16px}.review h4{font-size:19px;margin-bottom:6px}.review p{font-size:17px;margin-bottom:4px}.official,.overnight{border:1px solid var(--line);border-radius:10px;margin-bottom:18px;padding:0 16px;background:#f4f6f0}summary{cursor:pointer;min-height:52px;padding:12px 0;font-size:18px;font-weight:700}.official-links{display:flex;flex-direction:column;padding-bottom:12px}.overnight p{font-size:18px}.day-footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding:18px 0 8px}.day-footer a{font-size:16px;min-height:44px;display:flex;align-items:center}.page-footer{font-size:16px;color:var(--muted);padding:24px 0;border-top:1px solid var(--line)}.page-footer p{margin-bottom:8px}
+@media(min-width:760px){.schedule{max-width:760px}.meals{padding:24px}.day-head h3{font-size:33px}}
+@media(max-width:600px){body{font-size:18px;line-height:1.85}main{padding:16px 14px 48px}.hero{padding:26px 20px;border-radius:18px}.hero h1{font-size:34px}.date-banner{font-size:20px}.hero .intro{font-size:18px}.hero-meta{font-size:16px}.route-strip{grid-template-columns:1fr;gap:10px}.route-stop{display:flex;align-items:baseline;gap:14px}.route-stop b{font-size:21px;min-width:80px}.route-stop small{font-size:16px}.route-arrow{display:none}.planning{padding:18px}.toolbar{padding:10px 14px;gap:9px}.toolbar label{font-size:15px}.toolbar select{font-size:16px;padding:10px 6px}.top-link{font-size:15px}.day-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.day-jump{padding:12px}.day-jump span{font-size:16px}.guide{padding:20px}.day-card{border-radius:16px;margin-bottom:28px}.day-head{padding:22px 18px}.day-head h3{font-size:27px}.day-kicker{font-size:16px}.day-content{padding:22px 18px 10px}.part-title{font-size:22px}.stop{padding-left:20px;margin-left:12px}.stop h5,.meal h5{font-size:21px}.meals,.logistics{padding:17px}.small{font-size:16px}.map-link{min-height:48px}.stay{font-size:16px}.text-link{font-size:17px}.actions{gap:8px 14px}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
+@media print{.sticky,.skip,.day-footer,.index{display:none}body{font-size:12pt;background:white}.day-card{break-inside:avoid;box-shadow:none}.hero{background:white;color:black;border:1px solid}.hero p,.hero small{color:black}.map-link{background:white;color:black;border:1px solid}.day-head{background:#eee}}
 </style>
 </head>
-<body>
+<body id="top">
+<a class="skip" href="#day-index">跳至每日行程</a>
+<div class="sticky"><nav class="toolbar" aria-label="快速切換每日行程"><label for="day-select">跳到日期</label><select id="day-select"><option value="">選擇一天的行程</option><option value="day-1">6/16 · D1 台北出發，今晚睡飛機</option><option value="day-2">6/17 · D2 抵達雪梨，達令港慢慢醒來</option><option value="day-3">6/18 · D3 歌劇院、植物園，傍晚看港灣亮起</option><option value="day-4">6/19 · D4 渡輪去動物園，最後一晚賞燈看體力</option><option value="day-5">6/20 · D5 水族館與新魚市場，雨天也從容</option><option value="day-6">6/21 · D6 藍山一日遊，纜車與三姊妹岩</option><option value="day-7">6/22 · D7 搭渡輪到曼利，今天只想看海</option><option value="day-8">6/23 · D8 邦迪短停留，再飛黃金海岸</option><option value="day-9">6/24 · D9 夢幻世界，讓孩子挑三個最想玩的</option><option value="day-10">6/25 · D10 海洋世界，看動物與表演慢慢玩</option><option value="day-11">6/26 · D11 Currumbin 看動物，午後去海邊透氣</option><option value="day-12">6/27 · D12 HOTA 公園與海灘，留白也是行程</option><option value="day-13">6/28 · D13 移動到布里斯本，南岸公園輕旅行</option><option value="day-14">6/29 · D14 布里斯本搭華航，回台北</option></select><a class="top-link" href="#day-index">總覽</a></nav></div>
+<main>
+<header class="hero"><p class="eyebrow">AUSTRALIA · FAMILY JOURNEY</p><div class="date-banner">2027.06.16 — 06.29</div><h1>澳洲親子慢旅行</h1><p class="intro">早上去哪裡、午餐吃什麼、累了怎麼改。把每天要用的地圖、餐廳與旅人心得，放在同一張行程卡裡。</p><p class="hero-meta">2 大人・1 小孩（5 歲）｜14 天｜12 晚住宿＋1 晚機上</p><div class="route-strip"><div class="route-stop"><b>台北 → 雪梨</b><small>6/16 華航出發・6/17 暫定抵達</small></div><span class="route-arrow">→</span><div class="route-stop"><b>黃金海岸</b><small>6/23 國內線 SYD → OOL</small></div><span class="route-arrow">→</span><div class="route-stop"><b>布里斯本 → 台北</b><small>6/29 華航回程・抵達日待確認</small></div></div></header>
+<aside class="planning" aria-label="行程規劃狀態"><h2>先看這三件事</h2><p><strong>日期沿用 2027 年。</strong>華航國際線、6/23 國內線與住宿仍待實際訂位；下方時間是建議節奏，沒有已確認的班號或預約。</p><p><strong>Vivid 只排 6/17–6/19。</strong><a href="https://www.vividsydney.com/info/contact-us/frequently-asked-questions" target="_blank" rel="noopener noreferrer">官方場期為 5/28–6/19</a>，實際展區等 2027 節目公布後再選。</p><p><strong>手機直接點地圖。</strong>每個景點、餐廳都附 Google Maps 搜尋；開啟後再從當前位置規劃路線。餐廳未訂位，請確認分店與當日營業。</p></aside>
+<section class="index" id="day-index"><p class="section-kicker">YOUR DAYS, AT A GLANCE</p><h2>想看哪一天？</h2><p class="small">點日期直接跳到當日；上方選單會一直留著，長頁面也不用一直往回滑。</p><div class="day-grid"><a class="day-jump" href="#day-1"><b>6/16 · Day 1</b><span>台北出發，今晚睡飛機</span></a><a class="day-jump" href="#day-2"><b>6/17 · Day 2</b><span>抵達雪梨，達令港慢慢醒來</span></a><a class="day-jump" href="#day-3"><b>6/18 · Day 3</b><span>歌劇院、植物園，傍晚看港灣亮起</span></a><a class="day-jump" href="#day-4"><b>6/19 · Day 4</b><span>渡輪去動物園，最後一晚賞燈看體力</span></a><a class="day-jump" href="#day-5"><b>6/20 · Day 5</b><span>水族館與新魚市場，雨天也從容</span></a><a class="day-jump" href="#day-6"><b>6/21 · Day 6</b><span>藍山一日遊，纜車與三姊妹岩</span></a><a class="day-jump" href="#day-7"><b>6/22 · Day 7</b><span>搭渡輪到曼利，今天只想看海</span></a><a class="day-jump" href="#day-8"><b>6/23 · Day 8</b><span>邦迪短停留，再飛黃金海岸</span></a><a class="day-jump" href="#day-9"><b>6/24 · Day 9</b><span>夢幻世界，讓孩子挑三個最想玩的</span></a><a class="day-jump" href="#day-10"><b>6/25 · Day 10</b><span>海洋世界，看動物與表演慢慢玩</span></a><a class="day-jump" href="#day-11"><b>6/26 · Day 11</b><span>Currumbin 看動物，午後去海邊透氣</span></a><a class="day-jump" href="#day-12"><b>6/27 · Day 12</b><span>HOTA 公園與海灘，留白也是行程</span></a><a class="day-jump" href="#day-13"><b>6/28 · Day 13</b><span>移動到布里斯本，南岸公園輕旅行</span></a><a class="day-jump" href="#day-14"><b>6/29 · Day 14</b><span>布里斯本搭華航，回台北</span></a></div></section>
+<section class="guide"><h2>照著玩，也可以隨時放慢</h2><p>每天只抓一個主要重點。餐廳與推薦景點已放入當日卡片，午睡、下雨備案與回程交通一起看。</p><p>Day 10 海洋世界可與 Day 12 悠閒日交換，避免連續兩天樂園太累；換日期前先確認票券限制。</p><p class="small">內容查核：2026/10/16。遊記保留原作者連結；舊文章可能含過期票價、已停用設施或商業合作，不當成 2027 的營業保證。</p></section>
+<section aria-label="十四天詳細行程"><article class="day-card" id="day-1" aria-labelledby="title-1">
+<header class="day-head"><div class="day-kicker"><span>DAY 01</span><span>6/16（三）</span></div><p class="city">移動日 · 移動・保留體力</p><h3 id="title-1">台北出發，今晚睡飛機</h3><p class="lead">今天只處理出發。把孩子會用到的物品放隨身包，第一天不要塞景點。</p><p class="stay">今晚住宿｜機上</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>出門前</p><h5>桃園機場</h5><p>依華航通知確認航廈與報到時間，預留交通、托運與安檢緩衝。班號尚未確認，晚間出發是規劃假設。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan%20Taoyuan%20International%20Airport%20Terminal%202" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>通關後</p><h5>登機前放電</h5><p>先上廁所、補水，再到登機門附近活動；登機前換好舒適衣物。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan%20Taoyuan%20International%20Airport" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>機上</p><h5>吃飯後進入睡眠模式</h5><p>機上餐依航空公司供應，兒童餐需事先向華航確認。小毯、耳機、換洗衣與常用用品放座位下方。</p></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">晚餐</span><h5>桃園機場出境餐飲</h5><p>先吃一份孩子熟悉的飯或麵，機上餐當補充；店家依實際航廈選擇。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taoyuan%20International%20Airport%20Terminal%202%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜去程指定華航 TPE → SYD；確切起飛與抵達時間待訂票確認。</p><p><strong>累了／下雨</strong>｜若班機時間調整，Day 2 抵達日只保留入住與休息。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">延伸閱讀：先看抵達後的達令港環境。</p><div class="review"><h4>Hao・達令港景點與美食遊記</h4><p>可先看水岸景點的相對位置，再決定只走一小圈或搭配室內景點。</p><a class="text-link" href="https://www.jathao.com/2018/06/sydney-darling-harbour.html" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.china-airlines.com/tw/zh" target="_blank" rel="noopener noreferrer">華航班機與訂位<span aria-hidden="true"> ↗</span></a></div></details>
 
-<div class="wrap">
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-2">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-2" aria-labelledby="title-2">
+<header class="day-head"><div class="day-kicker"><span>DAY 02</span><span>6/17（四）</span></div><p class="city">雪梨 · 輕鬆・步行為主</p><h3 id="title-2">抵達雪梨，達令港慢慢醒來</h3><p class="lead">下飛機這天的任務是吃飽、補眠、走一小段。晚上若還有精神，再看第一晚 Vivid。</p><p class="stay">今晚住宿｜雪梨・第 1 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>抵達後</p><h5>雪梨機場 → 飯店寄放行李</h5><p>通關後前往達令港周邊住宿。若房間還沒好，先寄行李；需要一到就睡，可事先詢問提早入住。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sydney%20Airport%20International%20Terminal" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>午後</p><h5>Darling Quarter 遊樂場</h5><p>安排 45–60 分鐘玩遊具，再回飯店午睡；不要同時塞水族館。若遇雨，直接把下午留給休息。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Quarter%20Playground%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>17:00</p><h5>提早吃晚餐</h5><p>就在住宿或遊樂場附近吃，減少賞燈前移動。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Quarter%20Sydney%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>18:00 起</p><h5>Vivid 第 1 晚：達令港短線</h5><p>暫抓 45–60 分鐘，只選 2027 官方地圖上的一小區。抵達日累了就取消；不預先保證某場投影或雷射秀。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Harbour%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Darling Quarter 餐飲區</h5><p>選飯、麵或三明治，先解決孩子的胃；以現場有座位、候餐短的店為優先。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Quarter%20Sydney%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>Pancakes on the Rocks・The Rocks</h5><p>想吃鬆餅或西式餐可選；離達令港有距離，只有體力夠才特地前往，否則就近用餐。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pancakes%20On%20The%20Rocks%20The%20Rocks%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://pancakesontherocks.au/menu/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜機場到飯店依住宿位置選火車或預約接送。Vivid 期間道路可能管制，晚間以步行與大眾運輸為主。</p><p><strong>累了／下雨</strong>｜取消夜間活動，飯店午睡＋附近外帶晚餐。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>Hao・達令港景點與美食遊記</h4><p>可先看水岸景點的相對位置，再決定只走一小圈或搭配室內景點。</p><a class="text-link" href="https://www.jathao.com/2018/06/sydney-darling-harbour.html" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.vividsydney.com/info/contact-us/frequently-asked-questions" target="_blank" rel="noopener noreferrer">Vivid 官方日期與交通<span aria-hidden="true"> ↗</span></a></div></details>
 
-  <!-- ================= HEADER / TICKET ================= -->
-  <div class="ticket">
-    <div class="ticket-top">
-      <div>
-        <div class="eyebrow">Family Itinerary Proposal</div>
-        <div class="ticket-title">澳洲親子提案</div>
-      </div>
-      <div class="party-badge">2 大人 · 1 小孩（5 歲）· 14 天 · 12 晚住宿＋1 晚機上</div>
-    </div>
-    <div class="route">
-      <div class="route-stop"><div class="route-code">TPE</div><div class="route-date">06.16 華航出發</div></div>
-      <div class="route-line"></div>
-      <div class="route-stop"><div class="route-code">SYD</div><div class="route-date">06.17–06.23</div></div>
-      <div class="route-line"></div>
-      <div class="route-stop"><div class="route-code">OOL</div><div class="route-date">06.23–06.28</div></div>
-      <div class="route-line"></div>
-      <div class="route-stop"><div class="route-code">BNE</div><div class="route-date">06.28 移動／06.29 華航回程</div></div>
-      <div class="route-line"></div>
-      <div class="route-stop"><div class="route-code">TPE</div><div class="route-date">06.29 預計返台</div></div>
-    </div>
-  </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-3">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-3" aria-labelledby="title-3">
+<header class="day-head"><div class="day-kicker"><span>DAY 03</span><span>6/18（五）</span></div><p class="city">雪梨 · 中等・可縮短步行</p><h3 id="title-3">歌劇院、植物園，傍晚看港灣亮起</h3><p class="lead">沿著港灣走，不追求走完全部植物園。午餐坐下來慢慢吃，下午留一段回飯店的空白。</p><p class="stay">今晚住宿｜雪梨・第 2 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>09:30</p><h5>環形碼頭 → 歌劇院外觀</h5><p>先拍外觀與港灣景色，約 60–90 分鐘。若要內部導覽，事先查語言、時長與兒童規定，當天不再加其他導覽。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sydney%20Opera%20House" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>11:00</p><h5>皇家植物園短段散步</h5><p>從靠歌劇院的入口進去，找草地休息；Mrs Macquarie’s Chair 為體力足夠才延伸的選項，不必走到底。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Royal%20Botanic%20Garden%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>14:00</p><h5>回飯店午休</h5><p>午休約 1.5–2 小時，帶保暖外套再出門。</p></div><div class="stop"><p class="time"><span>4</span>18:00 起</p><h5>Vivid 第 2 晚：港灣周邊</h5><p>依官方 2027 路線選一區。今晚是週五，抓短線、避開散場時段；植物園不預設一定有燈光展區。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Circular%20Quay%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Pancakes on the Rocks・The Rocks</h5><p>和港灣散步放同一天較順；鬆餅可共享，另選鹹食，菜單與過敏原先確認。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pancakes%20On%20The%20Rocks%20The%20Rocks%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://pancakesontherocks.au/menu/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>環形碼頭周邊餐廳</h5><p>約 17:00 吃晚餐；遇客滿直接改外帶，不為一間名店消耗賞燈前的體力。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Circular%20Quay%20Sydney%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜環形碼頭、歌劇院與植物園以步行串連。Google Maps 顯示的距離未含推車、拍照與休息時間。</p><p><strong>累了／下雨</strong>｜下雨時只看歌劇院外觀，植物園改飯店休息；已訂的導覽按取消規則處理。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>Mina・歌劇院一日遊</h4><p>看歌劇院拍照角度與周邊散步路線；導覽場次、餐廳與展演另查官網。</p><a class="text-link" href="https://minahaha.com/sydney-opera-house-oneday/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.sydneyoperahouse.com/" target="_blank" rel="noopener noreferrer">歌劇院導覽與活動<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.vividsydney.com/info/contact-us/frequently-asked-questions" target="_blank" rel="noopener noreferrer">Vivid 官方公告<span aria-hidden="true"> ↗</span></a></div></details>
 
-  <div class="section-note" style="margin-top:-14px;">
-    <strong>2027/6/16–6/29，共 14 天</strong>：國際線指定中華航空，去程<strong>台北桃園（TPE）→雪梨（SYD）</strong>，回程<strong>布里斯本（BNE）→台北桃園（TPE）</strong>。保留雪梨與黃金海岸親子行程，6/23 搭國內線雪梨→黃金海岸（OOL），6/28 陸路移動至布里斯本住宿，6/29 搭華航回台。暫按 6/16 夜間出發、6/17 抵達及 6/29 當日返台規劃；確切班號、起降時間與抵達日以訂票結果為準，若跨日抵台需同步調整假期。住宿為雪梨 6 晚、黃金海岸 5 晚、布里斯本 1 晚，另有去程機上 1 晚。藍山兩天一夜仍可替換 Day 6–7，總天數不變。
-  </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-4">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-4" aria-labelledby="title-4">
+<header class="day-head"><div class="day-kicker"><span>DAY 04</span><span>6/19（六）</span></div><p class="city">雪梨 · 較多步行・推車有幫助</p><h3 id="title-4">渡輪去動物園，最後一晚賞燈看體力</h3><p class="lead">今天的主角是動物園。晚上是 Vivid 最後一晚，但不需要為了看滿三晚而硬撐。</p><p class="stay">今晚住宿｜雪梨・第 3 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>09:00</p><h5>環形碼頭搭渡輪</h5><p>查當日渡輪班次，提早到碼頭。渡輪抵達後，依官方動線轉往動物園入口，預留候車緩衝。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Circular%20Quay%20Wharf%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>10:00–12:00</p><h5>Taronga Zoo 看重點動物</h5><p>進園先看當日地圖，挑孩子最想看的 3–4 種動物。園區有坡度，安排短走、坐下、再走的節奏。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taronga%20Zoo%20Sydney%20Main%20Entrance" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>13:00–15:00</p><h5>輕鬆逛園與返程</h5><p>挑一場官方當日公布的解說或表演，不追場。下午適時離園，回飯店休息。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taronga%20Zoo%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>18:00 起・選配</p><h5>Vivid 最後一晚</h5><p>6/19 是週六與閉幕夜，只選靠近住宿的一區；人潮多、孩子累或下雨就取消。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Harbour%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Taronga 園內餐飲／野餐區</h5><p>直接在園內用餐，或依官方規定自備簡單午餐，減少排隊；用餐點依當日園區圖。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taronga%20Food%20Market%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.taronga.org.au/sydney-zoo/plan/visitor-information/food-and-drink" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>飯店附近外帶餐</h5><p>以提早吃完、可快速回房間為優先，不另跨區找餐廳。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Harbour%20Sydney%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜不安排 Sky Safari 纜車：官方目前規劃 2027 年底完成升級，早於開放的 6 月行程以步行與官方接駁資訊規劃。</p><p><strong>累了／下雨</strong>｜天候差時可與 Day 5 室內行程對調；Vivid 不能順延至 6/20。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>BringYou・塔龍加動物園遊記</h4><p>參考渡輪入園的旅遊經驗；文中纜車與動物互動資訊可能過時，依官網為準。</p><a class="text-link" href="https://www.bring-you.info/zh-tw/taronga-zoo" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.taronga.org.au/about/building-a-zoo-for-the-future/sky-safari/upgrade/" target="_blank" rel="noopener noreferrer">纜車工程與開放資訊<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.taronga.org.au/" target="_blank" rel="noopener noreferrer">動物園官網<span aria-hidden="true"> ↗</span></a></div></details>
 
-  <!-- ================= OVERVIEW LEGS ================= -->
-  <div class="legs">
-    <div class="leg" data-city="sydney">
-      <h3>雪梨 Sydney</h3>
-      <div class="nights">8 天 6 夜 · Day 1–8</div>
-      <p>6/17–6/19 三晚可安排 Vivid；其餘日子保留港灣、動物園、藍山及曼利親子行程。</p>
-    </div>
-    <div class="leg" data-city="gold">
-      <h3>黃金海岸 Gold Coast</h3>
-      <div class="nights">黃金海岸 5 晚＋布里斯本 1 晚 · Day 8–14</div>
-      <p>夢幻世界、海洋世界兩大主題樂園，加上一天悠閒海灘公園日，體力戰收尾但留了喘息空間。</p>
-    </div>
-  </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-5">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-5" aria-labelledby="title-5">
+<header class="day-head"><div class="day-kicker"><span>DAY 05</span><span>6/20（日）</span></div><p class="city">雪梨 · 輕鬆・室內主線</p><h3 id="title-5">水族館與新魚市場，雨天也從容</h3><p class="lead">上午只訂水族館，下午保留彈性。昨天若走累了，今天可以睡晚一點。</p><p class="stay">今晚住宿｜雪梨・第 4 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>10:00</p><h5>SEA LIFE 雪梨水族館</h5><p>規劃約 2–3 小時，以館方當日動線為準。若買組合票，先看有效期限與是否需分別預約。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=SEA%20LIFE%20Sydney%20Aquarium%20Darling%20Harbour" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>13:00</p><h5>新雪梨魚市場午餐</h5><p>前往 Blackwattle Bay 新館，逛熟食攤與水岸。不要使用舊魚市場地址導航。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sydney%20Fish%20Market%201%20Bridge%20Road%20Glebe" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>15:00・二選一</p><h5>午睡，或 WILD LIFE</h5><p>如果孩子對動物還有興趣，再加一館；否則回飯店。這是可刪的加選，不預設一定買兩館。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=WILD%20LIFE%20Sydney%20Zoo%20Darling%20Harbour" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>傍晚</p><h5>達令港一般夜景</h5><p>簡單散步後吃晚餐。Vivid 已結束，不再安排燈光節。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Harbour%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Sydney Fish Market 新館熟食</h5><p>先找座位，再分工買烤魚、熟蝦或其他熟食；海鮮過敏與孩子口味自行確認。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sydney%20Fish%20Market%201%20Bridge%20Road%20Glebe" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.sydneyfishmarket.com.au/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>Darling Quarter 餐飲區</h5><p>午餐較豐盛，晚上挑熟悉的飯麵或外帶回飯店即可。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Quarter%20Sydney%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜水族館與魚市場之間另搭車或大眾運輸，不把兩地當成同一園區；移動前用地圖查當日路線。</p><p><strong>累了／下雨</strong>｜大雨就取消魚市場，午餐留在達令港，下午直接午休。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>Australian Traveller・新魚市場採訪指南（英文）</h4><p>可看新館餐飲與逛市場方式；舊魚市場遊記的地址與店家配置不要直接套用。</p><a class="text-link" href="https://www.australiantraveller.com/nsw/sydney/sydney-fish-market/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div><div class="review"><h4>Hao・達令港景點與美食遊記</h4><p>可先看水岸景點的相對位置，再決定只走一小圈或搭配室內景點。</p><a class="text-link" href="https://www.jathao.com/2018/06/sydney-darling-harbour.html" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.visitsealife.com/sydney/" target="_blank" rel="noopener noreferrer">SEA LIFE 官網<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.sydneyfishmarket.com.au/" target="_blank" rel="noopener noreferrer">新魚市場官網<span aria-hidden="true"> ↗</span></a></div></details>
 
-  <!-- ================= VIVID FEATURE ================= -->
-  <div class="section-head"><span class="num">01</span><h2>雪梨夜間亮點</h2></div>
-  <div class="vivid-card">
-    <div class="vivid-head">
-      <span class="vivid-tag">Vivid Sydney</span>
-      <h3>抵達後前三晚，把握 Vivid 尾聲</h3>
-    </div>
-    <div class="vivid-dates"><a href="https://www.vividsydney.com/info/contact-us/frequently-asked-questions" target="_blank" rel="noopener">官方 2027 場期：5/28–6/19</a>；本行程僅 6/17、6/18、6/19 三晚重疊，展區與節目以當年公告為準。</div>
-    <div class="vivid-body">
-      <div>
-        <p>Vivid Sydney 是雪梨港灣沿岸的大型燈光藝術節，歌劇院、皇家植物園、達令港會被投影燈光與音樂裝置點亮，多數展區免費開放，只有少數體驗（如市政廳投影秀特別場、部分音樂演出）需要另外買票。</p>
-        <p>帶 5 歲小孩看夜燈，重點是「避開最擁擠的環形碼頭正對面」，選人潮較少但視野一樣好的角度，晚餐提早、抓在小孩精神最好的 7–9 點看完主秀再走。</p>
-      </div>
-      <div class="vivid-panel">
-        <h4>親子友善觀展路線</h4>
-        <ul class="vivid-list">
-          <li><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Royal+Botanic+Garden+Sydney%2C+Sydney+NSW" target="_blank" rel="noopener">皇家植物園（Royal Botanic Garden）</a><a class="slink" href="https://www.biteamap.com/blog/post/royalbotanicgardens/" target="_blank" rel="noopener">🔗</a>：步道平緩好推推車，燈光裝置分散不擁擠</li>
-          <li><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Darling+Harbour%2C+Sydney+NSW" target="_blank" rel="noopener">達令港 Tumbalong Park</a><a class="slink" href="https://www.jathao.com/2018/06/sydney-darling-harbour.html" target="_blank" rel="noopener">🔗</a>：草地寬敞，小孩可以坐著看對岸投影，旁邊就有免費遊樂場</li>
-          <li>Pyrmont Bridge：人潮比環形碼頭少一截，仍能看到港灣全景燈光</li>
-          <li>建議傍晚 5 點先吃晚餐，6 點半再出門卡位，9 點前撤退避開散場人潮</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-6">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-6" aria-labelledby="title-6">
+<header class="day-head"><div class="day-kicker"><span>DAY 06</span><span>6/21（一）</span></div><p class="city">藍山・雪梨往返 · 長途移動・保暖</p><h3 id="title-6">藍山一日遊，纜車與三姊妹岩</h3><p class="lead">今天是早出門的一天。主線只排 Scenic World 與三姊妹岩，不再把野生動物園硬塞進回程。</p><p class="stay">今晚住宿｜雪梨・第 5 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>07:30–08:00</p><h5>雪梨出發</h5><p>參加有接送的一日團，或預約包車。這是建議出發區間，集合時間依供應商通知；山區天候與路況可能延長車程。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Katoomba%20NSW" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>上午</p><h5>Scenic World</h5><p>安排約 2–3 小時，搭景觀纜車、天空纜車或景觀鐵路，依當日開放及孩子意願選擇；步道只走短段。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Scenic%20World%20Katoomba" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>午後</p><h5>Echo Point 三姊妹岩</h5><p>停留約 30–45 分鐘看景、拍照；遇濃霧不等待放晴，改到 Leura 休息。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Echo%20Point%20Lookout%20Katoomba" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>下午</p><h5>Leura 小鎮 → 回雪梨</h5><p>咖啡、熱飲與短逛後回市區。回程不排額外門票景點，晚餐後早睡。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Leura%20Mall%20NSW" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Scenic World 園區餐飲</h5><p>優點是少一次移動，先在園區吃熱食；若團費含餐，直接依團體安排。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Scenic%20World%20Restaurant%20Katoomba" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.scenicworld.com.au/food" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>雪梨住宿附近</h5><p>回程可能塞車，選可外帶的簡單晚餐，不訂需要準點抵達的餐廳。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Harbour%20Sydney%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜選團時確認是否包含門票、接送地點與兒童座椅安排；不把每個停留點的車程當成固定值。</p><p><strong>累了／下雨</strong>｜若山區天候差，可與 Day 7 交換；出發前看團體取消規則。另可展開下方「藍山過夜替代版」。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>海海媽・Scenic World 親子遊記</h4><p>親子視角參考纜車與景觀鐵路體驗；先評估孩子對高度、坡度的接受度。</p><a class="text-link" href="https://uninoritwins.com/sydney-scenicworld/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.scenicworld.com.au/tickets" target="_blank" rel="noopener noreferrer">Scenic World 門票<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.scenicworld.com.au/food" target="_blank" rel="noopener noreferrer">園區餐飲<span aria-hidden="true"> ↗</span></a></div></details>
+<details class="overnight"><summary>想慢一點？改成藍山兩天一夜</summary><p><strong>6/21</strong>：雪梨出發 → Scenic World → Echo Point → Leura 入住；午餐可在 Scenic World 吃，晚餐依住宿餐廳營業或小鎮餐廳預約。</p><p><strong>6/22</strong>：飯店早餐 → Leura 小鎮短散步 → 午餐後回雪梨。取消當天曼利行程，雪梨改住 5 晚、藍山 1 晚，總住宿晚數不變。6/23 仍從雪梨飛黃金海岸。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Fairmont%20Resort%20Blue%20Mountains%20Leura" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.fairmontresort.com.au/" target="_blank" rel="noopener noreferrer">Fairmont Resort 官網<span aria-hidden="true"> ↗</span></a></div><p class="small">飯店是候選，未取得本次日期房價；餐廳與接送請先確認。</p></details>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-7">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-7" aria-labelledby="title-7">
+<header class="day-head"><div class="day-kicker"><span>DAY 07</span><span>6/22（二）</span></div><p class="city">曼利・雪梨往返 · 輕鬆・海岸散步</p><h3 id="title-7">搭渡輪到曼利，今天只想看海</h3><p class="lead">用一趟渡輪、一頓炸魚薯條、短段海邊散步，留給孩子自由玩沙的時間。</p><p class="stay">今晚住宿｜雪梨・第 6 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>09:30</p><h5>環形碼頭 → Manly Wharf</h5><p>查當日渡輪後出發，坐船本身就是遊程。若容易暈船，依個人狀況準備。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Manly%20Wharf%20NSW" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>10:30</p><h5>The Corso → Manly Beach</h5><p>步行穿過商店街，海灘停留約 60–90 分鐘。六月以玩沙、看海為主，不把下水列為必做。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Manly%20Beach%20NSW" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>13:30・選配</p><h5>沿岸短走到 Shelly Beach</h5><p>有體力才沿海岸走一小段，隨時折返；不再加 North Head。備好防風外套與替換襪子。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Shelly%20Beach%20Manly%20NSW" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>15:30 左右</p><h5>搭船回雪梨</h5><p>回程留在天黑前較輕鬆，實際時間按天氣與班次調整；晚餐後整理明天國內線行李。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Manly%20Wharf%20NSW" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Manly Fish &amp; Chips</h5><p>外帶炸魚薯條後找座位慢慢吃；別讓海鷗靠近食物。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Manly%20Fish%20and%20Chips%20East%20Esplanade%20Manly%20NSW" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://hellomanly.com.au/listing/manly-fish-chips/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>回雪梨後就近吃</h5><p>不用為了海景留到很晚，回飯店附近吃熟悉餐點即可。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Darling%20Harbour%20Sydney%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜去回都以渡輪＋步行串連。兒童票別與乘船方式請用 NSW 官方行程規劃器確認。</p><p><strong>累了／下雨</strong>｜風浪大就取消船程，改回達令港室內館或逛市區；不要勉強搭船。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>焦糖熱一點・曼利海灘遊記</h4><p>參考海灘氛圍與沿岸散步；六月改以玩沙、看海為主。</p><a class="text-link" href="https://www.biteamap.com/blog/post/manlybeach/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://transportnsw.info/" target="_blank" rel="noopener noreferrer">NSW 交通與班次<span aria-hidden="true"> ↗</span></a></div></details>
 
-  <!-- ================= ITINERARY ================= -->
-  <div class="section-head"><span class="num">02</span><h2>14 天逐日行程</h2></div>
-  <div class="section-note">早上行程盡量安排室內或短距離活動，讓小孩補眠；每天只排一個「大重點」，其餘留白給體力和天氣彈性。</div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-8">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-8" aria-labelledby="title-8">
+<header class="day-head"><div class="day-kicker"><span>DAY 08</span><span>6/23（三）</span></div><p class="city">雪梨 → 黃金海岸 · 移動・不排長步道</p><h3 id="title-8">邦迪短停留，再飛黃金海岸</h3><p class="lead">班機優先，海灘是選配。先確認國內線時間，才決定早上能不能去邦迪。</p><p class="stay">今晚住宿｜黃金海岸・第 1 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>早餐後・選配</p><h5>Bondi Beach 短散步</h5><p>僅在班機較晚、行李已安排妥當時前往，停留 45–60 分鐘。不要排 Bondi–Coogee 長步道；時間緊直接略過。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Bondi%20Beach%20Sydney" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>依航班倒推</p><h5>飯店取行李 → 雪梨機場</h5><p>先確認國內線航廈、托運與報到截止時間，再倒推離開飯店時間，另加交通緩衝。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sydney%20Airport%20Domestic%20Terminal" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>下午・暫定</p><h5>SYD → OOL 國內線</h5><p>單程航班日期訂為 6/23；時間尚未確認。比價時一起看托運、手提行李與選位。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Gold%20Coast%20Airport" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>抵達後</p><h5>入住 → 衝浪者天堂短散步</h5><p>先入住再吃飯，精神好才去海邊走 20–30 分鐘；今晚不安排門票景點。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Surfers%20Paradise%20Beach%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>雪梨機場國內線餐飲</h5><p>移動日以航廈餐飲或簡單外帶為主，先吃完再登機。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sydney%20Airport%20Domestic%20Terminal%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>Hurricane’s Grill・Surfers Paradise</h5><p>想吃排餐可選，先查菜單與訂位；若班機晚抵達，改住宿附近外帶。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hurricanes%20Grill%20Surfers%20Paradise%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.hurricanesgrill.com.au/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜Gold Coast Airport（OOL）抵達後前往飯店；不要誤訂到回程機場 BNE。接送車需先確認兒童乘車安排。</p><p><strong>累了／下雨</strong>｜直接刪掉邦迪，早餐後慢慢退房去機場；抵達晚就取消沙灘散步。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>RoamingNow・邦迪海灘遊記攻略</h4><p>看海灘、展館與周邊位置，搭機日只選短段停留。</p><a class="text-link" href="https://roamingnow.com/bondi-beach-travel-guide-sydney/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div><div class="review"><h4>Mina・衝浪者天堂遊記</h4><p>看沙灘、市區與用餐區分布；市集並非每日都有，不列為固定行程。</p><a class="text-link" href="https://minahaha.com/goldcoast-surfers-paradise-guide/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.sydneyairport.com.au/" target="_blank" rel="noopener noreferrer">雪梨機場<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.goldcoastairport.com.au/" target="_blank" rel="noopener noreferrer">黃金海岸機場<span aria-hidden="true"> ↗</span></a></div></details>
 
-  <!-- SYDNEY -->
-  <div class="city-block" data-city="sydney">
-    <div class="city-block-head"><h3>雪梨</h3><span class="tag">DAY 1 – 8</span></div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-9">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-9" aria-labelledby="title-9">
+<header class="day-head"><div class="day-kicker"><span>DAY 09</span><span>6/24（四）</span></div><p class="city">黃金海岸 · 樂園日・多休息</p><h3 id="title-9">夢幻世界，讓孩子挑三個最想玩的</h3><p class="lead">保留一整天給 Dreamworld，但不追求玩遍。優先兒童區，午餐後安排坐下休息。</p><p class="stay">今晚住宿｜黃金海岸・第 2 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>開園前</p><h5>前往 Dreamworld</h5><p>依 2027 當日開園時間安排接送。入園前先量孩子身高，下載或查看最新園區圖。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dreamworld%20Coomera%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>上午</p><h5>Kenny &amp; Belinda’s Dreamland</h5><p>挑 2–3 個適合身高與接受度的設施，不保證每一項 5 歲都能搭。先玩孩子最想玩的，再決定是否排隊第二輪。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kenny%20and%20Belindas%20Dreamland%20Dreamworld" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>午餐後</p><h5>休息，再選 Rivertown 或動物區</h5><p>先坐下休息，再選一區；家人想玩刺激設施時分工，不讓孩子一路陪排隊。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dreamworld%20Coomera%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>15:30 起</p><h5>有餘力再玩，累了提早離園</h5><p>不為了待到閉園硬撐。晚餐回飯店附近吃，今晚不加夜市或觀景台。</p></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Jane’s Rivertown Restaurant</h5><p>園內吃午餐可少走回頭路，實際餐點、座位與營業時間依現場為準。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Janes%20Rivertown%20Restaurant%20Dreamworld" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.dreamworld.com.au/blog/the-best-family-3-day-gold-coast-itinerary/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>飯店附近簡單用餐</h5><p>飯、麵或外帶披薩都可，原則是吃完就能回房間。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Surfers%20Paradise%20QLD%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜園區在 Coomera，需另安排往返交通；不假設飯店一定提供免費接駁。</p><p><strong>累了／下雨</strong>｜遇停駛或孩子害怕，轉成看動物與散步；持票前先讀改期與取消條款。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>GINA・夢幻世界遊記</h4><p>先看園區照片與動物區，再按孩子身高挑設施；文章中的票價與舊設施名稱需重查。</p><a class="text-link" href="https://ginatw.com/gold-coast-dream-world/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.dreamworld.com.au/" target="_blank" rel="noopener noreferrer">設施與身高限制<span aria-hidden="true"> ↗</span></a></div></details>
 
-    <div class="day">
-      <div class="day-mark"><div class="day-num">01</div><div class="day-date mono">6/16 (三)</div></div>
-      <div class="day-body">
-        <h4>出發・夜間直飛</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">晚上</span><span>桃園機場集合，搭乘直飛雪梨的夜間航班（中華航空，班號與起降時間待確認），機上過夜。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">TPE → SYD</span><span class="chip">機上晚餐+早餐</span></div>
-      </div>
-    </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-10">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-10" aria-labelledby="title-10">
+<header class="day-head"><div class="day-kicker"><span>DAY 10</span><span>6/25（五）</span></div><p class="city">黃金海岸 · 樂園日・可交換休息日</p><h3 id="title-10">海洋世界，看動物與表演慢慢玩</h3><p class="lead">與昨天相比，今天以海洋動物為主。若早上仍疲累，可以與 Day 12 的悠閒日交換。</p><p class="stay">今晚住宿｜黃金海岸・第 3 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>依開園時間</p><h5>Sea World 入園</h5><p>先看官方當日表演時間，最多挑 1–2 場想看的，不追場。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sea%20World%20Main%20Beach%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>上午</p><h5>企鵝、海洋動物展示</h5><p>順路看動物，留意開放中的區域；遇人潮就換下一個展示區，避免全家久站。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sea%20World%20Main%20Beach%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>午後</p><h5>Nickelodeon Land 與休息</h5><p>依身高與孩子興趣選設施，午餐後先坐下休息；濕身或水上項目都可不參加。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Nickelodeon%20Land%20Sea%20World%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>15:00–16:00</p><h5>彈性離園</h5><p>精神好再多看一區，否則回飯店，不加第二個付費景點。</p></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Dockside Bistro・園內</h5><p>直接在園內用餐，避免為吃飯出入園；餐點與當日營業依官方頁。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dockside%20Bistro%20Sea%20World%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://seaworld.com.au/park-info/food" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>住宿附近餐廳</h5><p>提早吃晚餐；若連兩天樂園太累，改外帶與洗衣休息。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Surfers%20Paradise%20QLD%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜確認到的是澳洲黃金海岸 Sea World；票券與 Dreamworld 分屬不同系統，不預設同一張套票都能用。</p><p><strong>累了／下雨</strong>｜與 Day 12 對調，今天改成早餐、海邊短散步與午睡；調整前先查門票日期限制。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>小芝芝・Sea World 親子遊記</h4><p>參考海洋動物與園區遊玩照片；演出時間與設施開放以當日官方資訊為準。</p><a class="text-link" href="https://hx271.tw/blog/post/67459107" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://seaworld.com.au/" target="_blank" rel="noopener noreferrer">Sea World 官網與日程<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://seaworld.com.au/park-info/food" target="_blank" rel="noopener noreferrer">官方園內餐飲<span aria-hidden="true"> ↗</span></a></div></details>
 
-    <div class="day">
-      <div class="day-mark"><div class="day-num">02</div><div class="day-date mono">6/17 (四)</div></div>
-      <div class="day-body">
-        <h4>抵達雪梨・達令港放電</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span>依華航實際抵達時間落地，飯店寄放行李，先在<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Darling+Harbour%2C+Sydney+NSW" target="_blank" rel="noopener">達令港（Darling Harbour）</a><a class="slink" href="https://www.jathao.com/2018/06/sydney-darling-harbour.html" target="_blank" rel="noopener">🔗</a>散步吃早午餐，讓小孩下飛機後活動一下。</span></div>
-          <div class="row"><span class="slot">下午</span><span>飯店 check-in 補眠；傍晚到<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Darling+Quarter+Playground%2C+Sydney+NSW" target="_blank" rel="noopener">Darling Quarter 免費遊樂場</a><a class="slink" href="https://doreenabc0527.pixnet.net/blog/post/576936172" target="_blank" rel="noopener">🔗</a>放電。</span></div>
-          <div class="row"><span class="slot">晚上</span><span>Vivid Sydney 第 1 夜：達令港水岸燈光秀，看到小孩累了就收工。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">✦ Vivid Night 1</span><span class="chip">輕鬆日</span></div>
-      </div>
-    </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-11">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-11" aria-labelledby="title-11">
+<header class="day-head"><div class="day-kicker"><span>DAY 11</span><span>6/26（六）</span></div><p class="city">黃金海岸 · 中等・下午可刪</p><h3 id="title-11">Currumbin 看動物，午後去海邊透氣</h3><p class="lead">今天不用趕表演。上午逛野生動物園，下午體力夠再去 Burleigh Heads。</p><p class="stay">今晚住宿｜黃金海岸・第 4 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>依開園時間</p><h5>Currumbin Wildlife Sanctuary</h5><p>先看官方當日活動表。若要參加餵鳥，事先確認時段、天候與是否需額外付費，不保證固定有場次。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Currumbin%20Wildlife%20Sanctuary%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>上午</p><h5>無尾熊、袋鼠與步道</h5><p>依園區開放動線慢慢逛，預留休息。動物合照是需另查規定的選配，不預設能抱無尾熊。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Currumbin%20Wildlife%20Sanctuary%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>13:00</p><h5>午餐後決定是否續逛</h5><p>若孩子對動物意猶未盡就留園；若想休息直接回飯店，不必一定去海灘。</p></div><div class="stop"><p class="time"><span>4</span>15:00・選配</p><h5>Burleigh Heads 海邊草地</h5><p>看海、玩沙或草地坐坐，停留 45–60 分鐘，不安排長步道或下水。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Burleigh%20Heads%20Beach%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>Sanctuary Cafe</h5><p>園內咖啡館吃輕食，依當日菜單挑選；比離園找餐廳省一次移動。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sanctuary%20Cafe%20Currumbin%20Wildlife%20Sanctuary" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://currumbinsanctuary.com.au/visit/see-and-do/food-drink/sanctuary-cafe/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>回飯店附近吃</h5><p>下午若去海邊，晚餐仍回住宿周邊，避免多個地點來回。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Surfers%20Paradise%20QLD%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜Currumbin 與 Burleigh 需另搭車，帶孩子不把兩地當步行路線；先安排回程接送再玩。</p><p><strong>累了／下雨</strong>｜取消 Burleigh，改回飯店休息；雨大時以官網確認動物活動與設施是否照常。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>GINA・Currumbin 野生動物園遊記</h4><p>參考看動物的動線與園區照片；餵食、合照不保證可參加，依當日公告與預約規定。</p><a class="text-link" href="https://ginatw.com/currumbin-wildlife-sanctuary/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://currumbinsanctuary.com.au/visit/see-and-do/animals/" target="_blank" rel="noopener noreferrer">園區動物與活動<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://currumbinsanctuary.com.au/visit/see-and-do/food-drink/sanctuary-cafe/" target="_blank" rel="noopener noreferrer">Sanctuary Cafe<span aria-hidden="true"> ↗</span></a></div></details>
 
-    <div class="day">
-      <div class="day-mark"><div class="day-num">03</div><div class="day-date mono">6/18 (五)</div></div>
-      <div class="day-body">
-        <h4>歌劇院・植物園</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span>環形碼頭散步、<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Sydney+Opera+House%2C+Sydney+NSW" target="_blank" rel="noopener">雪梨歌劇院</a><a class="slink" href="https://minahaha.com/sydney-opera-house-oneday/" target="_blank" rel="noopener">🔗</a>外觀 + 建築導覽（有適合親子的簡短場次）。</span></div>
-          <div class="row"><span class="slot">下午</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Royal+Botanic+Garden+Sydney%2C+Sydney+NSW" target="_blank" rel="noopener">皇家植物園</a><a class="slink" href="https://www.biteamap.com/blog/post/royalbotanicgardens/" target="_blank" rel="noopener">🔗</a>野餐，走到 Mrs Macquarie's Chair 眺望歌劇院與大橋。</span></div>
-          <div class="row"><span class="slot">晚上</span><span>Vivid 第 2 夜：就在植物園周邊看燈光裝置，步道平緩、推車友善。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">✦ Vivid Night 2</span><span class="chip">歌劇院</span><span class="chip">植物園</span></div>
-      </div>
-    </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-12">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-12" aria-labelledby="title-12">
+<header class="day-head"><div class="day-kicker"><span>DAY 12</span><span>6/27（日）</span></div><p class="city">黃金海岸 · 輕鬆・彈性最高</p><h3 id="title-12">HOTA 公園與海灘，留白也是行程</h3><p class="lead">今天是恢復體力日，也能拿來與樂園日交換。不為了填滿日程而多買一張門票。</p><p class="stay">今晚住宿｜黃金海岸・第 5 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>09:30</p><h5>HOTA 公園與戶外空間</h5><p>先在園區戶外散步或看孩子想玩的空間，約 60–90 分鐘。展覽是否免費、是否適合兒童與營業時間另查官網。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=HOTA%20Home%20of%20the%20Arts%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>中午</p><h5>HOTA Cafe 午餐</h5><p>吃完就回飯店午睡，不接另一個跨區景點。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=HOTA%20Cafe%20Surfers%20Paradise%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>15:30・選配</p><h5>Broadbeach 海邊／Kurrawa 公園</h5><p>可選遊樂場或短段海邊散步，帶防風衣；天氣不舒服就改商場補給。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kurrawa%20Pratten%20Park%20Broadbeach%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>晚上</p><h5>洗衣、整理行李</h5><p>把隔天移動會用的換洗、點心與證件另外裝一包，預留退房時間。</p></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>HOTA Cafe</h5><p>園區內用餐，餐點與營業依當日公告；比正式套餐餐廳更容易安排彈性午餐。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=HOTA%20Cafe%20Surfers%20Paradise%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.hota.com.au/dining/cafe" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>Hurricane’s Grill・Surfers Paradise</h5><p>如果 Day 8 還沒吃到排餐，今天可安排；先查預約與份量，別讓孩子餓著排隊。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hurricanes%20Grill%20Surfers%20Paradise%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.hurricanesgrill.com.au/" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜HOTA、Broadbeach 與住宿之間依實際位置搭車，下午只選一區；不把整條海岸都排進同一天。</p><p><strong>累了／下雨</strong>｜取消戶外行程，改飯店休息與附近超市補給；不保證公寓泳池有溫水。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>Mina・衝浪者天堂遊記</h4><p>看沙灘、市區與用餐區分布；市集並非每日都有，不列為固定行程。</p><a class="text-link" href="https://minahaha.com/goldcoast-surfers-paradise-guide/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.hota.com.au/" target="_blank" rel="noopener noreferrer">HOTA 與展覽資訊<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.hota.com.au/dining/cafe" target="_blank" rel="noopener noreferrer">HOTA Cafe<span aria-hidden="true"> ↗</span></a></div></details>
 
-    <div class="day">
-      <div class="day-mark"><div class="day-num">04</div><div class="day-date mono">6/19 (六)</div></div>
-      <div class="day-body">
-        <h4>塔龍加動物園</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span>環形碼頭搭渡輪到<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Taronga+Zoo%2C+Mosman+NSW" target="_blank" rel="noopener">塔龍加動物園（Taronga Zoo）</a><a class="slink" href="https://www.bring-you.info/zh-tw/taronga-zoo" target="_blank" rel="noopener">🔗</a>，船程本身就是小孩的行程亮點。</span></div>
-          <div class="row"><span class="slot">下午</span><span>纜車 Sky Safari 俯瞰雪梨港，考拉/袋鼠互動區待到閉園。</span></div>
-          <div class="row"><span class="slot">晚上</span><span>Vivid 第 3 夜（6/19 最後一晚）：依體力選一處官方公布展區，累了就提早回飯店。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">渡輪</span><span class="chip">動物園</span></div>
-      </div>
-    </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-13">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-13" aria-labelledby="title-13">
+<header class="day-head"><div class="day-kicker"><span>DAY 13</span><span>6/28（一）</span></div><p class="city">黃金海岸 → 布里斯本 · 移動＋短散步</p><h3 id="title-13">移動到布里斯本，南岸公園輕旅行</h3><p class="lead">先把行李放好，才去公園。住市區方便吃飯；若明天班機很早，優先選機場周邊住宿。</p><p class="stay">今晚住宿｜布里斯本・第 1 晚</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>09:00</p><h5>早餐、退房、清點行李</h5><p>先把交通確認好再退房；明天搭華航從 BNE 出發，今天不要誤去 OOL。</p></div><div class="stop"><p class="time"><span>2</span>上午至中午</p><h5>黃金海岸 → 布里斯本飯店</h5><p>預約接送較少搬行李；大眾運輸則查當日轉乘與電梯。抵達先寄放行李或入住，不把車程寫成保證值。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Brisbane%20City%20QLD" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>14:00・選配</p><h5>South Bank Parklands</h5><p>只在市區住宿且體力足夠時前往，河岸散步、遊樂場與 Streets Beach 看景，約 1–2 小時；六月不必下水。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=South%20Bank%20Parklands%20Brisbane" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>4</span>傍晚</p><h5>提早吃晚餐、確認機場交通</h5><p>吃完回飯店整理行李，確認班號、航廈、報到與接送。若住機場附近就取消南岸。</p></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">午餐</span><h5>South Bank 餐飲區</h5><p>抵達晚就先在飯店附近吃，不為特定餐廳繞路。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=South%20Bank%20Brisbane%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">晚餐</span><h5>Siam South Bank</h5><p>泰式料理選項，可詢問不辣的麵飯與兒童餐；先查營業、預約及過敏原。若住機場周邊，直接就近用餐。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Siam%20South%20Bank%20Brisbane" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.siamsouthbank.com.au/family-restaurant-southbank" target="_blank" rel="noopener noreferrer">餐廳／菜單資訊<span aria-hidden="true"> ↗</span></a></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜今天是陸路移動。住宿市區或機場附近擇一，依回程班表決定；不預設一定能完成市區觀光。</p><p><strong>累了／下雨</strong>｜遇塞車或疲累，南岸公園與市區餐廳全部取消，直接到飯店休息。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">遊記是作者當時的體驗，可能含合作或購票連結；票價、營業與設施以官方為準。</p><div class="review"><h4>高妹・南岸公園親子遊記</h4><p>參考公園與城市沙灘環境，這天以散步、遊樂場與早點回飯店為主。</p><a class="text-link" href="https://annybear.com/southbank/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.bne.com.au/" target="_blank" rel="noopener noreferrer">布里斯本機場<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://translink.com.au/" target="_blank" rel="noopener noreferrer">昆士蘭大眾運輸規劃<span aria-hidden="true"> ↗</span></a></div></details>
 
-    <div class="day">
-      <div class="day-mark"><div class="day-num">05</div><div class="day-date mono">6/20 (日)</div></div>
-      <div class="day-body">
-        <h4>室內親子日（雨天備案彈性天）</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=SEA+LIFE+Sydney+Aquarium%2C+Darling+Harbour%2C+Sydney+NSW" target="_blank" rel="noopener">SEA LIFE 雪梨水族館</a><a class="slink" href="https://www.jathao.com/2025/03/sydney-sea-life-aquarium.html" target="_blank" rel="noopener">🔗</a> + <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=WILD+LIFE+Sydney+Zoo%2C+Darling+Harbour%2C+Sydney+NSW" target="_blank" rel="noopener">WILD LIFE 雪梨動物園</a><a class="slink" href="https://www.jathao.com/2025/03/sydney-wild-life-zoo.html" target="_blank" rel="noopener">🔗</a>，兩館相鄰、都在達令港室內，下雨天最保險。</span></div>
-          <div class="row"><span class="slot">下午</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Chinese+Garden+of+Friendship%2C+Darling+Harbour%2C+Sydney+NSW" target="_blank" rel="noopener">中國友誼花園（Chinese Garden of Friendship）</a><a class="slink" href="https://tanya413.pixnet.net/blog/posts/7121342898" target="_blank" rel="noopener">🔗</a>喝茶散步，或直接回飯店午休。</span></div>
-          <div class="row"><span class="slot">晚上</span><span>燈光節已結束，改為達令港散步、吃晚餐或回飯店休息。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">達令港夜景</span><span class="chip">室內備案</span><span class="chip">可省略天</span></div>
-      </div>
-    </div>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#day-14">下一天 →</a></footer></div></article>
+<article class="day-card" id="day-14" aria-labelledby="title-14">
+<header class="day-head"><div class="day-kicker"><span>DAY 14</span><span>6/29（二）</span></div><p class="city">布里斯本 → 台北 · 純移動日</p><h3 id="title-14">布里斯本搭華航，回台北</h3><p class="lead">今天不排市區景點。優先把機場交通、托運與登機處理好，輕鬆結束旅程。</p><p class="stay">今晚住宿｜返台・抵達日依班表</p></header>
+<div class="day-content"><section class="schedule" aria-label="當日時間安排"><h4 class="part-title">今天怎麼玩</h4><div class="stop"><p class="time"><span>1</span>依班表倒推</p><h5>退房 → BNE 國際航廈</h5><p>以航空公司建議報到時間倒推接送與退房，額外留塞車緩衝。記得是 International Terminal。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Brisbane%20Airport%20International%20Terminal" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>2</span>報到後</p><h5>吃飯、補水、上廁所</h5><p>先完成安檢與必要程序，再找餐飲；飲水與食物攜帶依機場及入境規定。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Brisbane%20Airport%20International%20Terminal%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div><div class="stop"><p class="time"><span>3</span>依實際時刻</p><h5>華航 BNE → TPE</h5><p>暫按 6/29 出發與當日抵台規劃，尚未確認班號與起降時間；若實際跨日，需調整請假與接機日期。</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan%20Taoyuan%20International%20Airport" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></section>
+<section class="meals" aria-label="當日餐廳推薦"><h4 class="part-title">今天吃什麼</h4><p class="small">早餐以飯店或附近簡單用餐為主；以下餐廳依當日營業與體力擇一，不需全部吃。</p><div class="meal"><span class="meal-tag">早餐／午餐</span><h5>飯店早餐或 BNE 國際航廈餐飲</h5><p>依起飛時間擇一，不在趕報到時另外繞去市區餐廳。</p><div class="actions"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Brisbane%20Airport%20International%20Terminal%20restaurants" target="_blank" rel="noopener noreferrer">Google Maps<span aria-hidden="true"> ↗</span></a></div></div><div class="meal"><span class="meal-tag">機上餐</span><h5>華航供餐</h5><p>若需要兒童餐，提早在訂位中確認；入境前再次檢查隨身食品。</p><div class="actions"></div></div></section>
+<section class="logistics" aria-label="交通與彈性安排"><h4 class="part-title">交通與備案</h4><p><strong>交通</strong>｜回程指定華航布里斯本 BNE → 台北桃園 TPE；目前沒有已確認班號，不把規劃時間當成機票。</p><p><strong>累了／下雨</strong>｜班機時間變動時，以華航通知重新安排退房、接送與接機。</p></section>
+<section class="reading" aria-label="其他旅人心得"><h4 class="part-title">出發前，看看別人怎麼玩</h4><p class="small">延伸閱讀：若回程前多留時間，可參考布里斯本親子遊記。</p><div class="review"><h4>高妹・南岸公園親子遊記</h4><p>參考公園與城市沙灘環境，這天以散步、遊樂場與早點回飯店為主。</p><a class="text-link" href="https://annybear.com/southbank/" target="_blank" rel="noopener noreferrer">閱讀原文心得<span aria-hidden="true"> ↗</span></a></div></section>
+<details class="official"><summary>官方資訊與預約入口</summary><div class="official-links"><a class="text-link" href="https://www.china-airlines.com/tw/zh" target="_blank" rel="noopener noreferrer">華航班機與訂位<span aria-hidden="true"> ↗</span></a><a class="text-link" href="https://www.bne.com.au/" target="_blank" rel="noopener noreferrer">BNE 機場資訊<span aria-hidden="true"> ↗</span></a></div></details>
 
-    <div class="day">
-      <div class="day-mark"><div class="day-num">06</div><div class="day-date mono">6/21 (一)</div></div>
-      <div class="day-body">
-        <h4>藍山一日遊</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">全天</span><span>參加藍山（Blue Mountains）一日團：<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Scenic+World%2C+Katoomba+NSW" target="_blank" rel="noopener">Scenic World</a><a class="slink" href="https://uninoritwins.com/sydney-scenicworld/" target="_blank" rel="noopener">🔗</a> 纜車＋觀景步道，<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Echo+Point+Lookout%2C+Katoomba+NSW" target="_blank" rel="noopener">三姊妹岩</a><a class="slink" href="https://iambp6.pixnet.net/blog/post/461180417" target="_blank" rel="noopener">🔗</a>眺望；接著 <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Featherdale+Wildlife+Park%2C+Doonside+NSW" target="_blank" rel="noopener">Featherdale 野生動物園</a><a class="slink" href="https://heynicolesays.com/featherdale-wildlife-park-%E6%82%89%E5%B0%BC%E8%B2%BB%E7%91%9F%E6%88%B4%E7%88%BE%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E5%9C%92/" target="_blank" rel="noopener">🔗</a>近距離摸袋鼠、拍考拉。</span></div>
-          <div class="row"><span class="slot">晚上</span><span>回雪梨較晚，簡單吃晚餐早點休息。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">一日團</span><span class="chip">考拉/袋鼠</span></div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">07</div><div class="day-date mono">6/22 (二)</div></div>
-      <div class="day-body">
-        <h4>曼利海灘・北岸悠閒日</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span>環形碼頭搭渡輪到<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Manly+Beach%2C+Manly+NSW" target="_blank" rel="noopener">曼利（Manly）</a><a class="slink" href="https://www.biteamap.com/blog/post/manlybeach/" target="_blank" rel="noopener">🔗</a>，船程本身就是港灣景觀行程，步調悠閒。</span></div>
-          <div class="row"><span class="slot">下午</span><span>曼利海灘玩沙戲水、<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=North+Head+Lookout%2C+Manly+NSW" target="_blank" rel="noopener">North Head 觀景台</a><a class="slink" href="https://www.nationalparks.nsw.gov.au/things-to-do/lookouts/north-head" target="_blank" rel="noopener">🔗</a>看海岬,或直接在海灘旁吃冰放空。</span></div>
-          <div class="row"><span class="slot">晚上</span><span>搭渡輪回市區欣賞一般港灣夜景，或在曼利吃完晚餐早點回飯店；此日已無 Vivid。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">港灣夜景</span><span class="chip">渡輪</span><span class="chip">可省略天</span></div>
-      </div>
-    </div>
-
-    <div class="alt-card">
-      <div class="alt-head">
-        <span class="alt-tag">替代方案・取代 Day 6–7</span>
-        <h4>藍山兩天一夜版</h4>
-      </div>
-      <p class="alt-note">想放慢腳步、在藍山山區住一晚看星空,可以用下面兩天取代 Day 6 的一日團跟 Day 7 的曼利海灘——總天數不變,只是換成不去曼利。兩個版本擇一即可。</p>
-      <div class="alt-days">
-        <div class="alt-day">
-          <div class="alt-day-num mono">Day 6 · 6/21</div>
-          <h5>藍山 Day 1・入住山區</h5>
-          <ul>
-            <li>雪梨出發（自駕或包車，車程約 1.5–2 小時），先到 <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Scenic+World%2C+Katoomba+NSW" target="_blank" rel="noopener">Scenic World</a><a class="slink" href="https://uninoritwins.com/sydney-scenicworld/" target="_blank" rel="noopener">🔗</a> 搭纜車、天空纜車、雨林景觀步道。</li>
-            <li>Katoomba 或 Leura 小鎮吃午餐，下午到 <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Echo+Point+Lookout%2C+Katoomba+NSW" target="_blank" rel="noopener">Echo Point</a><a class="slink" href="https://iambp6.pixnet.net/blog/post/461180417" target="_blank" rel="noopener">🔗</a> 眺望三姊妹岩。</li>
-            <li>傍晚在 <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Leura%2C+NSW" target="_blank" rel="noopener">Leura Mall</a><a class="slink" href="https://www.kongaroohk.com/post/%E6%82%89%E5%B0%BC%E9%9A%B1%E4%B8%96%E6%97%85%E9%81%8A%E6%99%AF%E9%BB%9E-%E8%97%8D%E5%B1%B1leura%E7%AB%A5%E8%A9%B1%E5%B0%8F%E9%8E%AE-kongaroo-topic" target="_blank" rel="noopener">🔗</a> 老街逛小店，入住<a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Fairmont+Resort+Blue+Mountains+MGallery+Collection%2C+Leura+NSW" target="_blank" rel="noopener">藍山山區飯店（Fairmont Resort）</a><a class="slink" href="https://www.fairmontresort.com.au/" target="_blank" rel="noopener">🔗</a>，不用趕車回雪梨，小孩可以早點睡。</li>
-          </ul>
-        </div>
-        <div class="alt-day">
-          <div class="alt-day-num mono">Day 7 · 6/22</div>
-          <h5>藍山 Day 2・回程</h5>
-          <ul>
-            <li>退房前先到 <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Wentworth+Falls+Lookout%2C+Wentworth+Falls+NSW" target="_blank" rel="noopener">Wentworth Falls 觀景台</a><a class="slink" href="https://bluemountainsuncovered.com/wentworth-falls-walk/" target="_blank" rel="noopener">🔗</a>走一小段平緩步道看瀑布，步調放慢不趕路。</li>
-            <li>回雪梨路上順道去 <a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Featherdale+Wildlife+Park%2C+Doonside+NSW" target="_blank" rel="noopener">Featherdale 野生動物園</a><a class="slink" href="https://heynicolesays.com/featherdale-wildlife-park-%E6%82%89%E5%B0%BC%E8%B2%BB%E7%91%9F%E6%88%B4%E7%88%BE%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E5%9C%92/" target="_blank" rel="noopener">🔗</a>，近距離摸袋鼠、拍考拉。</li>
-            <li>傍晚回雪梨市區吃晚餐、整理行李，迎接隔天飛黃金海岸；燈光節已結束。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">08</div><div class="day-date mono">6/23 (三)</div></div>
-      <div class="day-body">
-        <h4>邦迪海灘・飛黃金海岸</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Bondi+Beach%2C+Sydney+NSW" target="_blank" rel="noopener">邦迪海灘（Bondi Beach）</a><a class="slink" href="https://roamingnow.com/bondi-beach-travel-guide-sydney/" target="_blank" rel="noopener">🔗</a>走走、玩沙,不安排長距離健行,退房前最後放電。</span></div>
-          <div class="row"><span class="slot">下午</span><span>雪梨飛黃金海岸（國內線直飛約 1.5 小時,是全程唯一一段國內線）。</span></div>
-          <div class="row"><span class="slot">晚上</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Surfers+Paradise+Beach%2C+Surfers+Paradise+QLD" target="_blank" rel="noopener">衝浪者天堂（Surfers Paradise）</a><a class="slink" href="https://minahaha.com/goldcoast-surfers-paradise-guide/" target="_blank" rel="noopener">🔗</a>沙灘散步、Cavill Ave 一帶吃晚餐。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">SYD → OOL</span><span class="chip">海灘</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GOLD COAST -->
-  <div class="city-block" data-city="gold">
-    <div class="city-block-head"><h3>黃金海岸</h3><span class="tag">DAY 9 – 14</span></div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">09</div><div class="day-date mono">6/24 (四)</div></div>
-      <div class="day-body">
-        <h4>夢幻世界 Dreamworld</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">全天</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Dreamworld%2C+Coomera+QLD" target="_blank" rel="noopener">Dreamworld</a><a class="slink" href="https://ginatw.com/gold-coast-dream-world/" target="_blank" rel="noopener">🔗</a>：適合 5 歲的 Big Red Car World 主題區、老虎島、澳洲野生動物區近距離看無尾熊袋鼠;多數飯店有免費主題樂園接駁車,不必自駕。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">主題樂園</span><span class="chip">接駁車</span></div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">10</div><div class="day-date mono">6/25 (五)</div></div>
-      <div class="day-body">
-        <h4>海洋世界 Sea World</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">全天</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Sea+World%2C+Main+Beach+QLD" target="_blank" rel="noopener">Sea World</a><a class="slink" href="https://hx271.tw/blog/post/67459107" target="_blank" rel="noopener">🔗</a>：海豚表演、Nickelodeon Land 兒童遊樂區、企鵝與北極熊館,節奏比 Dreamworld 更適合 5 歲小孩。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">海豚秀</span><span class="chip">Nickelodeon Land</span></div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">11</div><div class="day-date mono">6/26 (六)</div></div>
-      <div class="day-body">
-        <h4>Currumbin 野生動物保護區</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Currumbin+Wildlife+Sanctuary%2C+Currumbin+QLD" target="_blank" rel="noopener">Currumbin 野生動物保護區</a><a class="slink" href="https://ginatw.com/currumbin-wildlife-sanctuary/" target="_blank" rel="noopener">🔗</a>：餵彩虹吸蜜鸚鵡、抱無尾熊拍照,步調悠閒。</span></div>
-          <div class="row"><span class="slot">下午</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Burleigh+Heads+Beach%2C+Burleigh+Heads+QLD" target="_blank" rel="noopener">Burleigh Heads</a><a class="slink" href="https://minahaha.com/goldcoast-burleigh-heads/" target="_blank" rel="noopener">🔗</a> 或 Currumbin 海灘戲水休息。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">餵鸚鵡</span><span class="chip">可替換：Warner Bros Movie World</span></div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">12</div><div class="day-date mono">6/27 (日)</div></div>
-      <div class="day-body">
-        <h4>HOTA 公園・沙灘悠閒日</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=HOTA%2C+Home+of+the+Arts%2C+Surfers+Paradise+QLD" target="_blank" rel="noopener">HOTA（Home of the Arts）</a><a class="slink" href="https://yichensis.pixnet.net/blog/posts/8234120690" target="_blank" rel="noopener">🔗</a>河岸公園,免費水岸遊樂場讓小孩自由跑跳,大人可以喘口氣。</span></div>
-          <div class="row"><span class="slot">下午</span><span>Broadbeach 海灘戲水或逛街,採買伴手禮,不排硬行程。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">免費遊樂場</span><span class="chip">可省略天</span></div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">13</div><div class="day-date mono">6/28 (一)</div></div>
-      <div class="day-body">
-        <h4>黃金海岸自由活動・移動至布里斯本</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">早上</span><span>飯店周邊海灘或泳池自由活動,整理行李,不排新景點。</span></div>
-          <div class="row"><span class="slot">下午</span><span>退房後搭預約接送或大眾運輸前往布里斯本，入住市區或機場附近飯店；依隔天班機時間選住宿。</span></div>
-          <div class="row"><span class="slot">晚上</span><span>布里斯本簡單晚餐、確認華航報到時間與前往 BNE 機場的交通，早點休息。</span></div>
-        </div>
-        <div class="day-meta"><span class="chip">黃金海岸 → 布里斯本（陸路）</span></div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-mark"><div class="day-num">14</div><div class="day-date mono">6/29 (二)</div></div>
-      <div class="day-body">
-        <h4>華航・布里斯本 → 台北</h4>
-        <div class="day-rows">
-          <div class="row"><span class="slot">依班表</span><span>前往布里斯本機場（BNE）辦理報到，搭中華航空直飛台北桃園（TPE），預計當日返台；班號、時間與是否跨日以實際訂位為準。</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= LODGING ================= -->
-  <div class="section-head"><span class="num">03</span><h2>住宿選項</h2></div>
-  <div class="section-note">每個城市給兩個方向：A 是公寓式、有廚房、性價比高；B 是度假村等級、設施齊全但價格較高。實際房價請以官網即時報價為準。</div>
-
-  <div class="lodge-city" data-city="sydney">
-    <div class="lodge-city-title"><span class="dot"></span><h4>雪梨</h4></div>
-    <div class="lodge-grid">
-      <div class="lodge-card">
-        <div class="opt">Option A · 公寓式</div>
-        <h4><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Adina+Apartment+Hotel+Sydney+Darling+Harbour%2C+Sydney+NSW" target="_blank" rel="noopener">Adina Apartment Hotel Darling Harbour</a><a class="slink" href="https://www.wendyjourney.com/sydney-hotels/" target="_blank" rel="noopener">🔗</a></h4>
-        <div class="price mono">$$ · 含小廚房</div>
-        <p>套房有簡易廚房可以煮小孩的清淡食物，位置就在達令港旁，走路到 SEA LIFE、WILD LIFE、Vivid 展區都很近，適合帶推車進出。</p>
-      </div>
-      <div class="lodge-card">
-        <div class="opt">Option B · 度假等級</div>
-        <h4><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Sofitel+Sydney+Darling+Harbour%2C+Sydney+NSW" target="_blank" rel="noopener">Sofitel Sydney Darling Harbour</a><a class="slink" href="https://sydneyexpert.com/sofitel-sydney-darling-harbour-review/" target="_blank" rel="noopener">🔗</a></h4>
-        <div class="price mono">$$$ · 親子優惠房型</div>
-        <p>水岸景觀飯店，有「第二間房 5 折」的親子方案、12 歲以下自助早餐免費，步行即可到水族館與海事博物館，看 Vivid 夜景也最方便。</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="lodge-city" data-city="bluemtn">
-    <div class="lodge-city-title"><span class="dot"></span><h4>藍山（兩天一夜方案適用）</h4></div>
-    <div class="lodge-grid">
-      <div class="lodge-card">
-        <div class="opt">推薦 · 度假等級</div>
-        <h4><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Fairmont+Resort+Blue+Mountains+MGallery+Collection%2C+Leura+NSW" target="_blank" rel="noopener">Fairmont Resort Blue Mountains, MGallery Collection</a><a class="slink" href="https://www.fairmontresort.com.au/" target="_blank" rel="noopener">🔗</a></h4>
-        <div class="price mono">$$$ · Leura</div>
-        <p>Accor 集團 MGallery 系列度假飯店，224 間客房、室內外泳池與 SPA，適合親子過夜放鬆，是藍山過夜首選。</p>
-      </div>
-      <div class="lodge-card">
-        <div class="opt">想省預算</div>
-        <h4>Katoomba／Leura 民宿與連鎖飯店</h4>
-        <div class="price mono">$$ · 依實際搜尋結果</div>
-        <p>Katoomba、Leura 一帶有不少家庭經營的 B&amp;B 與連鎖商務飯店，價格較彈性，建議直接在 Booking.com／Agoda 依入住日期搜尋比價，本提案暫不指定特定名稱。</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="lodge-city" data-city="gold">
-    <div class="lodge-city-title"><span class="dot"></span><h4>黃金海岸</h4></div>
-    <div class="lodge-grid">
-      <div class="lodge-card">
-        <div class="opt">Option A · 公寓式</div>
-        <h4><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Meriton+Suites+Surfers+Paradise%2C+Surfers+Paradise+QLD" target="_blank" rel="noopener">Meriton Suites Surfers Paradise</a><a class="slink" href="https://vivianexplore.tw/gold-coast-hotels/" target="_blank" rel="noopener">🔗</a></h4>
-        <div class="price mono">$$ · 海景公寓</div>
-        <p>衝浪者天堂一帶公寓選擇多、有陽台海景，多數飯店可搭免費接駁車到夢幻世界、海洋世界，省下租車跟停車的麻煩（評價落差較大，訂房前建議再核實近期評論）。</p>
-      </div>
-      <div class="lodge-card">
-        <div class="opt">Option B · 樂園直通</div>
-        <h4><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Sea+World+Resort%2C+Main+Beach+QLD" target="_blank" rel="noopener">Sea World Resort</a><a class="slink" href="https://kenji.life/aut-sea-world-resort/" target="_blank" rel="noopener">🔗</a></h4>
-        <div class="price mono">$$$ · 樂園旁</div>
-        <p>直接位在海洋世界園區旁，房客常有提早入園、海豚互動等加購優惠，玩到閉園走路就能回房間，省去接駁時間。</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= RESTAURANTS ================= -->
-  <div class="section-head"><span class="num">04</span><h2>餐廳推薦</h2></div>
-  <div class="section-note">考慮到 5 歲小孩可能認生食物，每個城市都保留至少一個「熟悉口味」的安全牌選項。</div>
-
-  <div class="food-city" data-city="sydney">
-    <div class="lodge-city-title"><span class="dot"></span><h4>雪梨</h4></div>
-    <div class="food-list">
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Double+Chin+Eats%2C+World+Square%2C+Sydney+NSW" target="_blank" rel="noopener">Double Chin Eats 双囍（World Square，原鼎泰豐店址）</a><a class="slink" href="https://www.bnext.com.tw/article/82546/din-tai-fung-australia" target="_blank" rel="noopener">🔗</a></span><span class="kind">安全牌</span>
-        <p>鼎泰豐已於 2025 年 3 月全面撤出澳洲市場，同址現由双囍接手，供應類似的亞洲創意料理與點心，長途飛行後第一天用來安撫小孩的胃仍然適合。</p>
-      </div>
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Spice+Alley%2C+Chippendale+NSW" target="_blank" rel="noopener">Spice Alley（Chippendale）</a><a class="slink" href="https://tapc.ctrip.com/Restaurant_Review-g255060-d10194847-Reviews-Spice_Alley-Sydney_New_South_Wales.html" target="_blank" rel="noopener">🔗</a></span><span class="kind">熟食街</span>
-        <p>戶外熱炒攤集合區,亞洲小吃選擇多、用餐彈性大,小孩坐不住也能邊走邊吃。</p>
-      </div>
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Darling+Quarter%2C+Sydney+NSW" target="_blank" rel="noopener">Darling Quarter 河岸餐廳群</a><a class="slink" href="https://minahaha.com/darling-harbour-oneday-trip/" target="_blank" rel="noopener">🔗</a></span><span class="kind">親子友善</span>
-        <p>餐廳外就是免費遊樂場,可以邊等餐邊讓小孩放電,不少店家備兒童餐椅與兒童餐。</p>
-      </div>
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Sydney+Fish+Market%2C+1+Bridge+Road%2C+Glebe+NSW" target="_blank" rel="noopener">雪梨魚市場 Sydney Fish Market</a><a class="slink" href="https://www.notesbyjai.tw/new-sydney-fish-market/" target="_blank" rel="noopener">🔗</a></span><span class="kind">海鮮</span>
-        <p>2026 年 1 月遷至 Blackwattle Bay 新館（1 Bridge Road, Glebe），自選現煮海鮮，坐在戶外看海鷗吃午餐，氣氛輕鬆不用久候（訂位/導航請用新地址）。</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="food-city" data-city="bluemtn">
-    <div class="lodge-city-title"><span class="dot"></span><h4>藍山（兩天一夜方案適用）</h4></div>
-    <div class="food-list">
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Leura%2C+Leura+NSW" target="_blank" rel="noopener">Café Leura, Leura</a><a class="slink" href="https://www.tripadvisor.com/Restaurant_Review-g261620-d21226513-Reviews-Cafe_Leura-Leura_Blue_Mountains_New_South_Wales.html" target="_blank" rel="noopener">🔗</a></span><span class="kind">早午餐</span>
-        <p>Leura 當地評價不錯的澳式早午餐咖啡廳，鄰近 Leura Cascades，藍山兩天一夜方案的早餐/午餐好選擇。</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="food-city" data-city="gold">
-    <div class="lodge-city-title"><span class="dot"></span><h4>黃金海岸</h4></div>
-    <div class="food-list">
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Palette+Restaurant%2C+HOTA%2C+Surfers+Paradise+QLD" target="_blank" rel="noopener">HOTA 河岸草坪餐飲區（含 Palette Restaurant）</a><a class="slink" href="https://www.theurbanlist.com/goldcoast/a-list/palette-restaurant-hota" target="_blank" rel="noopener">🔗</a></span><span class="kind">親子友善</span>
-        <p>藝術中心旁的河岸草地,鄰近免費水岸遊樂場,適合帶小孩野餐式用餐。</p>
-      </div>
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Justin+Lane%2C+Burleigh+Heads+QLD" target="_blank" rel="noopener">Justin Lane（Burleigh Heads）</a><a class="slink" href="https://www.mustdogoldcoast.com/justin-lane-pizzeria-bar-burleigh-heads" target="_blank" rel="noopener">🔗</a></span><span class="kind">早午餐</span>
-        <p>悠閒海邊小鎮氣氛的早午餐店,出發樂園前先吃飽。</p>
-      </div>
-      <div class="food-item">
-        <span class="name"><a class="mlink" href="https://www.google.com/maps/search/?api=1&query=Dockside+Bistro%2C+Sea+World%2C+Main+Beach+QLD" target="_blank" rel="noopener">Sea World 園內 Dockside Bistro（Nickelodeon 區旁）</a><a class="slink" href="https://seaworld.com.au/park-info/food" target="_blank" rel="noopener">🔗</a></span><span class="kind">安全牌</span>
-        <p>玩海洋世界那天可直接在園內用餐,兒童餐選項多,省去外出往返時間。</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= TIPS ================= -->
-  <div class="section-head"><span class="num">05</span><h2>行前小提醒</h2></div>
-  <div class="tips-grid">
-    <div class="tip"><div class="k">簽證</div><p>台灣護照赴澳需申請電子簽證 ETA（Subclass 601),透過官方 App 線上申請,建議出發前 1–2 個月辦好。</p></div>
-    <div class="tip"><div class="k">氣候</div><p>6 月雪梨是冬天,氣溫約 9–17°C,需要外套;藍山山區早晚可能個位數低溫,備保暖外套;黃金海岸是乾季,約 14–26°C,白天玩水剛好,泳衣防曬都要帶。</p></div>
-    <div class="tip"><div class="k">交通</div><p>雪梨用 Opal 卡或感應信用卡搭地鐵/巴士/渡輪;藍山建議自駕或包車,景點間距離較遠;黃金海岸主要靠步行、飯店接駁車或叫車。</p></div>
-    <div class="tip"><div class="k">兒童安全座椅</div><p>澳洲法規規定計程車/叫車若載 5 歲以下兒童需自備安全座椅或加價向車行預約附座椅車輛,建議叫車 App 內提前勾選。</p></div>
-    <div class="tip"><div class="k">防曬</div><p>南半球紫外線強,建議準備兒童專用防曬乳,藍山健行步道與黃金海岸沙灘都用得到。</p></div>
-    <div class="tip"><div class="k">插座</div><p>澳洲為 Type I 插座、230V,台灣電器需帶轉接頭。</p></div>
-    <div class="tip"><div class="k">推車 vs 揹巾</div><p>藍山的觀景步道多為木棧道與階梯,不利推車,建議輕便揹巾搭配市區用摺疊推車雙軌準備。</p></div>
-    <div class="tip"><div class="k">旅平險</div><p>行程含纜車、主題樂園遊樂設施等活動,建議投保涵蓋一般戶外活動的旅遊平安險。</p></div>
-  </div>
-
-  <!-- ================= BUDGET ================= -->
-  <div class="section-head"><span class="num">06</span><h2>機票與住宿預估費用</h2></div>
-  <div class="section-note">國際線請以華航「多城市」查詢：2027/6/16 台北→雪梨、2027/6/29 布里斯本→台北。以下住宿數字保留為舊版概算，未重新取得本次日期報價；航班與住宿費用以實際查詢為準。<a href="https://www.china-airlines.com/tw/zh" target="_blank" rel="noopener">華航官網</a></div>
-
-  <div class="table-wrap">
-    <table class="budget-table">
-      <thead>
-        <tr class="budget-group"><th colspan="3">機票（依查詢當下公開行情，非 2027/6 實際報價）</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>華航多城市經濟艙<br><span class="src">6/16 TPE → SYD；6/29 BNE → TPE</span></td><td class="amt">待查價</td><td class="src">兩段國際線合併查詢一次，避免重複計算兩張來回票；班表待確認</td></tr>
-        <tr><td>6/23 雪梨 → 黃金海岸（SYD → OOL）<br><span class="src">國內線單程，航空公司待選</span></td><td class="amt">待查價</td><td class="src">確認托運行李、選位與機場接送是否另計</td></tr>
-        <tr><td>6/28 黃金海岸 → 布里斯本</td><td class="amt">待查價</td><td class="src">陸路移動＋布里斯本住宿 1 晚，另計隔日前往 BNE 的交通</td></tr>
-      </tbody>
-      <thead>
-        <tr class="budget-group"><th colspan="3">住宿（每晚房價，依淡旺季與訂房平台落差可能很大）</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Adina Apartment Hotel Darling Harbour<br><span class="src">雪梨・二房公寓式</span></td>
-          <td class="amt">A$250–350／晚</td>
-          <td class="src">momondo／Expedia 現時報價約 A$245–293 起</td>
-        </tr>
-        <tr>
-          <td>Sofitel Sydney Darling Harbour<br><span class="src">雪梨・五星</span></td>
-          <td class="amt">A$350–500／晚</td>
-          <td class="src">淡旺季落差大：4 月最低約 $350，2 月最高約 $608</td>
-        </tr>
-        <tr>
-          <td>Fairmont Resort Blue Mountains<br><span class="src">藍山・度假村（兩天一夜方案適用）</span></td>
-          <td class="amt">A$150–250／晚</td>
-          <td class="src">查得區間約 $115–320，週六通常最便宜</td>
-        </tr>
-        <tr>
-          <td>Meriton Suites Surfers Paradise<br><span class="src">黃金海岸・二房公寓式</span></td>
-          <td class="amt">A$150–220／晚</td>
-          <td class="src">查得區間約 $110–258，評價落差大，訂房前建議再核實近期評論</td>
-        </tr>
-        <tr>
-          <td>Sea World Resort<br><span class="src">黃金海岸・樂園旁度假村</span></td>
-          <td class="amt">A$200–300／晚</td>
-          <td class="src">查得區間約 $175–349，依房型與樂園套票差異大</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="budget-total">
-    本次住宿共 <b>12 晚</b>：雪梨 6 晚（6/17–6/22）、黃金海岸 5 晚（6/23–6/27）、布里斯本 1 晚（6/28）。國際線採華航雪梨進、布里斯本出的多城市票，另加一段國內線與黃金海岸→布里斯本陸路交通；費用待依新日期重新報價，舊版機票與總預算已移除以免誤導。藍山過夜方案為替換雪梨其中 1 晚，並非額外增加住宿晚數。
-  </div>
-
-  <footer>
-    行程與飯店/餐廳僅供提案參考,航班與樂園營業時間請於預訂前至官方網站確認最新資訊。Vivid Sydney 2027 場期為 5/28–6/19，本行程僅 6/17–6/19 三晚可賞燈。機票與住宿價格為 2026 年查詢當下的公開行情估算,並非 2027 年 6 月實際報價。
-  </footer>
-
-</div>
-
-</body>
-</html>
+<footer class="day-footer"><a href="#day-index">回日期選單 ↑</a><a href="#top">回頁首 ↑</a></footer></div></article></section>
+<section class="guide" id="stays"><h2>住宿候選，依日期再比價</h2><p>保留原提案的住宿方向，尚未確認空房與房價：</p><ul><li>雪梨 6 晚：<a href="https://www.google.com/maps/search/?api=1&amp;query=Adina+Apartment+Hotel+Sydney+Darling+Harbour" target="_blank" rel="noopener noreferrer">Adina Apartment Hotel Darling Harbour</a>（公寓式），或 <a href="https://www.google.com/maps/search/?api=1&amp;query=Sofitel+Sydney+Darling+Harbour" target="_blank" rel="noopener noreferrer">Sofitel Sydney Darling Harbour</a>。</li><li>黃金海岸 5 晚：<a href="https://www.google.com/maps/search/?api=1&amp;query=Meriton+Suites+Surfers+Paradise" target="_blank" rel="noopener noreferrer">Meriton Suites Surfers Paradise</a>（公寓式），或 <a href="https://www.google.com/maps/search/?api=1&amp;query=Sea+World+Resort+Main+Beach+QLD" target="_blank" rel="noopener noreferrer">Sea World Resort</a>。</li><li>布里斯本 1 晚：待回程班表確認後，再選市區或機場周邊；不預設飯店有免費接駁。</li></ul></section><footer class="page-footer"><p><strong>住宿晚數：</strong>雪梨 6 晚（6/17–6/22）＋黃金海岸 5 晚（6/23–6/27）＋布里斯本 1 晚（6/28）。藍山過夜方案替換雪梨 1 晚，總數不變。</p><p>航班、營業時間、票價、交通、動物互動與餐廳菜單，請於出發前依官方最新資訊確認。所有景點順序與用餐時段為規劃建議，未完成任何預訂。</p><p>更新版本：daily-guide-20261016</p></footer>
+</main>
+<script>
+document.getElementById('day-select').addEventListener('change',function(){if(!this.value)return;const target=document.getElementById(this.value);if(target){window.location.hash=this.value;target.setAttribute('tabindex','-1');target.focus({preventScroll:true});}});
+</script>
+</body></html>
