@@ -214,7 +214,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "機場到飯店接駁選擇：① Airport Link 火車到 Town Hall／Central 再轉步行或輕軌，含推車與行李較費力；② Uber／DiDi／13cabs 叫車，約 25–35 分鐘視路況，車資抓 A$35–55；③ 事先預約的飯店或包車接送，行李多、小孩累時最省力。雪梨市區不建議自駕：停車昂貴、Vivid 期間道路常封閉，租車留到 Day 6 藍山或 Day 8 以後的黃金海岸再評估。Vivid 期間晚間以步行與大眾運輸為主。Harbourside 重建尚未能確認 2027/6 全面開放，活動集中在 Darling Quarter／Tumbalong Park，依當日施工告示走。",
+  "move": "機場到飯店接駁選擇：① Airport Link 火車到 Town Hall／Central 再轉步行或輕軌，含推車與行李較費力；② Uber／DiDi／13cabs 叫車，約 25–35 分鐘視路況，車資抓 A$35–55；③ 事先預約的飯店或包車接送，行李多、小孩累時最省力。雪梨市區不建議自駕：停車昂貴、Vivid 期間道路常封閉，租車留到 Day 5 藍山或 Day 6 以後的黃金海岸再評估。Vivid 期間晚間以步行與大眾運輸為主。Harbourside 重建尚未能確認 2027/6 全面開放，活動集中在 Darling Quarter／Tumbalong Park，依當日施工告示走。",
   "planb": "取消夜間活動，飯店午睡＋附近外帶晚餐。",
   "reads": [
    {
@@ -389,141 +389,13 @@ window.TRIP_DAYS = [
   "md": "6/19",
   "wd": "六",
   "area": "雪梨",
-  "place": "雪梨・達令港",
-  "pace": "船艦探索・中等步行",
-  "color": "coral",
-  "illo": "ship",
-  "title": "當小小船長，登船探索海事博物館",
-  "lead": "真實船艦與航海探索，讓六歲孩子看看船員怎麼生活。下午回飯店休息，晚上賞燈看體力。",
-  "stay": "雪梨・第 3 晚",
-  "mission": "找找船員睡在哪裡，再挑一個最像電影場景的角落。",
-  "stops": [
-   {
-    "time": "10:00",
-    "title": "Australian National Maritime Museum",
-    "desc": "先到服務台確認當日可登船艦、身高要求與最後登船時間。只選一艘，不預設潛艇、軍艦全部開放。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": true,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Australian%20National%20Maritime%20Museum%20Sydney",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "上午",
-    "title": "登一艘船，找三個航海線索",
-    "desc": "讓孩子找船舵、船員床鋪或甲板上的設備，像完成小任務。船內可能有陡梯與狹窄通道，依現場指示與孩子意願決定。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Australian%20National%20Maritime%20Museum%20Sydney",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "午餐後",
-    "title": "展館短逛 → 回飯店休息",
-    "desc": "選一區常設展，或確認當日是否有適齡活動；不把舊遊記裡的 LEGO、手作或特展當成固定節目。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": []
-   },
-   {
-    "time": "18:00 起・選配",
-    "title": "Vivid 最後一晚",
-    "desc": "6/19 週六閉幕夜，依 2027 官方地圖選靠近住宿的一小區。道路管制或人潮多時就提早回飯店，不走施工圍籬旁的捷徑。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Darling%20Harbour%20Sydney",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   }
-  ],
-  "meals": [
-   {
-    "tag": "午餐",
-    "name": "博物館周邊餐飲／Darling Quarter",
-    "desc": "先確認博物館當日餐飲是否營業；想回達令港南側吃飯，先看官方施工改道，必要時搭車。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Darling%20Quarter%20Sydney%20restaurants",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "tag": "晚餐",
-    "name": "Darling Quarter 餐飲區",
-    "desc": "提早吃完再賞燈。不安排尚在重建中的 Harbourside 商場餐廳。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Darling%20Quarter%20Sydney%20restaurants",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   }
-  ],
-  "move": "博物館位於達令港西側。Harbourside 與橋邊工程可能影響步行銜接，當天依圍籬與告示走；不預設能直接穿過商場。",
-  "planb": "若船艦受維修、潮汐或天氣影響不能登船，改看館內展覽，或與 Day 5 的恐龍博物館互換。",
-  "reads": [
-   {
-    "date": "2025-11-07",
-    "type": "實訪遊記・英文",
-    "title": "A Globe Well Travelled｜海事博物館實訪",
-    "note": "作者多次到訪，分享船艦與展覽的不同體驗；船內有狹窄空間和階梯。文章中的特展不等於 2027 固定展出。",
-    "url": "https://aglobewelltravelled.com/2025/11/07/australian-national-maritime-museum-review/"
-   }
-  ],
-  "official": [
-   {
-    "u": "https://www.sea.museum/en/visit",
-    "l": "海事博物館：船艦開放與施工公告"
-   },
-   {
-    "u": "https://www.darlingharbour.com/notices",
-    "l": "達令港施工與改道公告"
-   }
-  ]
- },
- {
-  "n": 5,
-  "md": "6/20",
-  "wd": "日",
-  "area": "雪梨",
   "place": "雪梨・博物館區",
   "pace": "室內探索・雨天首選",
   "color": "coral",
   "illo": "dino",
-  "title": "遇見恐龍骨架，再到海德公園放風",
-  "lead": "把恐龍、礦石和想像力放在一起，展館裡也能有一場小冒險。常設展先逛兩小時，就很充實。",
-  "stay": "雪梨・第 4 晚",
+  "title": "遇見恐龍骨架，晚上看 Vivid 閉幕夜",
+  "lead": "把恐龍、礦石和想像力放在一起，常設展逛兩小時就很充實。想看真的船艦，可把主線換成達令港的海事博物館（見下方備案）；晚上 Vivid 閉幕夜看體力決定。",
+  "stay": "雪梨・第 3 晚",
   "mission": "選一隻恐龍，模仿牠的走路方式；再找一顆最像寶石的礦物。",
   "stops": [
    {
@@ -605,6 +477,24 @@ window.TRIP_DAYS = [
       "l": "開啟 Google Maps"
      }
     ]
+   },
+   {
+    "time": "18:00 起・選配",
+    "title": "Vivid 最後一晚",
+    "desc": "6/19 週六閉幕夜，依 2027 官方地圖選靠近住宿的一小區。道路管制或人潮多時就提早回飯店，不走施工圍籬旁的捷徑。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Darling%20Harbour%20Sydney",
+      "l": "開啟 Google Maps"
+     }
+    ]
    }
   ],
   "meals": [
@@ -640,7 +530,7 @@ window.TRIP_DAYS = [
    }
   ],
   "move": "博物館在 William Street，前往海德公園可步行；前往魚市場（Glebe 新館）接駁選擇：輕軌 L1 或公車至 Glebe 再步行，或直接叫 Uber／DiDi 約 15–20 分鐘，不要在孩子累時硬走。雪梨市區仍不建議自駕。",
-  "planb": "下雨就取消公園與魚市場，留在博物館用餐後回飯店。",
+  "planb": "下雨正好待在博物館。想改看船艦：海事博物館就在達令港、走路可到，先到服務台確認當日可登的船艦與身高限制；兩館擇一，不要同一天排兩個博物館。",
   "reads": [
    {
     "date": "2026-06",
@@ -655,6 +545,13 @@ window.TRIP_DAYS = [
     "title": "Australian Traveller｜新魚市場實訪指南",
     "note": "文章介紹 2026 新館與餐飲，適合了解新地址及市場配置；不沿用舊館照片來判斷步行路線。",
     "url": "https://www.australiantraveller.com/nsw/sydney/sydney-fish-market/"
+   },
+   {
+    "date": "2025-11-07",
+    "type": "實訪遊記・英文",
+    "title": "A Globe Well Travelled｜海事博物館實訪",
+    "note": "作者多次到訪，分享船艦與展覽的不同體驗；船內有狹窄空間和階梯。文章中的特展不等於 2027 固定展出。",
+    "url": "https://aglobewelltravelled.com/2025/11/07/australian-national-maritime-museum-review/"
    }
   ],
   "official": [
@@ -669,13 +566,21 @@ window.TRIP_DAYS = [
    {
     "u": "https://australian.museum/visit/food/",
     "l": "館內餐飲"
+   },
+   {
+    "u": "https://www.sea.museum/en/visit",
+    "l": "海事博物館：船艦開放與施工公告"
+   },
+   {
+    "u": "https://www.darlingharbour.com/notices",
+    "l": "達令港施工與改道公告"
    }
   ]
  },
  {
-  "n": 6,
-  "md": "6/21",
-  "wd": "一",
+  "n": 5,
+  "md": "6/20",
+  "wd": "日",
   "area": "藍山",
   "place": "藍山・雪梨往返",
   "pace": "長途移動・保暖",
@@ -683,7 +588,7 @@ window.TRIP_DAYS = [
   "illo": "mountain",
   "title": "藍山一日遊，纜車與三姊妹岩",
   "lead": "今天是早出門的一天。主線只排 Scenic World 與三姊妹岩，不再把野生動物園硬塞進回程。",
-  "stay": "雪梨・第 5 晚",
+  "stay": "雪梨・第 4 晚",
   "mission": "從纜車上找三種不同的綠色，回來畫出三姊妹岩。",
   "stops": [
    {
@@ -807,8 +712,8 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "三種接駁選擇：① 一日遊旅行團，含門票與接送最省心，選團時確認是否包含門票、接送地點與兒童座椅安排；② 自駕租車，走 M4／Great Western Highway 約 1.5–2 小時，Scenic World 與 Echo Point 都有停車場，行程最彈性，但要先備妥國際駕照、澳規兒童安全座椅，並記得靠左行駛（見文首「考慮自駕」說明）；③ 雪梨市郊火車藍山線到 Katoomba 約 2 小時，再轉當地巴士 686 到 Scenic World，最省錢但單程較久，六歲長程坐車要留意。不把每個停留點的車程當成固定值。",
-  "planb": "若山區天候差，可與 Day 7 交換；出發前看團體取消規則。另可展開下方「藍山過夜替代版」。",
+  "move": "三種接駁選擇：① 一日遊旅行團，含門票與接送最省心，選團時確認是否包含門票、接送地點與兒童座椅安排；② 自駕租車，走 M4／Great Western Highway 約 1.5–2 小時，Scenic World 與 Echo Point 都有停車場，行程最彈性，但要先備妥國際駕照、澳規兒童安全座椅，並記得靠左行駛（見文首「考慮自駕」說明）；③ 雪梨市郊火車藍山線到 Katoomba 約 2 小時（今天週日，Opal 週末每日上限大人 A$9.65、兒童 A$4.80），再轉當地巴士 686 到 Scenic World，最省錢但單程較久，六歲長程坐車要留意。不把每個停留點的車程當成固定值。",
+  "planb": "若山區天候差，可與 Day 4 對調（博物館日不怕下雨）；出發前看旅行團取消規則。想在藍山過夜的話，國內線要改訂 6/21 下午，隔天從 Leura 開車約 2 小時直接去機場。",
   "reads": [
    {
     "date": "2025-08-19",
@@ -827,162 +732,12 @@ window.TRIP_DAYS = [
     "u": "https://www.scenicworld.com.au/food",
     "l": "園區餐飲"
    }
-  ],
-  "overnight": {
-   "paras": [
-    "6/21：Scenic World → Echo Point → Leura 入住；午餐可在 Scenic World，晚餐先確認飯店或小鎮營業。",
-    "6/22：飯店早餐 → Leura 短散步 → 午餐後回雪梨，取消曼利。住宿改為雪梨 5 晚＋藍山 1 晚，6/23 仍從雪梨搭機。",
-    "接駁：這個版本自駕最划算——車子留一晚不用來回奔波；不自駕則選含過夜的雙日旅行團，或去程參加一日團、回程改搭火車，兩段各自處理。"
-   ],
-   "links": [
-    {
-     "u": "https://www.google.com/maps/search/?api=1&query=Fairmont%20Resort%20Blue%20Mountains%20Leura",
-     "l": "開啟 Google Maps"
-    },
-    {
-     "u": "https://www.fairmontresort.com.au/",
-     "l": "Fairmont 官網"
-    }
-   ]
-  }
- },
- {
-  "n": 7,
-  "md": "6/22",
-  "wd": "二",
-  "area": "曼利",
-  "place": "曼利・雪梨往返",
-  "pace": "輕鬆・海岸散步",
-  "color": "coral",
-  "illo": "ferry",
-  "title": "搭渡輪到曼利，今天只想看海",
-  "lead": "用一趟渡輪、一頓炸魚薯條、短段海邊散步，留給孩子自由玩沙的時間。",
-  "stay": "雪梨・第 6 晚",
-  "mission": "搭渡輪找歌劇院，再在沙灘做一座小城堡。",
-  "stops": [
-   {
-    "time": "09:30",
-    "title": "環形碼頭 → Manly Wharf",
-    "desc": "查當日渡輪後出發，坐船本身就是遊程。若容易暈船，依個人狀況準備。",
-    "tags": [
-     {
-      "m": "ferry",
-      "t": "曼利渡輪"
-     }
-    ],
-    "must": true,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Manly%20Wharf%20NSW",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "10:30",
-    "title": "The Corso → Manly Beach",
-    "desc": "步行穿過商店街，海灘停留約 60–90 分鐘。六月以玩沙、看海為主，不把下水列為必做。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Manly%20Beach%20NSW",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "13:30・選配",
-    "title": "沿岸短走到 Shelly Beach",
-    "desc": "有體力才沿海岸走一小段，隨時折返；不再加 North Head。備好防風外套與替換襪子。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Shelly%20Beach%20Manly%20NSW",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "15:30 左右",
-    "title": "搭船回雪梨",
-    "desc": "回程留在天黑前較輕鬆，實際時間按天氣與班次調整；晚餐後整理明天國內線行李。",
-    "tags": [
-     {
-      "m": "ferry",
-      "t": "曼利渡輪"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Manly%20Wharf%20NSW",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   }
-  ],
-  "meals": [
-   {
-    "tag": "午餐",
-    "name": "Manly Fish & Chips",
-    "desc": "外帶炸魚薯條後找座位慢慢吃；別讓海鷗靠近食物。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Manly%20Fish%20and%20Chips%20East%20Esplanade%20Manly%20NSW",
-      "l": "開啟 Google Maps"
-     },
-     {
-      "u": "https://hellomanly.com.au/listing/manly-fish-chips/",
-      "l": "菜單／店家資訊"
-     }
-    ]
-   },
-   {
-    "tag": "晚餐",
-    "name": "回雪梨後就近吃",
-    "desc": "不用為了海景留到很晚，回飯店附近吃熟悉餐點即可。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Darling%20Harbour%20Sydney%20restaurants",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   }
-  ],
-  "move": "去回都以渡輪＋步行串連。兒童票別與乘船方式請用 NSW 官方行程規劃器確認。",
-  "planb": "風浪大就取消船程，改回達令港室內館或逛市區；不要勉強搭船。",
-  "reads": [
-   {
-    "date": "2026-06-12",
-    "type": "在地親子攻略・英文",
-    "title": "Manly Sydney｜在地家庭的曼利玩法",
-    "note": "把渡輪、短段海岸步道與沙灘串成一天；六月行程不把游泳當成必做，也不照搬文章中的夏季節奏。",
-    "url": "https://manlysydney.com/blog/things-to-do-in-manly-with-kids"
-   }
-  ],
-  "official": [
-   {
-    "u": "https://transportnsw.info/",
-    "l": "NSW 交通與班次"
-   }
   ]
  },
  {
-  "n": 8,
-  "md": "6/23",
-  "wd": "三",
+  "n": 6,
+  "md": "6/21",
+  "wd": "一",
   "area": "雪梨→黃金海岸",
   "place": "雪梨 → 黃金海岸",
   "pace": "移動・不排長步道",
@@ -1040,7 +795,7 @@ window.TRIP_DAYS = [
    {
     "time": "下午・暫定",
     "title": "SYD → OOL 國內線",
-    "desc": "日期訂為 6/23，三家都有直飛、飛行時間約 1 小時 20–30 分：Virgin Australia班次最多；Jetstar票價通常最便宜，但托運行李另計費；Qantas班次較少、價位較高但含較多托運額度。比價時一起看托運、手提行李與選位，時間尚未確認。",
+    "desc": "日期訂為 6/21，三家都有直飛、飛行時間約 1 小時 20–30 分：Virgin Australia班次最多；Jetstar票價通常最便宜，但托運行李另計費；Qantas班次較少、價位較高但含較多托運額度。比價時一起看托運、手提行李與選位，時間尚未確認。",
     "tags": [
      {
       "m": "flight",
@@ -1106,7 +861,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "Gold Coast Airport（OOL）抵達後前往飯店接駁選擇：① 自駕租車，機場航廈就有租車櫃檯，取車後一路開到 Day 13 還車，黃金海岸景點分散、Dig IT（Day 11）又在山上，自駕是這幾天最彈性的方式，兒童安全座椅需向租車公司加購或自備（見文首「考慮自駕」說明）；② G:link 輕軌（需先搭接駁車到 Helensvale 站）＋步行，較省但轉乘次數多；③ 機場接送車或 Uber／DiDi，約 20–30 分鐘到衝浪者天堂，先確認兒童乘車安排。不要誤訂到回程機場 BNE。",
+  "move": "Gold Coast Airport（OOL）抵達後前往飯店接駁選擇：① 自駕租車，機場航廈就有租車櫃檯，取車後一路開到 Day 12（6/27）在布里斯本還車，黃金海岸景點分散、Dig IT（Day 10）又在山上，自駕是這幾天最彈性的方式，兒童安全座椅需向租車公司加購或自備（見文首「考慮自駕」說明）；② G:link 輕軌（需先搭接駁車到 Helensvale 站）＋步行，較省但轉乘次數多；③ 機場接送車或 Uber／DiDi，約 20–30 分鐘到衝浪者天堂，先確認兒童乘車安排。不要誤訂到回程機場 BNE。",
   "planb": "直接刪掉邦迪，早餐後慢慢退房去機場；抵達晚就取消沙灘散步。",
   "reads": [
    {
@@ -1145,9 +900,9 @@ window.TRIP_DAYS = [
   ]
  },
  {
-  "n": 9,
-  "md": "6/24",
-  "wd": "四",
+  "n": 7,
+  "md": "6/22",
+  "wd": "二",
   "area": "黃金海岸",
   "place": "黃金海岸",
   "pace": "樂園日・多休息",
@@ -1262,7 +1017,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "園區在 Coomera，接駁選擇：① 延續 Day 8 租的車自駕，園區停車場收費但好停，最省時間；② TX2 主題樂園接駁巴士，部分飯店有合作折扣，先查是否含在住宿方案；③ TransLink 公車轉乘，車程較久；不假設飯店一定提供免費接駁。",
+  "move": "園區在 Coomera，接駁選擇：① 延續 Day 6 租的車自駕，園區停車場收費但好停，最省時間；② TX2 主題樂園接駁巴士，部分飯店有合作折扣，先查是否含在住宿方案；③ TransLink 公車轉乘，車程較久；不假設飯店一定提供免費接駁。",
   "planb": "遇設施停駛、排隊太久或孩子害怕，改看官方當日家庭節目、休息或提早離園；不要改成另一整套動物園行程。",
   "reads": [
    {
@@ -1281,9 +1036,9 @@ window.TRIP_DAYS = [
   ]
  },
  {
-  "n": 10,
-  "md": "6/25",
-  "wd": "五",
+  "n": 8,
+  "md": "6/23",
+  "wd": "三",
   "area": "黃金海岸",
   "place": "黃金海岸・衝浪者天堂",
   "pace": "短體驗・午後留白",
@@ -1386,7 +1141,7 @@ window.TRIP_DAYS = [
    {
     "tag": "晚餐",
     "name": "Hurricane’s Grill・Surfers Paradise",
-    "desc": "今天時間較鬆，適合安排有座位的晚餐；若 Day 8 已吃過，就改附近其他餐廳。",
+    "desc": "今天時間較鬆，適合安排有座位的晚餐；若 Day 6 已吃過，就改附近其他餐廳。",
     "links": [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Hurricanes%20Grill%20Surfers%20Paradise%20QLD",
@@ -1400,7 +1155,7 @@ window.TRIP_DAYS = [
    }
   ],
   "move": "從住宿前往票券上的 Cavill Avenue 集合點：衝浪者天堂住宿大多步行可達，或搭 G:link 輕軌到 Surfers Paradise 站；自駕的話集合點附近為收費路邊停車或鄰近停車場，預留找車位時間。官方目前表示推車無法帶上車，可依業者寄放規則處理，貴重物品隨身。",
-  "planb": "若因天候取消，先依票券處理改期或退款，再把今天改成 Day 12 的公園／室內藝文安排。",
+  "planb": "若因天候取消，先依票券處理改期或退款，再把今天改成 Day 11 的 HOTA 公園／室內藝文安排。",
   "reads": [
    {
     "date": "2025-08-19",
@@ -1425,9 +1180,137 @@ window.TRIP_DAYS = [
   ]
  },
  {
-  "n": 11,
-  "md": "6/26",
-  "wd": "六",
+  "n": 9,
+  "md": "6/24",
+  "wd": "四",
+  "area": "黃金海岸",
+  "place": "黃金海岸・Currumbin",
+  "pace": "動物日・步行中等",
+  "color": "yellow",
+  "illo": "koala",
+  "title": "抱抱無尾熊，餵彩虹吸蜜鸚鵡",
+  "lead": "這趟唯一的動物日：無尾熊、袋鼠和彩虹吸蜜鸚鵡都在同一個保護區。上午看動物，下午順路到 Burleigh Heads 海邊放空。",
+  "stay": "黃金海岸・第 4 晚",
+  "mission": "數一數今天看到幾種澳洲動物，選一隻當這趟旅行的吉祥物。",
+  "stops": [
+   {
+    "time": "09:00 開園",
+    "title": "前往 Currumbin Wildlife Sanctuary",
+    "desc": "開放 9:00–16:00（15:30 最後入園）。官網門票大人 A$70、3–17 歲 A$50（2026 查核，線上購票可能有優惠）。自駕約 30 分鐘；不自駕可搭 TransLink 700 路公車往南，約 30–40 分鐘、每段 50 分錢，班次用 TransLink 規劃器查。",
+    "tags": [
+     {
+      "m": "car",
+      "t": "自駕"
+     },
+     {
+      "m": "bus",
+      "t": "700 路公車"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Currumbin%20Wildlife%20Sanctuary",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "上午",
+    "title": "彩虹吸蜜鸚鵡、袋鼠與無尾熊",
+    "desc": "園區每天有鸚鵡餵食與動物講解，時刻依當日園區表；和無尾熊合照是加購項目，看現場價格與排隊再決定。袋鼠區依園方規則近距離觀察。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": true,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Currumbin%20Wildlife%20Sanctuary",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "中午",
+    "title": "園區內吃午餐",
+    "desc": "在園內吃完再走，少一次移動；餐點與營業以當日為準。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": false,
+    "links": []
+   },
+   {
+    "time": "14:00・選配",
+    "title": "Burleigh Heads 海灘與公園",
+    "desc": "回程順路停 Burleigh Heads，玩沙、在草地休息約 1 小時；六月水冷，以玩沙為主，累了就直接回飯店。",
+    "tags": [
+     {
+      "m": "car",
+      "t": "自駕"
+     },
+     {
+      "m": "bus",
+      "t": "700 路公車"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Burleigh%20Heads%20Beach%20QLD",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   }
+  ],
+  "meals": [
+   {
+    "tag": "午餐",
+    "name": "Currumbin 園區餐飲",
+    "desc": "園內用餐最省事，營業與菜單以當日為準。",
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Currumbin%20Wildlife%20Sanctuary",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "tag": "晚餐",
+    "name": "Burleigh Heads 或住宿附近",
+    "desc": "玩完海灘就近吃；Burleigh 一帶餐廳多，傍晚人多可先訂位。",
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Burleigh%20Heads%20QLD%20restaurants",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   }
+  ],
+  "move": "接駁選擇：① 自駕，沿黃金海岸公路往南約 30 分鐘，園區有停車場；② TransLink 700 路公車，每段 50 分錢、可直接用感應信用卡，約 30–40 分鐘，班次用 TransLink 規劃器查；③ 叫車，不想轉乘時最省力。",
+  "planb": "下大雨就縮短園區時間、取消海灘，回飯店休息；不建議改到其他天，後面接著 Dig IT 和 HOTA。",
+  "reads": [],
+  "official": [
+   {
+    "u": "https://currumbinsanctuary.com.au/visit/",
+    "l": "Currumbin 開放時間與票價"
+   },
+   {
+    "u": "https://jp.translink.com.au/plan-your-journey",
+    "l": "TransLink 路線規劃"
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "md": "6/25",
+  "wd": "五",
   "area": "Tamborine",
   "place": "黃金海岸 → Tamborine Mountain",
   "pace": "戶外體驗・需預約與接送",
@@ -1435,7 +1318,7 @@ window.TRIP_DAYS = [
   "illo": "digger",
   "title": "開真正迷你挖土機，當半天小小工程師",
   "lead": "Dig IT 讓孩子坐進真正迷你挖土機，練習操作和手眼協調。今天專心在山區玩一件事，午後慢慢回海岸。",
-  "stay": "黃金海岸・第 4 晚",
+  "stay": "黃金海岸・第 5 晚",
   "mission": "用挖斗移動材料，試著一次慢慢放準；完成後畫出自己的工程車。",
   "stops": [
    {
@@ -1542,7 +1425,7 @@ window.TRIP_DAYS = [
    }
   ],
   "move": "Dig IT 在 Tamborine Mountain，不在黃金海岸市中心，沒有直達公車上山。接駁選擇：① 自駕，約 45 分鐘、34 公里，山路彎多，Thunderbird Park 有停車場，是最有彈性的方式，但山區路況較需留意、停車場可能需留意路況與濕滑；② Tamborine Mountain 跳上跳下觀光接駁車，從衝浪者天堂轉運站出發，約早上 8 點出發、下午 5 點返回，需事先訂位；③ Escape Shuttles 門對門接送，或 TransLink 740 公車到 Nerang 再轉 Uber／計程車上山（約 40 分鐘車程另計費）。這是需要往返車程的一日主題，不能當作市區隨到隨玩的點；所有參與者須穿包鞋，園方目前不開放自行野餐。",
-  "planb": "未訂到場次、孩子不理解英語安全說明或天候不適合時，改成 Day 12 藝文公園日；若全家想保留一次看動物，可整天改 Currumbin，兩者擇一。",
+  "planb": "未訂到場次、孩子不理解英語安全說明或天候不適合時，改成 Day 11 的 HOTA 公園日，或回 Currumbin 再玩半天。",
   "reads": [
    {
     "date": "2025-10-05",
@@ -1560,17 +1443,13 @@ window.TRIP_DAYS = [
    {
     "u": "https://escapeshuttles.com.au/thunderbird-park-pricing/",
     "l": "Escape Shuttles 接駁時刻與票價"
-   },
-   {
-    "u": "https://currumbinsanctuary.com.au/",
-    "l": "Currumbin 替代選項・官方資訊"
    }
   ]
  },
  {
-  "n": 12,
-  "md": "6/27",
-  "wd": "日",
+  "n": 11,
+  "md": "6/26",
+  "wd": "六",
   "area": "黃金海岸",
   "place": "黃金海岸",
   "pace": "輕鬆・彈性最高",
@@ -1578,7 +1457,7 @@ window.TRIP_DAYS = [
   "illo": "art",
   "title": "HOTA 公園與海灘，留白也是行程",
   "lead": "大活動後留一天休息。HOTA 看一小區作品、戶外空間走走，再吃午餐；不預設 2027 有相同兒童特展。",
-  "stay": "黃金海岸・第 5 晚",
+  "stay": "黃金海岸・第 6 晚",
   "mission": "選一幅最喜歡的作品，說出你看到的顏色和故事。",
   "stops": [
    {
@@ -1663,7 +1542,7 @@ window.TRIP_DAYS = [
    {
     "tag": "晚餐",
     "name": "Hurricane’s Grill・Surfers Paradise",
-    "desc": "如果 Day 8 還沒吃到排餐，今天可安排；先查預約與份量，別讓孩子餓著排隊。",
+    "desc": "如果 Day 6 還沒吃到排餐，今天可安排；先查預約與份量，別讓孩子餓著排隊。",
     "links": [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Hurricanes%20Grill%20Surfers%20Paradise%20QLD",
@@ -1699,23 +1578,23 @@ window.TRIP_DAYS = [
   ]
  },
  {
-  "n": 13,
-  "md": "6/28",
-  "wd": "一",
+  "n": 12,
+  "md": "6/27",
+  "wd": "日",
   "area": "布里斯本",
   "place": "黃金海岸 → 布里斯本",
   "pace": "移動＋短散步",
   "color": "green",
-  "illo": "brisbane",
+  "illo": "car",
   "title": "移動到布里斯本，南岸公園輕旅行",
-  "lead": "先把行李放好，才去公園。住市區方便吃飯；若明天班機很早，優先選機場周邊住宿。",
+  "lead": "先把行李放好，才去公園。布里斯本住兩晚，選 South Bank 或市區，吃飯散步都方便。",
   "stay": "布里斯本・第 1 晚",
   "mission": "沿河岸找一座橋，看看船怎麼從橋下通過。",
   "stops": [
    {
     "time": "09:00",
     "title": "早餐、退房、清點行李",
-    "desc": "先把交通確認好再退房；明天（6/29）搭華航 CI54 從 BNE 出發，今天不要誤去 OOL。",
+    "desc": "先把交通確認好再退房；回程是 6/29 華航 CI54 從 BNE 出發，不要誤去 OOL。",
     "tags": [],
     "must": false,
     "links": []
@@ -1748,8 +1627,8 @@ window.TRIP_DAYS = [
    },
    {
     "time": "14:00・選配",
-    "title": "South Bank Parklands，或改逛 Queensland Museum SparkLab",
-    "desc": "只在市區住宿且體力足夠時前往。晴天可以河岸散步、遊樂場與 Streets Beach 看景，約 1–2 小時，六月不必下水；下雨或想找室內活動，南岸旁的 Queensland Museum（SparkLab 科學中心）免費入場，互動展品大致適合 6–12 歲，兩者可擇一或各安排半小時。",
+    "title": "South Bank Parklands 散步",
+    "desc": "入住後河岸散步、Riverside Green 遊樂場與 Streets Beach 看景，約 1–2 小時；六月不必下水。SparkLab 留到明天。",
     "tags": [
      {
       "m": "walk",
@@ -1761,17 +1640,13 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=South%20Bank%20Parklands%20Brisbane",
       "l": "開啟 Google Maps"
-     },
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Queensland%20Museum%20Sciencentre%20South%20Brisbane",
-      "l": "開啟 Google Maps（博物館）"
      }
     ]
    },
    {
     "time": "傍晚",
-    "title": "提早吃晚餐、確認機場交通",
-    "desc": "吃完回飯店整理行李，確認 CI54 報到時間、航廈與接送。若住機場附近就取消南岸。",
+    "title": "提早吃晚餐、早點休息",
+    "desc": "明天整天在布里斯本，不用趕。",
     "tags": [
      {
       "m": "walk",
@@ -1796,21 +1671,17 @@ window.TRIP_DAYS = [
    },
    {
     "tag": "晚餐",
-    "name": "Siam South Bank",
-    "desc": "泰式料理選項，可詢問不辣的麵飯與兒童餐；先查營業、預約及過敏原。若住機場周邊，直接就近用餐。",
+    "name": "住宿附近輕鬆吃",
+    "desc": "移動日不跑遠，飯店周邊找孩子熟悉的飯麵。",
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Siam%20South%20Bank%20Brisbane",
+      "u": "https://www.google.com/maps/search/?api=1&query=South%20Bank%20Brisbane%20restaurants",
       "l": "開啟 Google Maps"
-     },
-     {
-      "u": "https://www.siamsouthbank.com.au/family-restaurant-southbank",
-      "l": "菜單／店家資訊"
      }
     ]
    }
   ],
-  "move": "今天是陸路移動，接駁選擇：① 延續自駕，沿 M1 開約 1 小時到布里斯本，直接把租車還在市區或機場營業點，最省轉乘；② Con-X-ion 門對門接駁巴士，適合行李多、不想自己開車；③ Airtrain 火車，從 Helensvale 或 Varsity Lakes 站北上，車程約 60–80 分鐘，是最省錢的公共運輸選項，但兩端都要自行接駁到車站。住宿市區或機場附近擇一，依回程班表決定；不預設一定能完成市區觀光。",
+  "move": "今天是陸路移動，接駁選擇：① 延續自駕，沿 M1 開約 1 小時到布里斯本，直接把租車還在市區或機場營業點，最省轉乘；② Con-X-ion 門對門接駁巴士，適合行李多、不想自己開車；③ Airtrain 火車，從 Helensvale 或 Varsity Lakes 站北上，車程約 60–80 分鐘，是最省錢的公共運輸選項，但兩端都要自行接駁到車站。布里斯本住兩晚，建議住 South Bank／市區；租車今天歸還，明天起以渡輪與步行為主。",
   "planb": "遇塞車或疲累，南岸公園與市區餐廳全部取消，直接到飯店休息。",
   "reads": [
    {
@@ -1837,10 +1708,137 @@ window.TRIP_DAYS = [
    {
     "u": "https://airtrain.com.au/",
     "l": "Airtrain 時刻與票價"
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "md": "6/28",
+  "wd": "一",
+  "area": "布里斯本",
+  "place": "布里斯本・South Bank",
+  "pace": "輕鬆・坐船＋室內",
+  "color": "green",
+  "illo": "brisbane",
+  "title": "搭 CityCat 遊河，再到 SparkLab 玩科學",
+  "lead": "今天整天不用搬行李。坐渡輪看城市和橋，再把下午交給互動科學館；累了就在南岸草地休息。",
+  "stay": "布里斯本・第 2 晚",
+  "mission": "從船上數一數經過幾座橋，再到科學館找出一個會發光的展品。",
+  "stops": [
+   {
+    "time": "09:30",
+    "title": "CityCat 渡輪遊河",
+    "desc": "從 South Bank 碼頭上船，沿河看城市與橋，每段 50 分錢，可直接用 Visa／Mastercard 感應上下船。挑一個碼頭下船再搭回來，往返約 1 小時。",
+    "tags": [
+     {
+      "m": "ferry",
+      "t": "CityCat"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=South%20Bank%20ferry%20terminal%20Brisbane",
+      "l": "開啟 Google Maps"
+     }
+    ]
    },
    {
-    "u": "https://www.museum.qld.gov.au/tropics/whats-on/sciencentre/",
-    "l": "SparkLab 科學中心資訊"
+    "time": "11:00",
+    "title": "Queensland Museum ＆ SparkLab 科學中心",
+    "desc": "博物館免費入場；SparkLab（原 Sciencentre）有互動科學展品，適齡約 6–12 歲，是否另收費與開放時間以官網為準。先玩 SparkLab 再逛展館。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": true,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Queensland%20Museum%20South%20Brisbane",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "午餐後",
+    "title": "Riverside Green 遊樂場與 Streets Beach",
+    "desc": "遊樂場放電、看人造沙灘，約 1 小時，之後回飯店午休。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Riverside%20Green%20South%20Bank%20Brisbane",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "傍晚",
+    "title": "整理行李、確認明天機場交通",
+    "desc": "把明天退房的行李整理好，確認 CI54 報到時間與 Airtrain／接送。",
+    "tags": [],
+    "must": false,
+    "links": []
+   }
+  ],
+  "meals": [
+   {
+    "tag": "午餐",
+    "name": "South Bank 文化區",
+    "desc": "博物館周邊就近吃，不為名店繞路。",
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=South%20Bank%20Brisbane%20restaurants",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "tag": "晚餐",
+    "name": "Siam South Bank",
+    "desc": "泰式料理選項，可詢問不辣的麵飯與兒童餐；先查營業、預約及過敏原。若住機場周邊，直接就近用餐。",
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Siam%20South%20Bank%20Brisbane",
+      "l": "開啟 Google Maps"
+     },
+     {
+      "u": "https://www.siamsouthbank.com.au/family-restaurant-southbank",
+      "l": "菜單／店家資訊"
+     }
+    ]
+   }
+  ],
+  "move": "今天以步行與渡輪為主：CityCat 與公車都是每段 50 分錢，可直接感應信用卡；South Bank 文化區、博物館與遊樂場彼此走路可到，不需開車。",
+  "planb": "下雨就跳過 CityCat，整天待在博物館與 SparkLab；天氣好可以多搭一段船。",
+  "reads": [
+   {
+    "date": "2025-06-07",
+    "type": "旅人實訪・英文",
+    "title": "Daniel Bowen｜Exploring Brissie 實訪",
+    "note": "記錄南岸與文化區散步，可參考河岸街景與行走感受；不是專門的六歲兒童攻略，當天仍以短線為主。",
+    "url": "https://danielbowen.com/2025/06/07/exploring-brissie/"
+   }
+  ],
+  "official": [
+   {
+    "u": "https://www.brisbane.qld.gov.au/transport-and-parking/public-transport/citycats-and-ferries",
+    "l": "CityCat 渡輪資訊"
+   },
+   {
+    "u": "https://www.museum.qld.gov.au/",
+    "l": "Queensland Museum 官網"
+   },
+   {
+    "u": "https://jp.translink.com.au/plan-your-journey",
+    "l": "TransLink 路線規劃"
    }
   ]
  },
@@ -1861,7 +1859,7 @@ window.TRIP_DAYS = [
    {
     "time": "白天彈性・傍晚出發",
     "title": "退房 → BNE 國際航廈",
-    "desc": "CI54 表定 22:50 起飛，白天仍有彈性時間留在市區或飯店附近，傍晚再以航空公司建議報到時間倒推接送與退房，額外留塞車緩衝。若全程自駕，租車多在國內航廈附近還車，記得預留還車後轉乘國際航廈的時間；記得是 International Terminal。",
+    "desc": "CI54 表定 22:50 起飛，白天還能在 South Bank 散步或回昨天沒逛完的地方，傍晚再以航空公司建議報到時間倒推退房與接送，額外留塞車緩衝。到國際航廈可搭 Airtrain（不適用 50 分錢票價）或叫車；記得是 International Terminal。",
     "tags": [
      {
       "m": "rail",
@@ -1870,10 +1868,6 @@ window.TRIP_DAYS = [
      {
       "m": "ride",
       "t": "叫車"
-     },
-     {
-      "m": "car",
-      "t": "還車"
      }
     ],
     "must": false,
@@ -1970,13 +1964,13 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-17',
-  version: 'little-explorers-20261017c',
+  version: 'little-explorers-20261017d',
 
   route: [
     { code: 'TPE', name: '台北', note: '6/16 出發', color: 'water' },
-    { code: 'SYD', name: '雪梨', note: '6 晚', color: 'coral' },
-    { code: 'OOL', name: '黃金海岸', note: '5 晚', color: 'yellow' },
-    { code: 'BNE', name: '布里斯本', note: '1 晚', color: 'green' },
+    { code: 'SYD', name: '雪梨', note: '4 晚', color: 'coral' },
+    { code: 'OOL', name: '黃金海岸', note: '6 晚', color: 'yellow' },
+    { code: 'BNE', name: '布里斯本', note: '2 晚', color: 'green' },
     { code: 'TPE', name: '回家', note: '6/30 清晨', color: 'water' }
   ],
 
@@ -1990,7 +1984,7 @@ window.TRIP = {
       links: [{ u: 'https://www.china-airlines.com/tw/zh', l: '華航訂位與班表' }]
     },
     {
-      kind: '國內線', color: 'yellow', code: 'SYD→OOL', airline: '三家擇一', date: '2027/6/23（三）',
+      kind: '國內線', color: 'yellow', code: 'SYD→OOL', airline: '三家擇一', date: '2027/6/21（一）',
       from: { code: 'SYD', city: '雪梨國內線', time: '待訂' },
       to: { code: 'OOL', city: '黃金海岸', time: '待訂' },
       dur: '約 1 小時 20–30 分',
@@ -1999,7 +1993,7 @@ window.TRIP = {
         { name: 'Jetstar', note: '通常最便宜，托運另計', u: 'https://www.jetstar.com/au/en/home' },
         { name: 'Qantas', note: '班次較少，托運額度較多', u: 'https://www.qantas.com/au/en.html' }
       ],
-      notes: ['比價時一起看托運、手提行李與選位', '抵達 OOL 可直接在航廈取租車（見 Day 8）'],
+      notes: ['比價時一起看托運、手提行李與選位', '抵達 OOL 可直接在航廈取租車（見 Day 6）'],
       links: [{ u: 'https://www.goldcoastairport.com.au/transport/transport-overview/transport-options', l: 'OOL 機場交通與租車' }]
     },
     {
@@ -2007,33 +2001,24 @@ window.TRIP = {
       from: { code: 'BNE', city: '布里斯本', time: '22:50' },
       to: { code: 'TPE', city: '桃園 T2', time: '05:40', plus: '+1' },
       dur: '約 8 小時 50 分',
-      notes: ['已跨日：6/30（三）清晨抵台，接機與請假抓這天', '若自駕，租車多在國內航廈附近還車，預留轉乘國際航廈的時間'],
+      notes: ['已跨日：6/30（三）清晨抵台，接機與請假抓這天', '租車已在 6/27 到布里斯本時歸還，當天用 Airtrain 或叫車到國際航廈'],
       links: [{ u: 'https://www.china-airlines.com/tw/zh', l: '華航訂位與班表' }, { u: 'https://www.bne.com.au/', l: '布里斯本機場' }]
     }
   ],
 
   stays: [
     {
-      city: '雪梨', color: 'coral', nights: 6, dates: '6/17（四）入住 → 6/23（三）退房',
+      city: '雪梨', color: 'coral', nights: 4, dates: '6/17（四）入住 → 6/21（一）退房',
       area: '達令港周邊：走路到 Darling Quarter、海事博物館，Vivid 也近',
       status: '尚未預訂',
       options: [
         { name: 'Adina Apartment Hotel Darling Harbour', type: '公寓式，有小廚房，適合煮孩子的清淡餐', map: 'https://www.google.com/maps/search/?api=1&query=Adina%20Apartment%20Hotel%20Sydney%20Darling%20Harbour' },
         { name: 'Sofitel Sydney Darling Harbour', type: '飯店，港灣景觀，看 Vivid 最方便', map: 'https://www.google.com/maps/search/?api=1&query=Sofitel%20Sydney%20Darling%20Harbour' }
       ],
-      note: '若選藍山兩天一夜版，改成雪梨 5 晚＋藍山 1 晚，總晚數不變。'
+      note: 'Day 5 藍山一日遊當天來回，不用換飯店。'
     },
     {
-      city: '藍山（替代版）', color: 'green', nights: 1, dates: '6/21（一）入住 → 6/22（二）退房',
-      area: 'Leura 小鎮，Scenic World 與三姊妹岩附近',
-      status: '選用此版本時再訂',
-      options: [
-        { name: 'Fairmont Resort Blue Mountains', type: '度假村，有室內外泳池', map: 'https://www.google.com/maps/search/?api=1&query=Fairmont%20Resort%20Blue%20Mountains%20Leura', site: 'https://www.fairmontresort.com.au/' }
-      ],
-      note: '這個版本自駕最划算，車子留一晚不用來回奔波。'
-    },
-    {
-      city: '黃金海岸', color: 'yellow', nights: 5, dates: '6/23（三）入住 → 6/28（一）退房',
+      city: '黃金海岸', color: 'yellow', nights: 6, dates: '6/21（一）入住 → 6/27（日）退房',
       area: '衝浪者天堂：G:link 輕軌沿線，走路到 Aquaduck 集合點',
       status: '尚未預訂',
       options: [
@@ -2043,11 +2028,11 @@ window.TRIP = {
       note: '自駕的話先確認飯店停車費；不自駕就選輕軌站走路可到的住宿。'
     },
     {
-      city: '布里斯本', color: 'green', nights: 1, dates: '6/28（一）入住 → 6/29（二）退房',
-      area: 'South Bank 市區，或機場周邊',
-      status: '依回程班表再決定',
+      city: '布里斯本', color: 'green', nights: 2, dates: '6/27（日）入住 → 6/29（二）退房',
+      area: 'South Bank／市區，走路到 CityCat 碼頭與博物館',
+      status: '尚未預訂',
       options: [],
-      note: 'CI54 晚上 22:50 才起飛，6/29 白天還能在市區走走，住 South Bank 吃飯散步較方便；想少搬行李再改住機場周邊。'
+      note: 'CI54 晚上 22:50 才起飛：6/28 整天玩南岸，6/29 白天還能散步，傍晚搭 Airtrain 或叫車去機場，住 South Bank 最順。'
     }
   ],
 
@@ -2063,10 +2048,10 @@ window.TRIP = {
     {
       group: '機票與交通', when: '開賣後盡早', items: [
         { id: 'ci', t: '訂華航 CI51／CI54', note: '核對 2027/6 實際班表，一併申請兒童餐與選位' },
-        { id: 'domestic', t: '訂 6/23 雪梨 → 黃金海岸國內線', note: 'Jetstar／Virgin／Qantas 比價，記得含托運' },
-        { id: 'car', t: '決定是否自駕、預約租車＋兒童安全座椅', note: '6/23 在 OOL 取車，6/28 在布里斯本還車' },
-        { id: 'bluemtn', t: '藍山：選一日團、自駕或兩天一夜版' },
-        { id: 'tamborine', t: 'Dig IT 那天（6/26）的接駁或自駕', note: 'Tamborine Mountain 沒有直達公車' }
+        { id: 'domestic', t: '訂 6/21 雪梨 → 黃金海岸國內線', note: 'Jetstar／Virgin／Qantas 比價，記得含托運' },
+        { id: 'car', t: '決定是否自駕、預約租車＋兒童安全座椅', note: '6/21 在 OOL 取車，6/27 在布里斯本還車' },
+        { id: 'bluemtn', t: '藍山（6/20 週日）：選一日團、自駕或火車' },
+        { id: 'tamborine', t: 'Dig IT 那天（6/25）的接駁或自駕', note: 'Tamborine Mountain 沒有直達公車' }
       ]
     },
     {
@@ -2074,22 +2059,23 @@ window.TRIP = {
         { id: 'digit', t: '預約 Dig IT 迷你挖土機場次', note: '確認孩子聽得懂英語安全說明，全員穿包鞋', u: 'https://www.thunderbirdpark.com/digit/', l: '官網' },
         { id: 'aquaduck', t: '預約 Aquaduck 鴨子車場次', u: 'https://www.aquaduck.com.au/gold-coast/', l: '官網' },
         { id: 'dreamworld', t: '購買 Dreamworld 門票', note: '入園前量好孩子身高', u: 'https://www.dreamworld.com.au/', l: '官網' },
+        { id: 'currumbin', t: '購買 Currumbin 門票（6/24）', note: '官網大人 A$70、3–17 歲 A$50，線上購票可能有優惠', u: 'https://currumbinsanctuary.com.au/visit/', l: '官網' },
         { id: 'scenic', t: '購買 Scenic World 門票', u: 'https://www.scenicworld.com.au/tickets', l: '官網' },
         { id: 'vivid', t: '查 Vivid Sydney 2027 節目與路線', note: '2027 場期 5/28–6/19，行程排在 6/17–6/19', u: 'https://www.vividsydney.com/info/contact-us/frequently-asked-questions', l: '官網' }
       ]
     },
     {
       group: '住宿', when: '機票確定後', items: [
-        { id: 'stay-syd', t: '訂雪梨 6 晚（6/17–6/23）' },
-        { id: 'stay-gc', t: '訂黃金海岸 5 晚（6/23–6/28）' },
-        { id: 'stay-bne', t: '訂布里斯本 1 晚（6/28–6/29）' }
+        { id: 'stay-syd', t: '訂雪梨 4 晚（6/17–6/21）' },
+        { id: 'stay-gc', t: '訂黃金海岸 6 晚（6/21–6/27）' },
+        { id: 'stay-bne', t: '訂布里斯本 2 晚（6/27–6/29）' }
       ]
     },
     {
       group: '出發前一週', when: '6/9 前後', items: [
         { id: 'museum', t: '再查海事博物館當週可登船艦', u: 'https://www.sea.museum/en/visit', l: '館方公告' },
         { id: 'harbour', t: '看達令港施工與改道公告', u: 'https://www.darlingharbour.com/notices', l: '公告' },
-        { id: 'card', t: '準備感應式信用卡或 Opal 卡', note: '雪梨大眾運輸可直接感應付款' },
+        { id: 'card', t: '準備感應式信用卡＋孩子的兒童 Opal 卡', note: '大人直接感應信用卡；6 歲在雪梨要用兒童 Opal 卡（機場站或便利商店買）；昆士蘭每段 50 分錢可直接感應' },
         { id: 'plug', t: '準備 Type I 插頭轉接頭' },
         { id: 'coat', t: '帶保暖外套與防風衣', note: '雪梨 6 月約 9–17°C，藍山更冷' },
         { id: 'kidbag', t: '整理孩子的隨身包', note: '換洗衣物、零食、耳機、小毯子；Dig IT 要包鞋' },
@@ -2109,7 +2095,7 @@ window.TRIP = {
     },
     {
       title: '海事博物館登船，要再看開放表',
-      text: '官網目前列有 2026 年 10–11 月展區與船艦工程；不等於 2027/6 關閉，也不保證屆時每艘船都開。Day 4 設計為「選一艘可登的船＋館內展」，可與 Day 5 對調。',
+      text: '官網目前列有 2026 年 10–11 月展區與船艦工程；不等於 2027/6 關閉，也不保證屆時每艘船都開。現在海事博物館是 Day 4 的備案，與恐龍博物館擇一。',
       links: [{ u: 'https://www.sea.museum/en/visit', l: '館方開放與維修公告' }]
     },
     {
@@ -2119,7 +2105,7 @@ window.TRIP = {
     },
     {
       title: '考慮自駕，先看這段',
-      text: '台灣駕照是中文，需國際駕照（IDP）或 NAATI 認證翻譯本；昆士蘭通常容許持有效外國駕照駕駛約 3 個月，各州規定不同。澳洲靠左行駛，與台灣相反。7 歲以下必須使用澳規（AS）兒童安全座椅，租車也適用；4 歲以下不得坐前座。只建議藍山（Day 6）與黃金海岸（Day 8–13）考慮自駕，雪梨市區停車貴、Vivid 期間常封路。',
+      text: '台灣駕照是中文，需國際駕照（IDP）或 NAATI 認證翻譯本；昆士蘭通常容許持有效外國駕照駕駛約 3 個月，各州規定不同。澳洲靠左行駛，與台灣相反。7 歲以下必須使用澳規（AS）兒童安全座椅，租車也適用；4 歲以下不得坐前座。只建議藍山（Day 5）與黃金海岸（Day 6–12）考慮自駕，雪梨市區停車貴、Vivid 期間常封路。',
       links: [
         { u: 'https://www.qld.gov.au/transport/safety/rules/children', l: 'QLD 兒童安全座椅規定' },
         { u: 'https://www.service.nsw.gov.au/transaction/apply-for-an-international-driving-permit-idp', l: '國際駕照資訊' }
@@ -2127,9 +2113,75 @@ window.TRIP = {
     }
   ],
 
+  transit: [
+    {
+      title: '雪梨 Opal', sub: '火車・輕軌・公車・渡輪', color: 'coral',
+      rows: [
+        ['大人怎麼付', '感應信用卡／手機，或大人 Opal 卡'],
+        ['6 歲怎麼付', '兒童 Opal 卡（4–15 歲）；感應信用卡只會扣大人票'],
+        ['大人每日上限', '週一–四 A$19.30・週五–日 A$9.65'],
+        ['兒童每日上限', '週一–四 A$9.65・週五–日 A$4.80'],
+        ['每週上限', '大人 A$50・兒童 A$25'],
+        ['機場站附加費', '大人約 A$18.61・兒童約 A$16.64，另計、不算進上限'],
+        ['藍山火車', 'Central → Katoomba 約 2 小時，大人單程約 A$7–11']
+      ],
+      tips: ['4 歲以下免費。兒童 Opal 卡可在機場站、7-Eleven 或便利商店買。', '6/18–6/20 是週五到週日，剛好適用週末半價上限；藍山日（6/20）是週日。', '三人帶行李往返機場，叫車常和「火車＋機場站附加費」差不多，可以比較。'],
+      links: [
+        { u: 'https://transportnsw.info/trip', l: 'NSW 路線規劃（含票價）' },
+        { u: 'https://transportnsw.info/tickets-fares/fares/best-ways-for-visitors-to-pay', l: '旅客付款方式' },
+        { u: 'https://transportnsw.info/travel-info/using-public-transport/getting-to-airport', l: '機場交通與附加費' }
+      ]
+    },
+    {
+      title: '昆士蘭 TransLink', sub: '黃金海岸・布里斯本', color: 'yellow',
+      rows: [
+        ['票價', '每段 50 分錢定額，不分距離'],
+        ['適用', '公車、火車、G:link 輕軌、CityCat 渡輪；Airtrain 除外'],
+        ['怎麼付', 'Visa／Mastercard 感應卡或手機，上下車都要感應；也可用 go card'],
+        ['兒童', '兒童 go card 與兒童票規則以官網為準']
+      ],
+      tips: ['每人用一張卡，下車用同一張感應，避免被多扣。', '黃金海岸常用：G:link 輕軌（Broadbeach–衝浪者天堂–Helensvale）、700 路公車（往 Burleigh、Currumbin）。', '2026 年已立法把 50 分錢票價永久化。'],
+      links: [
+        { u: 'https://translink.com.au/tickets-and-fares/fares-and-zones/south-east-queensland', l: 'TransLink 票價' },
+        { u: 'https://jp.translink.com.au/plan-your-journey', l: 'TransLink 路線規劃' },
+        { u: 'https://www.brisbane.qld.gov.au/transport-and-parking/public-transport/citycats-and-ferries', l: 'CityCat 渡輪' }
+      ]
+    },
+    {
+      title: '機場與城際', sub: 'Airtrain・接駁巴士・接送', color: 'water',
+      rows: [
+        ['Airtrain', '黃金海岸 ↔ 布里斯本（含機場），起價約 A$23.80；尖峰每 15 分、離峰每 30 分一班'],
+        ['Con-X-ion', '門對門接駁巴士，依區域計價，線上預約'],
+        ['私人接送', '黃金海岸 → 布里斯本機場，轎車約 A$190 起（業者報價）'],
+        ['雪梨機場叫車', '到達令港約 25–35 分鐘，約 A$35–55']
+      ],
+      tips: ['Airtrain 不適用 50 分錢票價。', '三人帶行李時，接駁或叫車常比火車省力；預算優先再選火車。'],
+      links: [
+        { u: 'https://www.airtrain.com.au/catch-airtrain-to/gold-coast-surfers-paradise/', l: 'Airtrain 黃金海岸' },
+        { u: 'https://www.con-x-ion.com/', l: 'Con-X-ion 訂位' },
+        { u: 'https://www.goldcoastairport.com.au/transport/transport-overview/transport-options', l: 'OOL 機場交通' }
+      ]
+    },
+    {
+      title: '景點接駁', sub: '不自駕時怎麼去', color: 'green',
+      rows: [
+        ['藍山 Scenic World', 'Katoomba 站轉 686 公車，用 Opal 付款'],
+        ['Dreamworld', '火車到 Coomera 站轉公車（50 分錢），或主題樂園接駁巴士'],
+        ['Currumbin', '700 路公車約 30–40 分鐘，50 分錢'],
+        ['Dig IT（Tamborine）', '沒有直達公車：Escape Shuttles 或山區觀光接駁車，票價依業者'],
+        ['布里斯本南岸', 'CityCat 渡輪＋步行，50 分錢']
+      ],
+      tips: ['班次都用上面的官方路線規劃器查當天時刻。', '自駕的法規與注意事項見清單區「考慮自駕，先看這段」。'],
+      links: [
+        { u: 'https://escapeshuttles.com.au/thunderbird-park-pricing/', l: 'Escape Shuttles 票價' },
+        { u: 'https://currumbinsanctuary.com.au/visit/', l: 'Currumbin 交通與票價' }
+      ]
+    }
+  ],
+
   footer: [
     '資料查核日 2026/10/17。航班時刻取自第三方航班追蹤網站交叉比對，非官方訂位確認；所有行程都還沒有預訂。',
     '延伸閱讀只收來源日期為 2025／2026 的內容，日期是來源頁面顯示的發布日期，不等於作者實際出遊日；遊記、短評與官方攻略分開標示。',
-    '營業時間、票價、交通、身高限制與餐廳菜單，請於出發前依官方最新資訊確認。'
+    '大眾運輸票價取自 Transport for NSW、TransLink、Airtrain 與業者官網及 2026 年旅遊指南交叉比對，票價每年調整。營業時間、票價、交通、身高限制與餐廳菜單，請於出發前依官方最新資訊確認。'
   ]
 };

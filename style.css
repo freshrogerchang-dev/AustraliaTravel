@@ -466,6 +466,20 @@ details.card[open] { padding-bottom: 14px; }
 .stay-option p { font-size: .85rem; color: var(--ink-2); }
 .stay-note { font-size: .88rem; margin-top: 12px; background: var(--ct); border-radius: var(--r-sm); padding: 8px 12px; border: 2px solid var(--ink); }
 
+/* ---------- transit fares ---------- */
+.transit-grid { display: grid; gap: 18px; }
+.transit { background: var(--paper); border: var(--line) solid var(--ink); border-radius: var(--r-lg); box-shadow: var(--shadow); overflow: hidden; }
+.transit .nights { white-space: normal; text-align: right; font-size: .78rem; }
+.fares { margin: 0; }
+.fare { display: grid; grid-template-columns: 7.5em 1fr; gap: 10px; padding: 8px 0; border-top: 2px dashed var(--ink); font-size: .9rem; }
+.fare:first-child { border-top: 0; padding-top: 2px; }
+.fare dt { color: var(--ink-2); }
+.fare dd { margin: 0; font-variant-numeric: tabular-nums; }
+.fare-tips { margin-top: 10px; background: var(--ct); border: 2px solid var(--ink); border-radius: var(--r-sm); padding: 8px 12px; font-size: .85rem; }
+.fare-tips li { padding-left: 1.1em; position: relative; }
+.fare-tips li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: var(--c); border: 1.5px solid var(--ink); }
+.fare-tips li + li { margin-top: 4px; }
+
 /* ---------- footer ---------- */
 .page-footer {
   max-width: 1040px; margin: 24px auto 0; padding: 20px 16px calc(32px + env(safe-area-inset-bottom));
@@ -531,7 +545,7 @@ html[data-motion="reduce"] *, html[data-motion="reduce"] *::before, html[data-mo
 
 /* ---------- larger screens ---------- */
 @media (min-width: 560px) {
-  .flight-grid, .stay-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .flight-grid, .stay-grid, .transit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   .todo-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   .notes { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   .day-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px; align-items: center; }

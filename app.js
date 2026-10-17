@@ -102,6 +102,17 @@
     }).join('');
   }
 
+  function renderTransit() {
+    $('#transit-list').innerHTML = TRIP.transit.map(function (t) {
+      return '<article class="transit" data-color="' + t.color + '"><div class="stay-top"><h3>' + esc(t.title) + '</h3><span class="nights">' + esc(t.sub) + '</span></div>' +
+        '<div class="stay-body"><dl class="fares">' + t.rows.map(function (r) {
+          return '<div class="fare"><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>';
+        }).join('') + '</dl>' +
+        '<ul class="fare-tips">' + t.tips.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' +
+        '<div class="links">' + t.links.map(function (l) { return ext(l.u, l.l); }).join('') + '</div></div></article>';
+    }).join('');
+  }
+
   /* ---------- itinerary ---------- */
   var current = 1;
 
@@ -391,6 +402,7 @@
   tickCountdown();
   setInterval(tickCountdown, 1000);
   renderFlights();
+  renderTransit();
   renderLegend();
   renderTabs();
   bindItinerary();

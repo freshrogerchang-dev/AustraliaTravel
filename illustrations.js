@@ -186,6 +186,34 @@
     '<g class="a-bob"><path d="M120 132h80l-8 12h-64Z" fill="' + P + '"/><rect x="134" y="120" width="52" height="12" rx="5" fill="' + C + '"/></g>' +
     '<path d="M20 148q8-5 16 0" stroke="' + P + '"/>');
 
+  ILLOS.koala = svg(D,
+    cloud(14, 16, .7, 'a-drift') +
+    '<path d="M0 134h240v30H0Z" fill="' + G + '"/>' +
+    '<path d="M150 136V18q0-6 9-6t9 6v118Z" fill="' + Y + '"/><path d="M155 40q4 6 0 12M162 76q-4 6 0 12M156 108q4 6 0 12" stroke-width="2"/>' +
+    '<g class="a-sway"><path d="M168 38q22-10 40-4" /><ellipse cx="196" cy="30" rx="10" ry="5" fill="' + G + '" transform="rotate(-20 196 30)"/><ellipse cx="212" cy="40" rx="10" ry="5" fill="' + G + '" transform="rotate(20 212 40)"/><ellipse cx="182" cy="44" rx="9" ry="4.5" fill="' + G + '" transform="rotate(30 182 44)"/></g>' +
+    '<g class="a-bob2"><ellipse cx="138" cy="98" rx="24" ry="28" fill="' + W + '"/>' +
+    '<circle cx="113" cy="50" r="12" fill="' + W + '"/><circle cx="113" cy="50" r="5.5" fill="' + C + '" stroke-width="2"/>' +
+    '<circle cx="155" cy="50" r="12" fill="' + W + '"/><circle cx="155" cy="50" r="5.5" fill="' + C + '" stroke-width="2"/>' +
+    '<circle cx="134" cy="64" r="22" fill="' + W + '"/>' +
+    '<ellipse cx="134" cy="69" rx="6" ry="8" fill="' + I + '" stroke="none"/><circle cx="125" cy="60" r="2.4" fill="' + I + '" stroke="none"/><circle cx="143" cy="60" r="2.4" fill="' + I + '" stroke="none"/>' +
+    '<circle cx="121" cy="71" r="3" fill="' + C + '" stroke="none"/><circle cx="147" cy="71" r="3" fill="' + C + '" stroke="none"/>' +
+    '<ellipse cx="158" cy="92" rx="10" ry="7" fill="' + W + '"/><ellipse cx="158" cy="116" rx="10" ry="7" fill="' + W + '"/></g>' +
+    '<g class="a-float"><ellipse cx="62" cy="64" rx="16" ry="10" fill="' + G + '"/><circle cx="48" cy="56" r="8" fill="' + W + '"/><path d="M40 56l-7 2 7 3Z" fill="' + C + '" stroke-width="2"/><ellipse cx="54" cy="66" rx="6" ry="5" fill="' + Y + '" stroke-width="2"/><path d="M76 66l14 6-12-2" fill="' + G + '" stroke-width="2"/><circle cx="46" cy="54" r="1.6" fill="' + I + '" stroke="none"/></g>' +
+    '<path d="M30 134q-2-14 6-22M30 134q-8-10-6-20M74 134q2-12 10-18" stroke-width="2.5"/>');
+
+  ILLOS.car = svg(D,
+    cloud(12, 16, .7, 'a-drift') + sun(208, 30, 11) +
+    '<rect x="160" y="70" width="18" height="44" rx="3" fill="' + W + '"/><rect x="182" y="56" width="22" height="58" rx="3" fill="' + P + '"/><rect x="208" y="78" width="18" height="36" rx="3" fill="' + W + '"/>' +
+    '<path d="M24 114q-4-34 6-58h7q-8 26-5 58Z" fill="' + Y + '"/>' +
+    '<g class="a-sway"><path d="M33 56q-20-6-30 6 14-2 30-3Z" fill="' + G + '"/><path d="M33 56q20-8 32 4-16-2-32-1Z" fill="' + G + '"/><path d="M33 56q-8-16-24-16 14 6 22 18Z" fill="' + G + '"/></g>' +
+    '<path d="M0 114h240v46H0Z" fill="' + P + '"/><path d="M0 114h240M0 156h240" />' +
+    '<path d="M10 136h20M50 136h20M90 136h20M130 136h20M170 136h20M210 136h20" stroke-width="3"/>' +
+    '<g class="a-bob"><ellipse cx="116" cy="74" rx="44" ry="6" fill="' + Y + '"/>' +
+    '<path d="M60 124v-20q0-8 8-10l20-5q8-14 22-14h28q14 0 22 14l12 4q8 2 8 11v20Z" fill="' + C + '"/>' +
+    '<path d="M96 88q5-10 14-10h12v12Z" fill="' + W + '" stroke-width="2.5"/><path d="M128 78h10q9 0 14 12h-24Z" fill="' + W + '" stroke-width="2.5"/>' +
+    '<circle cx="84" cy="124" r="12" fill="' + I + '"/><circle cx="84" cy="124" r="4.5" fill="' + P + '" stroke="none"/>' +
+    '<circle cx="152" cy="124" r="12" fill="' + I + '"/><circle cx="152" cy="124" r="4.5" fill="' + P + '" stroke="none"/></g>');
+
   ILLOS.hero = svg('0 0 360 250',
     cloud(20, 30, 1, 'a-drift') + cloud(196, 18, .75, 'a-drift2') +
     sun(306, 56, 22) + gull(250, 96) + gull(272, 104) +
