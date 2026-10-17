@@ -1,13 +1,13 @@
 {
   "name": "小小探險家去澳洲｜六歲親子旅行",
   "short_name": "小小探險家",
-  "description": "2027/6/16–6/29 澳洲親子行程：雪梨、黃金海岸、布里斯本，六歲親子探索每日行程。",
+  "description": "2027/6/16–6/29 澳洲親子行程：雪梨、藍山、黃金海岸、布里斯本的每日行程、航班、待辦清單與住宿。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f6f3ec",
-  "theme_color": "#183e3a",
+  "background_color": "#FFFCF6",
+  "theme_color": "#FFFCF6",
   "lang": "zh-Hant",
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
