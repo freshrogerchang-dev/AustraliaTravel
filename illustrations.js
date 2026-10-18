@@ -189,18 +189,6 @@
       '<circle cx="90" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/><circle cx="110" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/><circle cx="130" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/><circle cx="150" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/>' +
       '</g>' + sea(130, 240, 160) + '<path d="M24 148q8-5 16 0M196 146q8-5 16 0" stroke="' + P + '"/>');
 
-    ILLOS.dino = svg(D,
-      sun(206, 32, 12) +
-      '<path d="M0 134q120-24 240 0v30H0Z" fill="' + G + '"/>' +
-      '<path d="M24 132q-2-22 10-34M24 132q-14-14-12-30M24 132q10-16 24-20" stroke-width="2.5"/>' +
-      '<path d="M72 110c-20 0-36-6-52-16 12 20 34 30 58 28Z" fill="' + G + '"/>' +
-      '<rect x="86" y="108" width="18" height="28" rx="7" fill="' + G + '"/><rect x="136" y="108" width="18" height="28" rx="7" fill="' + G + '"/>' +
-      '<g class="a-nod"><path d="M140 92c10-22 18-38 26-48l18 6c-8 14-16 32-24 54Z" fill="' + G + '"/>' +
-      '<ellipse cx="182" cy="42" rx="17" ry="12" fill="' + G + '"/>' +
-      '<circle cx="186" cy="38" r="2.6" fill="' + I + '" stroke="none"/><path d="M188 47q4 2 8-1" stroke-width="2"/><circle cx="177" cy="46" r="3" fill="' + C + '" stroke="none"/></g>' +
-      '<path d="M66 116c-4-24 18-38 46-38 28 0 48 12 52 30 2 10-4 14-14 14H78c-8 0-12-2-12-6Z" fill="' + G + '"/>' +
-      '<circle cx="98" cy="96" r="6" fill="' + C + '" stroke-width="2"/><circle cx="118" cy="88" r="5" fill="' + Y + '" stroke-width="2"/><circle cx="136" cy="100" r="6" fill="' + C + '" stroke-width="2"/>');
-
     ILLOS.mountain = svg(D,
       sun(212, 26, 11) +
       '<path d="M0 112 40 70l30 22 40-38 40 34 40-28 50 40v68H0Z" fill="' + W + '"/>' +
@@ -242,28 +230,6 @@
       '<circle cx="204" cy="122" r="3" fill="' + W + '" stroke-width="2"/><circle cx="214" cy="114" r="2.5" fill="' + W + '" stroke-width="2"/>' +
       '<path d="M20 146q8-5 16 0M120 148q8-5 16 0" stroke="' + P + '"/>');
 
-    ILLOS.digger = svg(D,
-      '<circle cx="36" cy="52" r="20" fill="' + G + '"/><path d="M36 72v24" stroke-width="4"/><circle cx="70" cy="38" r="16" fill="' + G + '"/><path d="M70 54v40" stroke-width="4"/>' +
-      sun(210, 30, 11) +
-      '<path d="M0 134h240v30H0Z" fill="' + G + '"/>' +
-      '<path d="M150 134q30-40 66 0Z" fill="' + C + '"/>' +
-      '<g class="a-dig"><path d="M116 88l46-34 8 8-46 36Z" fill="' + Y + '"/><path d="M162 56l20 38-8 4-20-36Z" fill="' + Y + '"/>' +
-      '<path d="M170 92l22 6q0 16-16 16Z" fill="' + C + '"/><circle cx="164" cy="58" r="4" fill="' + P + '" stroke-width="2"/></g>' +
-      '<rect x="50" y="78" width="72" height="38" rx="8" fill="' + Y + '"/><path d="M60 84h28v20H60Z" fill="' + W + '" stroke-width="2.5"/><circle cx="118" cy="90" r="4" fill="' + P + '" stroke-width="2"/>' +
-      '<rect x="40" y="114" width="96" height="22" rx="11" fill="' + P + '"/>' +
-      '<circle cx="56" cy="125" r="5"/><circle cx="76" cy="125" r="5"/><circle cx="96" cy="125" r="5"/><circle cx="116" cy="125" r="5"/>');
-
-    ILLOS.art = svg(D,
-      cloud(12, 14, .7, 'a-drift') +
-      '<path d="M0 132h240v30H0Z" fill="' + G + '"/>' +
-      '<path d="M80 110 66 136M120 110l14 26M100 110v26" />' +
-      '<rect x="56" y="38" width="88" height="70" rx="6" fill="' + P + '"/>' +
-      '<circle cx="80" cy="60" r="9" fill="' + Y + '" stroke-width="2.5"/><path d="M64 98q14-24 30-10t44-14v26H64Z" fill="' + G + '" stroke-width="2.5"/><path d="M64 86q16-8 30 0t44-2" stroke-width="2"/>' +
-      '<path d="M184 136q-6-40 6-80h8q-10 40-4 80Z" fill="' + Y + '"/>' +
-      '<g class="a-sway"><path d="M194 56q-24-10-40 6 18-4 40-2Z" fill="' + G + '"/><path d="M194 56q24-12 40 4-20-2-40 0Z" fill="' + G + '"/><path d="M194 56q-14-22-34-20 18 6 30 22Z" fill="' + G + '"/><path d="M194 56q12-22 34-22-18 8-30 24Z" fill="' + G + '"/></g>' +
-      '<path d="M150 120q0-14 18-14t18 12q0 6-6 6-8-2-10 4-4 6-12 4-8-2-8-12Z" fill="' + P + '"/>' +
-      '<circle cx="160" cy="116" r="3" fill="' + C + '" stroke-width="1.5"/><circle cx="170" cy="112" r="3" fill="' + Y + '" stroke-width="1.5"/><circle cx="178" cy="117" r="3" fill="' + W + '" stroke-width="1.5"/>');
-
     ILLOS.brisbane = svg(D,
       cloud(150, 12, .7, 'a-drift') +
       '<rect x="140" y="62" width="22" height="52" rx="3" fill="' + P + '"/><rect x="166" y="46" width="26" height="68" rx="3" fill="' + W + '"/><rect x="196" y="72" width="22" height="42" rx="3" fill="' + P + '"/>' +
@@ -289,6 +255,57 @@
       '<ellipse cx="158" cy="92" rx="10" ry="7" fill="' + W + '"/><ellipse cx="158" cy="116" rx="10" ry="7" fill="' + W + '"/></g>' +
       '<g class="a-float"><ellipse cx="62" cy="64" rx="16" ry="10" fill="' + G + '"/><circle cx="48" cy="56" r="8" fill="' + W + '"/><path d="M40 56l-7 2 7 3Z" fill="' + C + '" stroke-width="2"/><ellipse cx="54" cy="66" rx="6" ry="5" fill="' + Y + '" stroke-width="2"/><path d="M76 66l14 6-12-2" fill="' + G + '" stroke-width="2"/><circle cx="46" cy="54" r="1.6" fill="' + I + '" stroke="none"/></g>' +
       '<path d="M30 134q-2-14 6-22M30 134q-8-10-6-20M74 134q2-12 10-18" stroke-width="2.5"/>');
+
+    ILLOS.giraffe = svg(D,
+      cloud(14, 14, .7, 'a-drift') + sun(210, 30, 10) +
+      sea(100, 240, 160) +
+      '<path d="M150 100Q186 70 222 100" stroke-width="3"/><path d="M162 100V92M174 100V84M186 100V81M198 100V84M210 100V92" stroke-width="1.8"/>' +
+      '<rect x="144" y="98" width="84" height="5" rx="2" fill="' + Y + '" stroke-width="2.5"/>' +
+      '<path d="M112 102q4-20 20-26-4 14-2 26Z" fill="' + P + '" stroke-width="2.5"/><path d="M126 102q4-14 16-18-3 10-2 18Z" fill="' + P + '" stroke-width="2.5"/>' +
+      '<path d="M-4 164V124q50-18 118-8t130 4V164Z" fill="' + G + '"/>' +
+      '<path d="M50 118v30M60 120v28M84 120v28M94 118v30" stroke-width="4"/>' +
+      '<path d="M40 112q0-16 22-18h30q14 2 14 16t-14 14H54q-14 0-14-12Z" fill="' + Y + '"/><path d="M40 108q-8 4-8 16" stroke-width="2.5"/>' +
+      '<circle cx="58" cy="106" r="4" fill="' + C + '" stroke="none"/><circle cx="74" cy="113" r="4.5" fill="' + C + '" stroke="none"/><circle cx="88" cy="104" r="3.5" fill="' + C + '" stroke="none"/>' +
+      '<g class="a-nod"><path d="M88 102L102 40h12L106 106Z" fill="' + Y + '"/>' +
+      '<circle cx="103" cy="66" r="3" fill="' + C + '" stroke="none"/><circle cx="103" cy="86" r="3" fill="' + C + '" stroke="none"/><circle cx="108" cy="52" r="2.6" fill="' + C + '" stroke="none"/>' +
+      '<path d="M100 40q0-12 14-12 14 0 22 8 4 6-2 10l-20 2q-14 0-14-8Z" fill="' + Y + '"/>' +
+      '<path d="M106 30l-2-10M114 28l1-10" stroke-width="2.5"/><circle cx="104" cy="19" r="2.6" fill="' + C + '" stroke-width="2"/><circle cx="115" cy="17" r="2.6" fill="' + C + '" stroke-width="2"/>' +
+      '<path d="M102 34l-10-4 8 8" fill="' + Y + '" stroke-width="2"/><circle cx="119" cy="34" r="2" fill="' + I + '" stroke="none"/><path d="M128 42q3 1 5-1" stroke-width="2"/></g>' +
+      '<path d="M150 150q2-10 8-14M160 150q0-8 4-12M200 146q2-8 8-12" stroke-width="2.5"/>');
+
+    ILLOS.dolphin = svg(D,
+      sun(34, 30, 11) + cloud(112, 12, .7, 'a-drift') +
+      sea(112, 240, 160) +
+      '<path d="M40 120q6-10 14 0M178 118q6-10 14 0" stroke="' + P + '"/><path d="M24 142q10-5 20 0M150 146q10-5 20 0M206 136q8-4 16 0" stroke="' + P + '"/>' +
+      '<g class="a-float"><path d="M62 112l-18 2 8-10-4-12 14 10Z" fill="' + W + '"/>' +
+      '<path d="M96 60q2-16 16-20-2 10 2 18Z" fill="' + W + '"/>' +
+      '<path d="M56 112Q72 60 128 54Q156 51 168 62L184 60L178 70Q160 72 140 76Q96 84 70 116Z" fill="' + W + '"/>' +
+      '<path d="M118 76q2 14-8 20 14-2 16-18Z" fill="' + W + '"/>' +
+      '<path d="M82 102q20-22 54-26" stroke="' + P + '" stroke-width="3"/>' +
+      '<circle cx="156" cy="62" r="2.2" fill="' + I + '" stroke="none"/><path d="M164 70q6 2 11-1" stroke-width="2"/></g>' +
+      '<g class="a-bob"><circle cx="192" cy="38" r="12" fill="' + C + '"/><path d="M180 38h24M192 26q-7 12 0 24M192 26q7 12 0 24" stroke-width="2.2"/></g>' +
+      '<circle class="a-twinkle" cx="46" cy="100" r="3" fill="' + W + '" stroke-width="2"/><circle class="a-twinkle d2" cx="34" cy="90" r="2.4" fill="' + W + '" stroke-width="2"/><circle class="a-twinkle d1" cx="188" cy="104" r="2.6" fill="' + W + '" stroke-width="2"/>');
+
+    function star(x, y, s, cls) {
+      return '<g class="' + cls + '"><path transform="translate(' + x + ' ' + y + ') scale(' + s + ')" d="M20 4l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 27.6l-9.3 4.9 1.8-10.3L5 14.9l10.4-1.5Z" fill="' + Y + '" stroke-width="' + (2.5 / s) + '"/></g>';
+    }
+    function reel(cx, cy, r) {
+      var holes = '';
+      for (var i = 0; i < 5; i++) {
+        var a = i * Math.PI * 2 / 5 - Math.PI / 2;
+        holes += '<circle cx="' + (cx + r * .56 * Math.cos(a)).toFixed(1) + '" cy="' + (cy + r * .56 * Math.sin(a)).toFixed(1) + '" r="' + (r * .2).toFixed(1) + '" fill="' + P + '" stroke-width="2.2"/>';
+      }
+      return '<g class="a-spin-slow"><circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="' + W + '"/>' + holes + '</g><circle cx="' + cx + '" cy="' + cy + '" r="5" fill="' + Y + '" stroke-width="2.2"/>';
+    }
+    ILLOS.clapper = svg(D,
+      star(14, 14, .6, 'a-twinkle') + star(104, 10, .5, 'a-twinkle d2') + star(212, 4, .45, 'a-twinkle d1') +
+      '<path d="M-4 132h248v32H-4Z" fill="' + C + '"/><path d="M60 146h20M120 150h24M180 144h18" stroke="' + P + '" stroke-width="2.5"/>' +
+      '<path d="M186 108l-14 24M186 108l14 24" stroke-width="3"/>' + reel(186, 76, 32) +
+      '<rect x="34" y="74" width="104" height="58" rx="6" fill="' + P + '"/>' +
+      '<rect x="34" y="74" width="104" height="13" fill="' + Y + '"/><path d="M48 74l-8 13h10l8-13ZM72 74l-8 13h10l8-13ZM96 74l-8 13h10l8-13ZM120 74l-8 13h10l8-13Z" fill="' + I + '" stroke="none"/><rect x="34" y="74" width="104" height="13" />' +
+      '<path d="M46 100h80M46 112h52M46 123h64" stroke-width="2"/>' +
+      '<g class="a-nod"><g transform="rotate(-14 34 72)"><rect x="34" y="58" width="104" height="13" fill="' + Y + '"/><path d="M48 58l-8 13h10l8-13ZM72 58l-8 13h10l8-13ZM96 58l-8 13h10l8-13ZM120 58l-8 13h10l8-13Z" fill="' + I + '" stroke="none"/><rect x="34" y="58" width="104" height="13"/></g></g>' +
+      '<circle cx="36" cy="72" r="3.5" fill="' + I + '" stroke="none"/>');
 
     ILLOS.car = svg(D,
       cloud(12, 16, .7, 'a-drift') + sun(208, 30, 11) +
@@ -381,6 +398,11 @@
   function quantize(px, colors) {
     for (var i = 0; i < px.length; i += 4) {
       if (px[i + 3] < 110) { px[i + 3] = 0; continue; }
+      var hi = Math.max(px[i], px[i + 1], px[i + 2]), lo = Math.min(px[i], px[i + 1], px[i + 2]);
+      if (hi - lo < 48) {                        // 灰色（線與底的混色）只能變成墨色或紙色，不會變成綠點
+        var c0 = colors[(px[i] * .3 + px[i + 1] * .59 + px[i + 2] * .11) < 150 ? 1 : 0];
+        px[i] = c0[0]; px[i + 1] = c0[1]; px[i + 2] = c0[2]; px[i + 3] = 255; continue;
+      }
       var best = 0, bd = 1e9;
       for (var j = 0; j < colors.length; j++) {
         var c = colors[j], d = (px[i] - c[0]) * (px[i] - c[0]) + (px[i + 1] - c[1]) * (px[i + 1] - c[1]) + (px[i + 2] - c[2]) * (px[i + 2] - c[2]);

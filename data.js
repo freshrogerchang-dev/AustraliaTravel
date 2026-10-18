@@ -389,41 +389,81 @@ window.TRIP_DAYS = [
   "md": "6/19",
   "wd": "六",
   "area": "雪梨",
-  "place": "雪梨・博物館區",
-  "pace": "室內探索・雨天首選",
+  "place": "雪梨・Taronga 動物園",
+  "pace": "動物日・搭渡輪去",
   "color": "coral",
-  "illo": "dino",
-  "title": "遇見恐龍骨架，晚上看 Vivid 閉幕夜",
-  "lead": "把恐龍、礦石和想像力放在一起，常設展逛兩小時就很充實。想看真的船艦，可把主線換成達令港的海事博物館（見下方備案）；晚上 Vivid 閉幕夜看體力決定。",
+  "illo": "giraffe",
+  "title": "搭渡輪去 Taronga 動物園，長頸鹿配港灣",
+  "lead": "從環形碼頭坐渡輪約 12 分鐘就到，長頸鹿背後就是港灣大橋和歌劇院。上午看動物，中午在園內吃，下午回飯店休息；晚上 Vivid 閉幕夜看體力決定。原本的恐龍博物館改成雨天備案。",
   "stay": "雪梨・第 3 晚",
-  "mission": "選一隻恐龍，模仿牠的走路方式；再找一顆最像寶石的礦物。",
+  "mission": "找到長頸鹿，比比看牠的脖子有幾個你高；再找一種只有澳洲才有的動物。",
   "stops": [
    {
-    "time": "10:00",
-    "title": "Australian Museum 恐龍常設展",
-    "desc": "從恐龍展開始，找一隻最喜歡的骨架。依目前官網常設展免費，2027 票務仍以出發前公告為準；不把限期特展排成必看。",
+    "time": "09:00",
+    "title": "環形碼頭搭 F2 渡輪",
+    "desc": "F2 渡輪約 12 分鐘到 Taronga Zoo 碼頭，用兒童 Opal 卡與大人的感應信用卡付款；週六適用較低的 Opal 每日上限。也有「渡輪＋門票」套票（Sydney Tourism 2026/8 列大人 A$67 起、兒童 A$38 起），買前和分開買比價。",
+    "tags": [
+     {
+      "m": "ferry",
+      "t": "F2 渡輪"
+     },
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Circular%20Quay%20Wharf%20Sydney",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "09:30 開園",
+    "title": "從碼頭上到主入口",
+    "desc": "Sky Safari 纜車 2023 年 1 月起停駛，園方預計 2027 年底才重新開放，所以 6 月很可能還不能搭。下船後搭公車上山到主入口（另外付費、用 Opal），再一路往下逛回碼頭，比從下方入口整天爬坡省力；公車路線與班次用 Transport for NSW 規劃器查。",
+    "tags": [
+     {
+      "m": "bus",
+      "t": "公車上山"
+     },
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Taronga%20Zoo%20Sydney%20main%20entrance",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "上午",
+    "title": "長頸鹿、無尾熊與澳洲動物",
+    "desc": "冬季（5–8 月）開放 9:30–16:30。門票依 2026 第三方整理約大人 A$51–55、4–15 歲 A$31–33、3 歲以下免費，線上通常比現場便宜；官網曾公告暫停線上購票，出發前確認購票方式與價格。先看長頸鹿（背景就是港灣），再到澳洲動物區找無尾熊和袋鼠；鳥類或海豹表演依當日時刻表挑一場。",
     "tags": [
      {
       "m": "walk",
       "t": "步行"
-     },
-     {
-      "m": "bus",
-      "t": "公車"
      }
     ],
     "must": true,
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Australian%20Museum%201%20William%20Street%20Sydney",
+      "u": "https://www.google.com/maps/search/?api=1&query=Taronga%20Zoo%20Sydney",
       "l": "開啟 Google Maps"
      }
     ]
    },
    {
-    "time": "11:15",
-    "title": "礦物或另一區常設展",
-    "desc": "讓孩子自己挑一區，停留 30–45 分鐘就好；恐龍解剖模型可能較強烈，可先由大人確認再帶孩子靠近。",
+    "time": "中午",
+    "title": "園區內午餐",
+    "desc": "在園內吃完，往碼頭方向邊走邊逛；孩子累了就直接搭渡輪回環形碼頭。",
     "tags": [
      {
       "m": "walk",
@@ -431,39 +471,16 @@ window.TRIP_DAYS = [
      }
     ],
     "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Australian%20Museum%20Sydney",
-      "l": "開啟 Google Maps"
-     }
-    ]
+    "links": []
    },
    {
-    "time": "午餐後",
-    "title": "Hyde Park 短散步",
-    "desc": "在公園走走、找噴泉與樹蔭，約 30–45 分鐘，再回飯店休息。不需穿越整個公園。",
+    "time": "14:00",
+    "title": "回飯店午休",
+    "desc": "渡輪回環形碼頭，再叫車或搭輕軌回達令港，午休 1.5–2 小時；今天上午走了不少坡。",
     "tags": [
      {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Hyde%20Park%20Sydney",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "下午・二選一",
-    "title": "午睡，或新魚市場早晚餐",
-    "desc": "精神夠再搭車到 Blackwattle Bay 新館看建築、吃熟食；否則刪掉。博物館與魚市場不是步行順路的同一區。",
-    "tags": [
-     {
-      "m": "rail",
-      "t": "輕軌 L1"
+      "m": "ferry",
+      "t": "渡輪"
      },
      {
       "m": "ride",
@@ -471,12 +488,7 @@ window.TRIP_DAYS = [
      }
     ],
     "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Sydney%20Fish%20Market%201%20Bridge%20Road%20Glebe",
-      "l": "開啟 Google Maps"
-     }
-    ]
+    "links": []
    },
    {
     "time": "18:00 起・選配",
@@ -500,80 +512,60 @@ window.TRIP_DAYS = [
   "meals": [
    {
     "tag": "午餐",
-    "name": "Billabong Waterhole・館內咖啡館",
-    "desc": "先在館內吃三明治或輕食，少一次移動；餐點與營業依當日公告。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Billabong%20Waterhole%20Australian%20Museum%20Sydney",
-      "l": "開啟 Google Maps"
-     },
-     {
-      "u": "https://australian.museum/visit/food/",
-      "l": "菜單／店家資訊"
-     }
-    ]
+    "name": "Taronga 園區餐飲",
+    "desc": "園內有多處餐點與咖啡，營業以當天為準；可以自備水與小點心。",
+    "links": []
    },
    {
-    "tag": "早晚餐・選配",
-    "name": "Sydney Fish Market 新館熟食",
-    "desc": "選熟食、先找座位再買餐；導航用 1 Bridge Road, Glebe，不使用舊市場地址。",
+    "tag": "晚餐",
+    "name": "環形碼頭或達令港餐廳",
+    "desc": "看完 Vivid 就近吃，避開散場人潮。",
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Sydney%20Fish%20Market%201%20Bridge%20Road%20Glebe",
+      "u": "https://www.google.com/maps/search/?api=1&query=Circular%20Quay%20restaurants%20Sydney",
       "l": "開啟 Google Maps"
-     },
-     {
-      "u": "https://www.sydneyfishmarket.com.au/",
-      "l": "菜單／店家資訊"
      }
     ]
    }
   ],
-  "move": "博物館在 William Street，前往海德公園可步行；前往魚市場（Glebe 新館）接駁選擇：輕軌 L1 或公車至 Glebe 再步行，或直接叫 Uber／DiDi 約 15–20 分鐘，不要在孩子累時硬走。雪梨市區仍不建議自駕。",
-  "planb": "下雨正好待在博物館。想改看船艦：海事博物館就在達令港、走路可到，先到服務台確認當日可登的船艦與身高限制；兩館擇一，不要同一天排兩個博物館。",
+  "move": "接駁選擇：① F2 渡輪（環形碼頭 ↔ Taronga Zoo 碼頭，約 12 分鐘，Opal／感應信用卡）＋公車上山到主入口，最推薦；② 渡輪＋門票套票，是否含上山交通依套票說明；③ 叫車直接到主入口，約 20–30 分鐘。雪梨市區仍不建議自駕，園區停車也要收費。",
+  "planb": "下雨就把主線換成 Australian Museum 恐龍常設展（William Street，室內，依目前官網常設展免費），動物園改到晴天；想看真的船艦，達令港的海事博物館也可以當雨天備案。博物館與動物園擇一，不要同一天排兩個。",
   "reads": [
+   {
+    "date": "2026-08",
+    "type": "旅遊指南・非實訪遊記",
+    "title": "Sydney Tourism｜Taronga 動物園完整指南",
+    "note": "整理門票、開放時間與渡輪套票，最後查核 2026/8/16；價格可能與官網不同。",
+    "url": "https://www.sydneytourism.org/taronga-zoo-sydney-complete-guide/"
+   },
    {
     "date": "2026-06",
     "type": "旅客短評・非完整遊記",
     "title": "Tripadvisor｜Australian Museum 近期旅客短評",
     "note": "本次找到 2026 年 6 月旅客對恐龍展的短評；頁面會混有其他年份，請看留言日期。常設展與適齡資訊以館方為準。",
     "url": "https://www.tripadvisor.com.au/Attraction_Review-g255060-d256713-Reviews-Australian_Museum-Sydney_New_South_Wales.html"
-   },
-   {
-    "date": "2026-05-28",
-    "type": "旅遊媒體採訪・英文",
-    "title": "Australian Traveller｜新魚市場實訪指南",
-    "note": "文章介紹 2026 新館與餐飲，適合了解新地址及市場配置；不沿用舊館照片來判斷步行路線。",
-    "url": "https://www.australiantraveller.com/nsw/sydney/sydney-fish-market/"
-   },
-   {
-    "date": "2025-11-07",
-    "type": "實訪遊記・英文",
-    "title": "A Globe Well Travelled｜海事博物館實訪",
-    "note": "作者多次到訪，分享船艦與展覽的不同體驗；船內有狹窄空間和階梯。文章中的特展不等於 2027 固定展出。",
-    "url": "https://aglobewelltravelled.com/2025/11/07/australian-national-maritime-museum-review/"
    }
   ],
   "official": [
+   {
+    "u": "https://www.taronga.org.au/sydney-zoo/plan",
+    "l": "Taronga 參觀資訊與門票"
+   },
+   {
+    "u": "https://www.taronga.org.au/about/building-a-zoo-for-the-future/sky-safari/upgrade",
+    "l": "Sky Safari 纜車停駛與重建"
+   },
+   {
+    "u": "https://transportnsw.info/trip",
+    "l": "Transport for NSW 路線規劃"
+   },
    {
     "u": "https://australian.museum/visit/",
     "l": "Australian Museum 參觀資訊"
    },
    {
-    "u": "https://australian.museum/exhibition/dinosaurs/",
-    "l": "恐龍常設展"
-   },
-   {
-    "u": "https://australian.museum/visit/food/",
-    "l": "館內餐飲"
-   },
-   {
     "u": "https://www.sea.museum/en/visit",
     "l": "海事博物館：船艦開放與施工公告"
-   },
-   {
-    "u": "https://www.darlingharbour.com/notices",
-    "l": "達令港施工與改道公告"
    }
   ]
  },
@@ -713,7 +705,7 @@ window.TRIP_DAYS = [
    }
   ],
   "move": "三種接駁選擇：① 一日遊旅行團，含門票與接送最省心，選團時確認是否包含門票、接送地點與兒童座椅安排；② 自駕租車，走 M4／Great Western Highway 約 1.5–2 小時，Scenic World 與 Echo Point 都有停車場，行程最彈性，但要先備妥國際駕照、澳規兒童安全座椅，並記得靠左行駛（見文首「考慮自駕」說明）；③ 雪梨市郊火車藍山線到 Katoomba 約 2 小時（今天週日，Opal 週末每日上限大人 A$9.65、兒童 A$4.80），再轉當地巴士 686 到 Scenic World，最省錢但單程較久，六歲長程坐車要留意。不把每個停留點的車程當成固定值。",
-  "planb": "若山區天候差，可與 Day 4 對調（博物館日不怕下雨）；出發前看旅行團取消規則。想在藍山過夜的話，國內線要改訂 6/21 下午，隔天從 Leura 開車約 2 小時直接去機場。",
+  "planb": "若山區天候差，今天改去 Australian Museum 恐龍常設展（室內），藍山改到 Day 4、動物園看哪天放晴再排；出發前看旅行團取消規則。想在藍山過夜的話，國內線要改訂 6/21 下午，隔天從 Leura 開車約 2 小時直接去機場。",
   "reads": [
    {
     "date": "2025-08-19",
@@ -861,7 +853,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "Gold Coast Airport（OOL）抵達後前往飯店接駁選擇：① 自駕租車，機場航廈就有租車櫃檯，取車後一路開到 Day 12（6/27）在布里斯本還車，黃金海岸景點分散、Dig IT（Day 10）又在山上，自駕是這幾天最彈性的方式，兒童安全座椅需向租車公司加購或自備（見文首「考慮自駕」說明）；② G:link 輕軌（需先搭接駁車到 Helensvale 站）＋步行，較省但轉乘次數多；③ 機場接送車或 Uber／DiDi，約 20–30 分鐘到衝浪者天堂，先確認兒童乘車安排。不要誤訂到回程機場 BNE。",
+  "move": "Gold Coast Airport（OOL）抵達後前往飯店接駁選擇：① 自駕租車，機場航廈就有租車櫃檯，取車後一路開到 Day 12（6/27）在布里斯本還車，黃金海岸的樂園分散在北邊的 Coomera、Oxenford 和 Main Beach，自駕是這幾天最彈性的方式，兒童安全座椅需向租車公司加購或自備（見文首「考慮自駕」說明）；② G:link 輕軌（需先搭接駁車到 Helensvale 站）＋步行，較省但轉乘次數多；③ 機場接送車或 Uber／DiDi，約 20–30 分鐘到衝浪者天堂，先確認兒童乘車安排。不要誤訂到回程機場 BNE。",
   "planb": "直接刪掉邦迪，早餐後慢慢退房去機場；抵達晚就取消沙灘散步。",
   "reads": [
    {
@@ -1040,157 +1032,13 @@ window.TRIP_DAYS = [
   "md": "6/23",
   "wd": "三",
   "area": "黃金海岸",
-  "place": "黃金海岸・衝浪者天堂",
-  "pace": "短體驗・午後留白",
-  "color": "yellow",
-  "illo": "duck",
-  "title": "水陸兩用鴨子車，陸地開進河道",
-  "lead": "Aquaduck 約一小時的陸地＋水上體驗，讓交通工具本身變成遊戲。下午留給午睡，今天不用走到腳痠。",
-  "stay": "黃金海岸・第 3 晚",
-  "mission": "觀察鴨子車入水時發生什麼事，再找一艘和自己不同的船。",
-  "stops": [
-   {
-    "time": "預約場次前",
-    "title": "Aquaduck 集合報到",
-    "desc": "依票券通知前往集合點，提前到場；Google Maps 搜尋結果需核對業者名稱與票券地址。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     },
-     {
-      "m": "rail",
-      "t": "G:link"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Aquaduck%20Gold%20Coast%20Cavill%20Avenue%20Surfers%20Paradise",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "約 1 小時",
-    "title": "Aquaduck 城市導覽＋河道巡遊",
-    "desc": "先在道路行駛，再進水道巡遊，體驗車子變船。官方有兒童掌舵機會，但依船長安排，不保證每個場次或孩子都可參加。",
-    "tags": [
-     {
-      "m": "ferry",
-      "t": "水陸鴨子車"
-     }
-    ],
-    "must": true,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Aquaduck%20Gold%20Coast",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "中午",
-    "title": "Cavill Avenue 附近午餐",
-    "desc": "用餐後直接回飯店。座位由業者分配，不預設能指定位置。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Cavill%20Avenue%20Surfers%20Paradise%20restaurants",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "time": "15:30・選配",
-    "title": "衝浪者天堂短散步",
-    "desc": "只有體力夠才去玩沙 30–45 分鐘，或留在飯店畫下今天的鴨子車；不加另一個付費景點。",
-    "tags": [
-     {
-      "m": "walk",
-      "t": "步行"
-     }
-    ],
-    "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Surfers%20Paradise%20Beach%20QLD",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   }
-  ],
-  "meals": [
-   {
-    "tag": "午餐",
-    "name": "Cavill Avenue 餐飲區",
-    "desc": "挑孩子接受的飯麵或簡餐，結束體驗後不再跨區找名店。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Cavill%20Avenue%20Surfers%20Paradise%20restaurants",
-      "l": "開啟 Google Maps"
-     }
-    ]
-   },
-   {
-    "tag": "晚餐",
-    "name": "Hurricane’s Grill・Surfers Paradise",
-    "desc": "今天時間較鬆，適合安排有座位的晚餐；若 Day 6 已吃過，就改附近其他餐廳。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Hurricanes%20Grill%20Surfers%20Paradise%20QLD",
-      "l": "開啟 Google Maps"
-     },
-     {
-      "u": "https://www.hurricanesgrill.com.au/",
-      "l": "菜單／店家資訊"
-     }
-    ]
-   }
-  ],
-  "move": "從住宿前往票券上的 Cavill Avenue 集合點：衝浪者天堂住宿大多步行可達，或搭 G:link 輕軌到 Surfers Paradise 站；自駕的話集合點附近為收費路邊停車或鄰近停車場，預留找車位時間。官方目前表示推車無法帶上車，可依業者寄放規則處理，貴重物品隨身。",
-  "planb": "若因天候取消，先依票券處理改期或退款，再把今天改成 Day 11 的 HOTA 公園／室內藝文安排。",
-  "reads": [
-   {
-    "date": "2025-08-19",
-    "type": "學校活動紀錄・非獨立遊記",
-    "title": "BROWNS｜Aquaduck 校外活動紀錄",
-    "note": "可看學生活動照片與水陸體驗；參與者年齡不同於六歲親子旅行，只參考體驗形式。",
-    "url": "https://blog.browns.edu.au/junior-program/gc-psp-w5-aquaduck/"
-   },
-   {
-    "date": "2026-10-09～11",
-    "type": "旅客短評・業者彙整",
-    "title": "Aquaduck｜業者官網展示的 Google 旅客短評",
-    "note": "本次頁面可見 2026 年 10 月短評，提到水上行程與掌舵體驗；此為業者網站選載，並非獨立媒體評測。",
-    "url": "https://www.aquaduck.com.au/gold-coast/"
-   }
-  ],
-  "official": [
-   {
-    "u": "https://www.aquaduck.com.au/gold-coast/",
-    "l": "Aquaduck 官方行程與乘車資訊"
-   }
-  ]
- },
- {
-  "n": 9,
-  "md": "6/24",
-  "wd": "四",
-  "area": "黃金海岸",
   "place": "黃金海岸・Currumbin",
   "pace": "動物日・步行中等",
   "color": "yellow",
   "illo": "koala",
   "title": "抱抱無尾熊，餵彩虹吸蜜鸚鵡",
-  "lead": "這趟唯一的動物日：無尾熊、袋鼠和彩虹吸蜜鸚鵡都在同一個保護區。上午看動物，下午順路到 Burleigh Heads 海邊放空。",
-  "stay": "黃金海岸・第 4 晚",
+  "lead": "黃金海岸的動物日：無尾熊、袋鼠和彩虹吸蜜鸚鵡都在同一個保護區。上午看動物，下午順路到 Burleigh Heads 海邊放空；昨天樂園走很多，今天步調放慢。",
+  "stay": "黃金海岸・第 3 晚",
   "mission": "數一數今天看到幾種澳洲動物，選一隻當這趟旅行的吉祥物。",
   "stops": [
    {
@@ -1294,7 +1142,7 @@ window.TRIP_DAYS = [
    }
   ],
   "move": "接駁選擇：① 自駕，沿黃金海岸公路往南約 30 分鐘，園區有停車場；② TransLink 700 路公車，每段 50 分錢、可直接用感應信用卡，約 30–40 分鐘，班次用 TransLink 規劃器查；③ 叫車，不想轉乘時最省力。",
-  "planb": "下大雨就縮短園區時間、取消海灘，回飯店休息；不建議改到其他天，後面接著 Dig IT 和 HOTA。",
+  "planb": "下大雨就縮短園區時間、取消海灘，回飯店休息；後面接著 Sea World、輕鬆日和 Movie World，不建議把 Currumbin 往後挪。",
   "reads": [],
   "official": [
    {
@@ -1308,62 +1156,63 @@ window.TRIP_DAYS = [
   ]
  },
  {
-  "n": 10,
-  "md": "6/25",
-  "wd": "五",
-  "area": "Tamborine",
-  "place": "黃金海岸 → Tamborine Mountain",
-  "pace": "戶外體驗・需預約與接送",
+  "n": 9,
+  "md": "6/24",
+  "wd": "四",
+  "area": "黃金海岸",
+  "place": "黃金海岸・Main Beach",
+  "pace": "樂園日・海洋動物＋兒童區",
   "color": "yellow",
-  "illo": "digger",
-  "title": "開真正迷你挖土機，當半天小小工程師",
-  "lead": "Dig IT 讓孩子坐進真正迷你挖土機，練習操作和手眼協調。今天專心在山區玩一件事，午後慢慢回海岸。",
-  "stay": "黃金海岸・第 5 晚",
-  "mission": "用挖斗移動材料，試著一次慢慢放準；完成後畫出自己的工程車。",
+  "illo": "dolphin",
+  "title": "海洋世界：看海豚表演，逛尼克兒童樂園",
+  "lead": "Sea World 在 Main Beach 半島上，除了海洋動物展示和表演，還有給小小孩的 Nickelodeon Land。和 Dreamworld 一樣不追求玩遍：先排兒童區，再挑一兩場表演。",
+  "stay": "黃金海岸・第 4 晚",
+  "mission": "看完海豚表演，說說牠們怎麼跟訓練師溝通；再找一隻你從來沒見過的海洋動物。",
   "stops": [
    {
-    "time": "依場次倒推",
-    "title": "前往 Thunderbird Park",
-    "desc": "預約往返接送或確認自駕安排。山區交通需留緩衝，官方目前要求場次前 30 分鐘報到，2027 場次需另查。",
+    "time": "開園前",
+    "title": "前往 Sea World",
+    "desc": "開園時間依季節調整（2026/10 查到多為 10:00–17:00，部分平日 10:30–16:00），出發前看官網 Operating Hours。從衝浪者天堂搭 TransLink 705 公車約 10–15 分鐘、每段 50 分錢，或自駕到園區收費停車場。",
     "tags": [
+     {
+      "m": "bus",
+      "t": "705 公車"
+     },
      {
       "m": "car",
       "t": "自駕"
-     },
-     {
-      "m": "bus",
-      "t": "山區接駁車"
-     },
-     {
-      "m": "ride",
-      "t": "叫車"
      }
     ],
     "must": false,
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Thunderbird%20Park%20Tamborine%20Mountain%20QLD",
+      "u": "https://www.google.com/maps/search/?api=1&query=Sea%20World%20Gold%20Coast",
       "l": "開啟 Google Maps"
      }
     ]
    },
    {
-    "time": "預約時段",
-    "title": "Dig IT 迷你挖土機體驗",
-    "desc": "官方目前允許 5 歲以上獨立操作，仍可能需要協助；六歲符合目前年齡門檻。所有參與者須能理解英語安全說明，訂位前先確認孩子是否符合，不以家長翻譯自行取代官方要求。",
-    "tags": [],
+    "time": "上午",
+    "title": "Nickelodeon Land 兒童區",
+    "desc": "有海綿寶寶、Dora、汪汪隊等角色的兒童遊具、表演與見面會。每項設施有各自的身高與陪同規定，入園前量好孩子身高再看園區圖；Leviathan、Storm Coaster 等大型設施是給大孩子和大人的。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
     "must": true,
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Dig%20IT%20Thunderbird%20Park%20Tamborine%20Mountain",
+      "u": "https://www.google.com/maps/search/?api=1&query=Nickelodeon%20Land%20Sea%20World%20Gold%20Coast",
       "l": "開啟 Google Maps"
      }
     ]
    },
    {
-    "time": "午餐後",
-    "title": "園區簡單用餐、短休息",
-    "desc": "活動後吃飯、洗手與換乾淨衣物；不再加高空繩索、滑索或其他需要另訂的活動。",
+    "time": "中午前後",
+    "title": "海豚與海洋動物表演",
+    "desc": "依當天「Shows & Presentations」時刻表挑一場，提早 15–20 分鐘入座；坐前排可能被潑濕，冬天帶件外套。其他時間逛海洋動物展示區，展示項目以當日園區圖為準。",
     "tags": [
      {
       "m": "walk",
@@ -1371,25 +1220,20 @@ window.TRIP_DAYS = [
      }
     ],
     "must": false,
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Thunderbird%20Park%20Tamborine%20Mountain%20QLD",
-      "l": "開啟 Google Maps"
-     }
-    ]
+    "links": []
    },
    {
-    "time": "午後",
-    "title": "回黃金海岸飯店",
-    "desc": "回程留作午睡與整理戰利品。若孩子不喜歡機械或不符合英語要求，這天改用下面的替代選項。",
+    "time": "15:00 起",
+    "title": "累了就提早離園",
+    "desc": "不為了待到閉園硬撐；回程前可以在 Main Beach 的 Tedder Avenue 吃早一點的晚餐。",
     "tags": [
+     {
+      "m": "bus",
+      "t": "705 公車"
+     },
      {
       "m": "car",
       "t": "自駕"
-     },
-     {
-      "m": "bus",
-      "t": "山區接駁車"
      }
     ],
     "must": false,
@@ -1399,89 +1243,114 @@ window.TRIP_DAYS = [
   "meals": [
    {
     "tag": "午餐",
-    "name": "Terrace Cafe／Rainforest Restaurant",
-    "desc": "場內用餐二選一，先確認當日營業；官方不開放自行野餐，不把自備午餐當備案。",
-    "links": [
-     {
-      "u": "https://www.google.com/maps/search/?api=1&query=Terrace%20Cafe%20Thunderbird%20Park%20Tamborine%20Mountain%20QLD",
-      "l": "開啟 Google Maps"
-     },
-     {
-      "u": "https://www.thunderbirdpark.com/",
-      "l": "菜單／店家資訊"
-     }
-    ]
+    "name": "Sea World 園區餐飲",
+    "desc": "園內有多處餐點，營業以當天為準；午餐避開表演剛散場的時段。",
+    "links": []
    },
    {
     "tag": "晚餐",
-    "name": "住宿附近吃飯",
-    "desc": "回到海岸後就近吃熟悉餐點，不安排另一段長途車程。",
+    "name": "Tedder Avenue 餐廳街・Main Beach",
+    "desc": "離園區近，挑一家坐下慢慢吃，不用急著回衝浪者天堂。",
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Surfers%20Paradise%20QLD%20restaurants",
+      "u": "https://www.google.com/maps/search/?api=1&query=Tedder%20Avenue%20Main%20Beach%20QLD",
       "l": "開啟 Google Maps"
      }
     ]
    }
   ],
-  "move": "Dig IT 在 Tamborine Mountain，不在黃金海岸市中心，沒有直達公車上山。接駁選擇：① 自駕，約 45 分鐘、34 公里，山路彎多，Thunderbird Park 有停車場，是最有彈性的方式，但山區路況較需留意、停車場可能需留意路況與濕滑；② Tamborine Mountain 跳上跳下觀光接駁車，從衝浪者天堂轉運站出發，約早上 8 點出發、下午 5 點返回，需事先訂位；③ Escape Shuttles 門對門接送，或 TransLink 740 公車到 Nerang 再轉 Uber／計程車上山（約 40 分鐘車程另計費）。這是需要往返車程的一日主題，不能當作市區隨到隨玩的點；所有參與者須穿包鞋，園方目前不開放自行野餐。",
-  "planb": "未訂到場次、孩子不理解英語安全說明或天候不適合時，改成 Day 11 的 HOTA 公園日，或回 Currumbin 再玩半天。",
+  "move": "接駁選擇：① TransLink 705 公車從衝浪者天堂往北，約 10–15 分鐘、每段 50 分錢，可用感應信用卡（第三方資料班距 10–20 分鐘不等，以 TransLink 規劃器為準）；② 自駕約 10 分鐘，園區停車場收費；③ 叫車，回程孩子累了最省力。",
+  "planb": "下雨時以室內展示和有屋頂的表演場為主，戶外設施可能停駛；雨太大就縮短行程。Sea World 和 Movie World 都是 Village Roadshow 的樂園，買多日通票的話可以依天氣調換這兩天。",
   "reads": [
    {
-    "date": "2025-10-05",
-    "type": "旅客短評・非完整遊記",
-    "title": "Tripadvisor｜Thunderbird Park 的 Dig IT 體驗短評",
-    "note": "可見旅客分享迷你挖土機體驗；請看標題「Fun, fun, fun」及日期。能否操作仍須符合官方年齡與英語安全要求。",
-    "url": "https://www.tripadvisor.co.za/Attraction_Review-g1424561-d2286851-Reviews-Thunderbird_Park-Tamborine_Mountain_Scenic_Rim_Brisbane_Region_Queensland.html"
+    "date": "2026-09",
+    "type": "比價文・非實訪遊記",
+    "title": "Endless Travel Plans｜黃金海岸主題樂園花費比較",
+    "note": "比較單日票、多園通票與交通的總花費；票價常變動，以官網當日價格為準。",
+    "url": "https://www.endlesstravelplans.com/destinations/comparisons/gold-coast-theme-parks-cost"
    }
   ],
   "official": [
    {
-    "u": "https://www.thunderbirdpark.com/digit/",
-    "l": "Dig IT 官方年齡、英語與報到規定"
+    "u": "https://seaworld.com.au/park-info/operating-hours",
+    "l": "Sea World 開放時間"
    },
    {
-    "u": "https://escapeshuttles.com.au/thunderbird-park-pricing/",
-    "l": "Escape Shuttles 接駁時刻與票價"
+    "u": "https://seaworld.com.au/attractions/nickelodeon-land",
+    "l": "Nickelodeon Land 設施"
+   },
+   {
+    "u": "https://seaworld.com.au/park-info/shows-and-presentations-schedule",
+    "l": "表演時刻表"
+   },
+   {
+    "u": "https://themeparks.com.au/park-info",
+    "l": "Village Roadshow 樂園資訊與多園通票"
+   },
+   {
+    "u": "https://jp.translink.com.au/plan-your-journey",
+    "l": "TransLink 路線規劃"
    }
   ]
  },
  {
-  "n": 11,
-  "md": "6/26",
-  "wd": "六",
+  "n": 10,
+  "md": "6/25",
+  "wd": "五",
   "area": "黃金海岸",
-  "place": "黃金海岸",
-  "pace": "輕鬆・彈性最高",
+  "place": "黃金海岸・衝浪者天堂",
+  "pace": "輕鬆・短體驗＋留白",
   "color": "yellow",
-  "illo": "art",
-  "title": "HOTA 公園與海灘，留白也是行程",
-  "lead": "大活動後留一天休息。HOTA 看一小區作品、戶外空間走走，再吃午餐；不預設 2027 有相同兒童特展。",
-  "stay": "黃金海岸・第 6 晚",
-  "mission": "選一幅最喜歡的作品，說出你看到的顏色和故事。",
+  "illo": "duck",
+  "title": "鴨子車開進河裡，下午公園留白",
+  "lead": "兩個樂園日中間放一天輕鬆的：上午坐約一小時的 Aquaduck 水陸兩用車，下午睡午覺，有精神再去 HOTA 戶外公園或海邊。",
+  "stay": "黃金海岸・第 5 晚",
+  "mission": "觀察鴨子車入水時發生什麼事；下午挑一個最喜歡的顏色，回飯店畫下今天的鴨子車。",
   "stops": [
    {
-    "time": "09:30",
-    "title": "HOTA 公園與戶外空間",
-    "desc": "先在園區戶外散步或看孩子想玩的空間，約 60–90 分鐘。展覽是否免費、是否適合兒童與營業時間另查官網。",
+    "time": "預約場次前",
+    "title": "Aquaduck 集合報到",
+    "desc": "依票券通知前往集合點，提前到場；Google Maps 搜尋結果需核對業者名稱與票券地址。",
     "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     },
      {
       "m": "rail",
       "t": "G:link"
      }
     ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Aquaduck%20Gold%20Coast%20Cavill%20Avenue%20Surfers%20Paradise",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "約 1 小時",
+    "title": "Aquaduck 城市導覽＋河道巡遊",
+    "desc": "先在道路行駛，再進水道巡遊，體驗車子變船。官方有兒童掌舵機會，但依船長安排，不保證每個場次或孩子都可參加。",
+    "tags": [
+     {
+      "m": "ferry",
+      "t": "水陸鴨子車"
+     }
+    ],
     "must": true,
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=HOTA%20Home%20of%20the%20Arts%20QLD",
+      "u": "https://www.google.com/maps/search/?api=1&query=Aquaduck%20Gold%20Coast",
       "l": "開啟 Google Maps"
      }
     ]
    },
    {
     "time": "中午",
-    "title": "HOTA Cafe 午餐",
-    "desc": "吃完就回飯店午睡，不接另一個跨區景點。",
+    "title": "Cavill Avenue 附近午餐",
+    "desc": "用餐後回飯店午睡。座位由業者分配，不預設能指定位置。",
     "tags": [
      {
       "m": "walk",
@@ -1491,33 +1360,37 @@ window.TRIP_DAYS = [
     "must": false,
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=HOTA%20Cafe%20Surfers%20Paradise%20QLD",
+      "u": "https://www.google.com/maps/search/?api=1&query=Cavill%20Avenue%20Surfers%20Paradise%20restaurants",
       "l": "開啟 Google Maps"
      }
     ]
    },
    {
     "time": "15:30・選配",
-    "title": "Broadbeach 海邊／Kurrawa 公園",
-    "desc": "可選遊樂場或短段海邊散步，帶防風衣；天氣不舒服就改商場補給。",
+    "title": "HOTA 戶外公園或海邊",
+    "desc": "HOTA（Home of the Arts）有戶外草地、步道和遊戲空間，室內展覽是否適合六歲另查官網；或改去衝浪者天堂海灘玩沙 30–45 分鐘。兩者擇一，六月傍晚風大帶外套。",
     "tags": [
      {
-      "m": "rail",
-      "t": "G:link"
+      "m": "ride",
+      "t": "叫車"
+     },
+     {
+      "m": "walk",
+      "t": "步行"
      }
     ],
     "must": false,
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Kurrawa%20Pratten%20Park%20Broadbeach%20QLD",
+      "u": "https://www.google.com/maps/search/?api=1&query=HOTA%20Home%20of%20the%20Arts%20Gold%20Coast",
       "l": "開啟 Google Maps"
      }
     ]
    },
    {
     "time": "晚上",
-    "title": "洗衣、整理行李",
-    "desc": "把隔天移動會用的換洗、點心與證件另外裝一包，預留退房時間。",
+    "title": "準備明天的樂園包",
+    "desc": "明天 Movie World 一整天：外套、水壺、點心，記下孩子身高（看設施限制用）。",
     "tags": [],
     "must": false,
     "links": []
@@ -1526,8 +1399,19 @@ window.TRIP_DAYS = [
   "meals": [
    {
     "tag": "午餐",
+    "name": "Cavill Avenue 餐飲區",
+    "desc": "挑孩子接受的飯麵或簡餐，結束體驗後不再跨區找名店。",
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Cavill%20Avenue%20Surfers%20Paradise%20restaurants",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "tag": "點心・選配",
     "name": "HOTA Cafe",
-    "desc": "園區內用餐，餐點與營業依當日公告；比正式套餐餐廳更容易安排彈性午餐。",
+    "desc": "下午去 HOTA 的話在這裡吃點心、休息。",
     "links": [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=HOTA%20Cafe%20Surfers%20Paradise%20QLD",
@@ -1542,7 +1426,7 @@ window.TRIP_DAYS = [
    {
     "tag": "晚餐",
     "name": "Hurricane’s Grill・Surfers Paradise",
-    "desc": "如果 Day 6 還沒吃到排餐，今天可安排；先查預約與份量，別讓孩子餓著排隊。",
+    "desc": "今天時間較鬆，適合安排有座位的晚餐；若 Day 6 已吃過，就改附近其他餐廳。",
     "links": [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Hurricanes%20Grill%20Surfers%20Paradise%20QLD",
@@ -1555,9 +1439,23 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "HOTA、Broadbeach 與住宿之間建議搭 G:link 輕軌，這段海岸線班次密集、不需自駕找車位；下午只選一區，不把整條海岸都排進同一天。",
-  "planb": "雨天先查 HOTA 當日室內展覽是否適合六歲；看不懂或沒興趣就回飯店。不要把九月 Kids Take Over 活動搬到六月。",
+  "move": "從住宿到 Cavill Avenue 的 Aquaduck 集合點：衝浪者天堂住宿大多步行可達，或搭 G:link 輕軌到 Surfers Paradise 站；自駕的話附近為收費路邊停車或停車場，預留找車位時間。官方目前表示推車無法帶上車，可依業者寄放規則處理。HOTA 在衝浪者天堂西側的 Bundall，叫車約 10 分鐘，公車班次用 TransLink 規劃器查。",
+  "planb": "若 Aquaduck 因天候取消，先依票券處理改期或退款；雨天下午查 HOTA 當日室內展覽是否適合六歲，看不懂或沒興趣就回飯店休息。",
   "reads": [
+   {
+    "date": "2025-08-19",
+    "type": "學校活動紀錄・非獨立遊記",
+    "title": "BROWNS｜Aquaduck 校外活動紀錄",
+    "note": "可看學生活動照片與水陸體驗；參與者年齡不同於六歲親子旅行，只參考體驗形式。",
+    "url": "https://blog.browns.edu.au/junior-program/gc-psp-w5-aquaduck/"
+   },
+   {
+    "date": "2026-10-09～11",
+    "type": "旅客短評・業者彙整",
+    "title": "Aquaduck｜業者官網展示的 Google 旅客短評",
+    "note": "本次頁面可見 2026 年 10 月短評，提到水上行程與掌舵體驗；此為業者網站選載，並非獨立媒體評測。",
+    "url": "https://www.aquaduck.com.au/gold-coast/"
+   },
    {
     "date": "2026-06-18",
     "type": "官方旅遊攻略・非遊記",
@@ -1568,12 +1466,145 @@ window.TRIP_DAYS = [
   ],
   "official": [
    {
+    "u": "https://www.aquaduck.com.au/gold-coast/",
+    "l": "Aquaduck 官方行程與乘車資訊"
+   },
+   {
     "u": "https://www.hota.com.au/",
     "l": "HOTA 與展覽資訊"
    },
    {
     "u": "https://www.hota.com.au/dining/cafe",
     "l": "HOTA Cafe"
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "md": "6/26",
+  "wd": "六",
+  "area": "黃金海岸",
+  "place": "黃金海岸・Oxenford",
+  "pace": "樂園日・Kids’ WB 兒童區",
+  "color": "yellow",
+  "illo": "clapper",
+  "title": "華納兄弟電影世界：卡通明星的一天",
+  "lead": "Movie World 是電影主題樂園，大型雲霄飛車多半給大人，六歲的主場是 Kids’ WB 兒童區。今天是週六人比較多，開園就先去兒童區，下午再看表演。",
+  "stay": "黃金海岸・第 6 晚",
+  "mission": "在兒童區自己「考」一張駕照：開完小車後，說說看你遵守了哪些交通規則。",
+  "stops": [
+   {
+    "time": "開園前",
+    "title": "前往 Movie World",
+    "desc": "園區在 Oxenford。從衝浪者天堂自駕約 25–30 分鐘，停車場收費；不自駕可搭 G:link 輕軌到 Helensvale 站轉 TX7 公車（第三方規劃器估約 1 小時 15 分），班次以 TransLink 為準。開園時間依季節調整，出發前看官網。",
+    "tags": [
+     {
+      "m": "car",
+      "t": "自駕"
+     },
+     {
+      "m": "rail",
+      "t": "G:link"
+     },
+     {
+      "m": "bus",
+      "t": "TX7 公車"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Warner%20Bros.%20Movie%20World%20Gold%20Coast",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "上午",
+    "title": "Kids’ WB 兒童區",
+    "desc": "先量孩子身高。官網目前的規定：Junior Driving School 小車 90 公分以上，90–106 公分要大人陪；Road Runner Rollercoaster 110 公分以上，110–120 公分要大人陪；Looney Tunes 旋轉木馬和 Yosemite Sam 小火車可由照顧者陪坐，110 公分以下要大人陪。依孩子實際身高與膽量決定。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": true,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Kids%20WB%20Fun%20Zone%20Movie%20World",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "午餐後",
+    "title": "休息，再挑一場表演",
+    "desc": "找有座位的地方休息，再依當日時刻表挑一場表演或角色見面；不為了大型雲霄飛車排長隊。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": false,
+    "links": []
+   },
+   {
+    "time": "15:30 起",
+    "title": "累了提早離園",
+    "desc": "回程開車約 30 分鐘、大眾運輸約 1 小時多。晚上整理行李，明天退房移動到布里斯本、在那裡還車。",
+    "tags": [
+     {
+      "m": "car",
+      "t": "自駕"
+     },
+     {
+      "m": "bus",
+      "t": "TX7 公車"
+     }
+    ],
+    "must": false,
+    "links": []
+   }
+  ],
+  "meals": [
+   {
+    "tag": "午餐",
+    "name": "Movie World 園區餐飲",
+    "desc": "園內有多處餐點，週六用餐時段排隊較長，可以 11:30 前先吃。",
+    "links": []
+   },
+   {
+    "tag": "晚餐",
+    "name": "住宿附近簡單吃",
+    "desc": "早點回飯店整理行李，明天要退房移動。",
+    "links": []
+   }
+  ],
+  "move": "接駁選擇：① 自駕，沿 M1 往北約 25–30 分鐘，園區停車場收費；② G:link 輕軌到 Helensvale 站轉 TX7 公車，每段 50 分錢，約 1 小時 15 分（第三方規劃器估計），班次以 TransLink 為準；③ 叫車，回程最省力。",
+  "planb": "下雨時戶外雲霄飛車和水區可能停開，以室內表演和有屋頂的兒童設施為主；買多日通票的話可以和 Sea World 那天調換。",
+  "reads": [],
+  "official": [
+   {
+    "u": "https://movieworld.com.au/attractions/kids-wb-fun-zone",
+    "l": "Kids’ WB 兒童區"
+   },
+   {
+    "u": "https://movieworld.com.au/attractions/junior-driving-school",
+    "l": "Junior Driving School 身高規定"
+   },
+   {
+    "u": "https://movieworld.com.au/park-info",
+    "l": "Movie World 園區資訊與開放時間"
+   },
+   {
+    "u": "https://themeparks.com.au/park-info",
+    "l": "Village Roadshow 樂園資訊與多園通票"
+   },
+   {
+    "u": "https://jp.translink.com.au/plan-your-journey",
+    "l": "TransLink 路線規劃"
    }
   ]
  },
@@ -1963,22 +1994,22 @@ window.TRIP = {
   departure: '2027-06-16T23:30:00+08:00',
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
-  checkedOn: '2026-10-17',
-  version: 'little-explorers-20261018c',
+  checkedOn: '2026-10-18',
+  version: 'little-explorers-20261018d',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
     { top: 'TAIPEI', bottom: 'DEPARTURE', shape: 'rect' },
     { top: 'SYDNEY', bottom: 'ARRIVAL', shape: 'circle' },
     { top: 'SYDNEY', bottom: 'HARBOUR', shape: 'rect' },
-    { top: 'SYDNEY', bottom: 'VIVID', shape: 'circle' },
+    { top: 'SYDNEY', bottom: 'TARONGA ZOO', shape: 'circle' },
     { top: 'BLUE MOUNTAINS', bottom: 'KATOOMBA', shape: 'rect' },
     { top: 'GOLD COAST', bottom: 'ARRIVAL', shape: 'circle' },
     { top: 'GOLD COAST', bottom: 'DREAMWORLD', shape: 'rect' },
+    { top: 'CURRUMBIN', bottom: 'KOALA', shape: 'circle' },
+    { top: 'GOLD COAST', bottom: 'SEA WORLD', shape: 'rect' },
     { top: 'SURFERS PARADISE', bottom: 'AQUADUCK', shape: 'circle' },
-    { top: 'CURRUMBIN', bottom: 'KOALA', shape: 'rect' },
-    { top: 'TAMBORINE MTN', bottom: 'DIG IT', shape: 'circle' },
-    { top: 'GOLD COAST', bottom: 'HOTA', shape: 'rect' },
+    { top: 'GOLD COAST', bottom: 'MOVIE WORLD', shape: 'rect' },
     { top: 'BRISBANE', bottom: 'ARRIVAL', shape: 'circle' },
     { top: 'BRISBANE', bottom: 'CITYCAT', shape: 'rect' },
     { top: 'BRISBANE', bottom: 'DEPARTURE', shape: 'circle' }
@@ -2069,15 +2100,16 @@ window.TRIP = {
         { id: 'domestic', t: '訂 6/21 雪梨 → 黃金海岸國內線', note: 'Jetstar／Virgin／Qantas 比價，記得含托運' },
         { id: 'car', t: '決定是否自駕、預約租車＋兒童安全座椅', note: '6/21 在 OOL 取車，6/27 在布里斯本還車' },
         { id: 'bluemtn', t: '藍山（6/20 週日）：選一日團、自駕或火車' },
-        { id: 'tamborine', t: 'Dig IT 那天（6/25）的接駁或自駕', note: 'Tamborine Mountain 沒有直達公車' }
+        { id: 'moviewld', t: 'Movie World 那天（6/26）的自駕或公車', note: '不自駕要 G:link 轉 TX7 公車，單程約 1 小時多' }
       ]
     },
     {
       group: '門票預約', when: '出發前 1–2 個月', items: [
-        { id: 'digit', t: '預約 Dig IT 迷你挖土機場次', note: '確認孩子聽得懂英語安全說明，全員穿包鞋', u: 'https://www.thunderbirdpark.com/digit/', l: '官網' },
-        { id: 'aquaduck', t: '預約 Aquaduck 鴨子車場次', u: 'https://www.aquaduck.com.au/gold-coast/', l: '官網' },
+        { id: 'taronga', t: '購買 Taronga 動物園門票（6/19）', note: '線上通常較便宜；官網曾暫停線上購票，出發前確認。Sky Safari 纜車停駛中', u: 'https://www.taronga.org.au/sydney-zoo/plan', l: '官網' },
+        { id: 'vrparks', t: '購買 Sea World（6/24）與 Movie World（6/26）門票', note: '兩天都在 5 天內，比較多園通票和兩張單日票；2027 價格以官網為準', u: 'https://themeparks.com.au/park-info', l: '官網' },
+        { id: 'aquaduck', t: '預約 Aquaduck 鴨子車場次（6/25）', u: 'https://www.aquaduck.com.au/gold-coast/', l: '官網' },
         { id: 'dreamworld', t: '購買 Dreamworld 門票', note: '入園前量好孩子身高', u: 'https://www.dreamworld.com.au/', l: '官網' },
-        { id: 'currumbin', t: '購買 Currumbin 門票（6/24）', note: '官網大人 A$70、3–17 歲 A$50，線上購票可能有優惠', u: 'https://currumbinsanctuary.com.au/visit/', l: '官網' },
+        { id: 'currumbin', t: '購買 Currumbin 門票（6/23）', note: '官網大人 A$70、3–17 歲 A$50，線上購票可能有優惠', u: 'https://currumbinsanctuary.com.au/visit/', l: '官網' },
         { id: 'scenic', t: '購買 Scenic World 門票', u: 'https://www.scenicworld.com.au/tickets', l: '官網' },
         { id: 'vivid', t: '查 Vivid Sydney 2027 節目與路線', note: '2027 場期 5/28–6/19，行程排在 6/17–6/19', u: 'https://www.vividsydney.com/info/contact-us/frequently-asked-questions', l: '官網' }
       ]
@@ -2096,7 +2128,7 @@ window.TRIP = {
         { id: 'card', t: '準備感應式信用卡＋孩子的兒童 Opal 卡', note: '大人直接感應信用卡；6 歲在雪梨要用兒童 Opal 卡（機場站或便利商店買）；昆士蘭每段 50 分錢可直接感應' },
         { id: 'plug', t: '準備 Type I 插頭轉接頭' },
         { id: 'coat', t: '帶保暖外套與防風衣', note: '雪梨 6 月約 9–17°C，藍山更冷' },
-        { id: 'kidbag', t: '整理孩子的隨身包', note: '換洗衣物、零食、耳機、小毯子；Dig IT 要包鞋' },
+        { id: 'kidbag', t: '整理孩子的隨身包', note: '換洗衣物、零食、耳機、小毯子；樂園日多帶一件外套' },
         { id: 'offline', t: '下載 Google Maps 離線地圖' }
       ]
     }
@@ -2113,12 +2145,12 @@ window.TRIP = {
     },
     {
       title: '海事博物館登船，要再看開放表',
-      text: '官網目前列有 2026 年 10–11 月展區與船艦工程；不等於 2027/6 關閉，也不保證屆時每艘船都開。現在海事博物館是 Day 4 的備案，與恐龍博物館擇一。',
+      text: '官網目前列有 2026 年 10–11 月展區與船艦工程；不等於 2027/6 關閉，也不保證屆時每艘船都開。現在海事博物館和恐龍博物館都是 Day 4（Taronga 動物園）的雨天備案，擇一。',
       links: [{ u: 'https://www.sea.museum/en/visit', l: '館方開放與維修公告' }]
     },
     {
       title: '日期先保留，班次與節目等實際確認',
-      text: '沿用 2027/6/16–6/29。國際線班號已定，國內線、住宿與活動都還沒訂；Vivid 只排 6/17–6/19，展區以 2027 節目表為準。HOTA 與 Dig IT 也不保證未來同樣場次。',
+      text: '沿用 2027/6/16–6/29。國際線班號已定，國內線、住宿與活動都還沒訂；Vivid 只排 6/17–6/19，展區以 2027 節目表為準。各樂園表演、Aquaduck 場次與 HOTA 展覽也不保證和現在相同。',
       links: [{ u: 'https://www.vividsydney.com/info/contact-us/frequently-asked-questions', l: 'Vivid 官方日期' }]
     },
     {
@@ -2183,15 +2215,18 @@ window.TRIP = {
     {
       title: '景點接駁', sub: '不自駕時怎麼去', color: 'green',
       rows: [
+        ['Taronga 動物園', '環形碼頭搭 F2 渡輪約 12 分鐘，碼頭再搭公車上山，用 Opal'],
         ['藍山 Scenic World', 'Katoomba 站轉 686 公車，用 Opal 付款'],
         ['Dreamworld', '火車到 Coomera 站轉公車（50 分錢），或主題樂園接駁巴士'],
         ['Currumbin', '700 路公車約 30–40 分鐘，50 分錢'],
-        ['Dig IT（Tamborine）', '沒有直達公車：Escape Shuttles 或山區觀光接駁車，票價依業者'],
+        ['Sea World', '衝浪者天堂搭 705 公車約 10–15 分鐘，50 分錢'],
+        ['Movie World', 'G:link 到 Helensvale 站轉 TX7 公車，50 分錢'],
         ['布里斯本南岸', 'CityCat 渡輪＋步行，50 分錢']
       ],
       tips: ['班次都用上面的官方路線規劃器查當天時刻。', '自駕的法規與注意事項見清單區「考慮自駕，先看這段」。'],
       links: [
-        { u: 'https://escapeshuttles.com.au/thunderbird-park-pricing/', l: 'Escape Shuttles 票價' },
+        { u: 'https://www.taronga.org.au/sydney-zoo/plan', l: 'Taronga 交通與門票' },
+        { u: 'https://themeparks.com.au/park-info', l: 'Sea World／Movie World 園區資訊' },
         { u: 'https://currumbinsanctuary.com.au/visit/', l: 'Currumbin 交通與票價' }
       ]
     }

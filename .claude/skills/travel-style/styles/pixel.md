@@ -53,7 +53,7 @@ html[data-theme="pixel"] {
 2. `window.pixelate(root)` 找出 `svg.px-src`：
    - 縮小倍率：寬 ≥ 200 的除以 3（240×160 → 80×53，首頁 360×250 → 120×83），其他除以 2。
    - SVG 轉 `data:image/svg+xml` 載入 → **先畫成目標的 4 倍大，再每 4×4 取正中間一點**（point sampling）。直接縮小會產生混色邊緣，量化時變成綠色、珊瑚色雜點；取點不混色，邊緣就乾淨。
-   - 每點換成色盤裡最近的顏色、透明度 < 110 的變透明。
+   - 每點換成色盤裡最近的顏色、透明度 < 110 的變透明。**近灰色（RGB 最大最小差 < 48）只能變成墨色或紙色**（亮度 < 150 取墨色）：線與紙的混色若直接找最近色，常被配到綠色，細線會變成綠條。
    - 輸出 PNG data URL，以 SVG 原始碼為鍵快取；用 `<img class="illo px-img">` 換掉原本的 SVG（保留 `aria-label` 當 `alt`）。失敗就移除 `px-src`，留著向量圖。
 3. 轉換完成前 `svg.px-src { visibility: hidden; }`，避免先閃一下向量圖。
 4. 放大顯示：`.px-img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; image-rendering: pixelated; }`（最後一個生效的為準）。
