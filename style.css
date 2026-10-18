@@ -23,6 +23,9 @@
   --tabs-h: 74px;
   --shadow: 0 4px 0 var(--ink);
   --font: 'Huninn', 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', system-ui, sans-serif;
+  --display: var(--font);
+  --mono: 'Courier Prime', ui-monospace, Menlo, monospace;
+  --bg: var(--paper);
 }
 
 html.big { font-size: 112.5%; }
@@ -33,7 +36,7 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font);
   font-size: 1rem;
@@ -117,6 +120,22 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .switch[aria-checked="true"] { background: var(--green); }
 .switch[aria-checked="true"] .knob { transform: translateX(24px); }
 
+.theme-picker { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.theme-opt {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px;
+  border: 2px solid var(--ink); border-radius: var(--r-sm); padding: 8px 4px 6px; cursor: pointer;
+  font-size: .78rem; line-height: 1.3; text-align: center; background: var(--paper);
+}
+.theme-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.theme-opt:has(input:checked) { background: var(--yellow); box-shadow: 0 3px 0 var(--ink); }
+.theme-opt:has(input:focus-visible) { outline: 3px solid var(--ink); outline-offset: 2px; }
+.sw { display: flex; width: 44px; height: 26px; border: 2px solid #3E3A39; border-radius: 8px; overflow: hidden; }
+.sw i { flex: 1; }
+.sw-book i:nth-child(1) { background: #F2A497; } .sw-book i:nth-child(2) { background: #F6D27A; } .sw-book i:nth-child(3) { background: #A8D3E6; }
+.sw-aussie i:nth-child(1) { background: #D7322B; } .sw-aussie i:nth-child(2) { background: #F6C543; } .sw-aussie i:nth-child(3) { background: #1E3557; }
+.sw-passport { border-radius: 50%; width: 26px; border-style: dashed; border-color: #C0453A; }
+.sw-passport i:nth-child(1) { background: #F3F0E4; } .sw-passport i:nth-child(2) { background: #2F5D8A; } .sw-passport i:nth-child(3) { background: #F3F0E4; }
+
 /* ---------- layout ---------- */
 main {
   max-width: 1040px; margin: 0 auto;
@@ -156,7 +175,7 @@ main {
   border: var(--line) solid var(--ink); border-radius: var(--r-xl);
   padding: 14px 14px 18px; display: grid; gap: 4px;
 }
-.hero-art { background: var(--paper); border: var(--line) solid var(--ink); border-radius: var(--r-lg); overflow: hidden; }
+.hero-art { position: relative; background: var(--paper); border: var(--line) solid var(--ink); border-radius: var(--r-lg); overflow: hidden; }
 .hero-art svg { display: block; width: 100%; height: auto; }
 .hero-text { padding: 10px 6px 0; }
 .hero h1 { font-size: 2.35rem; line-height: 1.2; letter-spacing: .06em; margin: 2px 0 8px; }
@@ -286,7 +305,7 @@ main {
   background: var(--ct); border: var(--line) solid var(--ink); border-radius: var(--r-lg);
   padding: 12px 14px 16px; overflow: hidden;
 }
-.day-illo { background: var(--paper); border: var(--line) solid var(--ink); border-radius: var(--r-md); overflow: hidden; }
+.day-illo { position: relative; background: var(--paper); border: var(--line) solid var(--ink); border-radius: var(--r-md); overflow: hidden; }
 .day-illo svg { display: block; width: 100%; height: auto; }
 .day-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 12px 0 4px; font-size: .88rem; }
 .day-no { background: var(--c); border: 2px solid var(--ink); border-radius: 999px; padding: 0 10px; letter-spacing: .08em; }
@@ -530,6 +549,185 @@ details.card[open] { padding-bottom: 14px; }
   40% { transform: translateY(-6px) scale(1.1); }
   70% { transform: translateY(0) scale(.96); }
   100% { transform: translateY(-2px) scale(1); }
+}
+
+/* ---------- theme-only pieces (hidden in the default picture-book theme) ---------- */
+.mrz, .stamp-count, .hero-stamps, .day-stamp { display: none; }
+.stamp text { font-family: var(--mono); font-weight: 700; }
+.stamp > circle:first-child, .stamp > rect:first-child { fill: var(--paper); fill-opacity: .72; }
+.paused .illo * { animation-play-state: paused !important; }
+
+/* ==========================================================
+   澳洲海報風 data-theme="aussie"
+   復古旅遊海報：沙色底、海軍藍粗線、日落橘＋金合歡黃、
+   海灘救生員紅黃旗條紋、板狀襯線英文字。小圓角、斜向硬陰影。
+   ========================================================== */
+html[data-theme="aussie"] {
+  --paper: #FFF8EC; --bg: #FBEFD9; --ink: #1E3557; --ink-2: #4E5F78;
+  --coral: #EE8B5B; --yellow: #F4BE3E; --water: #7EC4CF; --green: #97C08F;
+  --coral-t: #FCE3D5; --yellow-t: #FCEFC9; --water-t: #DCF0F2; --green-t: #E5F0E1;
+  --flag-red: #D7322B; --flag-yellow: #F6C543;
+  --r-xl: 16px; --r-lg: 12px; --r-md: 10px; --r-sm: 8px;
+  --shadow: 5px 5px 0 var(--ink);
+  --display: 'Alfa Slab One', var(--font);
+  --stripe: repeating-linear-gradient(90deg, var(--flag-red) 0 22px, var(--flag-yellow) 22px 44px);
+}
+html[data-theme="aussie"] .topbar { background: var(--stripe) bottom / 100% 6px no-repeat, var(--bg); }
+html[data-theme="aussie"] .day-tabs-wrap { background: var(--bg); }
+html[data-theme="aussie"] .kicker,
+html[data-theme="aussie"] .cd-box b,
+html[data-theme="aussie"] .fl-code,
+html[data-theme="aussie"] .flight-code,
+html[data-theme="aussie"] .day-no,
+html[data-theme="aussie"] .tab .t-md,
+html[data-theme="aussie"] .tab .t-day,
+html[data-theme="aussie"] .nights { font-family: var(--display); letter-spacing: .06em; }
+html[data-theme="aussie"] .kicker {
+  display: inline-flex; align-items: center; gap: 8px; border-radius: 4px;
+  background: var(--ink); color: var(--bg); border-color: var(--ink); padding: 2px 12px 2px 6px;
+}
+html[data-theme="aussie"] .kicker::before {
+  content: ""; width: 16px; height: 12px; border: 1.5px solid var(--bg); border-radius: 2px;
+  background: linear-gradient(var(--flag-red) 50%, var(--flag-yellow) 50%);
+}
+html[data-theme="aussie"] .section-head h2::after {
+  content: ""; display: block; width: 88px; height: 8px; margin-top: 8px;
+  background: var(--stripe); border: 2px solid var(--ink); border-radius: 3px;
+}
+html[data-theme="aussie"] .hero {
+  background: repeating-conic-gradient(from -90deg at 50% 100%, #F9D894 0 7.5deg, #FCE6B5 7.5deg 15deg);
+  box-shadow: var(--shadow);
+}
+html[data-theme="aussie"] .hero h1 { text-shadow: 3px 3px 0 var(--coral); }
+html[data-theme="aussie"] .hero-art,
+html[data-theme="aussie"] .day-illo { border-width: 3px; box-shadow: 0 0 0 5px var(--paper), 0 0 0 8px var(--ink); margin: 8px; }
+html[data-theme="aussie"] .day-illo { margin: 8px 8px 12px; }
+html[data-theme="aussie"] .btn:hover { box-shadow: 7px 7px 0 var(--ink); }
+html[data-theme="aussie"] .btn:active { box-shadow: 1px 1px 0 var(--ink); transform: translate(4px, 4px); }
+html[data-theme="aussie"] .btn, html[data-theme="aussie"] .link-btn,
+html[data-theme="aussie"] .tag, html[data-theme="aussie"] .route-stop { border-radius: 6px; }
+html[data-theme="aussie"] .tab { border-radius: 8px; }
+html[data-theme="aussie"] .tab[aria-selected="true"] { box-shadow: 3px 3px 0 var(--ink); }
+html[data-theme="aussie"] .must { background: var(--flag-red); color: #FFF8EC; border-radius: 4px; transform: rotate(-3deg); }
+html[data-theme="aussie"] .legend .must { transform: none; }
+html[data-theme="aussie"] .stop.is-must .node { background: var(--flag-red); }
+html[data-theme="aussie"] .flight-top, html[data-theme="aussie"] .stay-top { border-bottom-width: 3px; }
+html[data-theme="aussie"] .pop { animation-name: poster; }
+html[data-theme="aussie"] .todo-item.just .box { animation: wobble .45s cubic-bezier(.34, 1.56, .64, 1); }
+@keyframes poster {
+  0% { opacity: 0; transform: translateX(34px) rotate(1.2deg); }
+  60% { opacity: 1; transform: translateX(-5px) rotate(-.3deg); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes wobble { 0% { transform: scale(.6) rotate(-14deg); } 60% { transform: scale(1.15) rotate(6deg); } 100% { transform: none; } }
+
+/* ==========================================================
+   護照蓋章風 data-theme="passport"
+   護照內頁：米色底加淡淡防偽波紋、海軍墨細線、小圓角；
+   每天一枚入境章，切換日期時「咚」一聲蓋下去；打勾也是蓋章。
+   ========================================================== */
+html[data-theme="passport"] {
+  --paper: #FFFDF7; --bg: #F3F0E4; --ink: #26344D; --ink-2: #5A6478;
+  --coral: #EBA79C; --yellow: #EDCF85; --water: #A9C6DD; --green: #B3CDA9;
+  --coral-t: #F8E4DF; --yellow-t: #FAF0D5; --water-t: #E4EEF6; --green-t: #E9F1E5;
+  --stamp-red: #C0453A; --stamp-blue: #2F5D8A; --stamp-green: #3B7A55; --stamp-ochre: #A0650F;
+  --line: 2px; --r-xl: 18px; --r-lg: 14px; --r-md: 12px; --r-sm: 8px;
+  --shadow: 0 3px 0 rgba(38, 52, 77, .16);
+  --stamp: var(--stamp-red);
+}
+html[data-theme="passport"] body {
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='36' viewBox='0 0 120 36'%3E%3Cpath d='M0 9q15-9 30 0t30 0 30 0 30 0M0 27q15-9 30 0t30 0 30 0 30 0' fill='none' stroke='%23E4DFCB' stroke-width='1.2'/%3E%3C/svg%3E");
+}
+html[data-theme="passport"] [data-color="coral"] { --stamp: var(--stamp-red); }
+html[data-theme="passport"] [data-color="yellow"] { --stamp: var(--stamp-ochre); }
+html[data-theme="passport"] [data-color="water"] { --stamp: var(--stamp-blue); }
+html[data-theme="passport"] [data-color="green"] { --stamp: var(--stamp-green); }
+html[data-theme="passport"] .topbar, html[data-theme="passport"] .day-tabs-wrap { background: var(--bg); }
+html[data-theme="passport"] .kicker {
+  font-family: var(--mono); font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+  background: transparent; color: var(--stamp-red); border: 3px double currentColor; border-radius: 4px;
+  transform: rotate(-2deg); padding: 0 10px;
+}
+html[data-theme="passport"] .kicker-water { color: var(--stamp-blue); }
+html[data-theme="passport"] .kicker-green { color: var(--stamp-green); }
+html[data-theme="passport"] .kicker-yellow { color: var(--stamp-ochre); }
+html[data-theme="passport"] .fl-code, html[data-theme="passport"] .flight-code,
+html[data-theme="passport"] .cd-box b, html[data-theme="passport"] .day-no,
+html[data-theme="passport"] .tab .t-md, html[data-theme="passport"] .tab .t-day { font-family: var(--mono); font-weight: 700; }
+html[data-theme="passport"] .hero { background: var(--paper); }
+html[data-theme="passport"] .hero-art { padding: 7px; border: 2px dashed var(--ink-2); border-radius: 6px; }
+html[data-theme="passport"] .hero-art .illo { border: 2px solid var(--ink); border-radius: 4px; }
+html[data-theme="passport"] .hero-stamps { display: block; }
+.hs { position: absolute; width: 27%; max-width: 124px; color: var(--stamp); opacity: .86; }
+.hs svg { display: block; }
+.hs1 { left: 5%; top: 7%; transform: rotate(-14deg); animation: thunk1 .5s .35s both; }
+.hs2 { right: 5%; bottom: 26%; transform: rotate(9deg); animation: thunk2 .5s .8s both; }
+html[data-theme="passport"] .mrz {
+  display: grid; grid-column: 1 / -1; margin: 14px 6px 0; padding-top: 10px; border-top: 2px dashed var(--ink-2);
+  font-family: var(--mono); font-size: .74rem; letter-spacing: .14em; line-height: 1.5; color: var(--ink-2);
+}
+.mrz span { overflow: hidden; white-space: nowrap; }
+html[data-theme="passport"] .stamp-count {
+  display: inline-flex; margin-top: 12px; font-size: .85rem; color: var(--stamp-red);
+  border: 2px dashed currentColor; border-radius: 999px; padding: 2px 14px;
+}
+html[data-theme="passport"] .tab {
+  border: 2px dashed var(--ink-2); border-radius: 10px; background: var(--paper);
+}
+html[data-theme="passport"] .tab:nth-child(odd) { transform: rotate(-1.5deg); }
+html[data-theme="passport"] .tab:nth-child(even) { transform: rotate(1.5deg); }
+html[data-theme="passport"] .tab .t-dot { display: none; }
+html[data-theme="passport"] .tab.stamped { border-style: solid; border-color: var(--stamp); }
+html[data-theme="passport"] .tab.stamped .t-day { color: var(--stamp); }
+html[data-theme="passport"] .tab[aria-selected="true"] {
+  border: 2px solid var(--stamp); color: var(--stamp); background: var(--ct); box-shadow: none;
+  transform: rotate(-3deg) scale(1.05);
+}
+html[data-theme="passport"] .tab[aria-selected="true"] .t-day { color: var(--stamp); }
+html[data-theme="passport"] .day-hero { background: var(--paper); }
+html[data-theme="passport"] .day-stamp {
+  display: block; position: absolute; left: 8px; top: 8px; width: 31%; max-width: 112px;
+  color: var(--stamp); opacity: .88; transform: rotate(-12deg);
+}
+html[data-theme="passport"] .day-stamp svg { display: block; }
+html[data-theme="passport"] .pop { animation-name: page; transform-origin: 0 50%; }
+html[data-theme="passport"] .pop .day-stamp { animation: thunk1 .5s .3s both; }
+html[data-theme="passport"] .must {
+  background: transparent; color: var(--stamp-red); border: 2px solid currentColor; border-radius: 6px; transform: rotate(-6deg);
+}
+html[data-theme="passport"] .must svg path { stroke: var(--stamp-red); }
+html[data-theme="passport"] .legend .must { transform: none; }
+html[data-theme="passport"] .stop.is-must .node { background: var(--stamp-red); }
+html[data-theme="passport"] .stop.is-must .stop-card { box-shadow: none; border-style: solid; }
+html[data-theme="passport"] .todo-item .box { border-style: dashed; border-radius: 50%; }
+html[data-theme="passport"] .todo-item input:checked + .box {
+  background: var(--coral-t); border: 2px solid var(--stamp-red); transform: rotate(-10deg);
+}
+html[data-theme="passport"] .todo-item input:checked + .box svg path { stroke: var(--stamp-red); }
+html[data-theme="passport"] .todo-item.just .box { animation: thunk3 .42s cubic-bezier(.3, 1.4, .6, 1); }
+html[data-theme="passport"] .flight, html[data-theme="passport"] .stay, html[data-theme="passport"] .transit { box-shadow: var(--shadow); }
+
+@keyframes page {
+  0% { opacity: 0; transform: perspective(1400px) rotateY(-14deg) translateX(18px); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes thunk1 {
+  0% { opacity: 0; transform: scale(1.9) rotate(-26deg); }
+  55% { opacity: .95; transform: scale(.92) rotate(-12deg); }
+  78% { transform: scale(1.03) rotate(-12deg); }
+  100% { opacity: .88; transform: scale(1) rotate(-12deg); }
+}
+@keyframes thunk2 {
+  0% { opacity: 0; transform: scale(1.9) rotate(24deg); }
+  55% { opacity: .95; transform: scale(.92) rotate(9deg); }
+  78% { transform: scale(1.03) rotate(9deg); }
+  100% { opacity: .86; transform: scale(1) rotate(9deg); }
+}
+@keyframes thunk3 {
+  0% { transform: scale(1.8) rotate(-24deg); }
+  60% { transform: scale(.9) rotate(-10deg); }
+  100% { transform: rotate(-10deg); }
 }
 
 html[data-motion="reduce"] { scroll-behavior: auto; }

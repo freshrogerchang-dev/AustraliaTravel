@@ -15,12 +15,13 @@
 <meta name="apple-mobile-web-app-title" content="小小探險家">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Courier+Prime:wght@400;700&family=Huninn&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>
 (function(){
-  var d = document.documentElement, m = null, b = null;
-  try { m = localStorage.getItem('aus-motion'); b = localStorage.getItem('aus-big'); } catch (e) {}
+  var d = document.documentElement, m = null, b = null, t = null;
+  try { m = localStorage.getItem('aus-motion'); b = localStorage.getItem('aus-big'); t = localStorage.getItem('aus-theme'); } catch (e) {}
+  d.setAttribute('data-theme', /^(book|aussie|passport)$/.test(t) ? t : 'book');
   var reduce = m ? m === 'reduce' : (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
   d.setAttribute('data-motion', reduce ? 'reduce' : 'full');
   if (b === '1') d.classList.add('big');
@@ -43,9 +44,15 @@
       <li><a class="nav-link" href="#todo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"/><path d="m7.8 9.2 1.6 1.6L12 8.2M7.8 15.2l1.6 1.6 2.6-2.6M14 9.8h3M14 15.8h3"/></svg><span>清單</span></a></li>
       <li><a class="nav-link" href="#stays"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18.5V7M3 13.5h18v5M21 13.5v-1A3.5 3.5 0 0 0 17.5 9H11v4.5"/><circle cx="7" cy="10.8" r="2"/></svg><span>住宿</span></a></li>
     </ul>
-    <button class="nav-link settings-btn" type="button" id="settings-btn" aria-expanded="false" aria-controls="settings-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16M4 16.5h16"/><circle cx="9" cy="7.5" r="2.4"/><circle cx="15" cy="16.5" r="2.4"/></svg><span>設定</span></button>
+    <button class="nav-link settings-btn" type="button" id="settings-btn" aria-expanded="false" aria-controls="settings-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.4 0 2-.9 2-1.8 0-1.4-1.2-1.6-1.2-2.9 0-1 .8-1.8 1.8-1.8h2.2a3.7 3.7 0 0 0 3.7-3.7C20.5 6.6 16.7 3.5 12 3.5Z"/><circle cx="7.8" cy="11" r="1.3"/><circle cx="10.6" cy="7.4" r="1.3"/><circle cx="15" cy="7.6" r="1.3"/></svg><span>風格</span></button>
   </nav>
   <div class="settings" id="settings-panel" hidden>
+    <p class="settings-title" id="theme-label">網站風格</p>
+    <div class="theme-picker" role="radiogroup" aria-labelledby="theme-label">
+      <label class="theme-opt"><input type="radio" name="theme" value="book"><span class="sw sw-book" aria-hidden="true"><i></i><i></i><i></i></span><span>繪本</span></label>
+      <label class="theme-opt"><input type="radio" name="theme" value="aussie"><span class="sw sw-aussie" aria-hidden="true"><i></i><i></i><i></i></span><span>澳洲海報</span></label>
+      <label class="theme-opt"><input type="radio" name="theme" value="passport"><span class="sw sw-passport" aria-hidden="true"><i></i><i></i><i></i></span><span>護照蓋章</span></label>
+    </div>
     <p class="settings-title">顯示設定</p>
     <div class="setting-row">
       <span id="big-label">大字模式</span>
@@ -73,6 +80,7 @@
       </div>
     </div>
     <ol class="route" id="route" aria-label="旅行路線"></ol>
+    <p class="mrz" aria-hidden="true"><span>P&lt;TWNLITTLE&lt;EXPLORERS&lt;&lt;FAMILY&lt;OF&lt;THREE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><span>CI51&lt;160627&lt;SYD&lt;OOL&lt;BNE&lt;&lt;CI54&lt;290627&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span></p>
   </section>
 
   <section class="section" id="flights" aria-labelledby="flights-title">
@@ -93,6 +101,7 @@
       <h2 id="itinerary-title">每日行程</h2>
       <p class="section-note">點上方日期切換，手機也可以左右滑動換日。每天只排一個大重點，其餘留白給體力與天氣。</p>
       <ul class="legend" id="legend" aria-label="交通標籤說明"></ul>
+      <p class="stamp-count" id="stamp-count" aria-live="polite"></p>
     </div>
     <div class="day-tabs-wrap">
       <div class="day-tabs" id="day-tabs" role="tablist" aria-label="選擇日期"></div>

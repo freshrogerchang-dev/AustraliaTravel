@@ -1964,7 +1964,25 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-17',
-  version: 'little-explorers-20261017d',
+  version: 'little-explorers-20261018a',
+
+  // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
+  stamps: [
+    { top: 'TAIPEI', bottom: 'DEPARTURE', shape: 'rect' },
+    { top: 'SYDNEY', bottom: 'ARRIVAL', shape: 'circle' },
+    { top: 'SYDNEY', bottom: 'HARBOUR', shape: 'rect' },
+    { top: 'SYDNEY', bottom: 'VIVID', shape: 'circle' },
+    { top: 'BLUE MOUNTAINS', bottom: 'KATOOMBA', shape: 'rect' },
+    { top: 'GOLD COAST', bottom: 'ARRIVAL', shape: 'circle' },
+    { top: 'GOLD COAST', bottom: 'DREAMWORLD', shape: 'rect' },
+    { top: 'SURFERS PARADISE', bottom: 'AQUADUCK', shape: 'circle' },
+    { top: 'CURRUMBIN', bottom: 'KOALA', shape: 'rect' },
+    { top: 'TAMBORINE MTN', bottom: 'DIG IT', shape: 'circle' },
+    { top: 'GOLD COAST', bottom: 'HOTA', shape: 'rect' },
+    { top: 'BRISBANE', bottom: 'ARRIVAL', shape: 'circle' },
+    { top: 'BRISBANE', bottom: 'CITYCAT', shape: 'rect' },
+    { top: 'BRISBANE', bottom: 'DEPARTURE', shape: 'circle' }
+  ],
 
   route: [
     { code: 'TPE', name: '台北', note: '6/16 出發', color: 'water' },

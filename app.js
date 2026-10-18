@@ -16,6 +16,22 @@
     });
   }
   function reduced() { return root.getAttribute('data-motion') === 'reduce'; }
+
+  /* ---------- themes ---------- */
+  var THEMES = { book: '#FFFCF6', aussie: '#FBEFD9', passport: '#F3F0E4' };
+  var MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  function theme() { return THEMES[root.getAttribute('data-theme')] ? root.getAttribute('data-theme') : 'book'; }
+  function setThemeColor() {
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', THEMES[theme()]);
+  }
+  function stampFor(n) {
+    var s = TRIP.stamps[n - 1], md = DAYS[n - 1].md.split('/');
+    return window.makeStamp({
+      top: s.top, bottom: s.bottom, shape: s.shape, day: 'DAY ' + pad(n),
+      mid: pad(Number(md[1])) + ' ' + MONTHS[Number(md[0]) - 1] + ' ' + TRIP.startDate.slice(0, 4)
+    });
+  }
   function ext(u, label, cls) {
     var isMap = /google\.com\/maps/.test(u);
     var text = isMap ? label.replace('開啟 Google Maps', '地圖') : label;
@@ -43,7 +59,9 @@
 
   /* ---------- hero ---------- */
   function renderHero() {
-    $('#hero-art').innerHTML = ILLOS.hero;
+    $('#hero-art').innerHTML = ILLOS.hero +
+      '<div class="hero-stamps" aria-hidden="true"><span class="hs hs1" data-color="coral">' + stampFor(2) + '</span>' +
+      '<span class="hs hs2" data-color="water">' + stampFor(12) + '</span></div>';
     $('#route').innerHTML = TRIP.route.map(function (r) {
       return '<li data-color="' + r.color + '"><span class="route-stop" style="background:var(--c)">' + esc(r.code) + ' ' + esc(r.name) + '<small>' + esc(r.note) + '</small></span></li>';
     }).join('');
@@ -173,7 +191,7 @@
       d.official.map(function (l) { return ext(l.u, l.l); }).join('') + '</div></details>' : '';
 
     return '<article class="day" data-color="' + d.color + '" aria-labelledby="day-title">' +
-      '<header class="day-hero"><div class="day-illo">' + (ILLOS[d.illo] || '') + '</div><div>' +
+      '<header class="day-hero"><div class="day-illo">' + (ILLOS[d.illo] || '') + '<span class="day-stamp" aria-hidden="true">' + stampFor(d.n) + '</span></div><div>' +
       '<p class="day-kicker"><span class="day-no">DAY ' + pad(d.n) + '</span><span>' + d.md + '（' + d.wd + '）</span><span class="area-chip">' + esc(d.place) + '</span></p>' +
       '<h3 class="day-title" id="day-title">' + esc(d.title) + '</h3>' +
       '<p class="day-pace">' + esc(d.pace) + '</p>' +
@@ -226,6 +244,21 @@
     }
     if (opts.hash !== false) history.replaceState(null, '', '#day-' + n);
     store.set('aus-day', String(n));
+    collectStamp(n);
+  }
+
+  /* 護照集章：打開過的那一天就蓋一枚章，記在這台裝置 */
+  var STAMP_KEY = 'aus-stamps';
+  function loadStamps() {
+    try { var a = JSON.parse(store.get(STAMP_KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; }
+  }
+  function collectStamp(n) {
+    var got = loadStamps();
+    if (got.indexOf(n) < 0) { got.push(n); store.set(STAMP_KEY, JSON.stringify(got)); }
+    Array.prototype.forEach.call(document.querySelectorAll('.tab'), function (t) {
+      t.classList.toggle('stamped', got.indexOf(Number(t.getAttribute('data-day'))) >= 0);
+    });
+    $('#stamp-count').textContent = '護照集章 ' + got.length + '／' + DAYS.length + (got.length === DAYS.length ? '，全部集滿了！' : '，點開每一天就蓋一枚章');
   }
 
   function bindItinerary() {
@@ -310,6 +343,9 @@
       if (!b.matches('input[type="checkbox"]')) return;
       var done = loadTodo();
       if (b.checked) done[b.getAttribute('data-id')] = 1; else delete done[b.getAttribute('data-id')];
+      var item = b.closest('.todo-item');
+      item.classList.remove('just');
+      if (b.checked) { void item.offsetWidth; item.classList.add('just'); }
       store.set(TODO_KEY, JSON.stringify(done));
       updateProgress();
     });
@@ -370,6 +406,12 @@
     document.addEventListener('click', function (e) { if (!panel.hidden && !panel.contains(e.target)) close(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { close(); btn.focus(); } });
 
+    var picks = document.querySelectorAll('input[name="theme"]');
+    Array.prototype.forEach.call(picks, function (r) {
+      r.checked = r.value === theme();
+      r.addEventListener('change', function () { if (r.checked) switchTheme(r.value); });
+    });
+
     var big = $('#big-toggle'), motion = $('#motion-toggle');
     function sync() {
       big.setAttribute('aria-checked', root.classList.contains('big') ? 'true' : 'false');
@@ -397,7 +439,31 @@
     sync();
   }
 
+  function switchTheme(t) {
+    root.setAttribute('data-theme', THEMES[t] ? t : 'book');
+    store.set('aus-theme', theme());
+    setThemeColor();
+    var art = window.buildArt(theme());
+    ILLOS = art.ILLOS; ICONS = art.ICONS;
+    renderHero();
+    renderFlights();
+    renderLegend();
+    selectDay(current, { animate: true, hash: false });
+    renderTodos();
+  }
+
+  /* 插圖離開畫面就暫停動畫，手機比較省電 */
+  function bindPause() {
+    if (!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.target.classList.toggle('paused', !en.isIntersecting); });
+    });
+    io.observe($('#hero-art'));
+    io.observe($('#day-panel'));
+  }
+
   /* ---------- boot ---------- */
+  setThemeColor();
   renderHero();
   tickCountdown();
   setInterval(tickCountdown, 1000);
@@ -416,4 +482,5 @@
   renderStays();
   renderFooter();
   bindNav();
+  bindPause();
 })();
