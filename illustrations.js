@@ -1,19 +1,42 @@
-/* 手繪風 SVG 插圖：平塗四色＋墨灰粗線。動態用 a-* class，減少動態效果時會全部停止。
-   同一套圖依風格換色：window.buildArt(主題名) 會用對應色票重畫插圖與圖示。 */
+/* 旅行插圖：同一組構圖，依風格換「畫法」而不只是換色。動態用 a-* class，減少動態效果時會全部停止。
+   window.buildArt(主題名) 會用該風格的色票與畫法重畫插圖與圖示：
+   - book     繪本：平塗四色＋墨灰 3px 粗線
+   - aussie   海報：色塊不描邊，後面多一層錯位的海軍藍印版（網版印刷套色錯位感）
+   - passport 護照：單色細線，色塊改成刻版排線（斜線、橫線、網點、交叉線），像護照內頁版畫 */
 (function () {
   var PALETTES = {
-    book: { P: '#FFFCF6', I: '#3E3A39', C: '#F2A497', Y: '#F6D27A', W: '#A8D3E6', G: '#B9DAA5' },
-    aussie: { P: '#FFF8EC', I: '#1E3557', C: '#EE8B5B', Y: '#F4BE3E', W: '#7EC4CF', G: '#97C08F' },
-    passport: { P: '#FBF8EF', I: '#26344D', C: '#DE8579', Y: '#E9C46A', W: '#8DB3D1', G: '#9DBB94' }
+    book: { P: '#FFFCF6', I: '#3E3A39', C: '#F2A497', Y: '#F6D27A', W: '#A8D3E6', G: '#B9DAA5', sw: 3 },
+    aussie: { P: '#FFF8EC', I: '#1E3557', C: '#EE8B5B', Y: '#F4BE3E', W: '#7EC4CF', G: '#97C08F', sw: 3 },
+    passport: { P: '#FBF8EF', I: '#26344D', C: 'url(#pp-c)', Y: 'url(#pp-y)', W: 'url(#pp-w)', G: 'url(#pp-g)', sw: 2.2 }
   };
+
+  // 護照風的排線圖樣：全頁共用一份，任何 SVG 都能用 url(#pp-*) 引用
+  function ensureEngraving() {
+    if (document.getElementById('art-defs')) return;
+    var ink = 'stroke="#26344D" stroke-opacity=".7"';
+    var box = document.createElement('div');
+    box.innerHTML = '<svg id="art-defs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>' +
+      '<pattern id="pp-c" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)"><rect width="4" height="4" fill="#F6E2DC"/><path d="M0 0V4" ' + ink + ' stroke-width="1"/></pattern>' +
+      '<pattern id="pp-w" patternUnits="userSpaceOnUse" width="6" height="3.5"><rect width="6" height="3.5" fill="#E2ECF4"/><path d="M0 1.75H6" ' + ink + ' stroke-width=".9"/></pattern>' +
+      '<pattern id="pp-y" patternUnits="userSpaceOnUse" width="4" height="4"><rect width="4" height="4" fill="#F6ECCF"/><circle cx="2" cy="2" r=".8" fill="#26344D" fill-opacity=".6"/></pattern>' +
+      '<pattern id="pp-g" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><rect width="5" height="5" fill="#E4EDDF"/><path d="M0 0V5M0 0H5" ' + ink + ' stroke-width=".8"/></pattern>' +
+      '</defs></svg>';
+    document.body.appendChild(box.firstChild);
+  }
 
   function build(theme) {
     var pal = PALETTES[theme] || PALETTES.book;
     var P = pal.P, I = pal.I, C = pal.C, Y = pal.Y, W = pal.W, G = pal.G;
+    if (theme === 'passport') ensureEngraving();
 
     function svg(vb, inner, label) {
       var a = label ? ' role="img" aria-label="' + label + '"' : ' aria-hidden="true"';
-      return '<svg class="illo" viewBox="' + vb + '" fill="none" stroke="' + I + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" focusable="false"' + a + '>' + inner + '</svg>';
+      if (theme === 'aussie') {
+        // 錯位印版：同一張圖先印一層海軍藍、往右下偏一點，上層色塊不描邊
+        var off = (Number(vb.split(' ')[2]) / 80).toFixed(2);
+        inner = '<g class="plate" transform="translate(' + off + ' ' + off + ')">' + inner + '</g><g class="print">' + inner + '</g>';
+      }
+      return '<svg class="illo illo-' + (PALETTES[theme] ? theme : 'book') + '" viewBox="' + vb + '" fill="none" stroke="' + I + '" stroke-width="' + pal.sw + '" stroke-linecap="round" stroke-linejoin="round" focusable="false"' + a + '>' + inner + '</svg>';
     }
     function sea(y, w, h, fill) {
       var d = 'M-4 ' + y + ' L0 ' + y;

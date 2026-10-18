@@ -1964,7 +1964,7 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-17',
-  version: 'little-explorers-20261018a',
+  version: 'little-explorers-20261018b',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [

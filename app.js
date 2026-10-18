@@ -442,6 +442,7 @@
   function switchTheme(t) {
     root.setAttribute('data-theme', THEMES[t] ? t : 'book');
     store.set('aus-theme', theme());
+    if (window.loadThemeFonts) window.loadThemeFonts(theme());
     setThemeColor();
     var art = window.buildArt(theme());
     ILLOS = art.ILLOS; ICONS = art.ICONS;

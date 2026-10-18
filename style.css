@@ -569,9 +569,18 @@ html[data-theme="aussie"] {
   --flag-red: #D7322B; --flag-yellow: #F6C543;
   --r-xl: 16px; --r-lg: 12px; --r-md: 10px; --r-sm: 8px;
   --shadow: 5px 5px 0 var(--ink);
+  --font: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
   --display: 'Alfa Slab One', var(--font);
   --stripe: repeating-linear-gradient(90deg, var(--flag-red) 0 22px, var(--flag-yellow) 22px 44px);
 }
+html[data-theme="aussie"] body { letter-spacing: .01em; }
+html[data-theme="aussie"] :is(h1, h2, h3, h4, h5, .btn, .nav-link span, .tab .t-day) { font-weight: 900; }
+html[data-theme="aussie"] .hero h1 { letter-spacing: .02em; }
+/* 海報插圖：下層海軍藍錯位印版，上層色塊不描邊（只剩線條元素保留線） */
+.illo-aussie .plate [fill]:not([fill="none"]) { fill: #1E3557; }
+.illo-aussie .plate * { stroke: #1E3557; }
+.illo-aussie .print [fill]:not([fill="none"]) { stroke: none; }
+html[data-theme="aussie"] .hero-art, html[data-theme="aussie"] .day-illo { background: #F6D2A2; }
 html[data-theme="aussie"] .topbar { background: var(--stripe) bottom / 100% 6px no-repeat, var(--bg); }
 html[data-theme="aussie"] .day-tabs-wrap { background: var(--bg); }
 html[data-theme="aussie"] .kicker,
@@ -634,7 +643,10 @@ html[data-theme="passport"] {
   --line: 2px; --r-xl: 18px; --r-lg: 14px; --r-md: 12px; --r-sm: 8px;
   --shadow: 0 3px 0 rgba(38, 52, 77, .16);
   --stamp: var(--stamp-red);
+  --font: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
 }
+html[data-theme="passport"] :is(h1, h2, h3, h4, h5, .day-no) { font-weight: 700; }
+html[data-theme="passport"] .hero h1 { letter-spacing: .1em; }
 html[data-theme="passport"] body {
   background-color: var(--bg);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='36' viewBox='0 0 120 36'%3E%3Cpath d='M0 9q15-9 30 0t30 0 30 0 30 0M0 27q15-9 30 0t30 0 30 0 30 0' fill='none' stroke='%23E4DFCB' stroke-width='1.2'/%3E%3C/svg%3E");

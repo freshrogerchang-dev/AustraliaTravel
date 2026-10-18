@@ -15,13 +15,27 @@
 <meta name="apple-mobile-web-app-title" content="小小探險家">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Courier+Prime:wght@400;700&family=Huninn&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>
 (function(){
   var d = document.documentElement, m = null, b = null, t = null;
   try { m = localStorage.getItem('aus-motion'); b = localStorage.getItem('aus-big'); t = localStorage.getItem('aus-theme'); } catch (e) {}
-  d.setAttribute('data-theme', /^(book|aussie|passport)$/.test(t) ? t : 'book');
+  t = /^(book|aussie|passport)$/.test(t) ? t : 'book';
+  d.setAttribute('data-theme', t);
+  // 各風格的字型只在選到時才載入（中文字型的 CSS 一個字重就上百 KB）
+  var FONTS = {
+    aussie: 'family=Alfa+Slab+One&family=Noto+Sans+TC:wght@400;900',
+    passport: 'family=Courier+Prime:wght@400;700&family=Noto+Serif+TC:wght@400;700'
+  };
+  window.loadThemeFonts = function (theme) {
+    if (!FONTS[theme] || document.getElementById('font-' + theme)) return;
+    var l = document.createElement('link');
+    l.id = 'font-' + theme; l.rel = 'stylesheet';
+    l.href = 'https://fonts.googleapis.com/css2?' + FONTS[theme] + '&display=swap';
+    document.head.appendChild(l);
+  };
+  window.loadThemeFonts(t);
   var reduce = m ? m === 'reduce' : (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
   d.setAttribute('data-motion', reduce ? 'reduce' : 'full');
   if (b === '1') d.classList.add('big');
