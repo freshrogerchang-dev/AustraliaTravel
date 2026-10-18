@@ -215,7 +215,7 @@ window.TRIP_DAYS = [
    }
   ],
   "move": "機場到飯店接駁選擇：① Airport Link 火車到 Town Hall／Central 再轉步行或輕軌，含推車與行李較費力；② Uber／DiDi／13cabs 叫車，約 25–35 分鐘視路況，車資抓 A$35–55；③ 事先預約的飯店或包車接送，行李多、小孩累時最省力。雪梨市區不建議自駕：停車昂貴、Vivid 期間道路常封閉，租車留到 Day 5 藍山或 Day 6 以後的黃金海岸再評估。Vivid 期間晚間以步行與大眾運輸為主。Harbourside 重建尚未能確認 2027/6 全面開放，活動集中在 Darling Quarter／Tumbalong Park，依當日施工告示走。",
-  "planb": "取消夜間活動，飯店午睡＋附近外帶晚餐。",
+  "planb": "取消夜間活動，飯店午睡＋附近外帶晚餐。下午若下雨又還有精神，達令港的 SEA LIFE 雪梨水族館是室內備案（門票另查，看 30–60 分鐘就好）。",
   "reads": [
    {
     "date": "2026-07-23",
@@ -652,7 +652,7 @@ window.TRIP_DAYS = [
    {
     "time": "下午",
     "title": "Leura 小鎮 → 回雪梨",
-    "desc": "咖啡、熱飲與短逛後回市區。回程不排額外門票景點，晚餐後早睡。",
+    "desc": "咖啡、熱飲與短逛後回市區。Leura Mall 主街有老糖果店與玩具店，讓孩子挑一樣小東西；回程不排額外門票景點，晚餐後早睡。",
     "tags": [
      {
       "m": "bus",
@@ -1348,6 +1348,24 @@ window.TRIP_DAYS = [
     ]
    },
    {
+    "time": "上午・二選一",
+    "title": "冬季賞鯨船（取代 Aquaduck）",
+    "desc": "6 月正是座頭鯨北上的季節：Sea World Cruises 公布 2026 季從 5/30 開始，從 Main Beach 出港。2025 季價格大人 A$89、3–13 歲 A$79（2026–27 價格以官網為準）。風浪大會暈船，前一晚看天氣與退改規則；和 Aquaduck 擇一，不要同一天兩個都排。",
+    "tags": [
+     {
+      "m": "ferry",
+      "t": "賞鯨船"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Sea%20World%20Cruises%20Main%20Beach",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
     "time": "中午",
     "title": "Cavill Avenue 附近午餐",
     "desc": "用餐後回飯店午睡。座位由業者分配，不預設能指定位置。",
@@ -1476,6 +1494,10 @@ window.TRIP_DAYS = [
    {
     "u": "https://www.hota.com.au/dining/cafe",
     "l": "HOTA Cafe"
+   },
+   {
+    "u": "https://seaworldcruises.com.au/",
+    "l": "Sea World Cruises 賞鯨季與票價"
    }
   ]
  },
@@ -1540,7 +1562,7 @@ window.TRIP_DAYS = [
    {
     "time": "午餐後",
     "title": "休息，再挑一場表演",
-    "desc": "找有座位的地方休息，再依當日時刻表挑一場表演或角色見面；不為了大型雲霄飛車排長隊。",
+    "desc": "找有座位的地方休息，再依當日時刻表挑一場表演或角色見面——例如 2025/12 起取代舊飛車秀的 Spy Chase Stunt Show；遊行時間各來源不一致，以當日園區時刻表為準。不為了大型雲霄飛車排長隊。",
     "tags": [
      {
       "m": "walk",
@@ -1659,7 +1681,7 @@ window.TRIP_DAYS = [
    {
     "time": "14:00・選配",
     "title": "South Bank Parklands 散步",
-    "desc": "入住後河岸散步、Riverside Green 遊樂場與 Streets Beach 看景，約 1–2 小時；六月不必下水。SparkLab 留到明天。",
+    "desc": "入住後河岸散步、Riverside Green 遊樂場與 Streets Beach 看景，約 1–2 小時；六月不必下水，玩沙就好。想從高處看城市，可搭 South Bank 北端約 60 公尺高的 Wheel of Brisbane 摩天輪（2026/7 仍營運，票價與時間以官網為準）。SparkLab 留到明天。",
     "tags": [
      {
       "m": "walk",
@@ -1759,7 +1781,7 @@ window.TRIP_DAYS = [
    {
     "time": "09:30",
     "title": "CityCat 渡輪遊河",
-    "desc": "從 South Bank 碼頭上船，沿河看城市與橋，每段 50 分錢，可直接用 Visa／Mastercard 感應上下船。挑一個碼頭下船再搭回來，往返約 1 小時。",
+    "desc": "從 South Bank 碼頭上船，沿河看城市與橋，每段 50 分錢，可直接用 Visa／Mastercard 感應上下船。挑一個碼頭下船再搭回來，往返約 1 小時。另有免費的 CityHopper 渡輪（約每 30 分鐘一班，第三方資料，以 TransLink 為準），想省錢可以改搭。",
     "tags": [
      {
       "m": "ferry",
@@ -1793,6 +1815,28 @@ window.TRIP_DAYS = [
     ]
    },
    {
+    "time": "選配・取代 SparkLab",
+    "title": "Lone Pine 無尾熊保護區",
+    "desc": "想再看一次無尾熊、餵袋鼠可以來這裡。官網票價大人 A$63、3–13 歲 A$45，家庭票（2 大＋最多 3 小）A$193。注意：Lone Pine 2024 年 7 月起已不開放抱無尾熊，改成近距離觀察；要抱著拍照請在 Day 8 的 Currumbin 預約。從市區搭公車或叫車約 30–40 分鐘（已還車），路線用 TransLink 規劃器查；和 SparkLab 擇一。",
+    "tags": [
+     {
+      "m": "bus",
+      "t": "公車"
+     },
+     {
+      "m": "ride",
+      "t": "叫車"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Lone%20Pine%20Koala%20Sanctuary%20Brisbane",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
     "time": "午餐後",
     "title": "Riverside Green 遊樂場與 Streets Beach",
     "desc": "遊樂場放電、看人造沙灘，約 1 小時，之後回飯店午休。",
@@ -1806,6 +1850,24 @@ window.TRIP_DAYS = [
     "links": [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Riverside%20Green%20South%20Bank%20Brisbane",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
+   {
+    "time": "16:30・選配",
+    "title": "Mt Coot-tha 觀景台看夕陽",
+    "desc": "6 月日落約 17:00，從觀景台看整個布里斯本。已經還車，叫車約 20 分鐘；山上風大很冷，帶外套。累了就跳過，明天是回程日。",
+    "tags": [
+     {
+      "m": "ride",
+      "t": "叫車"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Mt%20Coot-tha%20Summit%20Lookout",
       "l": "開啟 Google Maps"
      }
     ]
@@ -1870,6 +1932,10 @@ window.TRIP_DAYS = [
    {
     "u": "https://jp.translink.com.au/plan-your-journey",
     "l": "TransLink 路線規劃"
+   },
+   {
+    "u": "https://lonepinekoalasanctuary.com/tickets/",
+    "l": "Lone Pine 門票"
    }
   ]
  },
@@ -1887,6 +1953,24 @@ window.TRIP_DAYS = [
   "stay": "機上（CI54 表定 6/30 清晨抵台，已跨日）",
   "mission": "今天只要吃飽、休息、順利移動，就是完成任務。",
   "stops": [
+   {
+    "time": "中午前",
+    "title": "Queen Street Mall 最後採買",
+    "desc": "退房後行李寄放飯店，到皇后街購物中心買零食、伴手禮。想辦退稅（TRS）：同一家店含稅滿 A$300、出境前 60 天內購買，商品要隨身帶到機場給海關看；先在 TRS App 填資料，出境後到 TRS 櫃台辦理，規定以澳洲邊境署官網為準。",
+    "tags": [
+     {
+      "m": "walk",
+      "t": "步行"
+     }
+    ],
+    "must": false,
+    "links": [
+     {
+      "u": "https://www.google.com/maps/search/?api=1&query=Queen%20Street%20Mall%20Brisbane",
+      "l": "開啟 Google Maps"
+     }
+    ]
+   },
    {
     "time": "白天彈性・傍晚出發",
     "title": "退房 → BNE 國際航廈",
@@ -1984,6 +2068,10 @@ window.TRIP_DAYS = [
    {
     "u": "https://www.bne.com.au/",
     "l": "BNE 機場資訊"
+   },
+   {
+    "u": "https://www.abf.gov.au/entering-and-leaving-australia/tourist-refund-scheme",
+    "l": "TRS 旅客退稅規定"
    }
   ]
  }
@@ -1995,7 +2083,7 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-18',
-  version: 'little-explorers-20261018d',
+  version: 'little-explorers-20261018e',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
@@ -2109,6 +2197,7 @@ window.TRIP = {
         { id: 'vrparks', t: '購買 Sea World（6/24）與 Movie World（6/26）門票', note: '兩天都在 5 天內，比較多園通票和兩張單日票；2027 價格以官網為準', u: 'https://themeparks.com.au/park-info', l: '官網' },
         { id: 'aquaduck', t: '預約 Aquaduck 鴨子車場次（6/25）', u: 'https://www.aquaduck.com.au/gold-coast/', l: '官網' },
         { id: 'dreamworld', t: '購買 Dreamworld 門票', note: '入園前量好孩子身高', u: 'https://www.dreamworld.com.au/', l: '官網' },
+        { id: 'koalaphoto', t: '預約 Currumbin Koala Photo（選配）', note: '想抱無尾熊拍照只能排這裡；能不能抱由飼育員當天判斷', u: 'https://currumbinsanctuary.com.au/', l: '官網' },
         { id: 'currumbin', t: '購買 Currumbin 門票（6/23）', note: '官網大人 A$70、3–17 歲 A$50，線上購票可能有優惠', u: 'https://currumbinsanctuary.com.au/visit/', l: '官網' },
         { id: 'scenic', t: '購買 Scenic World 門票', u: 'https://www.scenicworld.com.au/tickets', l: '官網' },
         { id: 'vivid', t: '查 Vivid Sydney 2027 節目與路線', note: '2027 場期 5/28–6/19，行程排在 6/17–6/19', u: 'https://www.vividsydney.com/info/contact-us/frequently-asked-questions', l: '官網' }
@@ -2152,6 +2241,16 @@ window.TRIP = {
       title: '日期先保留，班次與節目等實際確認',
       text: '沿用 2027/6/16–6/29。國際線班號已定，國內線、住宿與活動都還沒訂；Vivid 只排 6/17–6/19，展區以 2027 節目表為準。各樂園表演、Aquaduck 場次與 HOTA 展覽也不保證和現在相同。',
       links: [{ u: 'https://www.vividsydney.com/info/contact-us/frequently-asked-questions', l: 'Vivid 官方日期' }]
+    },
+    {
+      title: '想抱無尾熊，只排在 Currumbin',
+      text: '新南威爾斯州（雪梨、藍山）不能抱無尾熊。昆士蘭的 Currumbin 目前仍有 Koala Photo（約 A$49–69，可不可以抱由當天飼育員判斷，事先線上預約）；布里斯本的 Lone Pine 2024 年 7 月起已停止抱無尾熊，改成近距離觀察。',
+      links: [{ u: 'https://currumbinsanctuary.com.au/', l: 'Currumbin 互動體驗' }, { u: 'https://lonepinekoalasanctuary.com/tickets/', l: 'Lone Pine 票價與體驗' }]
+    },
+    {
+      title: '六月是冬天，洋蔥式穿法',
+      text: '雪梨早晚約 8–10°C，藍山再冷 5–7°C、起風體感更低，要帶防風外套、毛帽和發熱衣；黃金海岸和布里斯本白天較暖（約 20°C 上下），一件可以穿脫的外套最方便。樂園和賞鯨船上風大，多帶一件給孩子。',
+      links: [{ u: 'https://www.bom.gov.au/', l: '澳洲氣象局' }]
     },
     {
       title: '考慮自駕，先看這段',
@@ -2231,6 +2330,60 @@ window.TRIP = {
       ]
     }
   ],
+
+  // 預算：預估為 2026/10 查核的公開資料或粗估（標「粗估」），實際金額在網頁上填，存在這台裝置
+  budget: {
+    rate: 22,
+    rateNote: '2026/10 初約 1 澳幣 ≈ 22.1–22.3 台幣；可以改成實際刷卡匯率。',
+    groups: [
+      {
+        group: '機票', items: [
+          { id: 'b-ci', name: '華航 CI51／CI54 國際線（2 大 1 小）', cur: 'TWD', low: 90000, high: 135000, note: '粗估：經濟艙來回每人約 3–4.5 萬，兒童票依華航規定（常見為成人約 75%）；2027/6 票價尚未開賣。' },
+          { id: 'b-dom', name: '國內線 SYD → OOL（3 人含托運）', cur: 'AUD', low: 300, high: 600, note: '粗估：Jetstar 最便宜但托運另計；Virgin／Qantas 多半含托運。' }
+        ]
+      },
+      {
+        group: '住宿 12 晚', items: [
+          { id: 'b-syd', name: '雪梨 4 晚（達令港，Vivid 期間）', cur: 'AUD', low: 1200, high: 1800, note: '2026 Vivid 期間 Novotel Darling Harbour 優惠價每晚 A$319 起；家庭公寓約 A$300–450。' },
+          { id: 'b-gc', name: '黃金海岸 6 晚（衝浪者天堂公寓）', cur: 'AUD', low: 1100, high: 1900, note: '6 月是淡季，第三方資料平均每晚約 A$130–230；兩房公寓較貴。' },
+          { id: 'b-bne', name: '布里斯本 2 晚（South Bank）', cur: 'AUD', low: 450, high: 700, note: '粗估，依訂房網站即時價格。' }
+        ]
+      },
+      {
+        group: '交通', items: [
+          { id: 'b-car', name: '租車 6 天＋兒童安全座椅（OOL 取、布里斯本還）', cur: 'AUD', low: 450, high: 800, note: '第三方平均約 A$90／天；黃金海岸→布里斯本甲租乙還常見低或免手續費，座椅另計。' },
+          { id: 'b-fuel', name: '油錢、停車、過路費', cur: 'AUD', low: 150, high: 300, note: '粗估：樂園與飯店停車常另收費。' },
+          { id: 'b-opal', name: '雪梨 Opal（含機場站附加費、渡輪、藍山火車）', cur: 'AUD', low: 150, high: 250, note: '大人每日上限平日 A$19.30、週末 A$9.65；機場站附加費大人約 A$18.61、兒童約 A$16.64。' },
+          { id: 'b-qld', name: '昆士蘭公車、輕軌與 Airtrain', cur: 'AUD', low: 60, high: 150, note: '每段 50 分錢；Airtrain 不適用，去 BNE 另計。' }
+        ]
+      },
+      {
+        group: '門票與體驗', items: [
+          { id: 'b-taronga', name: 'Taronga 動物園', cur: 'AUD', low: 133, high: 143, note: '第三方 2026：大人約 A$51–55、4–15 歲約 A$31–33。' },
+          { id: 'b-bluemtn', name: '藍山：Scenic World 或一日團', cur: 'AUD', low: 150, high: 500, note: '粗估：自行前往只買 Scenic World；跟團含接送較貴。' },
+          { id: 'b-dream', name: 'Dreamworld', cur: 'AUD', low: 300, high: 450, note: '第三方 2026 約每人 A$119–149，常有線上優惠。' },
+          { id: 'b-vr', name: 'Sea World＋Movie World', cur: 'AUD', low: 500, high: 720, note: '單日票約每人 A$109–119；多園通票 2027 價格未知，買前比較。' },
+          { id: 'b-curr', name: 'Currumbin（含 Koala Photo 選配）', cur: 'AUD', low: 190, high: 260, note: '官網大人 A$70、3–17 歲 A$50；Koala Photo 約 A$49–69。' },
+          { id: 'b-aqua', name: 'Aquaduck 或賞鯨船（二選一）', cur: 'AUD', low: 100, high: 260, note: '粗估：Aquaduck 依官網；賞鯨 2025 季大人 A$89、3–13 歲 A$79。' },
+          { id: 'b-bneact', name: '布里斯本：SparkLab 或 Lone Pine（選配）', cur: 'AUD', low: 0, high: 193, note: 'Lone Pine 家庭票 A$193；SparkLab 收費以官網為準。' }
+        ]
+      },
+      {
+        group: '餐飲', items: [
+          { id: 'b-food', name: '餐費 13 天（三人）', cur: 'AUD', low: 1800, high: 2800, note: '粗估每天 A$140–215：早餐簡單、一餐簡餐一餐餐廳；有廚房可以省。' }
+        ]
+      },
+      {
+        group: '其他', items: [
+          { id: 'b-eta', name: '澳洲 ETA（3 人）', cur: 'AUD', low: 60, high: 60, note: '官方 Australian ETA App，每人 A$20 服務費。' },
+          { id: 'b-ins', name: '旅平險＋不便險', cur: 'TWD', low: 3000, high: 6000, note: '粗估，依保額與保險公司。' },
+          { id: 'b-net', name: '網路（eSIM 或漫遊）', cur: 'TWD', low: 600, high: 1500, note: '粗估。' },
+          { id: 'b-idp', name: '國際駕照', cur: 'TWD', low: 250, high: 250, note: '監理站辦理（要自駕才需要）。' },
+          { id: 'b-shop', name: '伴手禮與零用', cur: 'AUD', low: 300, high: 800, note: '粗估。' }
+        ]
+      }
+    ]
+  },
 
   footer: [
     '資料查核日 2026/10/17。航班時刻取自第三方航班追蹤網站交叉比對，非官方訂位確認；所有行程都還沒有預訂。',

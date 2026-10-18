@@ -82,7 +82,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 }
 .brand { display: none; align-items: center; gap: 8px; text-decoration: none; font-size: 1.1rem; margin-right: auto; }
 .brand svg { width: 34px; height: 34px; }
-.nav-list { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+.nav-list { flex: 1; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; }
 .nav-link {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
   min-height: 52px; padding: 4px 2px; border-radius: 16px;
@@ -96,7 +96,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .nav-link[aria-current="true"] { background: var(--yellow); border-color: var(--ink); }
 .nav-link:hover { background: var(--yellow-t); }
 .nav-link[aria-current="true"]:hover { background: var(--yellow); }
-.settings-btn { width: 58px; flex-shrink: 0; }
+.settings-btn { width: 52px; flex-shrink: 0; }
 .settings-btn[aria-expanded="true"] { background: var(--water); border-color: var(--ink); }
 
 .settings {
@@ -503,6 +503,51 @@ details.card[open] { padding-bottom: 14px; }
 .fare-tips li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: var(--c); border: 1.5px solid var(--ink); }
 .fare-tips li + li { margin-top: 4px; }
 
+/* ---------- budget ---------- */
+.budget-summary {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+  background: var(--coral-t); border: var(--line) solid var(--ink); border-radius: var(--r-md); padding: 12px 14px;
+}
+.bs-item span { display: block; font-size: .78rem; color: var(--ink-2); }
+.bs-item b { display: block; background: none; padding: 0; font-size: 1.25rem; font-variant-numeric: tabular-nums; line-height: 1.35; }
+.bs-item small { display: block; font-size: .76rem; color: var(--ink-2); }
+.bs-wide { grid-column: 1 / -1; }
+.bs-diff.over b { color: #B3402F; }
+.bs-diff.under b { color: #2F7A4A; }
+.budget-meter { grid-column: 1 / -1; height: 14px; border: 2px solid var(--ink); border-radius: 999px; background: var(--paper); overflow: hidden; }
+.budget-meter span { display: block; height: 100%; width: 0; background: var(--coral); }
+.budget-rate { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-top: 14px; font-size: .92rem; }
+.budget-rate-note { flex-basis: 100%; font-size: .78rem; color: var(--ink-2); }
+.budget-groups { display: grid; gap: 16px; margin-top: 14px; }
+.b-group { background: var(--paper); border: var(--line) solid var(--ink); border-radius: var(--r-md); padding: 10px 14px 6px; }
+.b-group h3 { font-size: 1.1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 10px; }
+.b-group h3 small { font-size: .76rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.b-row { border-top: 2px dashed var(--ink); padding: 10px 0; }
+.b-group h3 + .b-row { border-top: 0; }
+.b-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 10px; }
+.b-name { flex: 1 1 13em; font-size: .98rem; }
+.b-est { flex-shrink: 0; font-size: .8rem; color: var(--ink-2); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.b-note { font-size: .78rem; color: var(--ink-2); margin-top: 2px; }
+.b-inputs { display: grid; grid-template-columns: 5.2em minmax(0, 1fr); gap: 6px; margin-top: 8px; }
+.b-inputs .b-memo, .b-inputs .b-cname { grid-column: 1 / -1; }
+.b-done { font-size: .78rem; color: var(--ink-2); grid-column: 1 / -1; font-variant-numeric: tabular-nums; }
+.b-del { justify-self: end; grid-column: 1 / -1; min-height: 36px; font-size: .8rem; padding: 2px 12px; }
+.budget-rate input, .b-inputs input, .b-inputs select {
+  font: inherit; font-size: 16px;   /* 16px 以下 iPhone 會自動放大畫面 */
+  min-height: 44px; padding: 6px 10px; width: 100%;
+  color: var(--ink); background: var(--paper); border: 2px solid var(--ink); border-radius: var(--r-sm);
+}
+.b-inputs select { padding-right: 4px; }
+.budget-rate input { width: 6.5em; }
+.b-inputs input:focus-visible, .b-inputs select:focus-visible, .budget-rate input:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+.b-row.has-amt .b-amt { background: var(--green-t); }
+.budget-tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.budget-status { font-size: .85rem; color: var(--ink-2); margin-top: 8px; min-height: 1.4em; }
+@media (min-width: 560px) {
+  .budget-summary { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .budget-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+}
+
 /* ---------- footer ---------- */
 .page-footer {
   max-width: 1040px; margin: 24px auto 0; padding: 20px 16px calc(32px + env(safe-area-inset-bottom));
@@ -836,7 +881,7 @@ html[data-theme="pixel"] .switch, html[data-theme="pixel"] .switch .knob, html[d
 html[data-theme="pixel"] .day-no, html[data-theme="pixel"] .flight-code, html[data-theme="pixel"] .nights,
 html[data-theme="pixel"] .progress-bar, html[data-theme="pixel"] .meal-tag, html[data-theme="pixel"] .planb-label,
 html[data-theme="pixel"] .theme-opt, html[data-theme="pixel"] .todo-item .box, html[data-theme="pixel"] .node,
-html[data-theme="pixel"] .stay-status, html[data-theme="pixel"] .fl-tear::before, html[data-theme="pixel"] .fl-tear::after { border-radius: 0; }
+html[data-theme="pixel"] .stay-status, html[data-theme="pixel"] .budget-meter, html[data-theme="pixel"] .fl-tear::before, html[data-theme="pixel"] .fl-tear::after { border-radius: 0; }
 html[data-theme="pixel"] .kicker,
 html[data-theme="pixel"] .cd-box b, html[data-theme="pixel"] .fl-code, html[data-theme="pixel"] .flight-code,
 html[data-theme="pixel"] .day-no, html[data-theme="pixel"] .tab .t-md { font-family: var(--display); letter-spacing: 0; }
@@ -925,7 +970,7 @@ html[data-motion="reduce"] *, html[data-motion="reduce"] *::before, html[data-mo
 }
 
 @media print {
-  .topbar, .day-tabs-wrap, .day-nav, .todo-tools, .hero-actions, .skip { display: none !important; }
+  .topbar, .day-tabs-wrap, .day-nav, .todo-tools, .hero-actions, .skip, .budget-tools, .budget-rate input { display: none !important; }
   main { padding-top: 0; }
   * { animation: none !important; box-shadow: none !important; }
 }

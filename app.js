@@ -384,6 +384,194 @@
       '<p>版本 ' + esc(TRIP.version) + '</p>';
   }
 
+  /* ---------- budget ---------- */
+  // 預估來自 data.js（TRIP.budget），實際金額、備註、自訂項目與匯率存在這台裝置
+  var BUDGET_KEY = 'aus-budget-v1';
+  var B = TRIP.budget;
+  function loadBudget() {
+    var st = null;
+    try { st = JSON.parse(store.get(BUDGET_KEY) || 'null'); } catch (e) { }
+    st = st && typeof st === 'object' ? st : {};
+    if (!(Number(st.rate) > 0)) st.rate = B.rate;
+    if (!st.rows || typeof st.rows !== 'object') st.rows = {};
+    if (!Array.isArray(st.custom)) st.custom = [];
+    return st;
+  }
+  var budget = loadBudget();
+  function saveBudget() { store.set(BUDGET_KEY, JSON.stringify(budget)); }
+  function money(n, cur) {
+    var v = Math.round(n).toLocaleString('en-US');
+    return (cur === 'AUD' ? 'A$' : 'NT$') + v;
+  }
+  function toTwd(n, cur) { return cur === 'AUD' ? n * budget.rate : n; }
+  function num(v) { var n = parseFloat(String(v).replace(/,/g, '')); return isFinite(n) && n >= 0 ? n : null; }
+  function estText(it) { return it.low === it.high ? money(it.low, it.cur) : money(it.low, it.cur) + '–' + money(it.high, it.cur).replace(/^(A|NT)\$/, ''); }
+
+  function amountInputs(id, row, cur) {
+    return '<select class="b-cur" data-id="' + id + '" data-k="cur" aria-label="幣別">' +
+      ['AUD', 'TWD'].map(function (c) { return '<option value="' + c + '"' + ((row.cur || cur) === c ? ' selected' : '') + '>' + (c === 'AUD' ? '澳幣' : '台幣') + '</option>'; }).join('') + '</select>' +
+      '<input class="b-amt" type="number" inputmode="decimal" min="0" step="any" data-id="' + id + '" data-k="amt" placeholder="實際金額" aria-label="實際金額" value="' + esc(row.amt == null ? '' : row.amt) + '">';
+  }
+  function renderBudget() {
+    $('#budget-rate').value = budget.rate;
+    $('#budget-rate-note').textContent = B.rateNote;
+    var html = B.groups.map(function (g) {
+      return '<section class="b-group" data-group="' + esc(g.group) + '"><h3>' + esc(g.group) + '<small class="b-sub"></small></h3>' +
+        g.items.map(function (it) {
+          var row = budget.rows[it.id] || {};
+          return '<div class="b-row" data-row="' + it.id + '"><div class="b-head"><span class="b-name">' + esc(it.name) + '</span><span class="b-est">預估 ' + estText(it) + '</span></div>' +
+            '<p class="b-note">' + esc(it.note) + '</p>' +
+            '<div class="b-inputs">' + amountInputs(it.id, row, it.cur) +
+            '<input class="b-memo" type="text" data-id="' + it.id + '" data-k="memo" placeholder="訂位代號、飯店名稱或備註" aria-label="' + esc(it.name) + ' 備註" value="' + esc(row.memo || '') + '">' +
+            '<span class="b-done"></span></div></div>';
+        }).join('') + '</section>';
+    }).join('');
+    html += '<section class="b-group" data-group="custom"><h3>其他支出<small class="b-sub"></small></h3>' +
+      (budget.custom.length ? budget.custom.map(function (c) {
+        return '<div class="b-row" data-row="' + esc(c.id) + '"><div class="b-inputs">' +
+          '<input class="b-cname" type="text" data-id="' + esc(c.id) + '" data-k="name" placeholder="項目名稱，例如：Luna Park" aria-label="項目名稱" value="' + esc(c.name || '') + '">' +
+          amountInputs(esc(c.id), c, 'AUD') +
+          '<input class="b-memo" type="text" data-id="' + esc(c.id) + '" data-k="memo" placeholder="備註" aria-label="備註" value="' + esc(c.memo || '') + '">' +
+          '<span class="b-done"></span><button class="btn btn-small b-del" type="button" data-del="' + esc(c.id) + '">刪除這筆</button></div></div>';
+      }).join('') : '<p class="b-note b-row">沒有預估裡的花費（例如臨時加的景點、紀念品），按下面「＋新增其他支出」記下來。</p>') + '</section>';
+    $('#budget-list').innerHTML = html;
+    updateBudget();
+  }
+  function rowState(id) {
+    for (var i = 0; i < budget.custom.length; i++) if (budget.custom[i].id === id) return budget.custom[i];
+    return budget.rows[id] || (budget.rows[id] = {});
+  }
+  function updateBudget() {
+    var lo = 0, hi = 0, actual = 0, filled = 0, total = 0, matchedMid = 0, matchedActual = 0;
+    B.groups.forEach(function (g) {
+      var gMid = 0, gAct = 0;
+      g.items.forEach(function (it) {
+        total++;
+        var l = toTwd(it.low, it.cur), h = toTwd(it.high, it.cur);
+        lo += l; hi += h; gMid += (l + h) / 2;
+        var row = budget.rows[it.id] || {}, a = num(row.amt), el = document.querySelector('[data-row="' + it.id + '"]');
+        if (a != null) {
+          var tw = toTwd(a, row.cur || it.cur);
+          actual += tw; gAct += tw; filled++; matchedMid += (l + h) / 2; matchedActual += tw;
+        }
+        if (el) {
+          el.classList.toggle('has-amt', a != null);
+          el.querySelector('.b-done').textContent = a != null && (row.cur || it.cur) === 'AUD' ? '≈ ' + money(toTwd(a, 'AUD'), 'TWD') : '';
+        }
+      });
+      var sub = document.querySelector('.b-group[data-group="' + g.group + '"] .b-sub');
+      if (sub) sub.textContent = '預估約 ' + money(gMid, 'TWD') + (gAct ? '・已填 ' + money(gAct, 'TWD') : '');
+    });
+    var cAct = 0;
+    budget.custom.forEach(function (c) {
+      var a = num(c.amt), el = document.querySelector('[data-row="' + c.id + '"]');
+      if (a != null) cAct += toTwd(a, c.cur || 'AUD');
+      if (el) {
+        el.classList.toggle('has-amt', a != null);
+        el.querySelector('.b-done').textContent = a != null && (c.cur || 'AUD') === 'AUD' ? '≈ ' + money(toTwd(a, 'AUD'), 'TWD') : '';
+      }
+    });
+    actual += cAct;
+    var csub = document.querySelector('.b-group[data-group="custom"] .b-sub');
+    if (csub) csub.textContent = cAct ? '已填 ' + money(cAct, 'TWD') : '';
+    var diff = matchedActual - matchedMid, mid = (lo + hi) / 2;
+    $('#budget-summary').innerHTML =
+      '<div class="bs-item bs-wide"><span>預估總額（台幣）</span><b>' + money(lo, 'TWD') + ' – ' + money(hi, 'TWD').replace('NT$', '') + '</b><small>中間值約 ' + money(mid, 'TWD') + '，約 ' + money(mid / budget.rate, 'AUD') + '</small></div>' +
+      '<div class="bs-item"><span>實際已填</span><b>' + money(actual, 'TWD') + '</b><small>' + filled + '／' + total + ' 項' + (budget.custom.length ? '＋其他 ' + budget.custom.length + ' 筆' : '') + '</small></div>' +
+      '<div class="bs-item bs-diff ' + (filled ? (diff > 0 ? 'over' : 'under') : '') + '"><span>已填項目 vs 預估中間值</span><b>' + (filled ? (diff > 0 ? '多 ' : '省 ') + money(Math.abs(diff), 'TWD') : '—') + '</b><small>' + (filled ? '同樣 ' + filled + ' 項的預估約 ' + money(matchedMid, 'TWD') : '填了實際金額才比較') + '</small></div>' +
+      '<div class="budget-meter" aria-hidden="true"><span style="width:' + Math.min(100, Math.round(actual / hi * 100)) + '%"></span></div>';
+  }
+  function budgetText() {
+    var lines = ['小小探險家去澳洲｜預算（匯率 1 澳幣 = ' + budget.rate + ' 台幣）'];
+    B.groups.forEach(function (g) {
+      lines.push('', '【' + g.group + '】');
+      g.items.forEach(function (it) {
+        var row = budget.rows[it.id] || {}, a = num(row.amt);
+        lines.push('・' + it.name + '｜預估 ' + estText(it) + '｜實際 ' + (a != null ? money(a, row.cur || it.cur) : '未填') + (row.memo ? '｜' + row.memo : ''));
+      });
+    });
+    if (budget.custom.length) {
+      lines.push('', '【其他支出】');
+      budget.custom.forEach(function (c) { var a = num(c.amt); lines.push('・' + (c.name || '未命名') + '｜' + (a != null ? money(a, c.cur || 'AUD') : '未填') + (c.memo ? '｜' + c.memo : '')); });
+    }
+    lines.push('', $('#budget-summary').innerText.replace(/\n+/g, ' '));
+    return lines.join('\n');
+  }
+  function status(msg) { $('#budget-status').textContent = msg; }
+  function bindBudget() {
+    $('#budget-list').addEventListener('input', function (e) {
+      var t = e.target, id = t.getAttribute('data-id'), k = t.getAttribute('data-k');
+      if (!id || !k) return;
+      rowState(id)[k] = t.value;
+      saveBudget(); updateBudget();
+    });
+    $('#budget-list').addEventListener('change', function (e) {
+      var t = e.target;
+      if (t.matches('select[data-k="cur"]')) { rowState(t.getAttribute('data-id')).cur = t.value; saveBudget(); updateBudget(); }
+    });
+    $('#budget-list').addEventListener('click', function (e) {
+      var d = e.target.closest('[data-del]');
+      if (!d || !window.confirm('刪除這筆支出？')) return;
+      budget.custom = budget.custom.filter(function (c) { return c.id !== d.getAttribute('data-del'); });
+      saveBudget(); renderBudget();
+    });
+    $('#budget-rate').addEventListener('input', function () {
+      var r = num(this.value);
+      if (r && r > 0) { budget.rate = r; saveBudget(); updateBudget(); }
+    });
+    $('#budget-add').addEventListener('click', function () {
+      var id = 'c' + Date.now();
+      budget.custom.push({ id: id, name: '', cur: 'AUD', amt: '', memo: '' });
+      saveBudget(); renderBudget();
+      var el = document.querySelector('[data-row="' + id + '"] .b-cname'); if (el) el.focus();
+    });
+    $('#budget-reset').addEventListener('click', function () {
+      if (!window.confirm('清除所有實際金額、備註與其他支出？預估不受影響。')) return;
+      budget = { rate: budget.rate, rows: {}, custom: [] };
+      saveBudget(); renderBudget(); status('已清除。');
+    });
+    $('#budget-copy').addEventListener('click', function () {
+      var text = budgetText();
+      var done = function () { status('已複製，可以貼到 LINE 或傳給我做最終版。'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
+      else { fallbackCopy(text); done(); }
+    });
+    $('#budget-export').addEventListener('click', function () {
+      var data = { app: 'aus-trip-budget', version: 1, exported: new Date().toISOString(), rate: budget.rate, rows: budget.rows, custom: budget.custom };
+      var blob = new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'australia-budget-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+      status('已匯出檔案，可以存到雲端或傳到另一台裝置匯入。');
+    });
+    $('#budget-import-btn').addEventListener('click', function () { $('#budget-import').click(); });
+    $('#budget-import').addEventListener('change', function () {
+      var f = this.files && this.files[0], input = this;
+      if (!f) return;
+      var r = new FileReader();
+      r.onload = function () {
+        try {
+          var d = JSON.parse(r.result);
+          if (d.app !== 'aus-trip-budget') throw new Error('format');
+          if (!window.confirm('用這個檔案取代目前的實際金額與備註？')) return;
+          budget = { rate: Number(d.rate) > 0 ? Number(d.rate) : B.rate, rows: d.rows && typeof d.rows === 'object' ? d.rows : {}, custom: Array.isArray(d.custom) ? d.custom : [] };
+          saveBudget(); renderBudget(); status('已匯入。');
+        } catch (e) { status('這個檔案不是預算匯出檔，沒有匯入。'); }
+        input.value = '';
+      };
+      r.readAsText(f);
+    });
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'absolute'; ta.style.left = '-9999px';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) { }
+    ta.remove();
+  }
+
   /* ---------- nav, settings ---------- */
   function bindNav() {
     var links = document.querySelectorAll('.nav-list .nav-link');
@@ -396,7 +584,7 @@
           });
         });
       }, { rootMargin: '-35% 0px -60% 0px' });
-      ['home', 'flights', 'itinerary', 'todo', 'stays'].forEach(function (id) { io.observe(document.getElementById(id)); });
+      ['home', 'flights', 'itinerary', 'todo', 'stays', 'budget'].forEach(function (id) { io.observe(document.getElementById(id)); });
     }
 
     var btn = $('#settings-btn'), panel = $('#settings-panel');
@@ -495,6 +683,8 @@
   bindTodos();
   renderNotes();
   renderStays();
+  renderBudget();
+  bindBudget();
   renderFooter();
   bindNav();
   bindPause();
