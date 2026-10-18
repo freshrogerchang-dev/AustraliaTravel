@@ -1,6 +1,6 @@
 # 多風格旅遊網站架構
 
-完整的實作範例是 GitHub repo `freshrogerchang-dev/AustraliaTravel`（繪本／澳洲海報／護照蓋章三種風格）。手邊有那個 repo 時，直接讀它的檔案比讀這份更準。
+完整的實作範例是 GitHub repo `freshrogerchang-dev/AustraliaTravel`（繪本／澳洲海報／護照蓋章／蠟筆畫／像素冒險五種風格）。手邊有那個 repo 時，直接讀它的檔案比讀這份更準。
 
 ## 目錄
 1. 檔案分工
@@ -124,9 +124,9 @@ function build(theme) {
 | 粗線平塗 | 填色＋`stroke=I`、3px、圓頭 | 繪本 |
 | 錯位印版 | `inner` 印兩次：下層 `<g class="plate" transform="translate(寬/80 寬/80)">`，CSS 把所有填色與線改成墨色；上層 `<g class="print">` 有填色的形狀 `stroke:none`。插圖底色要換成和紙色以外的天空色，否則和紙色的雲、帆會消失 | 澳洲海報 |
 | 刻版排線 | 四個色改成 `url(#pp-c/w/y/g)`：斜線、橫線、網點、交叉線（淡底色＋墨線 70% 透明）；全頁共用一份隱藏 `<svg id="art-defs"><defs><pattern…>`（`width=0 height=0 position:absolute`，不可 `display:none`，否則 Safari 不畫）；線寬改 2.2 | 護照 |
-| 抖動手繪線 | build 時把 path 座標加固定種子的小抖動（±1.5），同一條線畫兩次（第二次偏移 0.8、透明 .6）；填色用不規則斜線 pattern，故意偏出輪廓 2–3px | 蠟筆 |
+| 抖動蠟筆線 | 印兩層：下層 `.cr-fill` 往右下偏（寬/100）、只留顏色；上層 `.cr-line` 的 path 座標加固定種子抖動（幅度依形狀大小 0.3–1.4，跳過含弧線的 path）、只留線。線用 `url(#cr-ink)`（墨色＋白點），色塊用帶白色斜紋的 pattern | 蠟筆 |
 | 線稿＋水彩 | 線：單一石墨色 1.4px；色塊：同形狀放大 4%、偏移 3px、`fill-opacity=.55`，放在線稿下方 | 手帳 |
-| 像素 | 用字串格子畫（每列合併連續同色為一個 rect），`shape-rendering="crispEdges"`，CSS `image-rendering: pixelated` | 像素 |
+| 像素化 | 共用 SVG 線寬 ×1.5 → 在瀏覽器以 4 倍大畫到 canvas → 每 4×4 取中心點縮成 1/3（或 1/2）→ 量化到固定色盤 → PNG（快取）換掉 SVG，`image-rendering: pixelated` 放大。小人等小圖示才用字串格子手繪 | 像素 |
 
 CSS 端配合錯位印版的寫法：
 
@@ -152,6 +152,7 @@ function switchTheme(t) {
   selectDay(current, { animate: true, hash: false });     // 當日行程（順便播換日動畫）
   renderTodos();                                           // 勾勾圖示
 }
+// 像素風：renderHero() 與 selectDay() 結尾呼叫 window.pixelate(document)（有快取，重複呼叫很便宜）
 ```
 
 只用 CSS 上色（`stroke: var(--ink)`）的連結圖示不必重畫。

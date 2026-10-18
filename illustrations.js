@@ -2,13 +2,46 @@
    window.buildArt(主題名) 會用該風格的色票與畫法重畫插圖與圖示：
    - book     繪本：平塗四色＋墨灰 3px 粗線
    - aussie   海報：色塊不描邊，後面多一層錯位的海軍藍印版（網版印刷套色錯位感）
-   - passport 護照：單色細線，色塊改成刻版排線（斜線、橫線、網點、交叉線），像護照內頁版畫 */
+   - passport 護照：單色細線，色塊改成刻版排線（斜線、橫線、網點、交叉線），像護照內頁版畫
+   - crayon   蠟筆：線條加固定種子的抖動、蠟筆質感墨線，顏色往右下塗出框
+   - pixel    像素：同一張圖在瀏覽器裡縮成低解析度、量化成固定色盤，再放大成像素圖（window.pixelate） */
 (function () {
   var PALETTES = {
     book: { P: '#FFFCF6', I: '#3E3A39', C: '#F2A497', Y: '#F6D27A', W: '#A8D3E6', G: '#B9DAA5', sw: 3 },
     aussie: { P: '#FFF8EC', I: '#1E3557', C: '#EE8B5B', Y: '#F4BE3E', W: '#7EC4CF', G: '#97C08F', sw: 3 },
-    passport: { P: '#FBF8EF', I: '#26344D', C: 'url(#pp-c)', Y: 'url(#pp-y)', W: 'url(#pp-w)', G: 'url(#pp-g)', sw: 2.2 }
+    passport: { P: '#FBF8EF', I: '#26344D', C: 'url(#pp-c)', Y: 'url(#pp-y)', W: 'url(#pp-w)', G: 'url(#pp-g)', sw: 2.2 },
+    crayon: { P: '#FFFFFF', I: '#2B2B2B', C: 'url(#cr-c)', Y: 'url(#cr-y)', W: 'url(#cr-w)', G: 'url(#cr-g)', sw: 3.5, st: 'url(#cr-ink)' },
+    pixel: { P: '#FFF7E8', I: '#2B2140', C: '#FF7B6B', Y: '#FFD15C', W: '#5CC8FF', G: '#6FD08C', sw: 4.6 }
   };
+
+  function addDefs(id, inner) {
+    if (document.getElementById(id)) return;
+    var box = document.createElement('div');
+    box.innerHTML = '<svg id="' + id + '" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>' + inner + '</defs></svg>';
+    document.body.appendChild(box.firstChild);
+  }
+
+  // 蠟筆風：墨線帶白色小斑點（蠟筆在紙上沒塗滿），色塊帶白色斜紋
+  function ensureCrayon() {
+    function wax(id, color) {
+      return '<pattern id="' + id + '" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(-25)">' +
+        '<rect width="10" height="10" fill="' + color + '"/><path d="M0 2.5H10M0 6.8H7M3 9.3H10" stroke="#FFFFFF" stroke-opacity=".38" stroke-width="1.1"/></pattern>';
+    }
+    addDefs('art-defs-cr',
+      '<pattern id="cr-ink" patternUnits="userSpaceOnUse" width="5" height="5"><rect width="5" height="5" fill="#2B2B2B"/>' +
+      '<circle cx="1" cy="1.2" r=".45" fill="#FFFFFF" fill-opacity=".5"/><circle cx="3.6" cy="2.8" r=".35" fill="#FFFFFF" fill-opacity=".45"/><circle cx="2.2" cy="4.3" r=".3" fill="#FFFFFF" fill-opacity=".4"/></pattern>' +
+      wax('cr-c', '#FF8A7A') + wax('cr-y', '#FFD23F') + wax('cr-w', '#5EC2F2') + wax('cr-g', '#7BD389'));
+  }
+
+  // 固定種子的亂數：同一張圖每次重畫抖動都一樣，不會閃
+  function rng(seed) { seed = seed % 2147483647 || 1; return function () { seed = seed * 16807 % 2147483647; return (seed - 1) / 2147483646; }; }
+  function hash(str) { var h = 7; for (var i = 0; i < str.length; i += 7) h = (h * 31 + str.charCodeAt(i)) % 2147483647; return h; }
+  function wobble(d, r) {
+    if (/[aA]/.test(d)) return d;                 // 弧線的旗標不能抖
+    var nums = (d.match(/-?(\d+\.?\d*|\.\d+)/g) || []).slice(2).map(function (n) { return Math.abs(parseFloat(n)); });
+    var amp = Math.max(.3, Math.min(1.4, Math.max.apply(null, nums.concat(0)) / 30));   // 小圖形抖小一點
+    return d.replace(/-?(\d+\.?\d*|\.\d+)/g, function (n) { return (parseFloat(n) + (r() - .5) * 2 * amp).toFixed(1); });
+  }
 
   // 護照風的排線圖樣：全頁共用一份，任何 SVG 都能用 url(#pp-*) 引用
   function ensureEngraving() {
@@ -28,6 +61,7 @@
     var pal = PALETTES[theme] || PALETTES.book;
     var P = pal.P, I = pal.I, C = pal.C, Y = pal.Y, W = pal.W, G = pal.G;
     if (theme === 'passport') ensureEngraving();
+    if (theme === 'crayon') ensureCrayon();
 
     function svg(vb, inner, label) {
       var a = label ? ' role="img" aria-label="' + label + '"' : ' aria-hidden="true"';
@@ -36,7 +70,19 @@
         var off = (Number(vb.split(' ')[2]) / 80).toFixed(2);
         inner = '<g class="plate" transform="translate(' + off + ' ' + off + ')">' + inner + '</g><g class="print">' + inner + '</g>';
       }
-      return '<svg class="illo illo-' + (PALETTES[theme] ? theme : 'book') + '" viewBox="' + vb + '" fill="none" stroke="' + I + '" stroke-width="' + pal.sw + '" stroke-linecap="round" stroke-linejoin="round" focusable="false"' + a + '>' + inner + '</svg>';
+      var cls = 'illo illo-' + (PALETTES[theme] ? theme : 'book'), size = vb.split(' ').map(Number);
+      if (theme === 'crayon') {
+        // 下層：色塊往右下偏、不描邊（塗出框）；上層：抖動過的蠟筆線
+        var r = rng(hash(vb + inner)), o = (size[2] / 100).toFixed(2);
+        var lines = inner.replace(/ d="([^"]*)"/g, function (m, d) { return ' d="' + wobble(d, r) + '"'; });
+        inner = '<g class="cr-fill" transform="translate(' + o + ' ' + (o * .8).toFixed(2) + ')">' + inner + '</g><g class="cr-line">' + lines + '</g>';
+      }
+      if (theme === 'pixel') {
+        // 線加粗 1.5 倍，縮小後才不會斷；夠大的圖交給 window.pixelate 轉成像素圖
+        inner = inner.replace(/stroke-width="([\d.]+)"/g, function (m, v) { return 'stroke-width="' + (v * 1.5).toFixed(2) + '"'; });
+        if (size[2] >= 40 && size[3] >= 40) cls += ' px-src';
+      }
+      return '<svg xmlns="http://www.w3.org/2000/svg" class="' + cls + '" viewBox="' + vb + '" fill="none" stroke="' + (pal.st || I) + '" stroke-width="' + pal.sw + '" stroke-linecap="round" stroke-linejoin="round" focusable="false"' + a + '>' + inner + '</svg>';
     }
     function sea(y, w, h, fill) {
       var d = 'M-4 ' + y + ' L0 ' + y;
@@ -304,8 +350,84 @@
       road: '<svg viewBox="0 0 26 26" aria-hidden="true" fill="none" stroke="' + I + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="10" fill="' + W + '"/><path d="M13 5v4M13 12v2M13 17v4"/></svg>'
     };
 
+    if (theme === 'pixel') ILLOS.sprite = sprite();
     return { ILLOS: ILLOS, ICONS: ICONS };
   }
+
+  /* 像素風：小探險家走路的兩格動畫（每個字元一格，. 是透明） */
+  function grid(rows, colors) {
+    var out = '';
+    rows.forEach(function (row, y) {
+      for (var x = 0; x < row.length;) {
+        var ch = row[x], w = 1;
+        while (row[x + w] === ch) w++;           // 同列連續同色合併成一個 rect
+        if (colors[ch]) out += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="1" fill="' + colors[ch] + '"/>';
+        x += w;
+      }
+    });
+    return out;
+  }
+  function sprite() {
+    var col = { h: '#FFD15C', k: '#2B2140', s: '#F7C9A0', c: '#FF7B6B', w: '#5CC8FF', b: '#8A5A3C' };
+    var top = ['...kkkk...', '..khhhhk..', '.khhhhhhk.', 'kkkkkkkkkk', '..ksssk...', '..kskssk..', '..ksssk...', '.kccccck..', 'kscccccsk.', '.kccccck..', '.kwwwwwk..'];
+    var a = top.concat(['.kwk.kwk..', '.ksk..ksk.', 'kbbk..kbbk']);
+    var b = top.concat(['..kwkwk...', '..kskskk..', '..kbbbbk..']);
+    return '<svg class="px-sprite" viewBox="0 0 10 14" shape-rendering="crispEdges" aria-hidden="true" focusable="false">' +
+      '<g class="px-f1">' + grid(a, col) + '</g><g class="px-f2">' + grid(b, col) + '</g></svg>';
+  }
+
+  /* 像素化：SVG → 低解析度 canvas → 量化成固定色盤 → PNG，結果依原始 SVG 快取 */
+  var pxCache = {};
+  function quantize(px, colors) {
+    for (var i = 0; i < px.length; i += 4) {
+      if (px[i + 3] < 110) { px[i + 3] = 0; continue; }
+      var best = 0, bd = 1e9;
+      for (var j = 0; j < colors.length; j++) {
+        var c = colors[j], d = (px[i] - c[0]) * (px[i] - c[0]) + (px[i + 1] - c[1]) * (px[i + 1] - c[1]) + (px[i + 2] - c[2]) * (px[i + 2] - c[2]);
+        if (d < bd) { bd = d; best = j; }
+      }
+      px[i] = colors[best][0]; px[i + 1] = colors[best][1]; px[i + 2] = colors[best][2]; px[i + 3] = 255;
+    }
+  }
+  function rgb(hex) { return [1, 3, 5].map(function (k) { return parseInt(hex.slice(k, k + 2), 16); }); }
+  function pixelate(root) {
+    var pal = PALETTES.pixel, colors = [pal.P, pal.I, pal.C, pal.Y, pal.W, pal.G].map(rgb);
+    Array.prototype.forEach.call((root || document).querySelectorAll('svg.px-src'), function (el) {
+      var src = el.outerHTML, vb = el.getAttribute('viewBox').split(' ').map(Number);
+      var div = vb[2] >= 200 ? 3 : 2, w = Math.round(vb[2] / div), h = Math.round(vb[3] / div);
+      var label = el.getAttribute('aria-label');
+      function place(url) {
+        if (!el.parentNode) return;
+        var img = document.createElement('img');
+        img.className = 'illo px-img'; img.width = w; img.height = h; img.src = url; img.alt = label || '';
+        if (!label) img.setAttribute('aria-hidden', 'true');
+        el.parentNode.replaceChild(img, el);
+      }
+      if (pxCache[src]) { place(pxCache[src]); return; }
+      var im = new Image();
+      im.onload = function () {
+        try {
+          // 先畫成 4 倍大，再每 4×4 取中心一點（不混色），邊緣才不會冒出雜色
+          var k = 4, big = document.createElement('canvas'); big.width = w * k; big.height = h * k;
+          big.getContext('2d').drawImage(im, 0, 0, w * k, h * k);
+          var src4 = big.getContext('2d').getImageData(0, 0, w * k, h * k).data;
+          var cv = document.createElement('canvas'); cv.width = w; cv.height = h;
+          var cx = cv.getContext('2d'), data = cx.createImageData(w, h);
+          for (var y = 0; y < h; y++) for (var x = 0; x < w; x++) {
+            var si = ((y * k + k / 2) * w * k + x * k + k / 2) * 4, di = (y * w + x) * 4;
+            data.data[di] = src4[si]; data.data[di + 1] = src4[si + 1]; data.data[di + 2] = src4[si + 2]; data.data[di + 3] = src4[si + 3];
+          }
+          quantize(data.data, colors);
+          cx.putImageData(data, 0, 0);
+          pxCache[src] = cv.toDataURL('image/png');
+          place(pxCache[src]);
+        } catch (e) { el.classList.remove('px-src'); }   // 失敗就留著向量圖
+      };
+      im.onerror = function () { el.classList.remove('px-src'); };
+      im.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(src);
+    });
+  }
+  window.pixelate = pixelate;
 
   /* 護照章：currentColor 單色，顏色由外層 CSS 的 color 決定。o = { top, mid, day, bottom, shape } */
   var stampSeq = 0;

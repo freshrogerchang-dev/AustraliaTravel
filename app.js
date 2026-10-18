@@ -18,7 +18,8 @@
   function reduced() { return root.getAttribute('data-motion') === 'reduce'; }
 
   /* ---------- themes ---------- */
-  var THEMES = { book: '#FFFCF6', aussie: '#FBEFD9', passport: '#F3F0E4' };
+  var THEMES = { book: '#FFFCF6', aussie: '#FBEFD9', passport: '#F3F0E4', crayon: '#FFFDF5', pixel: '#F2E8D5' };
+  function pixelate() { if (theme() === 'pixel' && window.pixelate) window.pixelate(document); }
   var MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
   function theme() { return THEMES[root.getAttribute('data-theme')] ? root.getAttribute('data-theme') : 'book'; }
   function setThemeColor() {
@@ -61,7 +62,9 @@
   function renderHero() {
     $('#hero-art').innerHTML = ILLOS.hero +
       '<div class="hero-stamps" aria-hidden="true"><span class="hs hs1" data-color="coral">' + stampFor(2) + '</span>' +
-      '<span class="hs hs2" data-color="water">' + stampFor(12) + '</span></div>';
+      '<span class="hs hs2" data-color="water">' + stampFor(12) + '</span></div>' +
+      (ILLOS.sprite ? '<span class="px-walker" aria-hidden="true"><span class="px-face">' + ILLOS.sprite + '</span></span>' : '');
+    pixelate();
     $('#route').innerHTML = TRIP.route.map(function (r) {
       return '<li data-color="' + r.color + '"><span class="route-stop" style="background:var(--c)">' + esc(r.code) + ' ' + esc(r.name) + '<small>' + esc(r.note) + '</small></span></li>';
     }).join('');
@@ -242,6 +245,7 @@
         window.scrollTo({ top: window.scrollY + top - covered - 4, behavior: reduced() ? 'auto' : 'smooth' });
       }
     }
+    pixelate();
     if (opts.hash !== false) history.replaceState(null, '', '#day-' + n);
     store.set('aus-day', String(n));
     collectStamp(n);
@@ -463,8 +467,18 @@
     io.observe($('#day-panel'));
   }
 
+  // 首頁大標拆成單字，蠟筆風會輪流上色；讀屏仍讀整句
+  function splitTitle() {
+    var h = $('#hero-title');
+    h.setAttribute('aria-label', h.textContent);
+    h.innerHTML = h.innerHTML.split(/(<br>)/).map(function (part) {
+      return part === '<br>' ? part : part.replace(/./g, function (c) { return '<span class="ch" aria-hidden="true">' + c + '</span>'; });
+    }).join('');
+  }
+
   /* ---------- boot ---------- */
   setThemeColor();
+  splitTitle();
   renderHero();
   tickCountdown();
   setInterval(tickCountdown, 1000);

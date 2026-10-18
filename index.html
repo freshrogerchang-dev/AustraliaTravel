@@ -21,12 +21,14 @@
 (function(){
   var d = document.documentElement, m = null, b = null, t = null;
   try { m = localStorage.getItem('aus-motion'); b = localStorage.getItem('aus-big'); t = localStorage.getItem('aus-theme'); } catch (e) {}
-  t = /^(book|aussie|passport)$/.test(t) ? t : 'book';
+  t = /^(book|aussie|passport|crayon|pixel)$/.test(t) ? t : 'book';
   d.setAttribute('data-theme', t);
   // 各風格的字型只在選到時才載入（中文字型的 CSS 一個字重就上百 KB）
   var FONTS = {
     aussie: 'family=Alfa+Slab+One&family=Noto+Sans+TC:wght@400;900',
-    passport: 'family=Courier+Prime:wght@400;700&family=Noto+Serif+TC:wght@400;700'
+    passport: 'family=Courier+Prime:wght@400;700&family=Noto+Serif+TC:wght@400;700',
+    crayon: 'family=Iansui',
+    pixel: 'family=Press+Start+2P'   // 中文像素字 Cubic 11 自帶在 fonts/，由 style.css 的 @font-face 宣告
   };
   window.loadThemeFonts = function (theme) {
     if (!FONTS[theme] || document.getElementById('font-' + theme)) return;
@@ -66,6 +68,8 @@
       <label class="theme-opt"><input type="radio" name="theme" value="book"><span class="sw sw-book" aria-hidden="true"><i></i><i></i><i></i></span><span>繪本</span></label>
       <label class="theme-opt"><input type="radio" name="theme" value="aussie"><span class="sw sw-aussie" aria-hidden="true"><i></i><i></i><i></i></span><span>澳洲海報</span></label>
       <label class="theme-opt"><input type="radio" name="theme" value="passport"><span class="sw sw-passport" aria-hidden="true"><i></i><i></i><i></i></span><span>護照蓋章</span></label>
+      <label class="theme-opt"><input type="radio" name="theme" value="crayon"><span class="sw sw-crayon" aria-hidden="true"><i></i><i></i><i></i></span><span>蠟筆畫</span></label>
+      <label class="theme-opt"><input type="radio" name="theme" value="pixel"><span class="sw sw-pixel" aria-hidden="true"><i></i><i></i><i></i></span><span>像素冒險</span></label>
     </div>
     <p class="settings-title">顯示設定</p>
     <div class="setting-row">

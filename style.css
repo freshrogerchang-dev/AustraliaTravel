@@ -135,6 +135,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .sw-aussie i:nth-child(1) { background: #D7322B; } .sw-aussie i:nth-child(2) { background: #F6C543; } .sw-aussie i:nth-child(3) { background: #1E3557; }
 .sw-passport { border-radius: 50%; width: 26px; border-style: dashed; border-color: #C0453A; }
 .sw-passport i:nth-child(1) { background: #F3F0E4; } .sw-passport i:nth-child(2) { background: #2F5D8A; } .sw-passport i:nth-child(3) { background: #F3F0E4; }
+.sw-crayon { border-radius: 10px 14px 8px 16px; transform: rotate(-4deg); }
+.sw-crayon i:nth-child(1) { background: #FF8A7A; } .sw-crayon i:nth-child(2) { background: #5EC2F2; } .sw-crayon i:nth-child(3) { background: #7BD389; }
+.sw-pixel { border-radius: 0; border-color: #2B2140; box-shadow: 2px 2px 0 #2B2140; }
+.sw-pixel i:nth-child(1) { background: #2B2140; } .sw-pixel i:nth-child(2) { background: #FFD15C; } .sw-pixel i:nth-child(3) { background: #FF7B6B; }
 
 /* ---------- layout ---------- */
 main {
@@ -741,6 +745,142 @@ html[data-theme="passport"] .flight, html[data-theme="passport"] .stay, html[dat
   60% { transform: scale(.9) rotate(-10deg); }
   100% { transform: rotate(-10deg); }
 }
+
+/* ==========================================================
+   蠟筆兒童畫 data-theme="crayon"
+   像 6 歲小孩畫的：芫荽手寫字、抖動的蠟筆線、塗出框的顏色、
+   不規則圓角像手剪的卡片、貼紙。
+   ========================================================== */
+html[data-theme="crayon"] {
+  --paper: #FFFFFF; --bg: #FFFDF5; --ink: #2B2B2B; --ink-2: #5C5C5C;
+  --coral: #FF8A7A; --yellow: #FFD23F; --water: #5EC2F2; --green: #7BD389;
+  --coral-t: #FFE6E1; --yellow-t: #FFF5CC; --water-t: #DDF2FC; --green-t: #E3F7E6;
+  --line: 3px;
+  --r-xl: 28px 34px 26px 38px / 34px 26px 38px 28px;
+  --r-lg: 22px 28px 20px 30px / 28px 20px 30px 22px;
+  --r-md: 16px 22px 14px 24px / 22px 14px 24px 16px;
+  --r-sm: 12px 16px 10px 18px / 16px 10px 18px 12px;
+  --shadow: 3px 4px 0 var(--ink);
+  --font: 'Iansui', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+}
+html[data-theme="crayon"] body {
+  font-size: 1.0625rem; line-height: 1.85;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg stroke='%23E9E4D6' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M12 18l3 1M60 9l2 2M38 47l3-1M80 62l2 2M20 74l3 0M66 38l1 3'/%3E%3C/g%3E%3C/svg%3E");
+}
+html[data-theme="crayon"] .topbar, html[data-theme="crayon"] .day-tabs-wrap { background: var(--bg); }
+/* 插圖：下層色塊偏移不描邊，上層蠟筆線不填色（墨色小圓點例外，例如眼睛、輪胎） */
+.illo-crayon .cr-fill * { stroke: none; }
+.illo-crayon .cr-line [fill]:not([fill="none"]):not([fill="#2B2B2B"]) { fill: none; }
+html[data-theme="crayon"] .hero-art, html[data-theme="crayon"] .day-illo { background: #FFFFFF; }
+html[data-theme="crayon"] .hero h1 .ch:nth-child(4n+1) { color: #E4572E; }
+html[data-theme="crayon"] .hero h1 .ch:nth-child(4n+2) { color: #2E86C1; }
+html[data-theme="crayon"] .hero h1 .ch:nth-child(4n+3) { color: #3FA34D; }
+html[data-theme="crayon"] .hero h1 .ch:nth-child(4n+4) { color: #E67E22; }
+html[data-theme="crayon"] .hero h1 .ch { display: inline-block; }
+html[data-theme="crayon"] .hero h1 .ch:nth-child(odd) { transform: rotate(-4deg); }
+html[data-theme="crayon"] .hero h1 .ch:nth-child(even) { transform: translateY(2px) rotate(3deg); }
+html[data-theme="crayon"] .kicker { border-radius: var(--r-sm); transform: rotate(-2deg); font-size: .82rem; }
+html[data-theme="crayon"] .section-head h2::after {
+  content: ""; display: block; width: 120px; height: 12px; margin-top: 2px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12'%3E%3Cpath d='M3 7q10-6 20 0t20 0 20 0 20 0 20 0 14-1' fill='none' stroke='%23FF8A7A' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+}
+html[data-theme="crayon"] .stop-card, html[data-theme="crayon"] .todo-group,
+html[data-theme="crayon"] .flight, html[data-theme="crayon"] .stay, html[data-theme="crayon"] .transit { transform: rotate(-.5deg); }
+html[data-theme="crayon"] .stop:nth-child(even) .stop-card,
+html[data-theme="crayon"] .todo-group:nth-child(even),
+html[data-theme="crayon"] .flight:nth-child(even), html[data-theme="crayon"] .stay:nth-child(even),
+html[data-theme="crayon"] .transit:nth-child(even) { transform: rotate(.5deg); }
+html[data-theme="crayon"] .tab { border-radius: 20px 26px 18px 24px / 24px 18px 26px 20px; }
+html[data-theme="crayon"] .tab[aria-selected="true"] { transform: rotate(-3deg) scale(1.06); }
+html[data-theme="crayon"] .must {
+  background: var(--yellow); border-radius: 999px; transform: rotate(8deg);
+  box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px var(--ink);
+}
+html[data-theme="crayon"] .legend .must { transform: none; }
+html[data-theme="crayon"] .todo-item .box { border-radius: 50%; }
+html[data-theme="crayon"] .todo-item input:checked + .box { background: var(--yellow); transform: rotate(-8deg); }
+html[data-theme="crayon"] .todo-item.just .box { animation: slap .45s cubic-bezier(.3, 1.5, .6, 1); }
+html[data-theme="crayon"] .pop { animation-name: slap; }
+html[data-theme="crayon"] .btn:hover { box-shadow: 4px 6px 0 var(--ink); }
+@keyframes slap {
+  0% { opacity: 0; transform: scale(1.15) rotate(-4deg); }
+  60% { opacity: 1; transform: scale(.97) rotate(1deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* ==========================================================
+   像素冒險 data-theme="pixel"
+   復古像素 RPG：俐方體 11 號、方角粗框、插圖在瀏覽器裡轉成像素圖、
+   每天是一關（LV）、待辦勾選 +10 EXP、首頁有小探險家走來走去。
+   ========================================================== */
+@font-face {
+  font-family: 'Cubic 11';
+  src: url('fonts/cubic11-subset.woff2') format('woff2');
+  font-display: swap;
+}
+html[data-theme="pixel"] {
+  --paper: #FFF7E8; --bg: #F2E8D5; --ink: #2B2140; --ink-2: #5A4E73;
+  --coral: #FF7B6B; --yellow: #FFD15C; --water: #5CC8FF; --green: #6FD08C;
+  --coral-t: #FFE2DD; --yellow-t: #FFF2CC; --water-t: #DDF4FF; --green-t: #DFF6E6;
+  --line: 3px; --r-xl: 0; --r-lg: 0; --r-md: 0; --r-sm: 0;
+  --shadow: 4px 4px 0 var(--ink);
+  --font: 'Cubic 11', 'Noto Sans TC', 'PingFang TC', sans-serif;
+  --display: 'Press Start 2P', var(--font);
+}
+html[data-theme="pixel"] body { letter-spacing: .04em; -webkit-font-smoothing: none; }
+html[data-theme="pixel"] .topbar, html[data-theme="pixel"] .day-tabs-wrap { background: var(--bg); }
+html[data-theme="pixel"] .topbar { border-bottom-width: 4px; }
+html[data-theme="pixel"] .nav-link, html[data-theme="pixel"] .btn, html[data-theme="pixel"] .link-btn,
+html[data-theme="pixel"] .tag, html[data-theme="pixel"] .route-stop, html[data-theme="pixel"] .kicker,
+html[data-theme="pixel"] .switch, html[data-theme="pixel"] .switch .knob, html[data-theme="pixel"] .stay-chip,
+html[data-theme="pixel"] .day-no, html[data-theme="pixel"] .flight-code, html[data-theme="pixel"] .nights,
+html[data-theme="pixel"] .progress-bar, html[data-theme="pixel"] .meal-tag, html[data-theme="pixel"] .planb-label,
+html[data-theme="pixel"] .theme-opt, html[data-theme="pixel"] .todo-item .box, html[data-theme="pixel"] .node,
+html[data-theme="pixel"] .stay-status, html[data-theme="pixel"] .fl-tear::before, html[data-theme="pixel"] .fl-tear::after { border-radius: 0; }
+html[data-theme="pixel"] .kicker,
+html[data-theme="pixel"] .cd-box b, html[data-theme="pixel"] .fl-code, html[data-theme="pixel"] .flight-code,
+html[data-theme="pixel"] .day-no, html[data-theme="pixel"] .tab .t-md { font-family: var(--display); letter-spacing: 0; }
+html[data-theme="pixel"] .kicker { background: var(--ink); color: var(--yellow); border-color: var(--ink); font-size: .6rem; padding: 4px 10px; }
+html[data-theme="pixel"] .cd-box b { font-size: 1.2rem; padding: 10px 0 6px; }
+html[data-theme="pixel"] .fl-code { font-size: 1.3rem; }
+html[data-theme="pixel"] .tab .t-md { font-size: .62rem; margin-top: 4px; }
+html[data-theme="pixel"] .day-no { font-size: .6rem; padding: 3px 8px; }
+html[data-theme="pixel"] .section-head h2::before { content: "▶ "; color: var(--coral); }
+html[data-theme="pixel"] .hero h1 { font-size: 44px; letter-spacing: 0; line-height: 1.25; }
+@media (min-width: 760px) { html[data-theme="pixel"] .hero h1 { font-size: 55px; } }
+html[data-theme="pixel"] .hero-art, html[data-theme="pixel"] .day-illo { border-radius: 0; box-shadow: var(--shadow); }
+html[data-theme="pixel"] svg.px-src { visibility: hidden; }
+.px-img { display: block; width: 100%; height: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; image-rendering: pixelated; }
+.mission .px-img { width: 40px; height: 40px; flex-shrink: 0; }
+/* 日期標籤：關卡 LV.n，看過的關卡亮星星 */
+html[data-theme="pixel"] .tab { position: relative; border-radius: 0; }
+html[data-theme="pixel"] .tab .t-day, html[data-theme="pixel"] .tab .t-dot { display: none; }
+html[data-theme="pixel"] .tab::before { content: "LV." attr(data-day); font-family: var(--display); font-size: .5rem; color: var(--ink-2); }
+html[data-theme="pixel"] .tab[aria-selected="true"] { box-shadow: 3px 3px 0 var(--ink); }
+html[data-theme="pixel"] .tab[aria-selected="true"]::before { color: var(--ink); }
+html[data-theme="pixel"] .tab.stamped::after { content: "★"; position: absolute; top: 1px; right: 3px; font-size: .62rem; color: #E0A800; }
+html[data-theme="pixel"] .tab.is-today::after { content: "今天"; position: static; color: var(--ink); }
+html[data-theme="pixel"] .must { border-radius: 0; transform: none; background: var(--yellow); box-shadow: 3px 3px 0 var(--ink); }
+html[data-theme="pixel"] .progress-bar span { background: repeating-linear-gradient(90deg, var(--green) 0 12px, var(--paper) 12px 15px); }
+html[data-theme="pixel"] .todo-item { position: relative; }
+html[data-theme="pixel"] .todo-item.just::after {
+  content: "+10 EXP"; position: absolute; right: 2px; top: 4px; opacity: 0;
+  font-family: var(--display); font-size: .55rem; color: var(--coral);
+  animation: exp 1.1s steps(6) forwards;
+}
+html[data-theme="pixel"] .pop { animation: stage .4s steps(4); }
+html[data-theme="pixel"] .tab.bounce { animation: none; }
+/* 首頁：小探險家在歌劇院的平台上走來走去（兩格踏步） */
+.px-walker { position: absolute; left: 6%; bottom: 32%; width: 40%; pointer-events: none; animation: walk 16s steps(32) infinite; }
+.px-face { display: block; width: 21%; animation: face 16s step-end infinite; }
+.px-sprite { display: block; width: 100%; height: auto; }
+.px-f2 { opacity: 0; animation: frame .5s step-end infinite; }
+.px-f1 { animation: frame .5s step-end infinite reverse; }
+@keyframes walk { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(79%); } }
+@keyframes face { 0% { transform: none; } 50% { transform: scaleX(-1); } }
+@keyframes frame { 0% { opacity: 0; } 50% { opacity: 1; } }
+@keyframes stage { 0% { opacity: 0; transform: translateX(32px); } 100% { opacity: 1; transform: none; } }
+@keyframes exp { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-20px); } }
 
 html[data-motion="reduce"] { scroll-behavior: auto; }
 html[data-motion="reduce"] *, html[data-motion="reduce"] *::before, html[data-motion="reduce"] *::after {

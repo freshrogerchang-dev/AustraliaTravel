@@ -27,9 +27,9 @@ description: 為旅遊行程網站／App 套用或新增「真正不同」的視
 | 繪本 | `styles/picture-book.md` | 日系繪本：和紙白、3px 墨灰粗線、平塗四色 | Huninn |
 | 澳洲復古海報 | `styles/aussie-poster.md` | 網版印刷海報：色塊不描邊＋錯位印版、救生員紅黃旗 | Noto Sans TC 900 |
 | 護照蓋章 | `styles/passport.md` | 護照內頁：明體、刻版排線插圖、每天一枚入境章 | Noto Serif TC |
-| 蠟筆兒童畫 | `styles/crayon.md` | 像 6 歲小孩畫的：抖動粗線、塗出框、貼紙 | 芫荽 Iansui |
-| 旅行手帳 | `styles/journal.md` | 鉛筆線稿＋水彩暈染、方格紙、紙膠帶 | 霞鶩文楷 LXGW WenKai TC |
-| 像素冒險 | `styles/pixel.md` | 像素 RPG：每天一關、待辦是任務 | 俐方體 11 號 Cubic 11 |
+| 蠟筆兒童畫 | `styles/crayon.md` | 像 6 歲小孩畫的：抖動蠟筆線、塗出框、手剪卡片、貼紙 | 芫荽 Iansui |
+| 旅行手帳 | `styles/journal.md` | 鉛筆線稿＋水彩暈染、方格紙、紙膠帶（規格，尚未實作驗證） | 霞鶩文楷 LXGW WenKai TC |
+| 像素冒險 | `styles/pixel.md` | 像素 RPG：插圖即時轉像素圖、每天一關、+10 EXP、走路小人 | 俐方體 11 號 Cubic 11（自帶子集） |
 
 使用者說的是某個國家或城市（例如「日本風」「首爾風」）時，不要硬套上表：用 `styles/_template.md` 依當地**非神聖、非原住民族專屬**的視覺文化（交通標誌、海報、郵票、市場招牌、建築、植物）設計新風格，並說明取材來源。
 
@@ -55,6 +55,7 @@ description: 為旅遊行程網站／App 套用或新增「真正不同」的視
 - 尊重「減少動態效果」：`html[data-motion="reduce"]` 和 `prefers-reduced-motion` 下關掉所有動畫，且元素要停在最終狀態（例如章直接蓋好）。
 - **字型依風格延遲載入**：每個中文字型的 Google Fonts CSS 一個字重約 125 KB，所以只在選到該風格時才插入 `<link>`，最多兩個字重。預設風格之外的字型不要寫進 `<head>` 的固定連結。
 - 每種風格只用**一個**中文字型；英數展示字型可另加一個。
+- Google Fonts 沒有的字型（例如中文像素字）要自帶：先確認授權允許再散布、只收網站用到的字做子集（woff2），授權全文放在字型旁邊。
 
 ## 文化與誠實
 

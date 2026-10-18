@@ -1964,7 +1964,7 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-17',
-  version: 'little-explorers-20261018b',
+  version: 'little-explorers-20261018c',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
@@ -2200,6 +2200,7 @@ window.TRIP = {
   footer: [
     '資料查核日 2026/10/17。航班時刻取自第三方航班追蹤網站交叉比對，非官方訂位確認；所有行程都還沒有預訂。',
     '延伸閱讀只收來源日期為 2025／2026 的內容，日期是來源頁面顯示的發布日期，不等於作者實際出遊日；遊記、短評與官方攻略分開標示。',
-    '大眾運輸票價取自 Transport for NSW、TransLink、Airtrain 與業者官網及 2026 年旅遊指南交叉比對，票價每年調整。營業時間、票價、交通、身高限制與餐廳菜單，請於出發前依官方最新資訊確認。'
+    '大眾運輸票價取自 Transport for NSW、TransLink、Airtrain 與業者官網及 2026 年旅遊指南交叉比對，票價每年調整。營業時間、票價、交通、身高限制與餐廳菜單，請於出發前依官方最新資訊確認。',
+    '字型：粉圓 Huninn、思源黑體、思源宋體、芫荽、Alfa Slab One、Courier Prime、Press Start 2P 來自 Google Fonts；像素風中文字型為俐方體 11 號 Cubic 11（ACh-K，免費字型，本站只收錄用到的字，授權全文見 fonts/Cubic11-LICENSE.txt）。'
   ]
 };
