@@ -116,7 +116,7 @@ window.TRIP_DAYS = [
    {
     "time": "抵達後",
     "title": "雪梨機場 → 飯店寄放行李",
-    "desc": "通關後前往達令港周邊住宿。若房間還沒好，先寄行李；需要一到就睡，可事先詢問提早入住。",
+    "desc": "通關後到 Meriton Suites Sussex Street（市中心西側的 Sussex Street，走路約 4 分鐘到 Town Hall 站）。若房間還沒好，先寄行李；需要一到就睡，可事先詢問提早入住。",
     "tags": [
      {
       "m": "rail",
@@ -152,7 +152,7 @@ window.TRIP_DAYS = [
    {
     "time": "午後",
     "title": "Darling Quarter 遊樂場",
-    "desc": "安排 45–60 分鐘玩遊具，再回飯店午睡；不要同時塞水族館。若遇雨，直接把下午留給休息。",
+    "desc": "從飯店往西走到達令港南邊約 10–15 分鐘。安排 45–60 分鐘玩遊具，再回飯店午睡；不要同時塞水族館。若遇雨，直接把下午留給休息。",
     "tags": [
      {
       "m": "walk",
@@ -196,7 +196,7 @@ window.TRIP_DAYS = [
    {
     "time": "18:00 起",
     "title": "Vivid 第 1 晚：達令港短線",
-    "desc": "暫抓 45–60 分鐘，只選 2027 官方地圖上的一小區。抵達日累了就取消；不預先保證某場投影或雷射秀。",
+    "desc": "暫抓 45–60 分鐘，只選 2027 官方地圖上的一小區。抵達日累了就取消；不預先保證某場投影或雷射秀。達令港就在飯店西邊，看完直接走回飯店。",
     "tags": [
      {
       "m": "walk",
@@ -244,7 +244,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "機場到飯店接駁選擇：① Airport Link 火車到 Town Hall／Central 再轉步行或輕軌，含推車與行李較費力；② Uber／DiDi／13cabs 叫車，約 25–35 分鐘視路況，車資抓 A$35–55；③ 事先預約的飯店或包車接送，行李多、小孩累時最省力。雪梨市區不建議自駕：停車昂貴、Vivid 期間道路常封閉，租車留到 Day 5 藍山或 Day 6 以後的黃金海岸再評估。Vivid 期間晚間以步行與大眾運輸為主。Harbourside 重建尚未能確認 2027/6 全面開放，活動集中在 Darling Quarter／Tumbalong Park，依當日施工告示走。",
+  "move": "機場到飯店：① Airport Link 火車（T8）從國際航廈直達 Town Hall 站，約 15–20 分鐘，出站走 4–5 分鐘到 Sussex Street；機場站附加費另計（見「交通與票價」），帶行李與推車要走一小段；② Uber／DiDi／13cabs 叫車約 25–35 分鐘，車資抓 A$35–55；③ 事先預約接送，行李多、孩子累時最省力。雪梨市區不建議自駕：停車昂貴、Vivid 期間道路常封閉，租車留到 Day 5 藍山或 Day 6 以後的黃金海岸再評估。Vivid 期間晚間以步行與大眾運輸為主。Harbourside 重建尚未能確認 2027/6 全面開放，活動集中在 Darling Quarter／Tumbalong Park，依當日施工告示走。",
   "planb": "取消夜間活動，飯店午睡＋附近外帶晚餐。下午若下雨又還有精神，達令港的 SEA LIFE 雪梨水族館是室內備案（門票另查，看 30–60 分鐘就好）。",
   "reads": [
    {
@@ -438,7 +438,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "環形碼頭、歌劇院與植物園以步行串連。Google Maps 顯示的距離未含推車、拍照與休息時間。",
+  "move": "飯店到環形碼頭：走 4–5 分鐘到 Town Hall 站搭火車到 Circular Quay 站（City Circle，約 5–10 分鐘），或到 George Street 搭 L2／L3 輕軌往北到 Circular Quay。環形碼頭、歌劇院與植物園以步行串連；去魯納樂園從環形碼頭搭渡輪到 Milsons Point。Google Maps 顯示的時間未含推車、拍照與休息。",
   "planb": "下雨時只看歌劇院外觀，植物園改飯店休息；已訂的導覽按取消規則處理。",
   "reads": [
    {
@@ -578,7 +578,7 @@ window.TRIP_DAYS = [
    {
     "time": "14:00",
     "title": "回飯店午休",
-    "desc": "渡輪回環形碼頭，再叫車或搭輕軌回達令港，午休 1.5–2 小時；今天上午走了不少坡。",
+    "desc": "渡輪回環形碼頭，搭火車或 L2／L3 輕軌回 Town Hall 一帶，再走回飯店，午休 1.5–2 小時；今天上午走了不少坡。",
     "tags": [
      {
       "m": "ferry",
@@ -650,8 +650,8 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "接駁選擇：① F2 渡輪（環形碼頭 ↔ Taronga Zoo 碼頭，約 12 分鐘，Opal／感應信用卡）＋公車上山到主入口，最推薦；② 渡輪＋門票套票，是否含上山交通依套票說明；③ 叫車直接到主入口，約 20–30 分鐘。雪梨市區仍不建議自駕，園區停車也要收費。",
-  "planb": "下雨就把主線換成 Australian Museum 恐龍常設展（William Street，室內，依目前官網常設展免費），動物園改到晴天；想看真的船艦，達令港的海事博物館也可以當雨天備案。博物館與動物園擇一，不要同一天排兩個。",
+  "move": "飯店到環形碼頭：Town Hall 站搭火車或 George Street 搭 L2／L3 輕軌，約 10–15 分鐘。接駁選擇：① F2 渡輪（環形碼頭 ↔ Taronga Zoo 碼頭，約 12 分鐘，Opal／感應信用卡）＋公車上山到主入口，最推薦；② 渡輪＋門票套票，是否含上山交通依套票說明；③ 叫車直接到主入口，約 20–30 分鐘。雪梨市區仍不建議自駕，園區停車也要收費。",
+  "planb": "下雨就把主線換成 Australian Museum 恐龍常設展（William Street，室內，依目前官網常設展免費；從飯店走路約 15–20 分鐘或叫車），動物園改到晴天；想看真的船艦，達令港的海事博物館也可以當雨天備案。博物館與動物園擇一，不要同一天排兩個。",
   "reads": [
    {
     "date": "2026-08",
@@ -708,7 +708,7 @@ window.TRIP_DAYS = [
    {
     "time": "07:30–08:00",
     "title": "雪梨出發",
-    "desc": "參加有接送的一日團，或預約包車。這是建議出發區間，集合時間依供應商通知；山區天候與路況可能延長車程。",
+    "desc": "參加有接送的一日團（確認是否到 Sussex Street 一帶接送），或預約包車。自己搭火車的話：從飯店走到 Town Hall 站搭到 Central，換藍山線（Blue Mountains Line）城際火車到 Katoomba，約 2 小時。這是建議出發區間，集合時間依供應商通知；山區天候與路況可能延長車程。",
     "tags": [
      {
       "m": "bus",
@@ -945,7 +945,7 @@ window.TRIP_DAYS = [
    {
     "time": "依航班倒推",
     "title": "飯店取行李 → 雪梨機場",
-    "desc": "先確認國內線航廈、托運與報到截止時間，再倒推離開飯店時間，另加交通緩衝。",
+    "desc": "先確認國內線航廈、托運與報到截止時間，再倒推離開飯店時間，另加交通緩衝。從飯店走到 Town Hall 站，搭 Airport Link（T8）到國內線（Domestic）站約 15–20 分鐘，Jetstar／Virgin 在 T2、Qantas 在 T3；帶全部行李時叫車約 20–30 分鐘最省力。",
     "tags": [
      {
       "m": "rail",
@@ -2289,7 +2289,7 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-19',
-  version: 'little-explorers-20261019b',
+  version: 'little-explorers-20261019c',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
@@ -2351,19 +2351,19 @@ window.TRIP = {
 
   // 已訂好的飯店：補上 name（或更精確的 query，例如地址）後，所有「Google 路線」都會從飯店出發
   hotels: {
-    syd: { name: '', query: '', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
+    syd: { name: 'Meriton Suites Sussex Street, Sydney', query: 'Meriton Suites Sussex Street, Sydney NSW 2000', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
   },
 
   stays: [
     {
       city: '雪梨', color: 'coral', nights: 4, dates: '6/17（四）入住 → 6/21（一）退房',
-      area: '你們訂好的飯店（位置見下方地圖）',
+      area: 'Sussex Street（市中心西側）：走路 4 分鐘到 Town Hall 站，往西幾分鐘就是達令港',
       status: '已預訂',
       hotel: 'syd',
       options: [
-        { name: '已預訂的飯店（名稱待補）', type: '點「地圖」開啟你分享的 Google 地圖位置', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
+        { name: 'Meriton Suites Sussex Street', type: '公寓式，有廚房；洗衣機與烘衣機依房型，入住前確認', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
       ],
-      note: '行程裡的「Google 路線」按鈕：飯店名稱補上前會從手機目前位置出發，補上後改從飯店出發。Day 5 藍山一日遊當天來回，不用換飯店。'
+      note: '行程 Day 2–6 的「Google 路線」按鈕都從這間飯店出發或回到這裡。機場：Airport Link 到 Town Hall 站再走 4–5 分鐘；環形碼頭：Town Hall 站搭火車或 George Street 搭 L2／L3 輕軌。Day 5 藍山一日遊當天來回，不用換飯店。'
     },
     {
       city: '黃金海岸', color: 'yellow', nights: 6, dates: '6/21（一）入住 → 6/27（日）退房',
@@ -2420,7 +2420,7 @@ window.TRIP = {
     },
     {
       group: '住宿', when: '機票確定後', items: [
-        { id: 'stay-syd', t: '雪梨 4 晚（6/17–6/21）已訂：補上飯店名稱', note: '傳給 Claude，交通會依飯店位置重算' },
+        { id: 'stay-syd', t: '雪梨 4 晚已訂：Meriton Suites Sussex Street（6/17–6/21）', note: '確認房型有沒有洗衣機與烘衣機、能否提早入住或寄放行李' },
         { id: 'stay-gc', t: '訂黃金海岸 6 晚（6/21–6/27）', note: 'Broadbeach，G:link 站走路 5–10 分鐘內，有廚房洗衣機' },
         { id: 'stay-bne', t: '訂布里斯本 2 晚（6/27–6/29）', note: 'South Brisbane 站附近，火車與 Airtrain 都直達' }
       ]
@@ -2519,7 +2519,7 @@ window.TRIP = {
         ['Airtrain 去 BNE', 'South Brisbane 等市區站大人約 A$23.30（2026/4 起），14 歲以下陪同免費'],
         ['Con-X-ion', '門對門接駁巴士，依區域計價，線上預約'],
         ['私人接送', '黃金海岸 → 布里斯本機場，轎車約 A$190 起（業者報價）'],
-        ['雪梨機場叫車', '到達令港約 25–35 分鐘，約 A$35–55']
+        ['雪梨機場叫車', '到 Sussex Street 飯店約 25–35 分鐘，約 A$35–55']
       ],
       tips: ['Airtrain 不適用 50 分錢票價。', '三人帶行李時，接駁或叫車常比火車省力；預算優先再選火車。'],
       links: [
@@ -2582,7 +2582,7 @@ window.TRIP = {
       },
       {
         group: '住宿 12 晚', items: [
-          { id: 'b-syd', name: '雪梨 4 晚（已預訂）', cur: 'AUD', low: 1200, high: 1800, note: '已訂好，把實際金額與飯店名稱填在下面；預估是訂房前查的 Vivid 期間行情。' },
+          { id: 'b-syd', name: '雪梨 4 晚（Meriton Suites Sussex Street，已預訂）', cur: 'AUD', low: 1200, high: 1800, note: '已訂好，把實際金額與訂房代號填在下面；預估是訂房前查的 Vivid 期間行情。' },
           { id: 'b-gc', name: '黃金海岸 6 晚（Broadbeach 公寓）', cur: 'AUD', low: 1100, high: 1900, note: '6 月是淡季，第三方資料平均每晚約 A$130–230；兩房公寓較貴。' },
           { id: 'b-bne', name: '布里斯本 2 晚（South Brisbane 站附近）', cur: 'AUD', low: 450, high: 700, note: '粗估，依訂房網站即時價格。' }
         ]
