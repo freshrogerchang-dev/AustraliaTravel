@@ -34,7 +34,7 @@
     });
   }
   function ext(u, label, cls) {
-    var isMap = /google\.com\/maps/.test(u);
+    var isMap = /google\.com\/maps|maps\.app\.goo\.gl/.test(u);
     var text = isMap ? label.replace('開啟 Google Maps', '地圖') : label;
     return '<a class="link-btn' + (isMap ? ' map' : '') + (cls ? ' ' + cls : '') + '" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' +
       (isMap ? ICONS.pin : ICONS.out) + '<span>' + esc(text) + '</span></a>';
@@ -162,6 +162,25 @@
       }).join('') + '</ol>';
   }
 
+  /* Google 地圖路線：'@syd' 這類代號指向 TRIP.hotels；飯店名稱還沒填時，起點留空＝手機目前位置 */
+  var ROUTE_MODES = { transit: '大眾運輸', walking: '步行', driving: '開車' };
+  function place(p) {
+    if (p && p.charAt(0) === '@') { var h = (TRIP.hotels || {})[p.slice(1)] || {}; return h.query || h.name || ''; }
+    return p || '';
+  }
+  function routesHTML(routes) {
+    return routes.map(function (r) {
+      var from = place(r.from), to = place(r.to);
+      if (!to) return '';                       // 回飯店的路線要等飯店名稱補上
+      var label = r.label || '';
+      if (!from && r.from && r.from.charAt(0) === '@') label = label.replace(/飯店 →/, '目前位置 →');
+      var u = 'https://www.google.com/maps/dir/?api=1' + (from ? '&origin=' + encodeURIComponent(from) : '') +
+        '&destination=' + encodeURIComponent(to) + '&travelmode=' + r.mode;
+      return '<a class="link-btn route-btn" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + ICONS.route +
+        '<span>' + esc(label) + '<small>' + ROUTE_MODES[r.mode] + '</small></span></a>';
+    }).join('');
+  }
+
   function dayHTML(d) {
     var prev = DAYS[d.n - 2], next = DAYS[d.n];
     var stops = d.stops.map(function (s) {
@@ -170,6 +189,7 @@
         '<div class="stop-card"><div class="stop-top"><h5>' + esc(s.title) + '</h5>' + (s.must ? '<span class="must">' + ICONS.star + '必去</span>' : '') + '</div>' +
         (s.tags.length ? '<ul class="tags" aria-label="交通方式">' + s.tags.map(function (t) { return tag(t.m, t.t); }).join('') + '</ul>' : '') +
         '<p>' + esc(s.desc) + '</p>' +
+        (s.routes && s.routes.length ? '<div class="links routes">' + routesHTML(s.routes) + '</div>' : '') +
         (s.links.length ? '<div class="links">' + s.links.map(function (l) { return ext(l.u, l.l); }).join('') + '</div>' : '') +
         '</div></li>';
     }).join('');

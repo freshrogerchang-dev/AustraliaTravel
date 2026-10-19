@@ -358,6 +358,7 @@
       ride: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 14V11.5l2-4h10l2 4V14Z"/><path d="M8.5 7.5V5.5h3v2"/><circle cx="6.5" cy="14.5" r="1.7"/><circle cx="13.5" cy="14.5" r="1.7"/></svg>',
       flight: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 11.5 7.5 10.5l3.5-6h1.8L11 10.5l5.5 1v1.5l-5.5-.5 1 4h-1.8l-3-4-5.2.5Z"/></svg>',
       cable: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 4l16 3"/><path d="M10 5.5v2.5"/><rect x="6" y="8" width="8" height="8" rx="2"/></svg>',
+      route: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="5" cy="15.5" r="2"/><circle cx="15" cy="4.5" r="2"/><path d="M7 15.5h5.5a2.75 2.75 0 0 0 0-5.5h-5a2.75 2.75 0 0 1 0-5.5H13"/></svg>',
       pin: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s-5.5-5.4-5.5-9.5a5.5 5.5 0 0 1 11 0C15.5 12.6 10 18 10 18Z"/><circle cx="10" cy="8.5" r="2"/></svg>',
       out: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4H5a1.5 1.5 0 0 0-1.5 1.5v9.5A1.5 1.5 0 0 0 5 16.5h9.5A1.5 1.5 0 0 0 16 15v-3"/><path d="M11 3.5h5.5V9M16.5 3.5 9.5 10.5"/></svg>',
       bed: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18.5V7M3 13.5h18v5M21 13.5v-1A3.5 3.5 0 0 0 17.5 9H11v4.5"/><circle cx="7" cy="10.8" r="2"/></svg>',

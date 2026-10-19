@@ -133,6 +133,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Sydney%20Airport%20International%20Terminal",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "Sydney Airport International Terminal T1",
+      "to": "@syd",
+      "mode": "transit",
+      "label": "機場 → 飯店"
+     },
+     {
+      "from": "Sydney Airport International Terminal T1",
+      "to": "@syd",
+      "mode": "driving",
+      "label": "機場 → 飯店（叫車）"
+     }
     ]
    },
    {
@@ -150,6 +164,14 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Darling%20Quarter%20Playground%20Sydney",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Darling Quarter Playground, Sydney",
+      "mode": "transit",
+      "label": "飯店 → Darling Quarter 遊樂場"
      }
     ]
    },
@@ -186,6 +208,14 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Darling%20Harbour%20Sydney",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Darling Harbour, Sydney",
+      "mode": "transit",
+      "label": "飯店 → 達令港"
      }
     ]
    }
@@ -269,6 +299,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Sydney%20Opera%20House",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Circular Quay, Sydney",
+      "mode": "transit",
+      "label": "飯店 → 環形碼頭"
+     },
+     {
+      "from": "Circular Quay, Sydney",
+      "to": "Sydney Opera House",
+      "mode": "walking",
+      "label": "環形碼頭 → 歌劇院"
+     }
     ]
    },
    {
@@ -286,6 +330,14 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Royal%20Botanic%20Garden%20Sydney",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "Sydney Opera House",
+      "to": "Royal Botanic Garden Sydney",
+      "mode": "walking",
+      "label": "歌劇院 → 皇家植物園"
      }
     ]
    },
@@ -309,6 +361,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Luna%20Park%20Sydney",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "Royal Botanic Garden Sydney",
+      "to": "@syd",
+      "mode": "transit",
+      "label": "植物園 → 飯店"
+     },
+     {
+      "from": "Circular Quay Wharf, Sydney",
+      "to": "Luna Park Sydney",
+      "mode": "transit",
+      "label": "環形碼頭 → 魯納樂園"
+     }
     ]
    },
    {
@@ -326,6 +392,20 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Circular%20Quay%20Sydney",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Circular Quay, Sydney",
+      "mode": "transit",
+      "label": "飯店 → 環形碼頭"
+     },
+     {
+      "from": "Circular Quay, Sydney",
+      "to": "@syd",
+      "mode": "transit",
+      "label": "環形碼頭 → 飯店"
      }
     ]
    }
@@ -418,6 +498,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Circular%20Quay%20Wharf%20Sydney",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Circular Quay Wharf, Sydney",
+      "mode": "transit",
+      "label": "飯店 → 環形碼頭"
+     },
+     {
+      "from": "Circular Quay Wharf, Sydney",
+      "to": "Taronga Zoo Wharf, Mosman",
+      "mode": "transit",
+      "label": "環形碼頭 → Taronga 碼頭（F2 渡輪）"
+     }
     ]
    },
    {
@@ -439,6 +533,14 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Taronga%20Zoo%20Sydney%20main%20entrance",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "Taronga Zoo Wharf, Mosman",
+      "to": "Taronga Zoo Sydney",
+      "mode": "transit",
+      "label": "Taronga 碼頭 → 動物園主入口（公車）"
      }
     ]
    },
@@ -488,7 +590,27 @@ window.TRIP_DAYS = [
      }
     ],
     "must": false,
-    "links": []
+    "links": [],
+    "routes": [
+     {
+      "from": "Taronga Zoo Wharf, Mosman",
+      "to": "Circular Quay Wharf, Sydney",
+      "mode": "transit",
+      "label": "Taronga 碼頭 → 環形碼頭"
+     },
+     {
+      "from": "Circular Quay, Sydney",
+      "to": "@syd",
+      "mode": "transit",
+      "label": "環形碼頭 → 飯店"
+     },
+     {
+      "from": "@syd",
+      "to": "Australian Museum, Sydney",
+      "mode": "transit",
+      "label": "雨天備案：飯店 → 澳洲博物館"
+     }
+    ]
    },
    {
     "time": "18:00 起・選配",
@@ -607,6 +729,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Katoomba%20NSW",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Central Station, Sydney",
+      "mode": "transit",
+      "label": "飯店 → 中央車站"
+     },
+     {
+      "from": "Central Station, Sydney",
+      "to": "Katoomba Station, NSW",
+      "mode": "transit",
+      "label": "中央車站 → Katoomba 站（藍山線火車）"
+     }
     ]
    },
    {
@@ -624,6 +760,14 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Scenic%20World%20Katoomba",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "Katoomba Station, NSW",
+      "to": "Scenic World, Katoomba",
+      "mode": "transit",
+      "label": "Katoomba 站 → Scenic World（686 公車）"
      }
     ]
    },
@@ -646,6 +790,14 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Echo%20Point%20Lookout%20Katoomba",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "Scenic World, Katoomba",
+      "to": "Echo Point Lookout, Katoomba",
+      "mode": "transit",
+      "label": "Scenic World → Echo Point"
      }
     ]
    },
@@ -672,6 +824,26 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Leura%20Mall%20NSW",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "Echo Point Lookout, Katoomba",
+      "to": "Leura Mall, Leura NSW",
+      "mode": "transit",
+      "label": "Echo Point → Leura 主街"
+     },
+     {
+      "from": "Leura Station, NSW",
+      "to": "Central Station, Sydney",
+      "mode": "transit",
+      "label": "Leura 站 → 中央車站"
+     },
+     {
+      "from": "Central Station, Sydney",
+      "to": "@syd",
+      "mode": "transit",
+      "label": "中央車站 → 飯店"
      }
     ]
    }
@@ -760,6 +932,14 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Bondi%20Beach%20Sydney",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Bondi Beach, Sydney",
+      "mode": "transit",
+      "label": "飯店 → 邦迪海灘"
+     }
     ]
    },
    {
@@ -781,6 +961,20 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Sydney%20Airport%20Domestic%20Terminal",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@syd",
+      "to": "Sydney Airport Domestic Terminal 2",
+      "mode": "transit",
+      "label": "飯店 → 國內線 T2（Jetstar／Virgin）"
+     },
+     {
+      "from": "@syd",
+      "to": "Sydney Airport Domestic Terminal 3",
+      "mode": "transit",
+      "label": "飯店 → 國內線 T3（Qantas）"
      }
     ]
    },
@@ -2095,7 +2289,7 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-19',
-  version: 'little-explorers-20261019a',
+  version: 'little-explorers-20261019b',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
@@ -2155,13 +2349,21 @@ window.TRIP = {
     }
   ],
 
+  // 已訂好的飯店：補上 name（或更精確的 query，例如地址）後，所有「Google 路線」都會從飯店出發
+  hotels: {
+    syd: { name: '', query: '', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
+  },
+
   stays: [
     {
       city: '雪梨', color: 'coral', nights: 4, dates: '6/17（四）入住 → 6/21（一）退房',
-      area: '達令港周邊：走路到 Darling Quarter、海事博物館，Vivid 也近',
+      area: '你們訂好的飯店（位置見下方地圖）',
       status: '已預訂',
-      options: [],
-      note: '前四晚已訂好；飯店名稱還沒補上，補上後會依位置重算 Day 2–6 的交通。Day 5 藍山一日遊當天來回，不用換飯店。'
+      hotel: 'syd',
+      options: [
+        { name: '已預訂的飯店（名稱待補）', type: '點「地圖」開啟你分享的 Google 地圖位置', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
+      ],
+      note: '行程裡的「Google 路線」按鈕：飯店名稱補上前會從手機目前位置出發，補上後改從飯店出發。Day 5 藍山一日遊當天來回，不用換飯店。'
     },
     {
       city: '黃金海岸', color: 'yellow', nights: 6, dates: '6/21（一）入住 → 6/27（日）退房',
