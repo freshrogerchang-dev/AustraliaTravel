@@ -92,4 +92,15 @@ NODE_PATH=$(npm root -g) node <skill>/scripts/check_themes.js http://localhost:8
 - 章、貼紙等疊在插圖上的元素是否仍可讀
 - 手機寬度沒有左右捲動
 
+再跑版面稽核（每個風格 × 390／375／360／320 寬 × 每一天＋設定面板，約 5 秒一組）：
+
+```bash
+NODE_PATH=$(npm root -g) node <skill>/scripts/audit_layout.js http://localhost:8765/ 390,375,360,320 book,aussie,passport
+```
+
+它找使用者在手機上最容易看到的毛病：**膠囊（圓角 999px）裡的字換行、被圓角切到**、超出畫面、被裁切、文字超出框、整頁左右捲動。輸出 TOTAL 0 才算過。避免膠囊換行的寫法：
+
+- 卡片標題列用 `flex-wrap: wrap`，副標膠囊 `white-space: nowrap`，放不下就整個換到標題下一行。
+- 可能很長的按鈕或標籤，圓角用固定值（約單行高度的一半，例如 22px）而不是 999px：單行看起來仍是膠囊，換行時變成圓角方塊、不切字。
+
 腳本只在 Chromium 跑；回報時要說清楚 iPhone 實機 Safari 未驗證。

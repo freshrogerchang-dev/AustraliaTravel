@@ -19,3 +19,4 @@
 
 ## skill 更新
 - `scripts/audit_layout.js` 收進 travel-style skill，`SKILL.md` 驗證段落加上用法與「膠囊不要換行」的寫法。
+- 更正：上一個 commit（0dd14cb）的訊息寫了已加入 audit_layout.js，但寫檔的步驟其實沒有執行，檔案與 SKILL.md 說明是在下一個 commit 才真正加入。加入後用舊版 style.css 測試，能抓到原本的兩個膠囊換行問題；新版為 0。
