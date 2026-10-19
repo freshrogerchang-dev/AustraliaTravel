@@ -484,6 +484,7 @@ details.card[open] { padding-bottom: 14px; }
 .stay-dates { font-size: .9rem; color: var(--ink-2); }
 .stay-area { margin-top: 4px; }
 .stay-status { display: inline-block; font-size: .75rem; border: 2px dashed var(--ink); border-radius: 999px; padding: 0 10px; margin-top: 8px; }
+.stay-status.is-booked { border-style: solid; background: var(--green); }
 .stay-option { border-top: 2px dashed var(--ink); margin-top: 12px; padding-top: 12px; }
 .stay-option h4 { font-size: 1.02rem; }
 .stay-option p { font-size: .85rem; color: var(--ink-2); }

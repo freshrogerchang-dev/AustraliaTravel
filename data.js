@@ -804,22 +804,22 @@ window.TRIP_DAYS = [
    },
    {
     "time": "抵達後",
-    "title": "入住 → 衝浪者天堂短散步",
-    "desc": "先入住再吃飯，精神好才去海邊走 20–30 分鐘；今晚不安排門票景點。",
+    "title": "入住 → Broadbeach 海邊短散步",
+    "desc": "從 OOL 機場搭 777 公車直達 Broadbeach South 站（約每 15 分一班，50 分錢），再走路或搭一站 G:link 到住宿；行李多或孩子睡著就叫車。先入住再吃飯，精神好才去 Kurrawa 海灘走 20–30 分鐘；今晚不安排門票景點。",
     "tags": [
      {
-      "m": "car",
-      "t": "自駕"
+      "m": "bus",
+      "t": "777 公車"
      },
      {
       "m": "ride",
-      "t": "叫車／接送"
+      "t": "叫車"
      }
     ],
     "must": false,
     "links": [
      {
-      "u": "https://www.google.com/maps/search/?api=1&query=Surfers%20Paradise%20Beach%20QLD",
+      "u": "https://www.google.com/maps/search/?api=1&query=Broadbeach%20South%20light%20rail%20station",
       "l": "開啟 Google Maps"
      }
     ]
@@ -853,7 +853,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "Gold Coast Airport（OOL）抵達後前往飯店接駁選擇：① 自駕租車，機場航廈就有租車櫃檯，取車後一路開到 Day 12（6/27）在布里斯本還車，黃金海岸的樂園分散在北邊的 Coomera、Oxenford 和 Main Beach，自駕是這幾天最彈性的方式，兒童安全座椅需向租車公司加購或自備（見文首「考慮自駕」說明）；② G:link 輕軌（需先搭接駁車到 Helensvale 站）＋步行，較省但轉乘次數多；③ 機場接送車或 Uber／DiDi，約 20–30 分鐘到衝浪者天堂，先確認兒童乘車安排。不要誤訂到回程機場 BNE。",
+  "move": "Gold Coast Airport（OOL）抵達後前往 Broadbeach 住宿：① 777 公車（機場 → Broadbeach South 站，限停靠快線，約每 15 分一班、50 分錢，第三方估約 30–40 分鐘），最省；② Con-X-ion 共乘接駁，第三方資料單程每人約 A$15–22，門對門少搬行李；③ 計程車／Uber，計程車第三方估約 A$75–90。若決定自駕，機場航廈有租車櫃檯，6/27 在布里斯本還車（比較見「交通與票價」的大眾運輸 vs 自駕）。不要誤訂到回程機場 BNE。",
   "planb": "直接刪掉邦迪，早餐後慢慢退房去機場；抵達晚就取消沙灘散步。",
   "reads": [
    {
@@ -908,15 +908,19 @@ window.TRIP_DAYS = [
    {
     "time": "開園前",
     "title": "前往 Dreamworld",
-    "desc": "依 2027 當日開園時間安排接送。入園前先量孩子身高，下載或查看最新園區圖。",
+    "desc": "依 2027 當日開園時間倒推出門。入園前先量孩子身高，下載或查看最新園區圖。",
     "tags": [
      {
-      "m": "car",
-      "t": "自駕"
+      "m": "bus",
+      "t": "TX2 樂園巴士"
      },
      {
-      "m": "bus",
-      "t": "TX2 接駁"
+      "m": "rail",
+      "t": "G:link＋火車"
+     },
+     {
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -969,12 +973,12 @@ window.TRIP_DAYS = [
     "desc": "不為了待到閉園硬撐。晚餐回飯店附近吃，今晚不加夜市或觀景台。",
     "tags": [
      {
-      "m": "car",
-      "t": "自駕"
+      "m": "bus",
+      "t": "TX2 樂園巴士"
      },
      {
-      "m": "bus",
-      "t": "TX2 接駁"
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -1009,7 +1013,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "園區在 Coomera，接駁選擇：① 延續 Day 6 租的車自駕，園區停車場收費但好停，最省時間；② TX2 主題樂園接駁巴士，部分飯店有合作折扣，先查是否含在住宿方案；③ TransLink 公車轉乘，車程較久；不假設飯店一定提供免費接駁。",
+  "move": "園區在北邊的 Coomera，從 Broadbeach 出發：① Broadbeach South 站搭 TX2 主題樂園路線公車到 Dreamworld（第三方資料，出發前用 TransLink 規劃器確認仍營運），50 分錢；② G:link 到 Helensvale 轉火車到 Coomera 站再轉公車，約 1 小時 20 分；③ 回程孩子累了叫車，約 30–35 分鐘（車資粗估 A$50–70）。自駕的話約 30 分鐘，停車費第三方 2026 資料說免費、以官網為準。",
   "planb": "遇設施停駛、排隊太久或孩子害怕，改看官方當日家庭節目、休息或提早離園；不要改成另一整套動物園行程。",
   "reads": [
    {
@@ -1044,15 +1048,15 @@ window.TRIP_DAYS = [
    {
     "time": "09:00 開園",
     "title": "前往 Currumbin Wildlife Sanctuary",
-    "desc": "開放 9:00–16:00（15:30 最後入園）。官網門票大人 A$70、3–17 歲 A$50（2026 查核，線上購票可能有優惠）。自駕約 30 分鐘；不自駕可搭 TransLink 700 路公車往南，約 30–40 分鐘、每段 50 分錢，班次用 TransLink 規劃器查。",
+    "desc": "開放 9:00–16:00（15:30 最後入園）。官網門票大人 A$70、3–17 歲 A$50（2026 查核，線上購票可能有優惠）。從 Broadbeach 搭 TransLink 700 路公車往南，約 25–35 分鐘、每段 50 分錢，班次用 TransLink 規劃器查；自駕約 20–25 分鐘。",
     "tags": [
-     {
-      "m": "car",
-      "t": "自駕"
-     },
      {
       "m": "bus",
       "t": "700 路公車"
+     },
+     {
+      "m": "car",
+      "t": "自駕"
      }
     ],
     "must": false,
@@ -1100,12 +1104,12 @@ window.TRIP_DAYS = [
     "desc": "回程順路停 Burleigh Heads，玩沙、在草地休息約 1 小時；六月水冷，以玩沙為主，累了就直接回飯店。",
     "tags": [
      {
-      "m": "car",
-      "t": "自駕"
-     },
-     {
       "m": "bus",
       "t": "700 路公車"
+     },
+     {
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -1141,7 +1145,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "接駁選擇：① 自駕，沿黃金海岸公路往南約 30 分鐘，園區有停車場；② TransLink 700 路公車，每段 50 分錢、可直接用感應信用卡，約 30–40 分鐘，班次用 TransLink 規劃器查；③ 叫車，不想轉乘時最省力。",
+  "move": "接駁選擇：① TransLink 700 路公車沿黃金海岸公路往南，從 Broadbeach 約 25–35 分鐘，每段 50 分錢、可用感應信用卡；回程順路在 Burleigh Heads 下車；② 叫車，不想等車時最省力；③ 自駕約 20–25 分鐘，園區有停車場。",
   "planb": "下大雨就縮短園區時間、取消海灘，回飯店休息；後面接著 Sea World、輕鬆日和 Movie World，不建議把 Currumbin 往後挪。",
   "reads": [],
   "official": [
@@ -1172,15 +1176,19 @@ window.TRIP_DAYS = [
    {
     "time": "開園前",
     "title": "前往 Sea World",
-    "desc": "開園時間依季節調整（2026/10 查到多為 10:00–17:00，部分平日 10:30–16:00），出發前看官網 Operating Hours。從衝浪者天堂搭 TransLink 705 公車約 10–15 分鐘、每段 50 分錢，或自駕到園區收費停車場。",
+    "desc": "開園時間依季節調整（2026/10 查到多為 10:00–17:00，部分平日 10:30–16:00），出發前看官網 Operating Hours。從 Broadbeach 搭 G:link 往北到衝浪者天堂一帶，轉 TransLink 705 公車約 10–15 分鐘（都是 50 分錢）；或直接叫車約 15–20 分鐘。",
     "tags": [
+     {
+      "m": "rail",
+      "t": "G:link"
+     },
      {
       "m": "bus",
       "t": "705 公車"
      },
      {
-      "m": "car",
-      "t": "自駕"
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -1232,8 +1240,8 @@ window.TRIP_DAYS = [
       "t": "705 公車"
      },
      {
-      "m": "car",
-      "t": "自駕"
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -1250,7 +1258,7 @@ window.TRIP_DAYS = [
    {
     "tag": "晚餐",
     "name": "Tedder Avenue 餐廳街・Main Beach",
-    "desc": "離園區近，挑一家坐下慢慢吃，不用急著回衝浪者天堂。",
+    "desc": "離園區近，挑一家坐下慢慢吃，吃完再叫車或搭車回 Broadbeach。",
     "links": [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Tedder%20Avenue%20Main%20Beach%20QLD",
@@ -1259,7 +1267,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "接駁選擇：① TransLink 705 公車從衝浪者天堂往北，約 10–15 分鐘、每段 50 分錢，可用感應信用卡（第三方資料班距 10–20 分鐘不等，以 TransLink 規劃器為準）；② 自駕約 10 分鐘，園區停車場收費；③ 叫車，回程孩子累了最省力。",
+  "move": "接駁選擇：① G:link 從 Broadbeach 往北到衝浪者天堂一帶，轉 705 公車到 Sea World，車資都是 50 分錢，可用感應信用卡（班距第三方資料 10–20 分鐘不等，以 TransLink 規劃器為準）；② 叫車約 15–20 分鐘，回程孩子累了最省力；③ 自駕約 15 分鐘，停車費以官網為準。",
   "planb": "下雨時以室內展示和有屋頂的表演場為主，戶外設施可能停駛；雨太大就縮短行程。Sea World 和 Movie World 都是 Village Roadshow 的樂園，買多日通票的話可以依天氣調換這兩天。",
   "reads": [
    {
@@ -1313,12 +1321,12 @@ window.TRIP_DAYS = [
     "desc": "依票券通知前往集合點，提前到場；Google Maps 搜尋結果需核對業者名稱與票券地址。",
     "tags": [
      {
-      "m": "walk",
-      "t": "步行"
-     },
-     {
       "m": "rail",
       "t": "G:link"
+     },
+     {
+      "m": "walk",
+      "t": "步行"
      }
     ],
     "must": false,
@@ -1386,7 +1394,7 @@ window.TRIP_DAYS = [
    {
     "time": "15:30・選配",
     "title": "HOTA 戶外公園或海邊",
-    "desc": "HOTA（Home of the Arts）有戶外草地、步道和遊戲空間，室內展覽是否適合六歲另查官網；或改去衝浪者天堂海灘玩沙 30–45 分鐘。兩者擇一，六月傍晚風大帶外套。",
+    "desc": "HOTA（Home of the Arts）有戶外草地、步道和遊戲空間，室內展覽是否適合六歲另查官網；或改去 Broadbeach 的 Kurrawa 海灘與公園玩沙 30–45 分鐘。兩者擇一，六月傍晚風大帶外套。",
     "tags": [
      {
       "m": "ride",
@@ -1457,7 +1465,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "從住宿到 Cavill Avenue 的 Aquaduck 集合點：衝浪者天堂住宿大多步行可達，或搭 G:link 輕軌到 Surfers Paradise 站；自駕的話附近為收費路邊停車或停車場，預留找車位時間。官方目前表示推車無法帶上車，可依業者寄放規則處理。HOTA 在衝浪者天堂西側的 Bundall，叫車約 10 分鐘，公車班次用 TransLink 規劃器查。",
+  "move": "從 Broadbeach 搭 G:link 往北約 10 分鐘到 Cavill Avenue 站，再走到 Aquaduck 集合點；官方目前表示推車無法帶上車，可依業者寄放規則處理。賞鯨船從 Main Beach 出港：G:link＋705 公車或叫車。HOTA 在 Bundall，從 Broadbeach 叫車約 10 分鐘，公車班次用 TransLink 規劃器查。",
   "planb": "若 Aquaduck 因天候取消，先依票券處理改期或退款；雨天下午查 HOTA 當日室內展覽是否適合六歲，看不懂或沒興趣就回飯店休息。",
   "reads": [
    {
@@ -1518,12 +1526,8 @@ window.TRIP_DAYS = [
    {
     "time": "開園前",
     "title": "前往 Movie World",
-    "desc": "園區在 Oxenford。從衝浪者天堂自駕約 25–30 分鐘，停車場收費；不自駕可搭 G:link 輕軌到 Helensvale 站轉 TX7 公車（第三方規劃器估約 1 小時 15 分），班次以 TransLink 為準。開園時間依季節調整，出發前看官網。",
+    "desc": "園區在北邊的 Oxenford。從 Broadbeach 搭 G:link 到 Helensvale 站（約 45 分鐘）轉 TX7 公車，合計約 1 小時 10–20 分（第三方規劃器估計，班次以 TransLink 為準），都是 50 分錢；回程孩子累了叫車約 35 分鐘（車資粗估 A$50–70）。開園時間依季節調整，出發前看官網。",
     "tags": [
-     {
-      "m": "car",
-      "t": "自駕"
-     },
      {
       "m": "rail",
       "t": "G:link"
@@ -1531,6 +1535,10 @@ window.TRIP_DAYS = [
      {
       "m": "bus",
       "t": "TX7 公車"
+     },
+     {
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -1575,15 +1583,15 @@ window.TRIP_DAYS = [
    {
     "time": "15:30 起",
     "title": "累了提早離園",
-    "desc": "回程開車約 30 分鐘、大眾運輸約 1 小時多。晚上整理行李，明天退房移動到布里斯本、在那裡還車。",
+    "desc": "回程大眾運輸約 1 小時多、叫車約 35 分鐘。晚上整理行李，明天退房移動到布里斯本。",
     "tags": [
-     {
-      "m": "car",
-      "t": "自駕"
-     },
      {
       "m": "bus",
       "t": "TX7 公車"
+     },
+     {
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -1604,7 +1612,7 @@ window.TRIP_DAYS = [
     "links": []
    }
   ],
-  "move": "接駁選擇：① 自駕，沿 M1 往北約 25–30 分鐘，園區停車場收費；② G:link 輕軌到 Helensvale 站轉 TX7 公車，每段 50 分錢，約 1 小時 15 分（第三方規劃器估計），班次以 TransLink 為準；③ 叫車，回程最省力。",
+  "move": "接駁選擇：① G:link 從 Broadbeach 到 Helensvale 站轉 TX7 公車，每段 50 分錢，約 1 小時 10–20 分；② 去程搭大眾運輸、回程叫車（約 35 分鐘、粗估 A$50–70），孩子累了最實際；③ 自駕沿 M1 往北約 35 分鐘，停車費以官網為準。",
   "planb": "下雨時戶外雲霄飛車和水區可能停開，以室內表演和有屋頂的兒童設施為主；買多日通票的話可以和 Sea World 那天調換。",
   "reads": [],
   "official": [
@@ -1655,19 +1663,19 @@ window.TRIP_DAYS = [
    {
     "time": "上午至中午",
     "title": "黃金海岸 → 布里斯本飯店",
-    "desc": "預約接送較少搬行李；大眾運輸則查當日轉乘與電梯。抵達先寄放行李或入住，不把車程寫成保證值。",
+    "desc": "行李多就預約 Con-X-ion 門對門接駁；行李不多可以搭 G:link 到 Helensvale 站，轉火車直達 South Brisbane 站（車資都是 50 分錢，合計約 1 小時 45 分，含轉乘時間是估計）。抵達先寄放行李或入住，不把車程寫成保證值。",
     "tags": [
-     {
-      "m": "car",
-      "t": "自駕"
-     },
      {
       "m": "bus",
       "t": "Con-X-ion"
      },
      {
       "m": "rail",
-      "t": "Airtrain"
+      "t": "G:link＋火車"
+     },
+     {
+      "m": "ride",
+      "t": "叫車"
      }
     ],
     "must": false,
@@ -1734,7 +1742,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "今天是陸路移動，接駁選擇：① 延續自駕，沿 M1 開約 1 小時到布里斯本，直接把租車還在市區或機場營業點，最省轉乘；② Con-X-ion 門對門接駁巴士，適合行李多、不想自己開車；③ Airtrain 火車，從 Helensvale 或 Varsity Lakes 站北上，車程約 60–80 分鐘，是最省錢的公共運輸選項，但兩端都要自行接駁到車站。布里斯本住兩晚，建議住 South Bank／市區；租車今天歸還，明天起以渡輪與步行為主。",
+  "move": "今天是陸路移動，接駁選擇：① Con-X-ion 門對門接駁巴士，行李多、帶孩子最省力，依區域計價、線上預約；② G:link 到 Helensvale 站轉昆士蘭鐵路 Gold Coast 線，直達 South Brisbane 站，車資 50 分錢，是最省錢的方式，但要自己搬行李上下車；③ 叫車或私人接送，約 1 小時。若當初選自駕，今天開到布里斯本把車還在市區營業點。布里斯本兩晚都以步行、CityCat 與公車為主。",
   "planb": "遇塞車或疲累，南岸公園與市區餐廳全部取消，直接到飯店休息。",
   "reads": [
    {
@@ -1974,7 +1982,7 @@ window.TRIP_DAYS = [
    {
     "time": "白天彈性・傍晚出發",
     "title": "退房 → BNE 國際航廈",
-    "desc": "CI54 表定 22:50 起飛，白天還能在 South Bank 散步或回昨天沒逛完的地方，傍晚再以航空公司建議報到時間倒推退房與接送，額外留塞車緩衝。到國際航廈可搭 Airtrain（不適用 50 分錢票價）或叫車；記得是 International Terminal。",
+    "desc": "CI54 表定 22:50 起飛，白天還能在 South Bank 散步或回昨天沒逛完的地方，傍晚再以航空公司建議報到時間倒推退房，額外留緩衝。從 South Brisbane 站搭 Airtrain 直達國際航廈：大人約 A$23.30（2026/4 起，不適用 50 分錢），14 歲以下由大人陪同免費（大人與孩子的票要一起買，go card 不適用），以 Airtrain 官網為準；也可以叫車。記得是 International Terminal。",
     "tags": [
      {
       "m": "rail",
@@ -2072,6 +2080,10 @@ window.TRIP_DAYS = [
    {
     "u": "https://www.abf.gov.au/entering-and-leaving-australia/tourist-refund-scheme",
     "l": "TRS 旅客退稅規定"
+   },
+   {
+    "u": "https://www.airtrain.com.au/offers-and-discounts/kids-travel-free/",
+    "l": "Airtrain 兒童免費方案"
    }
   ]
  }
@@ -2082,8 +2094,8 @@ window.TRIP = {
   departure: '2027-06-16T23:30:00+08:00',
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
-  checkedOn: '2026-10-18',
-  version: 'little-explorers-20261018e',
+  checkedOn: '2026-10-19',
+  version: 'little-explorers-20261019a',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
@@ -2130,7 +2142,7 @@ window.TRIP = {
         { name: 'Jetstar', note: '通常最便宜，托運另計', u: 'https://www.jetstar.com/au/en/home' },
         { name: 'Qantas', note: '班次較少，托運額度較多', u: 'https://www.qantas.com/au/en.html' }
       ],
-      notes: ['比價時一起看托運、手提行李與選位', '抵達 OOL 可直接在航廈取租車（見 Day 6）'],
+      notes: ['比價時一起看托運、手提行李與選位', '抵達 OOL 搭 777 公車直達 Broadbeach South 站（50 分錢）；要自駕才在航廈取車'],
       links: [{ u: 'https://www.goldcoastairport.com.au/transport/transport-overview/transport-options', l: 'OOL 機場交通與租車' }]
     },
     {
@@ -2147,29 +2159,30 @@ window.TRIP = {
     {
       city: '雪梨', color: 'coral', nights: 4, dates: '6/17（四）入住 → 6/21（一）退房',
       area: '達令港周邊：走路到 Darling Quarter、海事博物館，Vivid 也近',
-      status: '尚未預訂',
-      options: [
-        { name: 'Adina Apartment Hotel Darling Harbour', type: '公寓式，有小廚房，適合煮孩子的清淡餐', map: 'https://www.google.com/maps/search/?api=1&query=Adina%20Apartment%20Hotel%20Sydney%20Darling%20Harbour' },
-        { name: 'Sofitel Sydney Darling Harbour', type: '飯店，港灣景觀，看 Vivid 最方便', map: 'https://www.google.com/maps/search/?api=1&query=Sofitel%20Sydney%20Darling%20Harbour' }
-      ],
-      note: 'Day 5 藍山一日遊當天來回，不用換飯店。'
+      status: '已預訂',
+      options: [],
+      note: '前四晚已訂好；飯店名稱還沒補上，補上後會依位置重算 Day 2–6 的交通。Day 5 藍山一日遊當天來回，不用換飯店。'
     },
     {
       city: '黃金海岸', color: 'yellow', nights: 6, dates: '6/21（一）入住 → 6/27（日）退房',
-      area: '衝浪者天堂：G:link 輕軌沿線，走路到 Aquaduck 集合點',
+      area: '建議 Broadbeach：G:link 站走路 5–10 分鐘內，6 晚不換飯店',
       status: '尚未預訂',
       options: [
-        { name: 'Meriton Suites Surfers Paradise', type: '公寓式，評價落差較大，訂前看近期評論', map: 'https://www.google.com/maps/search/?api=1&query=Meriton%20Suites%20Surfers%20Paradise' },
-        { name: 'Sea World Resort', type: 'Main Beach 樂園旁度假村', map: 'https://www.google.com/maps/search/?api=1&query=Sea%20World%20Resort%20Main%20Beach%20QLD' }
+        { name: 'Peppers Broadbeach', type: '公寓式（有廚房、洗衣），訂前確認到 G:link 站的步行距離', map: 'https://www.google.com/maps/search/?api=1&query=Peppers%20Broadbeach' },
+        { name: 'Mantra Broadbeach on the Park', type: '公寓式，靠近 Kurrawa 公園與海灘', map: 'https://www.google.com/maps/search/?api=1&query=Mantra%20Broadbeach%20on%20the%20Park' },
+        { name: 'Sofitel Gold Coast Broadbeach', type: '飯店（沒有廚房），在 Oasis 商場旁、近 Broadbeach North 站', map: 'https://www.google.com/maps/search/?api=1&query=Sofitel%20Gold%20Coast%20Broadbeach' }
       ],
-      note: '自駕的話先確認飯店停車費；不自駕就選輕軌站走路可到的住宿。'
+      note: '為什麼選 Broadbeach：OOL 機場的 777 公車直達 Broadbeach South 站；去 Dreamworld 的 TX2 樂園巴士、去 Currumbin 的 700 公車都從這一帶出發；比衝浪者天堂安靜，有 Pacific Fair 商場可補給。Sea World 與 Aquaduck 搭 G:link 往北約 10 分鐘再轉乘。備選：衝浪者天堂 Cavill Avenue 站附近（去 Sea World、Aquaduck 較近，晚上較吵）。公寓式有洗衣機，6 晚只帶一半衣服。'
     },
     {
       city: '布里斯本', color: 'green', nights: 2, dates: '6/27（日）入住 → 6/29（二）退房',
-      area: 'South Bank／市區，走路到 CityCat 碼頭與博物館',
+      area: '建議 South Brisbane 站／Cultural Centre 一帶：走路到博物館、South Bank 與 CityCat',
       status: '尚未預訂',
-      options: [],
-      note: 'CI54 晚上 22:50 才起飛：6/28 整天玩南岸，6/29 白天還能散步，傍晚搭 Airtrain 或叫車去機場，住 South Bank 最順。'
+      options: [
+        { name: 'Rydges South Bank', type: '飯店，近 South Brisbane 站與會展中心', map: 'https://www.google.com/maps/search/?api=1&query=Rydges%20South%20Bank%20Brisbane' },
+        { name: 'Emporium Hotel South Bank', type: '飯店，Grey Street，走路到 South Bank 公園', map: 'https://www.google.com/maps/search/?api=1&query=Emporium%20Hotel%20South%20Bank' }
+      ],
+      note: '從黃金海岸搭火車可以直達 South Brisbane 站；6/29 也從這站搭 Airtrain 直達國際航廈，14 歲以下由大人陪同免費（Airtrain 兒童免費方案）。CI54 晚上 22:50 才起飛，6/29 白天還能在南岸散步。'
     }
   ],
 
@@ -2186,9 +2199,9 @@ window.TRIP = {
       group: '機票與交通', when: '開賣後盡早', items: [
         { id: 'ci', t: '訂華航 CI51／CI54', note: '核對 2027/6 實際班表，一併申請兒童餐與選位' },
         { id: 'domestic', t: '訂 6/21 雪梨 → 黃金海岸國內線', note: 'Jetstar／Virgin／Qantas 比價，記得含托運' },
-        { id: 'car', t: '決定是否自駕、預約租車＋兒童安全座椅', note: '6/21 在 OOL 取車，6/27 在布里斯本還車' },
+        { id: 'car', t: '決定黃金海岸交通：大眾運輸（建議）或自駕', note: '比較見「交通與票價」；自駕才需要訂車、兒童座椅與國際駕照' },
         { id: 'bluemtn', t: '藍山（6/20 週日）：選一日團、自駕或火車' },
-        { id: 'moviewld', t: 'Movie World 那天（6/26）的自駕或公車', note: '不自駕要 G:link 轉 TX7 公車，單程約 1 小時多' }
+        { id: 'moviewld', t: '查好 Dreamworld（6/22）與 Movie World（6/26）的公車', note: 'TX2 是否仍從 Broadbeach South 開；TX7 從 Helensvale 開；回程可叫車' }
       ]
     },
     {
@@ -2205,9 +2218,9 @@ window.TRIP = {
     },
     {
       group: '住宿', when: '機票確定後', items: [
-        { id: 'stay-syd', t: '訂雪梨 4 晚（6/17–6/21）' },
-        { id: 'stay-gc', t: '訂黃金海岸 6 晚（6/21–6/27）' },
-        { id: 'stay-bne', t: '訂布里斯本 2 晚（6/27–6/29）' }
+        { id: 'stay-syd', t: '雪梨 4 晚（6/17–6/21）已訂：補上飯店名稱', note: '傳給 Claude，交通會依飯店位置重算' },
+        { id: 'stay-gc', t: '訂黃金海岸 6 晚（6/21–6/27）', note: 'Broadbeach，G:link 站走路 5–10 分鐘內，有廚房洗衣機' },
+        { id: 'stay-bne', t: '訂布里斯本 2 晚（6/27–6/29）', note: 'South Brisbane 站附近，火車與 Airtrain 都直達' }
       ]
     },
     {
@@ -2299,7 +2312,9 @@ window.TRIP = {
     {
       title: '機場與城際', sub: 'Airtrain・接駁巴士・接送', color: 'water',
       rows: [
-        ['Airtrain', '黃金海岸 ↔ 布里斯本（含機場），起價約 A$23.80；尖峰每 15 分、離峰每 30 分一班'],
+        ['OOL → Broadbeach', '777 公車直達 Broadbeach South 站，約每 15 分一班，50 分錢'],
+        ['黃金海岸 → 布里斯本', 'G:link 到 Helensvale 轉火車直達 South Brisbane 站，50 分錢'],
+        ['Airtrain 去 BNE', 'South Brisbane 等市區站大人約 A$23.30（2026/4 起），14 歲以下陪同免費'],
         ['Con-X-ion', '門對門接駁巴士，依區域計價，線上預約'],
         ['私人接送', '黃金海岸 → 布里斯本機場，轎車約 A$190 起（業者報價）'],
         ['雪梨機場叫車', '到達令港約 25–35 分鐘，約 A$35–55']
@@ -2316,10 +2331,10 @@ window.TRIP = {
       rows: [
         ['Taronga 動物園', '環形碼頭搭 F2 渡輪約 12 分鐘，碼頭再搭公車上山，用 Opal'],
         ['藍山 Scenic World', 'Katoomba 站轉 686 公車，用 Opal 付款'],
-        ['Dreamworld', '火車到 Coomera 站轉公車（50 分錢），或主題樂園接駁巴士'],
-        ['Currumbin', '700 路公車約 30–40 分鐘，50 分錢'],
-        ['Sea World', '衝浪者天堂搭 705 公車約 10–15 分鐘，50 分錢'],
-        ['Movie World', 'G:link 到 Helensvale 站轉 TX7 公車，50 分錢'],
+        ['Dreamworld', 'Broadbeach South 搭 TX2 樂園巴士（第三方資料，出發前確認），或 G:link＋火車＋公車'],
+        ['Currumbin', '700 路公車從 Broadbeach 約 25–35 分鐘，50 分錢'],
+        ['Sea World', 'G:link 到衝浪者天堂一帶轉 705 公車，或叫車約 15–20 分鐘'],
+        ['Movie World', 'G:link 到 Helensvale 站轉 TX7 公車，約 1 小時 10–20 分，50 分錢'],
         ['布里斯本南岸', 'CityCat 渡輪＋步行，50 分錢']
       ],
       tips: ['班次都用上面的官方路線規劃器查當天時刻。', '自駕的法規與注意事項見清單區「考慮自駕，先看這段」。'],
@@ -2327,6 +2342,27 @@ window.TRIP = {
         { u: 'https://www.taronga.org.au/sydney-zoo/plan', l: 'Taronga 交通與門票' },
         { u: 'https://themeparks.com.au/park-info', l: 'Sea World／Movie World 園區資訊' },
         { u: 'https://currumbinsanctuary.com.au/visit/', l: 'Currumbin 交通與票價' }
+      ]
+    },
+    {
+      title: '黃金海岸：大眾運輸 vs 自駕', sub: '6/21 機場 → 6/27 到布里斯本', color: 'coral',
+      rows: [
+        ['大眾運輸', '約 A$150–300：50 分錢車資約 A$30–45，加 3–4 趟叫車（機場、晚歸）'],
+        ['大眾運輸＋樂園日叫車', '約 A$350–500：Dreamworld、Movie World 回程都叫車，每趟約 A$50–70（粗估）'],
+        ['自駕', '約 A$700–1,250：租車 6 天 A$360–600、兒童座椅 A$80–150、油錢 A$60–90、飯店停車 A$90–180、降低自負額 A$120–210（選購）'],
+        ['差多少', '自駕比純大眾運輸多約 A$450–950，約 NT$10,000–21,000（匯率 22）'],
+        ['時間差', 'Dreamworld、Movie World 單程大眾運輸約 1 小時 10–20 分，開車約 30–35 分；Currumbin、Sea World 差不多'],
+        ['建議', '住 Broadbeach、以大眾運輸為主；兩個北邊樂園日看孩子體力，回程叫車'],
+      ],
+      tips: [
+        '自駕還要國際駕照、靠左行駛、自己裝兒童座椅，6/27 在布里斯本還車；布里斯本兩天用不到車。',
+        '租車價格是第三方平均（約 A$90／天）或粗估；樂園停車費第三方 2026 資料說免費，以官網為準。',
+        '叫車車資是依距離的粗估，實際看 Uber／DiDi 當下報價。'
+      ],
+      links: [
+        { u: 'https://jp.translink.com.au/plan-your-journey', l: 'TransLink 路線規劃' },
+        { u: 'https://www.goldcoastairport.com.au/getting-here/transport', l: 'OOL 機場交通（777）' },
+        { u: 'https://www.airtrain.com.au/offers-and-discounts/kids-travel-free/', l: 'Airtrain 兒童免費' }
       ]
     }
   ],
@@ -2344,17 +2380,16 @@ window.TRIP = {
       },
       {
         group: '住宿 12 晚', items: [
-          { id: 'b-syd', name: '雪梨 4 晚（達令港，Vivid 期間）', cur: 'AUD', low: 1200, high: 1800, note: '2026 Vivid 期間 Novotel Darling Harbour 優惠價每晚 A$319 起；家庭公寓約 A$300–450。' },
-          { id: 'b-gc', name: '黃金海岸 6 晚（衝浪者天堂公寓）', cur: 'AUD', low: 1100, high: 1900, note: '6 月是淡季，第三方資料平均每晚約 A$130–230；兩房公寓較貴。' },
-          { id: 'b-bne', name: '布里斯本 2 晚（South Bank）', cur: 'AUD', low: 450, high: 700, note: '粗估，依訂房網站即時價格。' }
+          { id: 'b-syd', name: '雪梨 4 晚（已預訂）', cur: 'AUD', low: 1200, high: 1800, note: '已訂好，把實際金額與飯店名稱填在下面；預估是訂房前查的 Vivid 期間行情。' },
+          { id: 'b-gc', name: '黃金海岸 6 晚（Broadbeach 公寓）', cur: 'AUD', low: 1100, high: 1900, note: '6 月是淡季，第三方資料平均每晚約 A$130–230；兩房公寓較貴。' },
+          { id: 'b-bne', name: '布里斯本 2 晚（South Brisbane 站附近）', cur: 'AUD', low: 450, high: 700, note: '粗估，依訂房網站即時價格。' }
         ]
       },
       {
         group: '交通', items: [
-          { id: 'b-car', name: '租車 6 天＋兒童安全座椅（OOL 取、布里斯本還）', cur: 'AUD', low: 450, high: 800, note: '第三方平均約 A$90／天；黃金海岸→布里斯本甲租乙還常見低或免手續費，座椅另計。' },
-          { id: 'b-fuel', name: '油錢、停車、過路費', cur: 'AUD', low: 150, high: 300, note: '粗估：樂園與飯店停車常另收費。' },
+          { id: 'b-gcride', name: '黃金海岸叫車與接駁（機場、樂園日回程、移動到布里斯本）', cur: 'AUD', low: 150, high: 450, note: '大眾運輸方案：樂園日回程叫車每趟約 A$50–70（粗估）。若改自駕約 A$700–1,250，請改用「其他支出」記。' },
           { id: 'b-opal', name: '雪梨 Opal（含機場站附加費、渡輪、藍山火車）', cur: 'AUD', low: 150, high: 250, note: '大人每日上限平日 A$19.30、週末 A$9.65；機場站附加費大人約 A$18.61、兒童約 A$16.64。' },
-          { id: 'b-qld', name: '昆士蘭公車、輕軌與 Airtrain', cur: 'AUD', low: 60, high: 150, note: '每段 50 分錢；Airtrain 不適用，去 BNE 另計。' }
+          { id: 'b-qld', name: '昆士蘭公車、輕軌、火車與 Airtrain', cur: 'AUD', low: 60, high: 120, note: '每段 50 分錢；去 BNE 的 Airtrain 大人約 A$23.30、14 歲以下陪同免費。' }
         ]
       },
       {
@@ -2378,7 +2413,7 @@ window.TRIP = {
           { id: 'b-eta', name: '澳洲 ETA（3 人）', cur: 'AUD', low: 60, high: 60, note: '官方 Australian ETA App，每人 A$20 服務費。' },
           { id: 'b-ins', name: '旅平險＋不便險', cur: 'TWD', low: 3000, high: 6000, note: '粗估，依保額與保險公司。' },
           { id: 'b-net', name: '網路（eSIM 或漫遊）', cur: 'TWD', low: 600, high: 1500, note: '粗估。' },
-          { id: 'b-idp', name: '國際駕照', cur: 'TWD', low: 250, high: 250, note: '監理站辦理（要自駕才需要）。' },
+          { id: 'b-idp', name: '國際駕照（自駕才需要）', cur: 'TWD', low: 0, high: 250, note: '大眾運輸方案不需要；要自駕再到監理站辦。' },
           { id: 'b-shop', name: '伴手禮與零用', cur: 'AUD', low: 300, high: 800, note: '粗估。' }
         ]
       }

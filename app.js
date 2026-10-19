@@ -371,7 +371,7 @@
     $('#stay-list').innerHTML = TRIP.stays.map(function (s) {
       return '<article class="stay" data-color="' + s.color + '"><div class="stay-top"><h3>' + esc(s.city) + '</h3><span class="nights">' + s.nights + ' 晚</span></div>' +
         '<div class="stay-body"><p class="stay-dates">' + esc(s.dates) + '</p><p class="stay-area">' + esc(s.area) + '</p>' +
-        '<span class="stay-status">' + esc(s.status) + '</span>' +
+        '<span class="stay-status' + (/^已預訂/.test(s.status) ? ' is-booked' : '') + '">' + esc(s.status) + '</span>' +
         s.options.map(function (o) {
           return '<div class="stay-option"><h4>' + esc(o.name) + '</h4><p>' + esc(o.type) + '</p><div class="links">' + ext(o.map, '地圖') + (o.site ? ext(o.site, '官網') : '') + '</div></div>';
         }).join('') +
