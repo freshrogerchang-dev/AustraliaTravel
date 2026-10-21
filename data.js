@@ -116,7 +116,7 @@ window.TRIP_DAYS = [
    {
     "time": "抵達後",
     "title": "雪梨機場 → 飯店寄放行李",
-    "desc": "通關後到 Meriton Suites Sussex Street（市中心西側的 Sussex Street，走路約 4 分鐘到 Town Hall 站）。若房間還沒好，先寄行李；需要一到就睡，可事先詢問提早入住。",
+    "desc": "通關後到 Mantra on Kent（433 Kent Street，走路約 5 分鐘到 Town Hall 站）。若房間還沒好，先寄行李；需要一到就睡，可事先詢問提早入住。",
     "tags": [
      {
       "m": "rail",
@@ -244,7 +244,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "機場到飯店：① Airport Link 火車（T8）從國際航廈直達 Town Hall 站，約 15–20 分鐘，出站走 4–5 分鐘到 Sussex Street；機場站附加費另計（見「交通與票價」），帶行李與推車要走一小段；② Uber／DiDi／13cabs 叫車約 25–35 分鐘，車資抓 A$35–55；③ 事先預約接送，行李多、孩子累時最省力。雪梨市區不建議自駕：停車昂貴、Vivid 期間道路常封閉，租車留到 Day 5 藍山或 Day 6 以後的黃金海岸再評估。Vivid 期間晚間以步行與大眾運輸為主。Harbourside 重建尚未能確認 2027/6 全面開放，活動集中在 Darling Quarter／Tumbalong Park，依當日施工告示走。",
+  "move": "機場到飯店：① Airport Link 火車（T8）從國際航廈直達 Town Hall 站，約 15–20 分鐘，出站走約 5 分鐘到 Kent Street；機場站附加費另計（見「交通與票價」），帶行李與推車要走一小段；② Uber／DiDi／13cabs 叫車約 25–35 分鐘，車資抓 A$35–55；③ 事先預約接送，行李多、孩子累時最省力。雪梨市區不建議自駕：停車昂貴、Vivid 期間道路常封閉，租車留到 Day 5 藍山或 Day 6 以後的黃金海岸再評估。Vivid 期間晚間以步行與大眾運輸為主。Harbourside 重建尚未能確認 2027/6 全面開放，活動集中在 Darling Quarter／Tumbalong Park，依當日施工告示走。",
   "planb": "取消夜間活動，飯店午睡＋附近外帶晚餐。下午若下雨又還有精神，達令港的 SEA LIFE 雪梨水族館是室內備案（門票另查，看 30–60 分鐘就好）。",
   "reads": [
    {
@@ -708,7 +708,7 @@ window.TRIP_DAYS = [
    {
     "time": "07:30–08:00",
     "title": "雪梨出發",
-    "desc": "參加有接送的一日團（確認是否到 Sussex Street 一帶接送），或預約包車。自己搭火車的話：從飯店走到 Town Hall 站搭到 Central，換藍山線（Blue Mountains Line）城際火車到 Katoomba，約 2 小時。這是建議出發區間，集合時間依供應商通知；山區天候與路況可能延長車程。",
+    "desc": "參加有接送的一日團（確認是否到 Kent Street 一帶接送），或預約包車。自己搭火車的話：從飯店走到 Town Hall 站搭到 Central，換藍山線（Blue Mountains Line）城際火車到 Katoomba，約 2 小時。這是建議出發區間，集合時間依供應商通知；山區天候與路況可能延長車程。",
     "tags": [
      {
       "m": "bus",
@@ -999,7 +999,7 @@ window.TRIP_DAYS = [
    {
     "time": "抵達後",
     "title": "入住 → Broadbeach 海邊短散步",
-    "desc": "從 OOL 機場搭 777 公車直達 Broadbeach South 站（約每 15 分一班，50 分錢），再走路或搭一站 G:link 到住宿；行李多或孩子睡著就叫車。先入住再吃飯，精神好才去 Kurrawa 海灘走 20–30 分鐘；今晚不安排門票景點。",
+    "desc": "從 OOL 機場搭 777 公車直達 Broadbeach South 站（約每 15 分一班，50 分錢），下車就在 Meriton Suites Broadbeach 附近（飯店在 Gold Coast Highway 上，對面是 The Star 與 Pacific Fair）；行李多或孩子睡著就叫車。先入住再吃飯，精神好才去 Kurrawa 海灘走 20–30 分鐘；今晚不安排門票景點。",
     "tags": [
      {
       "m": "bus",
@@ -1047,7 +1047,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "Gold Coast Airport（OOL）抵達後前往 Broadbeach 住宿：① 777 公車（機場 → Broadbeach South 站，限停靠快線，約每 15 分一班、50 分錢，第三方估約 30–40 分鐘），最省；② Con-X-ion 共乘接駁，第三方資料單程每人約 A$15–22，門對門少搬行李；③ 計程車／Uber，計程車第三方估約 A$75–90。若決定自駕，機場航廈有租車櫃檯，6/27 在布里斯本還車（比較見「交通與票價」的大眾運輸 vs 自駕）。不要誤訂到回程機場 BNE。",
+  "move": "Gold Coast Airport（OOL）抵達後前往 Meriton Suites Broadbeach：① 777 公車（機場 → Broadbeach South 站，限停靠快線，約每 15 分一班、50 分錢，第三方估約 30–40 分鐘），最省；② Con-X-ion 共乘接駁，第三方資料單程每人約 A$15–22，門對門少搬行李；③ 計程車／Uber，計程車第三方估約 A$75–90。若決定自駕，機場航廈有租車櫃檯，6/27 在布里斯本還車（比較見「交通與票價」的大眾運輸 vs 自駕）。不要誤訂到回程機場 BNE。",
   "planb": "直接刪掉邦迪，早餐後慢慢退房去機場；抵達晚就取消沙灘散步。",
   "reads": [
    {
@@ -1857,7 +1857,7 @@ window.TRIP_DAYS = [
    {
     "time": "上午至中午",
     "title": "黃金海岸 → 布里斯本飯店",
-    "desc": "行李多就預約 Con-X-ion 門對門接駁；行李不多可以搭 G:link 到 Helensvale 站，轉火車直達 South Brisbane 站（車資都是 50 分錢，合計約 1 小時 45 分，含轉乘時間是估計）。抵達先寄放行李或入住，不把車程寫成保證值。",
+    "desc": "行李多就預約 Con-X-ion 門對門接駁；行李不多可以搭 G:link 到 Helensvale 站，轉火車直達 Roma Street 站，出站走約 4 分鐘到 Meriton Suites Herschel Street（車資都是 50 分錢，合計約 1 小時 45 分，含轉乘時間是估計）。抵達先寄放行李或入住，不把車程寫成保證值。",
     "tags": [
      {
       "m": "bus",
@@ -1883,7 +1883,7 @@ window.TRIP_DAYS = [
    {
     "time": "14:00・選配",
     "title": "South Bank Parklands 散步",
-    "desc": "入住後河岸散步、Riverside Green 遊樂場與 Streets Beach 看景，約 1–2 小時；六月不必下水，玩沙就好。想從高處看城市，可搭 South Bank 北端約 60 公尺高的 Wheel of Brisbane 摩天輪（2026/7 仍營運，票價與時間以官網為準）。SparkLab 留到明天。",
+    "desc": "從飯店走 Kurilpa 橋過河約 15–20 分鐘（估計），或從 Roma Street 搭火車一站到 South Brisbane。入住後河岸散步、Riverside Green 遊樂場與 Streets Beach 看景，約 1–2 小時；六月不必下水，玩沙就好。想從高處看城市，可搭 South Bank 北端約 60 公尺高的 Wheel of Brisbane 摩天輪（2026/7 仍營運，票價與時間以官網為準）。SparkLab 留到明天。",
     "tags": [
      {
       "m": "walk",
@@ -1936,7 +1936,7 @@ window.TRIP_DAYS = [
     ]
    }
   ],
-  "move": "今天是陸路移動，接駁選擇：① Con-X-ion 門對門接駁巴士，行李多、帶孩子最省力，依區域計價、線上預約；② G:link 到 Helensvale 站轉昆士蘭鐵路 Gold Coast 線，直達 South Brisbane 站，車資 50 分錢，是最省錢的方式，但要自己搬行李上下車；③ 叫車或私人接送，約 1 小時。若當初選自駕，今天開到布里斯本把車還在市區營業點。布里斯本兩晚都以步行、CityCat 與公車為主。",
+  "move": "今天是陸路移動，接駁選擇：① Con-X-ion 門對門接駁巴士，行李多、帶孩子最省力，依區域計價、線上預約；② G:link 到 Helensvale 站轉昆士蘭鐵路 Gold Coast 線，直達 Roma Street 站（飯店走路約 4 分鐘），車資 50 分錢，是最省錢的方式，但要自己搬行李上下車；③ 叫車或私人接送，約 1 小時。若當初選自駕，今天開到布里斯本把車還在市區營業點。布里斯本兩晚都以步行、CityCat 與公車為主。",
   "planb": "遇塞車或疲累，南岸公園與市區餐廳全部取消，直接到飯店休息。",
   "reads": [
    {
@@ -1983,7 +1983,7 @@ window.TRIP_DAYS = [
    {
     "time": "09:30",
     "title": "CityCat 渡輪遊河",
-    "desc": "從 South Bank 碼頭上船，沿河看城市與橋，每段 50 分錢，可直接用 Visa／Mastercard 感應上下船。挑一個碼頭下船再搭回來，往返約 1 小時。另有免費的 CityHopper 渡輪（約每 30 分鐘一班，第三方資料，以 TransLink 為準），想省錢可以改搭。",
+    "desc": "從飯店附近的 North Quay 碼頭上船（走路約 10 分鐘，估計，以地圖確認），沿河看城市與橋，每段 50 分錢，可直接用 Visa／Mastercard 感應上下船。挑一個碼頭下船再搭回來，往返約 1 小時。另有免費的 CityHopper 渡輪（約每 30 分鐘一班，第三方資料，以 TransLink 為準），想省錢可以改搭。",
     "tags": [
      {
       "m": "ferry",
@@ -2001,7 +2001,7 @@ window.TRIP_DAYS = [
    {
     "time": "11:00",
     "title": "Queensland Museum ＆ SparkLab 科學中心",
-    "desc": "博物館免費入場；SparkLab（原 Sciencentre）有互動科學展品，適齡約 6–12 歲，是否另收費與開放時間以官網為準。先玩 SparkLab 再逛展館。",
+    "desc": "搭 CityCat 到 South Bank 下船走過去，或從飯店走 Kurilpa 橋約 15–20 分鐘。博物館免費入場；SparkLab（原 Sciencentre）有互動科學展品，適齡約 6–12 歲，是否另收費與開放時間以官網為準。先玩 SparkLab 再逛展館。",
     "tags": [
      {
       "m": "walk",
@@ -2158,7 +2158,7 @@ window.TRIP_DAYS = [
    {
     "time": "中午前",
     "title": "Queen Street Mall 最後採買",
-    "desc": "退房後行李寄放飯店，到皇后街購物中心買零食、伴手禮。想辦退稅（TRS）：同一家店含稅滿 A$300、出境前 60 天內購買，商品要隨身帶到機場給海關看；先在 TRS App 填資料，出境後到 TRS 櫃台辦理，規定以澳洲邊境署官網為準。",
+    "desc": "退房後行李寄放飯店，走約 10 分鐘到皇后街購物中心買零食、伴手禮。想辦退稅（TRS）：同一家店含稅滿 A$300、出境前 60 天內購買，商品要隨身帶到機場給海關看；先在 TRS App 填資料，出境後到 TRS 櫃台辦理，規定以澳洲邊境署官網為準。",
     "tags": [
      {
       "m": "walk",
@@ -2176,7 +2176,7 @@ window.TRIP_DAYS = [
    {
     "time": "白天彈性・傍晚出發",
     "title": "退房 → BNE 國際航廈",
-    "desc": "CI54 表定 22:50 起飛，白天還能在 South Bank 散步或回昨天沒逛完的地方，傍晚再以航空公司建議報到時間倒推退房，額外留緩衝。從 South Brisbane 站搭 Airtrain 直達國際航廈：大人約 A$23.30（2026/4 起，不適用 50 分錢），14 歲以下由大人陪同免費（大人與孩子的票要一起買，go card 不適用），以 Airtrain 官網為準；也可以叫車。記得是 International Terminal。",
+    "desc": "CI54 表定 22:50 起飛，白天還能在 South Bank 散步或回昨天沒逛完的地方，傍晚再以航空公司建議報到時間倒推退房，額外留緩衝。回飯店拿行李，走約 4 分鐘到 Roma Street 站搭 Airtrain 直達國際航廈：大人約 A$23.30（2026/4 起，不適用 50 分錢），14 歲以下由大人陪同免費（大人與孩子的票要一起買，go card 不適用），以 Airtrain 官網為準；也可以叫車。記得是 International Terminal。",
     "tags": [
      {
       "m": "rail",
@@ -2288,8 +2288,8 @@ window.TRIP = {
   departure: '2027-06-16T23:30:00+08:00',
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
-  checkedOn: '2026-10-19',
-  version: 'little-explorers-20261019c',
+  checkedOn: '2026-10-21',
+  version: 'little-explorers-20261021a',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
@@ -2351,40 +2351,41 @@ window.TRIP = {
 
   // 已訂好的飯店：補上 name（或更精確的 query，例如地址）後，所有「Google 路線」都會從飯店出發
   hotels: {
-    syd: { name: 'Meriton Suites Sussex Street, Sydney', query: 'Meriton Suites Sussex Street, Sydney NSW 2000', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
+    syd: { name: 'Mantra on Kent, Sydney', query: 'Mantra on Kent, 433 Kent Street, Sydney NSW 2000', map: 'https://www.google.com/maps/search/?api=1&query=Mantra%20on%20Kent%2C%20433%20Kent%20Street%2C%20Sydney%20NSW%202000' },
+    gc: { name: 'Meriton Suites Broadbeach', query: 'Meriton Suites Broadbeach, 2669 Gold Coast Highway, Broadbeach QLD 4218', map: 'https://www.google.com/maps/search/?api=1&query=Meriton%20Suites%20Broadbeach%2C%202669%20Gold%20Coast%20Highway%2C%20Broadbeach%20QLD%204218' },
+    bne: { name: 'Meriton Suites Herschel Street, Brisbane', query: 'Meriton Suites Herschel Street, 43 Herschel Street, Brisbane QLD 4000', map: 'https://www.google.com/maps/search/?api=1&query=Meriton%20Suites%20Herschel%20Street%2C%2043%20Herschel%20Street%2C%20Brisbane%20QLD%204000' }
   },
 
   stays: [
     {
       city: '雪梨', color: 'coral', nights: 4, dates: '6/17（四）入住 → 6/21（一）退房',
-      area: 'Sussex Street（市中心西側）：走路 4 分鐘到 Town Hall 站，往西幾分鐘就是達令港',
+      area: 'Kent Street（市中心西側）：走路約 5 分鐘到 Town Hall 站，往西走就是達令港',
       status: '已預訂',
       hotel: 'syd',
       options: [
-        { name: 'Meriton Suites Sussex Street', type: '公寓式，有廚房；洗衣機與烘衣機依房型，入住前確認', map: 'https://maps.app.goo.gl/7LfUX4V7bFqoLBh67' }
+        { name: 'Mantra on Kent（曼特拉肯特酒店）', type: '433 Kent Street；公寓房型有廚房，洗衣機與烘衣機依房型，入住前確認', map: 'https://www.google.com/maps/search/?api=1&query=Mantra%20on%20Kent%2C%20433%20Kent%20Street%2C%20Sydney%20NSW%202000' }
       ],
-      note: '行程 Day 2–6 的「Google 路線」按鈕都從這間飯店出發或回到這裡。機場：Airport Link 到 Town Hall 站再走 4–5 分鐘；環形碼頭：Town Hall 站搭火車或 George Street 搭 L2／L3 輕軌。Day 5 藍山一日遊當天來回，不用換飯店。'
+      note: '行程 Day 2–6 的「Google 路線」按鈕都從這間飯店出發或回到這裡。機場：Airport Link 到 Town Hall 站再走約 5 分鐘；環形碼頭：Town Hall 站搭火車或 George Street 搭 L2／L3 輕軌。Day 5 藍山一日遊當天來回，不用換飯店。'
     },
     {
       city: '黃金海岸', color: 'yellow', nights: 6, dates: '6/21（一）入住 → 6/27（日）退房',
-      area: '建議 Broadbeach：G:link 站走路 5–10 分鐘內，6 晚不換飯店',
-      status: '尚未預訂',
+      area: 'Broadbeach，Gold Coast Highway 上：對面是 The Star 與 Pacific Fair，G:link 與 777 機場公車都在附近',
+      status: '已預訂',
+      hotel: 'gc',
       options: [
-        { name: 'Peppers Broadbeach', type: '公寓式（有廚房、洗衣），訂前確認到 G:link 站的步行距離', map: 'https://www.google.com/maps/search/?api=1&query=Peppers%20Broadbeach' },
-        { name: 'Mantra Broadbeach on the Park', type: '公寓式，靠近 Kurrawa 公園與海灘', map: 'https://www.google.com/maps/search/?api=1&query=Mantra%20Broadbeach%20on%20the%20Park' },
-        { name: 'Sofitel Gold Coast Broadbeach', type: '飯店（沒有廚房），在 Oasis 商場旁、近 Broadbeach North 站', map: 'https://www.google.com/maps/search/?api=1&query=Sofitel%20Gold%20Coast%20Broadbeach' }
+        { name: 'Meriton Suites Broadbeach', type: '2669 Gold Coast Highway；公寓式，入住前確認房型的廚房與洗衣設備', map: 'https://www.google.com/maps/search/?api=1&query=Meriton%20Suites%20Broadbeach%2C%202669%20Gold%20Coast%20Highway%2C%20Broadbeach%20QLD%204218' }
       ],
-      note: '為什麼選 Broadbeach：OOL 機場的 777 公車直達 Broadbeach South 站；去 Dreamworld 的 TX2 樂園巴士、去 Currumbin 的 700 公車都從這一帶出發；比衝浪者天堂安靜，有 Pacific Fair 商場可補給。Sea World 與 Aquaduck 搭 G:link 往北約 10 分鐘再轉乘。備選：衝浪者天堂 Cavill Avenue 站附近（去 Sea World、Aquaduck 較近，晚上較吵）。公寓式有洗衣機，6 晚只帶一半衣服。'
+      note: '位置很適合大眾運輸：OOL 機場的 777 公車直達 Broadbeach South 站；去 Dreamworld 的 TX2 樂園巴士、去 Currumbin 的 700 公車都從這一帶出發；Sea World、Aquaduck 搭 G:link 往北約 10 分鐘再轉乘。樓下就是 Pacific Fair 商場，補給方便。'
     },
     {
       city: '布里斯本', color: 'green', nights: 2, dates: '6/27（日）入住 → 6/29（二）退房',
-      area: '建議 South Brisbane 站／Cultural Centre 一帶：走路到博物館、South Bank 與 CityCat',
-      status: '尚未預訂',
+      area: '市中心 Herschel Street：走路約 4 分鐘到 Roma Street 站，過河就是 South Bank',
+      status: '已預訂',
+      hotel: 'bne',
       options: [
-        { name: 'Rydges South Bank', type: '飯店，近 South Brisbane 站與會展中心', map: 'https://www.google.com/maps/search/?api=1&query=Rydges%20South%20Bank%20Brisbane' },
-        { name: 'Emporium Hotel South Bank', type: '飯店，Grey Street，走路到 South Bank 公園', map: 'https://www.google.com/maps/search/?api=1&query=Emporium%20Hotel%20South%20Bank' }
+        { name: 'Meriton Suites Herschel Street', type: '43 Herschel Street；公寓式，入住前確認房型的廚房與洗衣設備', map: 'https://www.google.com/maps/search/?api=1&query=Meriton%20Suites%20Herschel%20Street%2C%2043%20Herschel%20Street%2C%20Brisbane%20QLD%204000' }
       ],
-      note: '從黃金海岸搭火車可以直達 South Brisbane 站；6/29 也從這站搭 Airtrain 直達國際航廈，14 歲以下由大人陪同免費（Airtrain 兒童免費方案）。CI54 晚上 22:50 才起飛，6/29 白天還能在南岸散步。'
+      note: '從黃金海岸搭火車直達 Roma Street 站，走路約 4 分鐘；6/29 從 Roma Street 站搭 Airtrain 直達國際航廈，14 歲以下由大人陪同免費（Airtrain 兒童免費方案）。去 South Bank、博物館走 Kurilpa 橋過河約 15–20 分鐘，或搭 CityCat／免費 CityHopper 渡輪。CI54 晚上 22:50 才起飛，6/29 白天還能散步。'
     }
   ],
 
@@ -2420,9 +2421,9 @@ window.TRIP = {
     },
     {
       group: '住宿', when: '機票確定後', items: [
-        { id: 'stay-syd', t: '雪梨 4 晚已訂：Meriton Suites Sussex Street（6/17–6/21）', note: '確認房型有沒有洗衣機與烘衣機、能否提早入住或寄放行李' },
-        { id: 'stay-gc', t: '訂黃金海岸 6 晚（6/21–6/27）', note: 'Broadbeach，G:link 站走路 5–10 分鐘內，有廚房洗衣機' },
-        { id: 'stay-bne', t: '訂布里斯本 2 晚（6/27–6/29）', note: 'South Brisbane 站附近，火車與 Airtrain 都直達' }
+        { id: 'stay-syd', t: '雪梨 4 晚已訂：Mantra on Kent（6/17–6/21）', note: '確認房型有沒有洗衣機與烘衣機、能否提早入住或寄放行李' },
+        { id: 'stay-gc', t: '黃金海岸 6 晚已訂：Meriton Suites Broadbeach（6/21–6/27）', note: '確認房型有洗衣機、停車需求（大眾運輸方案不需要）' },
+        { id: 'stay-bne', t: '布里斯本 2 晚已訂：Meriton Suites Herschel Street（6/27–6/29）', note: '確認 6/29 退房後能寄放行李到傍晚' }
       ]
     },
     {
@@ -2515,11 +2516,11 @@ window.TRIP = {
       title: '機場與城際', sub: 'Airtrain・接駁巴士・接送', color: 'water',
       rows: [
         ['OOL → Broadbeach', '777 公車直達 Broadbeach South 站，約每 15 分一班，50 分錢'],
-        ['黃金海岸 → 布里斯本', 'G:link 到 Helensvale 轉火車直達 South Brisbane 站，50 分錢'],
-        ['Airtrain 去 BNE', 'South Brisbane 等市區站大人約 A$23.30（2026/4 起），14 歲以下陪同免費'],
+        ['黃金海岸 → 布里斯本', 'G:link 到 Helensvale 轉火車直達 Roma Street 站，50 分錢'],
+        ['Airtrain 去 BNE', 'Roma Street 等市區站大人約 A$23.30（2026/4 起），14 歲以下陪同免費'],
         ['Con-X-ion', '門對門接駁巴士，依區域計價，線上預約'],
         ['私人接送', '黃金海岸 → 布里斯本機場，轎車約 A$190 起（業者報價）'],
-        ['雪梨機場叫車', '到 Sussex Street 飯店約 25–35 分鐘，約 A$35–55']
+        ['雪梨機場叫車', '到 Kent Street 飯店約 25–35 分鐘，約 A$35–55']
       ],
       tips: ['Airtrain 不適用 50 分錢票價。', '三人帶行李時，接駁或叫車常比火車省力；預算優先再選火車。'],
       links: [
@@ -2582,9 +2583,9 @@ window.TRIP = {
       },
       {
         group: '住宿 12 晚', items: [
-          { id: 'b-syd', name: '雪梨 4 晚（Meriton Suites Sussex Street，已預訂）', cur: 'AUD', low: 1200, high: 1800, note: '已訂好，把實際金額與訂房代號填在下面；預估是訂房前查的 Vivid 期間行情。' },
-          { id: 'b-gc', name: '黃金海岸 6 晚（Broadbeach 公寓）', cur: 'AUD', low: 1100, high: 1900, note: '6 月是淡季，第三方資料平均每晚約 A$130–230；兩房公寓較貴。' },
-          { id: 'b-bne', name: '布里斯本 2 晚（South Brisbane 站附近）', cur: 'AUD', low: 450, high: 700, note: '粗估，依訂房網站即時價格。' }
+          { id: 'b-syd', name: '雪梨 4 晚（Mantra on Kent，已預訂）', cur: 'AUD', low: 1200, high: 1800, note: '已訂好，把實際金額與訂房代號填在下面；預估是訂房前查的 Vivid 期間行情。' },
+          { id: 'b-gc', name: '黃金海岸 6 晚（Meriton Suites Broadbeach，已預訂）', cur: 'AUD', low: 1100, high: 1900, note: '6 月是淡季，第三方資料平均每晚約 A$130–230；兩房公寓較貴。' },
+          { id: 'b-bne', name: '布里斯本 2 晚（Meriton Suites Herschel Street，已預訂）', cur: 'AUD', low: 450, high: 700, note: '已訂好，把實際金額與訂房代號填在下面；預估是訂房前的粗估。' }
         ]
       },
       {
