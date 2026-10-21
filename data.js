@@ -1016,6 +1016,26 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Broadbeach%20South%20light%20rail%20station",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "Gold Coast Airport, Bilinga QLD",
+      "to": "@gc",
+      "mode": "transit",
+      "label": "OOL 機場 → 飯店（777 公車）"
+     },
+     {
+      "from": "Gold Coast Airport, Bilinga QLD",
+      "to": "@gc",
+      "mode": "driving",
+      "label": "OOL 機場 → 飯店（叫車）"
+     },
+     {
+      "from": "@gc",
+      "to": "Kurrawa Beach, Broadbeach QLD",
+      "mode": "walking",
+      "label": "飯店 → Kurrawa 海灘"
+     }
     ]
    }
   ],
@@ -1123,6 +1143,14 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Dreamworld%20Coomera%20QLD",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@gc",
+      "to": "Dreamworld, Coomera QLD",
+      "mode": "transit",
+      "label": "飯店 → Dreamworld"
+     }
     ]
    },
    {
@@ -1176,7 +1204,21 @@ window.TRIP_DAYS = [
      }
     ],
     "must": false,
-    "links": []
+    "links": [],
+    "routes": [
+     {
+      "from": "Dreamworld, Coomera QLD",
+      "to": "@gc",
+      "mode": "transit",
+      "label": "Dreamworld → 飯店"
+     },
+     {
+      "from": "Dreamworld, Coomera QLD",
+      "to": "@gc",
+      "mode": "driving",
+      "label": "Dreamworld → 飯店（叫車）"
+     }
+    ]
    }
   ],
   "meals": [
@@ -1259,6 +1301,14 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Currumbin%20Wildlife%20Sanctuary",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@gc",
+      "to": "Currumbin Wildlife Sanctuary",
+      "mode": "transit",
+      "label": "飯店 → Currumbin（700 公車）"
+     }
     ]
    },
    {
@@ -1311,6 +1361,20 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Burleigh%20Heads%20Beach%20QLD",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "Currumbin Wildlife Sanctuary",
+      "to": "Burleigh Heads Beach, QLD",
+      "mode": "transit",
+      "label": "Currumbin → Burleigh Heads"
+     },
+     {
+      "from": "Burleigh Heads Beach, QLD",
+      "to": "@gc",
+      "mode": "transit",
+      "label": "Burleigh Heads → 飯店"
      }
     ]
    }
@@ -1391,6 +1455,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Sea%20World%20Gold%20Coast",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@gc",
+      "to": "Sea World Gold Coast, Main Beach",
+      "mode": "transit",
+      "label": "飯店 → Sea World"
+     },
+     {
+      "from": "@gc",
+      "to": "Sea World Gold Coast, Main Beach",
+      "mode": "driving",
+      "label": "飯店 → Sea World（叫車）"
+     }
     ]
    },
    {
@@ -1439,7 +1517,27 @@ window.TRIP_DAYS = [
      }
     ],
     "must": false,
-    "links": []
+    "links": [],
+    "routes": [
+     {
+      "from": "Sea World Gold Coast, Main Beach",
+      "to": "Tedder Avenue, Main Beach QLD",
+      "mode": "transit",
+      "label": "Sea World → Tedder Avenue 餐廳街"
+     },
+     {
+      "from": "Sea World Gold Coast, Main Beach",
+      "to": "@gc",
+      "mode": "transit",
+      "label": "Sea World → 飯店"
+     },
+     {
+      "from": "Sea World Gold Coast, Main Beach",
+      "to": "@gc",
+      "mode": "driving",
+      "label": "Sea World → 飯店（叫車）"
+     }
+    ]
    }
   ],
   "meals": [
@@ -1529,6 +1627,14 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Aquaduck%20Gold%20Coast%20Cavill%20Avenue%20Surfers%20Paradise",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@gc",
+      "to": "Aquaduck Surfers Paradise, Cavill Avenue",
+      "mode": "transit",
+      "label": "飯店 → Aquaduck 集合點（G:link）"
+     }
     ]
    },
    {
@@ -1564,6 +1670,14 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Sea%20World%20Cruises%20Main%20Beach",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@gc",
+      "to": "Sea World Cruises, Main Beach QLD",
+      "mode": "transit",
+      "label": "飯店 → 賞鯨船碼頭"
      }
     ]
    },
@@ -1604,6 +1718,26 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=HOTA%20Home%20of%20the%20Arts%20Gold%20Coast",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "Cavill Avenue, Surfers Paradise QLD",
+      "to": "HOTA Home of the Arts, Bundall",
+      "mode": "transit",
+      "label": "Cavill Avenue → HOTA"
+     },
+     {
+      "from": "HOTA Home of the Arts, Bundall",
+      "to": "@gc",
+      "mode": "transit",
+      "label": "HOTA → 飯店"
+     },
+     {
+      "from": "@gc",
+      "to": "Kurrawa Park, Broadbeach QLD",
+      "mode": "walking",
+      "label": "飯店 → Kurrawa 公園與海灘"
      }
     ]
    },
@@ -1741,6 +1875,14 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Warner%20Bros.%20Movie%20World%20Gold%20Coast",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@gc",
+      "to": "Warner Bros. Movie World, Oxenford QLD",
+      "mode": "transit",
+      "label": "飯店 → Movie World（G:link＋TX7）"
+     }
     ]
    },
    {
@@ -1789,7 +1931,21 @@ window.TRIP_DAYS = [
      }
     ],
     "must": false,
-    "links": []
+    "links": [],
+    "routes": [
+     {
+      "from": "Warner Bros. Movie World, Oxenford QLD",
+      "to": "@gc",
+      "mode": "transit",
+      "label": "Movie World → 飯店"
+     },
+     {
+      "from": "Warner Bros. Movie World, Oxenford QLD",
+      "to": "@gc",
+      "mode": "driving",
+      "label": "Movie World → 飯店（叫車）"
+     }
+    ]
    }
   ],
   "meals": [
@@ -1878,6 +2034,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Brisbane%20City%20QLD",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@gc",
+      "to": "@bne",
+      "mode": "transit",
+      "label": "黃金海岸飯店 → 布里斯本飯店（G:link＋火車）"
+     },
+     {
+      "from": "@gc",
+      "to": "@bne",
+      "mode": "driving",
+      "label": "黃金海岸飯店 → 布里斯本飯店（接駁／叫車）"
+     }
     ]
    },
    {
@@ -1895,6 +2065,20 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=South%20Bank%20Parklands%20Brisbane",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@bne",
+      "to": "South Bank Parklands, Brisbane",
+      "mode": "walking",
+      "label": "飯店 → South Bank（走 Kurilpa 橋）"
+     },
+     {
+      "from": "@bne",
+      "to": "Wheel of Brisbane",
+      "mode": "walking",
+      "label": "飯店 → 布里斯本摩天輪"
      }
     ]
    },
@@ -1996,6 +2180,14 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=South%20Bank%20ferry%20terminal%20Brisbane",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@bne",
+      "to": "North Quay ferry terminal, Brisbane",
+      "mode": "walking",
+      "label": "飯店 → North Quay 碼頭"
+     }
     ]
    },
    {
@@ -2013,6 +2205,20 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Queensland%20Museum%20South%20Brisbane",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@bne",
+      "to": "Queensland Museum Kurilpa, South Brisbane",
+      "mode": "walking",
+      "label": "飯店 → 昆士蘭博物館"
+     },
+     {
+      "from": "North Quay ferry terminal, Brisbane",
+      "to": "Queensland Museum Kurilpa, South Brisbane",
+      "mode": "transit",
+      "label": "North Quay 碼頭 → 博物館"
      }
     ]
    },
@@ -2036,6 +2242,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Lone%20Pine%20Koala%20Sanctuary%20Brisbane",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@bne",
+      "to": "Lone Pine Koala Sanctuary, Fig Tree Pocket",
+      "mode": "transit",
+      "label": "飯店 → Lone Pine"
+     },
+     {
+      "from": "@bne",
+      "to": "Lone Pine Koala Sanctuary, Fig Tree Pocket",
+      "mode": "driving",
+      "label": "飯店 → Lone Pine（叫車）"
+     }
     ]
    },
    {
@@ -2054,6 +2274,20 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Riverside%20Green%20South%20Bank%20Brisbane",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "Queensland Museum Kurilpa, South Brisbane",
+      "to": "Riverside Green, South Bank Parklands",
+      "mode": "walking",
+      "label": "博物館 → Riverside Green 遊樂場"
+     },
+     {
+      "from": "Riverside Green, South Bank Parklands",
+      "to": "@bne",
+      "mode": "walking",
+      "label": "South Bank → 飯店"
+     }
     ]
    },
    {
@@ -2071,6 +2305,20 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Mt%20Coot-tha%20Summit%20Lookout",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@bne",
+      "to": "Mt Coot-tha Summit Lookout",
+      "mode": "driving",
+      "label": "飯店 → Mt Coot-tha 觀景台（叫車）"
+     },
+     {
+      "from": "Mt Coot-tha Summit Lookout",
+      "to": "@bne",
+      "mode": "driving",
+      "label": "觀景台 → 飯店（叫車）"
      }
     ]
    },
@@ -2171,6 +2419,14 @@ window.TRIP_DAYS = [
       "u": "https://www.google.com/maps/search/?api=1&query=Queen%20Street%20Mall%20Brisbane",
       "l": "開啟 Google Maps"
      }
+    ],
+    "routes": [
+     {
+      "from": "@bne",
+      "to": "Queen Street Mall, Brisbane",
+      "mode": "walking",
+      "label": "飯店 → Queen Street Mall"
+     }
     ]
    },
    {
@@ -2192,6 +2448,26 @@ window.TRIP_DAYS = [
      {
       "u": "https://www.google.com/maps/search/?api=1&query=Brisbane%20Airport%20International%20Terminal",
       "l": "開啟 Google Maps"
+     }
+    ],
+    "routes": [
+     {
+      "from": "@bne",
+      "to": "Roma Street station, Brisbane",
+      "mode": "walking",
+      "label": "飯店 → Roma Street 站"
+     },
+     {
+      "from": "Roma Street station, Brisbane",
+      "to": "Brisbane Airport International Terminal",
+      "mode": "transit",
+      "label": "Roma Street 站 → 國際航廈（Airtrain）"
+     },
+     {
+      "from": "@bne",
+      "to": "Brisbane Airport International Terminal",
+      "mode": "driving",
+      "label": "飯店 → 國際航廈（叫車）"
      }
     ]
    },
@@ -2289,7 +2565,7 @@ window.TRIP = {
   tripEnd: '2027-06-30T05:40:00+08:00',
   startDate: '2027-06-16',
   checkedOn: '2026-10-21',
-  version: 'little-explorers-20261021a',
+  version: 'little-explorers-20261021b',
 
   // 護照蓋章風格：每天一枚入境章（依序對應 Day 1–14）
   stamps: [
@@ -2365,7 +2641,7 @@ window.TRIP = {
       options: [
         { name: 'Mantra on Kent（曼特拉肯特酒店）', type: '433 Kent Street；公寓房型有廚房，洗衣機與烘衣機依房型，入住前確認', map: 'https://www.google.com/maps/search/?api=1&query=Mantra%20on%20Kent%2C%20433%20Kent%20Street%2C%20Sydney%20NSW%202000' }
       ],
-      note: '行程 Day 2–6 的「Google 路線」按鈕都從這間飯店出發或回到這裡。機場：Airport Link 到 Town Hall 站再走約 5 分鐘；環形碼頭：Town Hall 站搭火車或 George Street 搭 L2／L3 輕軌。Day 5 藍山一日遊當天來回，不用換飯店。'
+      note: '行程 Day 2–6 的「Google 路線」按鈕都從這間飯店出發或回到這裡（Day 6–12 改用黃金海岸飯店、Day 12–14 改用布里斯本飯店）。機場：Airport Link 到 Town Hall 站再走約 5 分鐘；環形碼頭：Town Hall 站搭火車或 George Street 搭 L2／L3 輕軌。Day 5 藍山一日遊當天來回，不用換飯店。'
     },
     {
       city: '黃金海岸', color: 'yellow', nights: 6, dates: '6/21（一）入住 → 6/27（日）退房',

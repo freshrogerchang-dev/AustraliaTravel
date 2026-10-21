@@ -20,3 +20,10 @@
 
 ## 驗證
 27 條路線起點為 Mantra on Kent；版面稽核 5 風格 × 4 寬度 TOTAL 0；五風格回歸、14 天標題、預算功能正常；Cubic 11 子集重做。
+
+## 追加（同日）：Day 6–14 路線按鈕
+- 使用 `@gc`（Meriton Suites Broadbeach）與 `@bne`（Meriton Suites Herschel Street）新增 39 條 Google 路線，全行程共 66 條：
+  - Day 6 OOL 機場 → 飯店（777 公車、叫車）、Kurrawa 海灘；Day 7 Dreamworld 來回；Day 8 Currumbin、Burleigh Heads、回飯店；Day 9 Sea World、Tedder Avenue、回飯店；Day 10 Aquaduck、賞鯨碼頭、HOTA、Kurrawa；Day 11 Movie World 來回；
+  - Day 12 黃金海岸飯店 → 布里斯本飯店（火車、接駁）、South Bank、摩天輪；Day 13 North Quay、博物館、Lone Pine、Riverside Green、Mt Coot-tha；Day 14 Queen Street Mall、Roma Street 站、Airtrain 到國際航廈、叫車。
+- 樂園日回程、Lone Pine、Mt Coot-tha 等多附一顆「叫車」（driving）按鈕。
+- 驗證：66 條逐條檢查起點與終點都有值、沒有未解析的飯店代號、交通方式合法；版面稽核 TOTAL 0；五風格回歸正常。
