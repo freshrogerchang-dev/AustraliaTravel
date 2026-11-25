@@ -1,5 +1,5 @@
 # AustraliaTravel — Dev-Flow State
-最後更新：2026-10-21（三段住宿全部已訂：Mantra on Kent／Meriton Suites Broadbeach／Meriton Suites Herschel Street）
+最後更新：2026-11-25（插圖依 svg-scene-maker 畫面規則全部重畫、新增背景配樂與 web-svg-design skill）
 
 ## 一句話目標
 提供 2027/6/16–6/29 六歲親子澳洲行程，華航台北→雪梨、布里斯本→台北，每日整合景點、餐廳、地圖與近期旅行閱讀。
@@ -34,6 +34,7 @@
 | 2026-10-18 | S4 | 澳洲海報改 Noto Sans TC＋錯位印版插圖、護照改 Noto Serif TC＋刻版排線插圖；非預設風格字型改為選到才載入 | 使用者回饋只換色感覺不出風格差異；中文字型 CSS 每字重約 125 KB，不能全部預載 |
 | 2026-10-18 | S4 | 風格做法整理成 `.claude/skills/travel-style`（主 skill＋風格庫＋驗證腳本），不拆成多個 agent | 共用規則只維護一份；新增風格只需多一份風格檔 |
 | 2026-10-18 | S4 | 新增「澳洲海報」「護照蓋章」兩種可切換風格，繪本風維持預設；插圖改為依色票重畫 | 使用者要求在同一網站切換；澳洲風只用海灘救生旗、原生植物配色與復古海報字，不用原住民圖騰 |
+| 2026-11-25 | S4 | 插圖依《SVG 動畫圖鑑》svg-scene-maker 的畫面規則重畫（17 張＋新增 bondi、train），新增可開關的原創背景配樂（music.js，預設關）；不採用它的 1600×600 互動場景、日夜循環、秀與濾鏡；規則寫成 `.claude/skills/web-svg-design` | 使用者要求並選擇「只用畫面規則重畫＋配樂」；互動場景與濾鏡違反 iPhone 效能規則、也和五風格架構衝突 |
 | 2026-10-17 | S3/S4 | 雪梨 6 晚→4 晚（合併兩個博物館日、取消曼利），新增 Currumbin 動物日與布里斯本 CityCat＋SparkLab 日；新增「交通與票價」區 | 使用者要求雪梨少 1–2 天，並補大眾運輸工具與票價 |
 
 ## 未決問題 / 風險
@@ -50,8 +51,9 @@
 - 近兩年來源中部分為英文、短評或官方指南；頁面已誠實標示。
 - 實際手機 Safari／Chrome、「加入主畫面」安裝流程、無障礙輔具與旅行當日現場狀態未驗證。
 - 護照圓章用 SVG textPath 排文字，只在 Chromium 驗證過；iPhone Safari 實機外觀待確認。
+- 背景配樂（Web Audio）只在 Chromium 驗證；iPhone 靜音開關、實際音量音色未實測。
 - 像素風靠 canvas 讀取 SVG 圖片像素（getImageData）；若某瀏覽器禁止會退回向量圖。Cubic 11 子集只含目前用到的字，data.js 新增文字後要重跑子集。
 
 ## 下一步
 使用者訂好機票與住宿後：以預算區匯出檔／文字摘要生成最終版（鎖定航班飯店、刪備案、依飯店重算交通、列印版）。
-/s5-verify：實機查看手機排版與加入主畫面流程；出發前重新查核班號、訂位、交通與開放公告，尤其是 SYD–OOL 機票與 Tamborine Mountain 接駁時刻表。最新紀錄見 17-build-log.md（既有紀錄見 04–16-build-log.md）。
+/s5-verify：實機查看手機排版與加入主畫面流程；出發前重新查核班號、訂位、交通與開放公告，尤其是 SYD–OOL 機票與 Tamborine Mountain 接駁時刻表。最新紀錄見 18-build-log.md（既有紀錄見 04–17-build-log.md）。

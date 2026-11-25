@@ -633,6 +633,7 @@ html[data-theme="aussie"] .hero h1 { letter-spacing: .02em; }
 .illo-aussie .plate [fill]:not([fill="none"]) { fill: #1E3557; }
 .illo-aussie .plate * { stroke: #1E3557; }
 .illo-aussie .print [fill]:not([fill="none"]) { stroke: none; }
+.illo-aussie .plate .glow { display: none; }   /* 半透明的光束不要印成深藍色塊 */
 html[data-theme="aussie"] .hero-art, html[data-theme="aussie"] .day-illo { background: #F6D2A2; }
 html[data-theme="aussie"] .topbar { background: var(--stripe) bottom / 100% 6px no-repeat, var(--bg); }
 html[data-theme="aussie"] .day-tabs-wrap { background: var(--bg); }

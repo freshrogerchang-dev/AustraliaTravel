@@ -137,6 +137,8 @@ CSS 端配合錯位印版的寫法：
 html[data-theme="aussie"] .hero-art, html[data-theme="aussie"] .day-illo { background: #F6D2A2; }
 ```
 
+構圖本身（地標、天空不留白、在地人物動物交通工具、一家三口、移動物朝向、季節）的規則在 `.claude/skills/web-svg-design/SKILL.md`。半透明的光束要用 `<g class="glow">` 包起來，CSS 加 `.illo-aussie .plate .glow { display: none; }`，否則海報風的印版會把它印成深色塊。
+
 動態用共用 class（`a-bob`、`a-float`、`a-drift`、`a-spin`、`a-twinkle d1–d3`、`a-sway`、`a-flag`…），搭配 `transform-box: fill-box`。印兩次的畫法會讓動畫元素加倍，仍要守住同時動的數量。
 
 ## 5. 切換風格時要重畫什麼

@@ -137,131 +137,150 @@
       return '<path d="M-4 254V234q44-16 98-4 22 6 32 24Z" fill="#F6DFA9"/>' + flag(26, 194) + flag(66, 198);
     }
 
+    /* ===== 場景小零件（svg-scene-maker 的畫面規則：天空不留白、白天也熱鬧、在地人物動物交通工具） ===== */
+    function n1(v) { return +v.toFixed(1); }
+    // 人：腳底在 (x, y)，h 是身高；身高不同、衣服用四個角色色輪替
+    function person(x, y, h, shirt, o) {
+      o = o || {};
+      var hr = h * .17, hy = y - h + hr, bt = hy + hr + .6, bb = y - h * .34, bw = h * .2, s = '';
+      s += '<path d="M' + n1(x - bw * .4) + ' ' + n1(bb) + 'V' + y + 'M' + n1(x + bw * .4) + ' ' + n1(bb) + 'V' + y + '" stroke-width="2"/>';
+      if (o.arm) s += '<path d="M' + n1(x + bw * .8) + ' ' + n1(bt + 2) + 'l' + n1(h * .16) + ' -' + n1(h * .2) + '" stroke-width="2"/>';
+      s += '<rect x="' + n1(x - bw) + '" y="' + n1(bt) + '" width="' + n1(bw * 2) + '" height="' + n1(bb - bt + 1) + '" rx="' + n1(bw * .7) + '" fill="' + shirt + '" stroke-width="2"/>';
+      s += '<circle cx="' + x + '" cy="' + n1(hy) + '" r="' + n1(hr) + '" fill="' + P + '" stroke-width="2"/>';
+      if (o.cap) s += '<path d="M' + n1(x - hr) + ' ' + n1(hy - hr * .2) + 'q' + n1(hr) + ' -' + n1(hr * 1.5) + ' ' + n1(hr * 2) + ' 0h' + n1(hr * .7) + '" fill="' + o.cap + '" stroke-width="1.8"/>';
+      return s;
+    }
+    // 我們一家三口（兩個大人＋六歲小孩），每張圖都會出現
+    function family(x, y, k) {
+      k = k || 1;
+      return person(x, y, 30 * k, C) + person(x + 11 * k, y, 18 * k, Y, { cap: G, arm: true }) + person(x + 22 * k, y, 27 * k, W);
+    }
+    function crowd(x, y, list) {
+      var s = '';
+      list.forEach(function (h, i) { s += person(x + i * 9, y, h, [G, C, W, Y][i % 4]); });
+      return s;
+    }
+    function birds(x, y) { return gull(x, y) + gull(x + 18, y + 8); }
+    // 雪梨渡輪：綠色船身、奶油色船艙、黃色煙囪（船頭朝右）
+    function sydFerry(x, y) {
+      return '<g transform="translate(' + x + ' ' + y + ')"><path d="M0 0h64l-6 10H6Z" fill="' + G + '"/>' +
+        '<rect x="8" y="-12" width="46" height="12" rx="3" fill="' + P + '"/>' +
+        '<path d="M14 -6h6M24 -6h6M34 -6h6M44 -6h6" stroke-width="2"/>' +
+        '<rect x="22" y="-21" width="20" height="9" rx="3" fill="' + P + '" stroke-width="2.5"/><rect x="29" y="-28" width="6" height="7" fill="' + Y + '" stroke-width="2"/></g>';
+    }
+    function sailboat(x, y) {
+      return '<g transform="translate(' + x + ' ' + y + ')"><path d="M0 0h26l-4 6H4Z" fill="' + C + '" stroke-width="2.5"/><path d="M13 0V-22L24 -2Z" fill="' + P + '" stroke-width="2.5"/></g>';
+    }
+    function palm(x, y, h) {
+      return '<path d="M' + x + ' ' + y + 'q-3 -' + n1(h * .5) + ' 2 -' + h + '" stroke-width="3"/>' +
+        '<g class="a-sway"><path d="M' + (x + 2) + ' ' + (y - h) + 'q-12 -6 -20 4 10 -2 20 -4Zq12 -8 20 2 -10 -2 -20 -2Zq-4 -12 -16 -12 10 4 16 12Zq6 -12 16 -10 -10 2 -16 10Z" fill="' + G + '" stroke-width="2"/></g>';
+    }
+    // 尤加利樹：灰白樹幹＋一團團葉子
+    function gum(x, y, h) {
+      return '<path d="M' + x + ' ' + y + 'V' + (y - h * .55) + 'M' + x + ' ' + n1(y - h * .45) + 'l-8 -10M' + x + ' ' + n1(y - h * .5) + 'l8 -12" stroke-width="3"/>' +
+        '<path d="M' + (x - 16) + ' ' + n1(y - h * .62) + 'q0-' + n1(h * .4) + ' 16-' + n1(h * .4) + 'q16 0 16 ' + n1(h * .4) + 'q-16 8 -32 0Z" fill="' + G + '" stroke-width="2.5"/>';
+    }
+    function moon(cx, cy, r) {
+      return '<path d="M' + cx + ' ' + (cy - r) + 'a' + r + ' ' + r + ' 0 1 0 ' + n1(r * 1.2) + ' ' + n1(r * 1.45) + 'a' + n1(r * .8) + ' ' + n1(r * .8) + ' 0 1 1 -' + n1(r * 1.2) + ' -' + n1(r * 1.45) + 'Z" fill="' + Y + '"/>';
+    }
+    function spark(x, y, s, cls) {
+      return '<path class="a-twinkle' + (cls ? ' ' + cls : '') + '" d="M' + x + ' ' + (y + s) + 'q' + s + ' 0 ' + s + ' -' + s + ' 0 ' + s + ' ' + s + ' ' + s + ' -' + s + ' 0 -' + s + ' ' + s + ' 0 -' + s + ' -' + s + ' -' + s + 'Z" fill="' + Y + '" stroke-width="2"/>';
+    }
+    function lorikeet(x, y, cls) {
+      return '<g class="' + cls + '"><ellipse cx="' + x + '" cy="' + y + '" rx="9" ry="5.5" fill="' + G + '" stroke-width="2"/>' +
+        '<circle cx="' + (x - 8) + '" cy="' + (y - 3) + '" r="4.5" fill="' + W + '" stroke-width="2"/><path d="M' + (x - 12) + ' ' + (y - 3) + 'l-4 2 4 1Z" fill="' + C + '" stroke-width="1.6"/>' +
+        '<path d="M' + (x - 5) + ' ' + (y + 1) + 'q3 4 7 1" fill="' + C + '" stroke-width="1.6"/><path d="M' + (x + 8) + ' ' + y + 'l9 3-9 1" fill="' + G + '" stroke-width="1.8"/></g>';
+    }
+    // 澳洲白䴉：白身、黑頭頸、彎長嘴（雪梨公園常見）
+    function ibis(x, y) {
+      return '<path d="M' + (x - 2) + ' ' + y + 'v-6M' + (x + 3) + ' ' + y + 'v-6" stroke-width="1.8"/>' +
+        '<ellipse cx="' + x + '" cy="' + (y - 9) + '" rx="8" ry="5" fill="' + P + '" stroke-width="2"/>' +
+        '<g class="a-nod"><path d="M' + (x - 6) + ' ' + (y - 11) + 'q-3 -8 -7 -8q-3 0 -4 4q-2 6 -6 8" stroke-width="2.4"/></g>';
+    }
+    function skyline(x, y, list, lit) {
+      var s = '', cx = x;
+      list.forEach(function (b, i) {
+        s += '<rect x="' + cx + '" y="' + (y - b[1]) + '" width="' + b[0] + '" height="' + b[1] + '" rx="2" fill="' + (i % 2 ? P : W) + '" stroke-width="2.2"/>';
+        if (lit) s += '<path d="M' + (cx + 3) + ' ' + (y - b[1] + 6) + 'h' + (b[0] - 6) + 'M' + (cx + 3) + ' ' + (y - b[1] + 13) + 'h' + (b[0] - 6) + '" stroke="' + Y + '" stroke-width="2"/>';
+        cx += b[0] + 2;
+      });
+      return s;
+    }
+    function bridgeArch(x0, x1, deck, top) {
+      var m = (x0 + x1) / 2, s = '<path d="M' + x0 + ' ' + deck + 'Q' + m + ' ' + top + ' ' + x1 + ' ' + deck + '" stroke-width="3.5"/>' +
+        '<path d="M' + (x0 + 12) + ' ' + deck + 'Q' + m + ' ' + (top + 18) + ' ' + (x1 - 12) + ' ' + deck + '" stroke-width="2"/>';
+      for (var i = 1; i < 8; i++) {
+        var px = x0 + (x1 - x0) * i / 8, t = i / 8, py = (1 - t) * (1 - t) * deck + 2 * t * (1 - t) * top + t * t * deck;
+        s += '<path d="M' + n1(px) + ' ' + deck + 'V' + n1(py + 4) + '" stroke-width="1.6"/>';
+      }
+      return s;
+    }
+
     var D = '0 0 240 160';
     var ILLOS = {};
 
+    // Day 1：台北深夜起飛——月亮、星星、台北 101、航廈與塔台
     ILLOS.plane = svg(D,
-      cloud(18, 30, 1, 'a-drift') + cloud(160, 104, .8, 'a-drift2') +
-      '<g class="a-float">' + plane(false) + '</g>');
+      moon(206, 24, 13) + spark(160, 18, 4) + spark(120, 34, 3, 'd2') + spark(226, 62, 3, 'd1') +
+      cloud(150, 52, .6, 'a-drift') +
+      '<path d="M-4 132H244V164H-4Z" fill="' + G + '"/><path d="M-4 140H244" stroke-width="2"/><path d="M10 148h16M44 148h16M78 148h16M112 148h16" stroke="' + P + '" stroke-width="3"/>' +
+      '<rect x="12" y="110" width="66" height="22" rx="4" fill="' + P + '"/><path d="M20 120h50" stroke="' + Y + '" stroke-width="4"/>' +
+      '<path d="M90 132V96" stroke-width="3"/><rect x="83" y="84" width="14" height="12" rx="3" fill="' + W + '" stroke-width="2.5"/><circle class="a-twinkle d3" cx="90" cy="79" r="3" fill="' + C + '" stroke-width="2"/>' +
+      '<rect x="176" y="116" width="30" height="16" rx="2" fill="' + P + '" stroke-width="2.5"/>' +
+      '<path d="M184 116l-2-10h22l-2 10ZM184 106l-2-10h22l-2 10ZM184 96l-2-10h22l-2 10ZM184 86l-2-10h22l-2 10ZM184 76l-2-10h22l-2 10Z" fill="' + W + '" stroke-width="2.2"/>' +
+      '<path d="M186 66h14l-2-8h-10ZM193 58V42" stroke-width="2.2"/><path d="M186 112h14M186 92h14M186 72h14" stroke="' + Y + '" stroke-width="2"/>' +
+      '<g class="a-float"><g transform="translate(14 -14) scale(.66) rotate(-10 120 80)">' + plane(false) + '</g></g>');
 
+    // Day 14：布里斯本夜班機回家——城市燈火、月亮、往左（回台灣）飛的飛機
     ILLOS.planeHome = svg(D,
-      '<path class="a-twinkle" d="M196 26q4 0 4-4 0 4 4 4-4 0-4 4 0-4-4-4Z" fill="' + Y + '" stroke-width="2"/>' +
-      '<path class="a-twinkle d2" d="M36 112q3 0 3-3 0 3 3 3-3 0-3 3 0-3-3-3Z" fill="' + Y + '" stroke-width="2"/>' +
-      '<path d="M44 30a18 18 0 1 0 22 26 14 14 0 1 1-22-26Z" fill="' + Y + '"/>' +
-      cloud(150, 108, .8, 'a-drift2') +
-      '<g class="a-float">' + plane(true) + '</g>');
+      moon(32, 26, 12) + spark(196, 20, 4) + spark(110, 14, 3, 'd2') + spark(150, 46, 3, 'd1') +
+      cloud(170, 64, .6, 'a-drift2') +
+      '<path d="M-4 136H244V164H-4Z" fill="' + W + '"/>' +
+      skyline(118, 136, [[16, 34], [20, 56], [14, 40], [22, 70], [16, 46], [18, 30]], true) +
+      '<path d="M8 136q20-14 40 0" stroke-width="3"/><path d="M14 136v-8M28 136v-12M42 136v-8" stroke-width="1.6"/>' +
+      '<path d="M18 150q8-5 16 0M150 152q8-5 16 0" stroke="' + Y + '"/>' +
+      '<g transform="translate(240 0) scale(-1 1)"><g class="a-float"><g transform="translate(14 -16) scale(.66) rotate(-10 120 80)">' + plane(false) + '</g></g></g>');
 
+    // Day 2：抵達雪梨——港灣大橋（橋頂兩面旗、攀橋的人）、綠色渡輪、帆船、岸邊的一家人
     ILLOS.bridge = svg(D,
-      '<path class="a-twinkle" d="M40 26q4 0 4-4 0 4 4 4-4 0-4 4 0-4-4-4Z" fill="' + Y + '" stroke-width="2"/>' +
-      '<path class="a-twinkle d2" d="M120 18q3 0 3-3 0 3 3 3-3 0-3 3 0-3-3-3Z" fill="' + Y + '" stroke-width="2"/>' +
-      '<path class="a-twinkle d1" d="M196 30q4 0 4-4 0 4 4 4-4 0-4 4 0-4-4-4Z" fill="' + Y + '" stroke-width="2"/>' +
-      '<path d="M40 104Q120 20 200 104" stroke-width="4"/>' +
-      '<path d="M56 104Q120 40 184 104"/>' +
-      '<path d="M72 104V92M88 104V80M104 104V75M120 104V72M136 104V75M152 104V80M168 104V92" stroke-width="2"/>' +
-      '<rect x="10" y="104" width="220" height="10" rx="3" fill="' + Y + '"/>' +
-      '<rect x="16" y="74" width="24" height="30" rx="3" fill="' + P + '"/><rect x="200" y="74" width="24" height="30" rx="3" fill="' + P + '"/>' +
-      '<circle class="a-twinkle" cx="53" cy="88" r="4.5" fill="' + C + '"/><circle class="a-twinkle d1" cx="72" cy="72" r="4.5" fill="' + Y + '"/>' +
-      '<circle class="a-twinkle d2" cx="96" cy="62" r="4.5" fill="' + W + '"/><circle class="a-twinkle d3" cx="120" cy="58" r="4.5" fill="' + G + '"/>' +
-      '<circle class="a-twinkle" cx="144" cy="62" r="4.5" fill="' + C + '"/><circle class="a-twinkle d1" cx="168" cy="72" r="4.5" fill="' + Y + '"/>' +
-      '<circle class="a-twinkle d2" cx="187" cy="88" r="4.5" fill="' + W + '"/>' +
-      sea(128, 240, 160) +
-      '<path d="M30 146q8-5 16 0M150 142q8-5 16 0" stroke="' + P + '"/>');
+      sun(206, 30, 12) + cloud(70, 14, .7, 'a-drift') + birds(130, 30) +
+      skyline(4, 100, [[14, 30], [18, 46], [12, 26], [16, 38]]) +
+      '<rect x="24" y="74" width="18" height="30" rx="2" fill="' + P + '"/><rect x="198" y="74" width="18" height="30" rx="2" fill="' + P + '"/>' +
+      bridgeArch(42, 198, 98, 16) +
+      '<rect x="10" y="96" width="224" height="8" rx="3" fill="' + Y + '"/>' +
+      '<circle cx="100" cy="58" r="2.2" fill="' + C + '" stroke-width="1.4"/><circle cx="107" cy="55.5" r="2.2" fill="' + W + '" stroke-width="1.4"/><circle cx="137" cy="56" r="2.2" fill="' + G + '" stroke-width="1.4"/>' +
+      '<path d="M114 56V45M126 56V45" stroke-width="1.8"/><path class="a-flag" d="M114 45h8v5h-8Z" fill="' + C + '" stroke-width="1.6"/><path class="a-flag" d="M126 45h8v5h-8Z" fill="' + W + '" stroke-width="1.6"/>' +
+      sea(112, 240, 160) +
+      '<g class="a-bob">' + sydFerry(132, 126) + '</g>' +
+      '<g class="a-bob2">' + sailboat(70, 124) + '</g>' +
+      '<path d="M-4 146q40-6 92 2V164H-4Z" fill="' + Y + '"/>' + family(16, 152, .85) +
+      '<path d="M206 140q8-5 16 0" stroke="' + P + '"/>');
 
+    // Day 3：歌劇院與植物園——白色帆殼、遠方的港灣大橋、無花果樹下的白䴉
     ILLOS.opera = svg(D,
-      sun(200, 38, 15) + cloud(14, 20, .75, 'a-drift') +
-      '<rect x="30" y="106" width="166" height="14" rx="3" fill="' + C + '"/>' +
-      '<path d="M44 106q4-42 40-56-8 28-4 56Z" fill="' + P + '"/><path d="M54 104q4-26 24-42" stroke-width="2"/>' +
-      '<path d="M76 106q8-52 52-68-12 36-8 68Z" fill="' + P + '"/><path d="M88 104q6-36 34-56" stroke-width="2"/>' +
-      '<path d="M116 106q10-38 44-46-8 26-6 46Z" fill="' + P + '"/><path d="M126 104q6-24 28-38" stroke-width="2"/>' +
-      '<path d="M150 106q8-24 30-28-4 16-2 28Z" fill="' + P + '"/>' +
-      sea(126, 240, 160) +
-      '<g class="a-bob"><path d="M150 134h44l-6 10h-32Z" fill="' + Y + '"/><path d="M172 134v-18l12 14Z" fill="' + P + '" stroke-width="2.5"/></g>' +
-      '<path d="M30 148q8-5 16 0" stroke="' + P + '"/>');
+      sun(214, 34, 12) + cloud(90, 14, .7, 'a-drift') + birds(150, 24) +
+      '<path d="M168 104Q204 66 240 104" stroke-width="2.5"/><rect x="164" y="102" width="80" height="5" rx="2" fill="' + Y + '" stroke-width="2"/>' +
+      '<rect x="64" y="100" width="108" height="12" rx="3" fill="' + C + '"/>' +
+      '<path d="M72 100q4-34 30-46-6 24-4 46Z" fill="' + P + '"/><path d="M80 98q3-22 18-36" stroke-width="1.8"/>' +
+      '<path d="M94 100q8-46 44-60-10 32-6 60Z" fill="' + P + '"/><path d="M104 98q6-32 28-50" stroke-width="1.8"/>' +
+      '<path d="M128 100q8-30 30-36-6 20-4 36Z" fill="' + P + '"/><path d="M136 98q4-20 18-30" stroke-width="1.8"/>' +
+      '<path d="M152 100q5-16 16-18-3 10-2 18Z" fill="' + P + '"/>' +
+      sea(112, 240, 160) +
+      '<g class="a-bob">' + sydFerry(158, 132) + '</g>' +
+      '<path d="M-4 104q30-6 62 4v56H-4Z" fill="' + G + '"/>' +
+      '<path d="M24 120V84M24 96l-10-8M24 92l10-10" stroke-width="4"/>' +
+      '<path d="M2 82q0-26 22-26 24 0 24 26-24 10-46 0Z" fill="' + G + '"/>' +
+      family(6, 150, .8) + ibis(50, 132) +
+      '<path d="M90 146q8-5 16 0" stroke="' + P + '"/>');
 
-    ILLOS.ship = svg(D,
-      cloud(16, 18, .7, 'a-drift') + gull(180, 30) + gull(200, 40) +
-      '<g class="a-bob">' +
-      '<path d="M100 40v72M148 22v90" />' +
-      '<path d="M82 44q18 6 36 0v22q-18 6-36 0Z" fill="' + P + '"/><path d="M84 72q16 6 32 0v24q-16 6-32 0Z" fill="' + P + '"/>' +
-      '<path d="M128 32q20 6 40 0v26q-20 6-40 0Z" fill="' + P + '"/><path d="M130 64q18 6 36 0v28q-18 6-36 0Z" fill="' + P + '"/>' +
-      '<path class="a-flag" d="M148 22 166 16 148 9Z" fill="' + C + '" stroke-width="2.5"/>' +
-      '<path d="M48 108h146l-14 26H62Z" fill="' + C + '"/><path d="M194 108l22-12" />' +
-      '<circle cx="90" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/><circle cx="110" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/><circle cx="130" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/><circle cx="150" cy="120" r="3.5" fill="' + W + '" stroke-width="2"/>' +
-      '</g>' + sea(130, 240, 160) + '<path d="M24 148q8-5 16 0M196 146q8-5 16 0" stroke="' + P + '"/>');
-
-    ILLOS.mountain = svg(D,
-      sun(212, 26, 11) +
-      '<path d="M0 112 40 70l30 22 40-38 40 34 40-28 50 40v68H0Z" fill="' + W + '"/>' +
-      '<path d="M6 40 234 72" stroke-width="2"/>' +
-      '<g class="a-glide"><path d="M50 46v8" stroke-width="2"/><rect x="38" y="54" width="26" height="20" rx="6" fill="' + C + '"/><rect x="43" y="59" width="7" height="7" rx="2" fill="' + P + '" stroke-width="2"/><rect x="53" y="59" width="7" height="7" rx="2" fill="' + P + '" stroke-width="2"/></g>' +
-      '<path d="M0 128q60-24 120-8t120-4v48H0Z" fill="' + G + '"/>' +
-      '<path d="M150 126V86q0-14 8-18 8 4 8 18v40Z" fill="' + Y + '"/><path d="M168 126V78q0-16 9-20 9 4 9 20v48Z" fill="' + Y + '"/><path d="M188 126V92q0-12 8-16 8 4 8 16v34Z" fill="' + Y + '"/>' +
-      '<path d="M152 96h12M152 110h12M170 90h14M170 104h14M190 100h12M190 114h12" stroke-width="2"/>' +
-      '<path d="M44 140V112" stroke-width="4"/><g class="a-sway"><circle cx="44" cy="102" r="16" fill="' + G + '"/></g>');
-
-    ILLOS.ferry = svg(D,
-      cloud(20, 18, .8, 'a-drift') + gull(150, 28) +
-      '<path d="M150 124q40-20 94-14v30H150Z" fill="' + Y + '"/>' +
-      '<path d="M206 112V82" /><path d="M186 86q20-16 40 0Z" fill="' + C + '"/>' +
-      sea(124, 240, 160) +
-      '<g class="a-bob"><path d="M22 118h134l-10 18H32Z" fill="' + G + '"/>' +
-      '<rect x="38" y="96" width="104" height="22" rx="6" fill="' + Y + '"/>' +
-      '<rect x="46" y="101" width="11" height="10" rx="2" fill="' + P + '" stroke-width="2"/><rect x="63" y="101" width="11" height="10" rx="2" fill="' + P + '" stroke-width="2"/><rect x="80" y="101" width="11" height="10" rx="2" fill="' + P + '" stroke-width="2"/><rect x="97" y="101" width="11" height="10" rx="2" fill="' + P + '" stroke-width="2"/><rect x="114" y="101" width="11" height="10" rx="2" fill="' + P + '" stroke-width="2"/>' +
-      '<rect x="74" y="82" width="34" height="14" rx="5" fill="' + P + '"/><path d="M91 82V70" /><path class="a-flag" d="M91 70l12-4-12-5Z" fill="' + C + '" stroke-width="2"/></g>' +
-      '<path d="M14 148q8-5 16 0M168 146q8-5 16 0" stroke="' + P + '"/>');
-
-    ILLOS.park = svg(D,
-      cloud(10, 14, .7, 'a-drift') +
-      '<path d="M0 134h240v30H0Z" fill="' + G + '"/>' +
-      '<path d="M168 72 150 134M168 72l18 62" stroke-width="3.5"/>' +
-      wheel(168, 72, 42, [C, Y, W, G]) +
-      '<path d="M8 120q22-70 46-30t40-10q14-28 26 40" stroke-width="3.5"/>' +
-      '<path d="M28 134v-30M54 134V90M80 134v-26M106 134V86" stroke-width="2"/>' +
-      '<g class="a-bob2"><rect x="88" y="74" width="22" height="14" rx="5" fill="' + C + '" transform="rotate(-24 99 81)"/></g>');
-
-    ILLOS.duck = svg(D,
-      sun(30, 30, 12) + cloud(150, 16, .7, 'a-drift') +
-      '<g class="a-bob"><path d="M36 78q0-14 14-14h112q18 0 22 18l4 34H36Z" fill="' + Y + '"/>' +
-      '<rect x="50" y="72" width="20" height="16" rx="3" fill="' + W + '" stroke-width="2.5"/><rect x="78" y="72" width="20" height="16" rx="3" fill="' + W + '" stroke-width="2.5"/><rect x="106" y="72" width="20" height="16" rx="3" fill="' + W + '" stroke-width="2.5"/><rect x="134" y="72" width="20" height="16" rx="3" fill="' + W + '" stroke-width="2.5"/>' +
-      '<path d="M38 100h150" stroke="' + C + '" stroke-width="5"/>' +
-      '<circle cx="172" cy="52" r="15" fill="' + Y + '"/><path d="M186 50l16 4-16 6Z" fill="' + C + '"/><circle cx="176" cy="48" r="2.6" fill="' + I + '" stroke="none"/>' +
-      '<circle cx="72" cy="118" r="12" fill="' + P + '"/><circle cx="160" cy="118" r="12" fill="' + P + '"/></g>' +
-      sea(124, 240, 160) +
-      '<circle cx="204" cy="122" r="3" fill="' + W + '" stroke-width="2"/><circle cx="214" cy="114" r="2.5" fill="' + W + '" stroke-width="2"/>' +
-      '<path d="M20 146q8-5 16 0M120 148q8-5 16 0" stroke="' + P + '"/>');
-
-    ILLOS.brisbane = svg(D,
-      cloud(150, 12, .7, 'a-drift') +
-      '<rect x="140" y="62" width="22" height="52" rx="3" fill="' + P + '"/><rect x="166" y="46" width="26" height="68" rx="3" fill="' + W + '"/><rect x="196" y="72" width="22" height="42" rx="3" fill="' + P + '"/>' +
-      '<path d="M146 72h10M146 84h10M146 96h10M172 58h14M172 72h14M172 86h14M172 100h14M202 82h10M202 96h10" stroke-width="2"/>' +
-      '<path d="M0 114h240v12H0Z" fill="' + G + '"/>' +
-      '<path d="M66 64 48 114M66 64l18 50" stroke-width="3.5"/>' +
-      wheel(66, 64, 40, [Y, C, W, G]) +
-      sea(126, 240, 160) +
-      '<g class="a-bob"><path d="M120 132h80l-8 12h-64Z" fill="' + P + '"/><rect x="134" y="120" width="52" height="12" rx="5" fill="' + C + '"/></g>' +
-      '<path d="M20 148q8-5 16 0" stroke="' + P + '"/>');
-
-    ILLOS.koala = svg(D,
-      cloud(14, 16, .7, 'a-drift') +
-      '<path d="M0 134h240v30H0Z" fill="' + G + '"/>' +
-      '<path d="M150 136V18q0-6 9-6t9 6v118Z" fill="' + Y + '"/><path d="M155 40q4 6 0 12M162 76q-4 6 0 12M156 108q4 6 0 12" stroke-width="2"/>' +
-      '<g class="a-sway"><path d="M168 38q22-10 40-4" /><ellipse cx="196" cy="30" rx="10" ry="5" fill="' + G + '" transform="rotate(-20 196 30)"/><ellipse cx="212" cy="40" rx="10" ry="5" fill="' + G + '" transform="rotate(20 212 40)"/><ellipse cx="182" cy="44" rx="9" ry="4.5" fill="' + G + '" transform="rotate(30 182 44)"/></g>' +
-      '<g class="a-bob2"><ellipse cx="138" cy="98" rx="24" ry="28" fill="' + W + '"/>' +
-      '<circle cx="113" cy="50" r="12" fill="' + W + '"/><circle cx="113" cy="50" r="5.5" fill="' + C + '" stroke-width="2"/>' +
-      '<circle cx="155" cy="50" r="12" fill="' + W + '"/><circle cx="155" cy="50" r="5.5" fill="' + C + '" stroke-width="2"/>' +
-      '<circle cx="134" cy="64" r="22" fill="' + W + '"/>' +
-      '<ellipse cx="134" cy="69" rx="6" ry="8" fill="' + I + '" stroke="none"/><circle cx="125" cy="60" r="2.4" fill="' + I + '" stroke="none"/><circle cx="143" cy="60" r="2.4" fill="' + I + '" stroke="none"/>' +
-      '<circle cx="121" cy="71" r="3" fill="' + C + '" stroke="none"/><circle cx="147" cy="71" r="3" fill="' + C + '" stroke="none"/>' +
-      '<ellipse cx="158" cy="92" rx="10" ry="7" fill="' + W + '"/><ellipse cx="158" cy="116" rx="10" ry="7" fill="' + W + '"/></g>' +
-      '<g class="a-float"><ellipse cx="62" cy="64" rx="16" ry="10" fill="' + G + '"/><circle cx="48" cy="56" r="8" fill="' + W + '"/><path d="M40 56l-7 2 7 3Z" fill="' + C + '" stroke-width="2"/><ellipse cx="54" cy="66" rx="6" ry="5" fill="' + Y + '" stroke-width="2"/><path d="M76 66l14 6-12-2" fill="' + G + '" stroke-width="2"/><circle cx="46" cy="54" r="1.6" fill="' + I + '" stroke="none"/></g>' +
-      '<path d="M30 134q-2-14 6-22M30 134q-8-10-6-20M74 134q2-12 10-18" stroke-width="2.5"/>');
-
+    // Day 4：搭渡輪去 Taronga——長頸鹿背後就是港灣、歌劇院和市區
     ILLOS.giraffe = svg(D,
-      cloud(14, 14, .7, 'a-drift') + sun(210, 30, 10) +
+      cloud(150, 12, .6, 'a-drift') + sun(214, 28, 10) + birds(36, 22) +
       sea(100, 240, 160) +
-      '<path d="M150 100Q186 70 222 100" stroke-width="3"/><path d="M162 100V92M174 100V84M186 100V81M198 100V84M210 100V92" stroke-width="1.8"/>' +
-      '<rect x="144" y="98" width="84" height="5" rx="2" fill="' + Y + '" stroke-width="2.5"/>' +
-      '<path d="M112 102q4-20 20-26-4 14-2 26Z" fill="' + P + '" stroke-width="2.5"/><path d="M126 102q4-14 16-18-3 10-2 18Z" fill="' + P + '" stroke-width="2.5"/>' +
+      skyline(150, 98, [[10, 22], [12, 34], [9, 18], [12, 28]]) +
+      '<path d="M196 100Q216 82 236 100" stroke-width="2.4"/><rect x="194" y="98" width="46" height="4" rx="2" fill="' + Y + '" stroke-width="2"/>' +
+      '<path d="M120 100q4-18 18-24-4 12-2 24Z" fill="' + P + '" stroke-width="2.2"/><path d="M134 100q4-12 14-16-3 8-2 16Z" fill="' + P + '" stroke-width="2.2"/>' +
+      '<g class="a-bob">' + sydFerry(164, 112).replace('translate(164 112)', 'translate(164 112) scale(.7)') + '</g>' +
       '<path d="M-4 164V124q50-18 118-8t130 4V164Z" fill="' + G + '"/>' +
       '<path d="M50 118v30M60 120v28M84 120v28M94 118v30" stroke-width="4"/>' +
       '<path d="M40 112q0-16 22-18h30q14 2 14 16t-14 14H54q-14 0-14-12Z" fill="' + Y + '"/><path d="M40 108q-8 4-8 16" stroke-width="2.5"/>' +
@@ -271,24 +290,116 @@
       '<path d="M100 40q0-12 14-12 14 0 22 8 4 6-2 10l-20 2q-14 0-14-8Z" fill="' + Y + '"/>' +
       '<path d="M106 30l-2-10M114 28l1-10" stroke-width="2.5"/><circle cx="104" cy="19" r="2.6" fill="' + C + '" stroke-width="2"/><circle cx="115" cy="17" r="2.6" fill="' + C + '" stroke-width="2"/>' +
       '<path d="M102 34l-10-4 8 8" fill="' + Y + '" stroke-width="2"/><circle cx="119" cy="34" r="2" fill="' + I + '" stroke="none"/><path d="M128 42q3 1 5-1" stroke-width="2"/></g>' +
-      '<path d="M150 150q2-10 8-14M160 150q0-8 4-12M200 146q2-8 8-12" stroke-width="2.5"/>');
+      '<path d="M140 156V132M140 136H236M140 146H236M172 156V132M204 156V132M236 156V132" stroke-width="2"/>' +
+      family(170, 132, .7));
 
+    // Day 5：藍山——三姊妹岩、藍色霧氣的山谷、高空纜車、葵花鳳頭鸚鵡、觀景台上的一家人
+    ILLOS.mountain = svg(D,
+      sun(212, 24, 10) + cloud(96, 10, .6, 'a-drift') +
+      '<path d="M-4 84 30 64l26 12 34-22 34 20 36-16 40 18 44-12v100H-4Z" fill="' + W + '"/>' +
+      '<path d="M6 36 234 62" stroke-width="2"/>' +
+      '<g class="a-glide"><path d="M52 41v7" stroke-width="2"/><rect x="40" y="48" width="24" height="16" rx="5" fill="' + C + '"/><rect x="45" y="52" width="6" height="6" rx="2" fill="' + P + '" stroke-width="1.8"/><rect x="54" y="52" width="6" height="6" rx="2" fill="' + P + '" stroke-width="1.8"/></g>' +
+      '<path d="M-4 112q60-14 120-4t128-6v62H-4Z" fill="' + G + '"/>' +
+      '<path d="M146 112V80q0-14 8-18 8 4 8 18v32Z" fill="' + Y + '"/><path d="M164 112V70q0-16 9-20 9 4 9 20v42Z" fill="' + Y + '"/><path d="M184 112V84q0-12 8-16 8 4 8 16v28Z" fill="' + Y + '"/>' +
+      '<path d="M148 90h12M148 102h12M166 82h14M166 96h14M186 92h12M186 104h12" stroke-width="2"/>' +
+      '<path d="M202 112q8-10 22-8 10 2 20 8v52h-42Z" fill="' + Y + '"/>' +
+      gum(116, 128, 40) + gum(96, 136, 30) +
+      '<path d="M-4 140h96v24H-4Z" fill="' + P + '"/><path d="M-4 128h96M10 128v12M40 128v12M70 128v12" stroke-width="2"/>' +
+      family(12, 140, .78) +
+      '<path d="M206 136q14-8 34-6" stroke-width="3"/>' +
+      '<g class="a-nod"><ellipse cx="222" cy="126" rx="9" ry="6" fill="' + P + '" stroke-width="2"/><circle cx="214" cy="120" r="4.5" fill="' + P + '" stroke-width="2"/><path d="M212 116q-2-6 2-9 1 4 4 6" fill="' + Y + '" stroke-width="1.6"/><path d="M210 121l-3 2 3 1" stroke-width="1.6"/></g>');
+
+    // Day 6：邦迪——冰山泳池、救生員紅黃旗、衝浪的人，再搭飛機往北
+    ILLOS.bondi = svg(D,
+      sun(30, 26, 10) + cloud(92, 14, .6, 'a-drift') +
+      '<g class="a-float"><g transform="translate(116 -26) scale(.42) rotate(-8 120 80)">' + plane(false) + '</g></g>' +
+      sea(92, 240, 160) +
+      '<path d="M-4 86q24-4 40 6l10 16H-4Z" fill="' + C + '"/><rect x="4" y="98" width="36" height="9" rx="2" fill="' + W + '" stroke-width="2.2"/><path d="M13 98v9M22 98v9M31 98v9" stroke="' + P + '" stroke-width="1.6"/>' +
+      '<path class="a-twinkle" d="M42 92q4-8 8 0" stroke="' + P + '" stroke-width="2.4"/>' +
+      '<path d="M100 104q14-10 28 0" stroke="' + P + '" stroke-width="2.4"/>' +
+      '<g class="a-bob"><path d="M96 110q16-4 34 0-16 4-34 0Z" fill="' + Y + '" stroke-width="2"/>' + person(112, 108, 18, I) + '</g>' +
+      '<path d="M-4 130q120-26 248-8V164H-4Z" fill="' + Y + '"/>' +
+      '<path d="M180 128V106" stroke-width="2"/><rect x="170" y="96" width="22" height="12" rx="3" fill="' + P + '" stroke-width="2.4"/><path d="M175 102h12" stroke="' + W + '" stroke-width="3"/>' +
+      '<path d="M200 132V112M224 130V110" stroke-width="2"/>' +
+      '<g class="a-flag"><path d="M200 112h12v4h-12Z" fill="' + C + '" stroke="none"/><path d="M200 116h12v4h-12Z" fill="' + Y + '" stroke="none"/><rect x="200" y="112" width="12" height="8" stroke-width="1.8"/></g>' +
+      '<g class="a-flag"><path d="M224 110h12v4h-12Z" fill="' + C + '" stroke="none"/><path d="M224 114h12v4h-12Z" fill="' + Y + '" stroke="none"/><rect x="224" y="110" width="12" height="8" stroke-width="1.8"/></g>' +
+      family(40, 150, .8) + person(120, 146, 26, G) + person(150, 144, 22, C));
+
+    // Day 7：樂園日——雲霄飛車、自由落體塔、旋轉木馬、氣球、排隊的人（高矮不一、衣服鮮豔）
+    ILLOS.park = svg(D,
+      cloud(16, 14, .6, 'a-drift') +
+      '<g class="a-float"><path d="M196 36v20M210 30v24M224 38v18" stroke-width="1.4"/><ellipse cx="196" cy="28" rx="6" ry="8" fill="' + C + '" stroke-width="2"/><ellipse cx="210" cy="22" rx="6" ry="8" fill="' + W + '" stroke-width="2"/><ellipse cx="224" cy="30" rx="6" ry="8" fill="' + Y + '" stroke-width="2"/></g>' +
+      '<path d="M-4 132h248v32H-4Z" fill="' + G + '"/>' +
+      '<rect x="150" y="20" width="12" height="112" rx="3" fill="' + P + '"/><path d="M150 40h12M150 60h12M150 80h12M150 100h12" stroke="' + C + '" stroke-width="3"/><path d="M146 20h20" stroke-width="3"/>' +
+      '<g class="a-bob2"><rect x="142" y="44" width="28" height="10" rx="3" fill="' + Y + '"/></g>' +
+      '<path d="M8 128q20-80 44-40t34-20q14-24 26 60" stroke-width="3.5"/><path d="M28 130v-38M52 130V90M78 130v-30M100 130V96" stroke-width="2"/>' +
+      '<g class="a-bob"><rect x="62" y="64" width="22" height="12" rx="5" fill="' + C + '" transform="rotate(-30 73 70)"/><circle cx="68" cy="63" r="3" fill="' + P + '" stroke-width="1.6"/><circle cx="76" cy="58" r="3" fill="' + P + '" stroke-width="1.6"/></g>' +
+      '<path d="M186 104l20-16 20 16Z" fill="' + C + '"/><path d="M196 104l10-16 10 16" fill="' + P + '" stroke-width="2"/><rect x="186" y="104" width="40" height="28" fill="' + P + '"/><path d="M196 104v28M216 104v28" stroke-width="2"/><path class="a-flag" d="M206 88V78l8 3-8 3" fill="' + Y + '" stroke-width="2"/>' +
+      crowd(108, 152, [26, 18, 30, 22, 28]) + family(178, 154, .8) +
+      '<path d="M190 128v-24" stroke-width="1.2"/>');
+
+    // Day 8：Currumbin——尤加利樹上的無尾熊、彩虹吸蜜鸚鵡停在小孩的盤子上、袋鼠
+    ILLOS.koala = svg(D,
+      cloud(60, 10, .6, 'a-drift') +
+      lorikeet(30, 28, 'a-float') + lorikeet(84, 42, 'a-bob') +
+      '<path d="M-4 128h248v36H-4Z" fill="' + G + '"/>' +
+      '<path d="M150 130V18q0-6 9-6t9 6v112Z" fill="' + P + '"/><path d="M155 40q4 6 0 12M162 76q-4 6 0 12M156 106q4 6 0 12" stroke-width="2"/>' +
+      '<g class="a-sway"><path d="M168 38q22-10 40-4" /><ellipse cx="196" cy="30" rx="10" ry="5" fill="' + G + '" transform="rotate(-20 196 30)"/><ellipse cx="212" cy="40" rx="10" ry="5" fill="' + G + '" transform="rotate(20 212 40)"/><ellipse cx="182" cy="44" rx="9" ry="4.5" fill="' + G + '" transform="rotate(30 182 44)"/></g>' +
+      '<g class="a-bob2"><ellipse cx="138" cy="92" rx="22" ry="26" fill="' + W + '"/>' +
+      '<circle cx="115" cy="48" r="11" fill="' + W + '"/><circle cx="115" cy="48" r="5" fill="' + C + '" stroke-width="2"/>' +
+      '<circle cx="153" cy="48" r="11" fill="' + W + '"/><circle cx="153" cy="48" r="5" fill="' + C + '" stroke-width="2"/>' +
+      '<circle cx="134" cy="62" r="20" fill="' + W + '"/>' +
+      '<ellipse cx="134" cy="67" rx="5.5" ry="7.5" fill="' + I + '" stroke="none"/><circle cx="126" cy="58" r="2.3" fill="' + I + '" stroke="none"/><circle cx="142" cy="58" r="2.3" fill="' + I + '" stroke="none"/>' +
+      '<ellipse cx="157" cy="86" rx="9" ry="6" fill="' + W + '"/><ellipse cx="157" cy="108" rx="9" ry="6" fill="' + W + '"/></g>' +
+      // 袋鼠（往右跳，身體朝右）
+      '<g class="a-bob"><path d="M198 122q-12 2-24 8" stroke-width="3.4"/><path d="M200 120q6 8 18 8" stroke-width="3.4"/>' +
+      '<ellipse cx="204" cy="110" rx="9" ry="14" fill="' + C + '" transform="rotate(24 204 110)"/><path d="M210 104l7 5" stroke-width="2"/>' +
+      '<path d="M208 98l-2-10 4 3 2-4 2 9" fill="' + C + '" stroke-width="2"/><ellipse cx="214" cy="96" rx="7" ry="4.6" fill="' + C + '" stroke-width="2.2"/><circle cx="215" cy="95" r="1.3" fill="' + I + '" stroke="none"/></g>' +
+      person(52, 150, 30, C) + person(80, 150, 27, W) +
+      person(66, 150, 18, Y, { cap: G, arm: true }) +
+      '<ellipse cx="78" cy="128" rx="7" ry="2.4" fill="' + P + '" stroke-width="2"/>' + lorikeet(84, 120, 'a-nod') +
+      '<path d="M20 128q-2-12 6-18M24 128q-6-8-4-16" stroke-width="2.2"/>');
+
+    // Day 9：海洋世界——海豚躍出水面、看台上的觀眾、訓練員與海灘球
     ILLOS.dolphin = svg(D,
-      sun(34, 30, 11) + cloud(112, 12, .7, 'a-drift') +
-      sea(112, 240, 160) +
-      '<path d="M40 120q6-10 14 0M178 118q6-10 14 0" stroke="' + P + '"/><path d="M24 142q10-5 20 0M150 146q10-5 20 0M206 136q8-4 16 0" stroke="' + P + '"/>' +
-      '<g class="a-float"><path d="M62 112l-18 2 8-10-4-12 14 10Z" fill="' + W + '"/>' +
-      '<path d="M96 60q2-16 16-20-2 10 2 18Z" fill="' + W + '"/>' +
-      '<path d="M56 112Q72 60 128 54Q156 51 168 62L184 60L178 70Q160 72 140 76Q96 84 70 116Z" fill="' + W + '"/>' +
-      '<path d="M118 76q2 14-8 20 14-2 16-18Z" fill="' + W + '"/>' +
-      '<path d="M82 102q20-22 54-26" stroke="' + P + '" stroke-width="3"/>' +
-      '<circle cx="156" cy="62" r="2.2" fill="' + I + '" stroke="none"/><path d="M164 70q6 2 11-1" stroke-width="2"/></g>' +
-      '<g class="a-bob"><circle cx="192" cy="38" r="12" fill="' + C + '"/><path d="M180 38h24M192 26q-7 12 0 24M192 26q7 12 0 24" stroke-width="2.2"/></g>' +
-      '<circle class="a-twinkle" cx="46" cy="100" r="3" fill="' + W + '" stroke-width="2"/><circle class="a-twinkle d2" cx="34" cy="90" r="2.4" fill="' + W + '" stroke-width="2"/><circle class="a-twinkle d1" cx="188" cy="104" r="2.6" fill="' + W + '" stroke-width="2"/>');
+      sun(214, 26, 10) + cloud(90, 10, .6, 'a-drift') + birds(150, 26) +
+      '<path d="M-4 64H96V164H-4Z" fill="' + P + '"/>' +
+      '<path d="M-4 84H96M-4 106H96M-4 128H96" stroke-width="2"/>' +
+      crowd(4, 84, [16, 13, 17, 12, 15, 14, 16, 12, 15, 13]) +
+      crowd(8, 106, [14, 17, 12, 16, 13, 15, 17, 14, 12, 16]) +
+      crowd(2, 128, [17, 12, 15, 16, 13, 17, 14, 12, 16, 15]) +
+      family(20, 152, .62) +
+      '<path d="M96 108H244V164H96Z" fill="' + W + '"/><path d="M96 108H244" stroke-width="3"/>' +
+      '<path d="M110 126q8-5 16 0M200 140q10-5 20 0M150 150q8-5 16 0" stroke="' + P + '"/>' +
+      '<rect x="206" y="92" width="30" height="16" rx="2" fill="' + Y + '"/>' + person(222, 92, 22, C, { arm: true }) +
+      '<g class="a-float"><path d="M118 112l-14 2 6-8-3-10 11 8Z" fill="' + W + '"/>' +
+      '<path d="M144 60q2-12 12-15-1 8 2 13Z" fill="' + W + '"/>' +
+      '<path d="M112 112Q124 70 168 64Q190 62 198 70L210 68L206 76Q192 78 176 81Q140 88 124 114Z" fill="' + W + '"/>' +
+      '<path d="M130 104q16-18 42-21" stroke="' + P + '" stroke-width="3"/>' +
+      '<circle cx="190" cy="70" r="2" fill="' + I + '" stroke="none"/></g>' +
+      '<g class="a-bob"><circle cx="174" cy="40" r="9" fill="' + C + '"/><path d="M165 40h18M174 31q-5 9 0 18M174 31q5 9 0 18" stroke-width="2"/></g>' +
+      '<circle class="a-twinkle" cx="112" cy="102" r="3" fill="' + W + '" stroke-width="2"/><circle class="a-twinkle d2" cx="104" cy="94" r="2.4" fill="' + W + '" stroke-width="2"/>');
 
-    function star(x, y, s, cls) {
-      return '<g class="' + cls + '"><path transform="translate(' + x + ' ' + y + ') scale(' + s + ')" d="M20 4l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 27.6l-9.3 4.9 1.8-10.3L5 14.9l10.4-1.5Z" fill="' + Y + '" stroke-width="' + (2.5 / s) + '"/></g>';
-    }
+    // Day 10：鴨子水陸車——乘客從窗戶揮手、黃金海岸高樓（最高那棟有尖塔）、遠方噴水的座頭鯨、鵜鶘
+    ILLOS.duck = svg(D,
+      sun(28, 26, 10) + cloud(70, 10, .6, 'a-drift') +
+      skyline(118, 82, [[12, 30], [14, 46], [12, 36], [16, 62], [12, 40], [14, 52], [12, 28]]) +
+      '<path d="M174 20v-14" stroke-width="2.2"/>' +
+      sea(82, 240, 160) +
+      '<path d="M20 90q6-6 12 0" stroke-width="2.5"/><path class="a-twinkle" d="M26 84v-8M26 78l-4-4M26 78l4-4" stroke="' + W + '" stroke-width="2.2"/>' +
+      '<g class="a-bob"><path d="M34 90q0-12 12-12h106q16 0 20 16l4 30H34Z" fill="' + Y + '"/>' +
+      '<rect x="46" y="84" width="18" height="14" rx="3" fill="' + W + '" stroke-width="2.4"/><rect x="72" y="84" width="18" height="14" rx="3" fill="' + W + '" stroke-width="2.4"/><rect x="98" y="84" width="18" height="14" rx="3" fill="' + W + '" stroke-width="2.4"/><rect x="124" y="84" width="18" height="14" rx="3" fill="' + W + '" stroke-width="2.4"/>' +
+      '<circle cx="55" cy="94" r="4" fill="' + P + '" stroke-width="1.8"/><circle cx="81" cy="95" r="3" fill="' + P + '" stroke-width="1.8"/><circle cx="107" cy="94" r="4" fill="' + P + '" stroke-width="1.8"/><circle cx="133" cy="94" r="4" fill="' + P + '" stroke-width="1.8"/>' +
+      '<path d="M84 92l4-6" stroke-width="1.8"/>' +
+      '<path d="M36 108h138" stroke="' + C + '" stroke-width="5"/>' +
+      '<circle cx="160" cy="64" r="14" fill="' + Y + '"/><path d="M173 62l15 4-15 6Z" fill="' + C + '"/><circle cx="164" cy="60" r="2.4" fill="' + I + '" stroke="none"/>' +
+      '<circle cx="64" cy="124" r="11" fill="' + P + '"/><circle cx="148" cy="124" r="11" fill="' + P + '"/></g>' +
+      sea(126, 240, 160) +
+      '<path d="M210 160V118" stroke-width="4"/>' +
+      '<g class="a-nod"><ellipse cx="212" cy="110" rx="11" ry="7" fill="' + P + '" stroke-width="2.2"/><path d="M204 106q-2-10 6-12" stroke-width="2.2"/><path d="M210 94l-16 4 4 4 12-4" fill="' + Y + '" stroke-width="1.8"/></g>' +
+      '<path d="M20 148q8-5 16 0M120 150q8-5 16 0" stroke="' + P + '"/>');
+
+    // Day 11：電影世界——場記板、膠捲、聚光燈、爆米花與看熱鬧的人
     function reel(cx, cy, r) {
       var holes = '';
       for (var i = 0; i < 5; i++) {
@@ -297,15 +408,58 @@
       }
       return '<g class="a-spin-slow"><circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="' + W + '"/>' + holes + '</g><circle cx="' + cx + '" cy="' + cy + '" r="5" fill="' + Y + '" stroke-width="2.2"/>';
     }
+    function star(x, y, s, cls) {
+      return '<g class="' + cls + '"><path transform="translate(' + x + ' ' + y + ') scale(' + s + ')" d="M20 4l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 27.6l-9.3 4.9 1.8-10.3L5 14.9l10.4-1.5Z" fill="' + Y + '" stroke-width="' + (2.5 / s) + '"/></g>';
+    }
     ILLOS.clapper = svg(D,
-      star(14, 14, .6, 'a-twinkle') + star(104, 10, .5, 'a-twinkle d2') + star(212, 4, .45, 'a-twinkle d1') +
-      '<path d="M-4 132h248v32H-4Z" fill="' + C + '"/><path d="M60 146h20M120 150h24M180 144h18" stroke="' + P + '" stroke-width="2.5"/>' +
-      '<path d="M186 108l-14 24M186 108l14 24" stroke-width="3"/>' + reel(186, 76, 32) +
+      '<g class="glow"><path d="M6 132 40 14h22L30 132Z" fill="' + Y + '" fill-opacity=".45" stroke="none"/><path d="M226 132 196 14h-22l26 118Z" fill="' + Y + '" fill-opacity=".45" stroke="none"/></g>' +
+      star(84, 8, .5, 'a-twinkle') + star(140, 4, .45, 'a-twinkle d2') + star(212, 40, .4, 'a-twinkle d1') +
+      '<path d="M-4 132h248v32H-4Z" fill="' + C + '"/><path d="M60 146h20M180 144h18" stroke="' + P + '" stroke-width="2.5"/>' +
+      '<path d="M186 108l-14 24M186 108l14 24" stroke-width="3"/>' + reel(186, 78, 30) +
       '<rect x="34" y="74" width="104" height="58" rx="6" fill="' + P + '"/>' +
       '<rect x="34" y="74" width="104" height="13" fill="' + Y + '"/><path d="M48 74l-8 13h10l8-13ZM72 74l-8 13h10l8-13ZM96 74l-8 13h10l8-13ZM120 74l-8 13h10l8-13Z" fill="' + I + '" stroke="none"/><rect x="34" y="74" width="104" height="13" />' +
       '<path d="M46 100h80M46 112h52M46 123h64" stroke-width="2"/>' +
       '<g class="a-nod"><g transform="rotate(-14 34 72)"><rect x="34" y="58" width="104" height="13" fill="' + Y + '"/><path d="M48 58l-8 13h10l8-13ZM72 58l-8 13h10l8-13ZM96 58l-8 13h10l8-13ZM120 58l-8 13h10l8-13Z" fill="' + I + '" stroke="none"/><rect x="34" y="58" width="104" height="13"/></g></g>' +
-      '<circle cx="36" cy="72" r="3.5" fill="' + I + '" stroke="none"/>');
+      '<circle cx="36" cy="72" r="3.5" fill="' + I + '" stroke="none"/>' +
+      family(104, 156, .72) + person(14, 156, 24, G) + person(220, 156, 26, W) +
+      '<path d="M144 140l3 14h12l3-14Z" fill="' + P + '" stroke-width="2"/><path d="M148 140v14M154 140v14" stroke="' + C + '" stroke-width="2"/><path d="M144 140q3-6 6-2 3-5 6 0 3-4 6 2" fill="' + Y + '" stroke-width="1.8"/>');
+
+    // Day 12：搭火車到布里斯本——南岸的人工沙灘、棕櫚樹、拉著行李的一家人
+    ILLOS.train = svg(D,
+      sun(212, 24, 10) + cloud(30, 12, .6, 'a-drift') + birds(120, 22) +
+      skyline(108, 84, [[12, 28], [16, 44], [12, 34], [18, 56], [12, 30]]) +
+      '<g class="a-spin-slow"><circle cx="208" cy="58" r="24"/><path d="M184 58h48M208 34v48M191 41l34 34M225 41l-34 34" stroke-width="1.6"/></g><path d="M208 58l-12 26M208 58l12 26" stroke-width="2.6"/><circle cx="208" cy="58" r="4" fill="' + Y + '" stroke-width="2"/>' +
+      '<path d="M-4 84h248v10H-4Z" fill="' + P + '" stroke-width="2.2"/><path d="M10 94v10M60 94v10M110 94v10M160 94v10M210 94v10" stroke-width="2.4"/>' +
+      '<path d="M8 84V64q0-8 8-8h112q14 0 22 14l6 14Z" fill="' + P + '"/>' +
+      '<path d="M8 76h146" stroke="' + Y + '" stroke-width="4"/>' +
+      '<rect x="18" y="62" width="14" height="9" rx="2" fill="' + W + '" stroke-width="2"/><rect x="38" y="62" width="14" height="9" rx="2" fill="' + W + '" stroke-width="2"/><rect x="58" y="62" width="14" height="9" rx="2" fill="' + W + '" stroke-width="2"/><rect x="78" y="62" width="14" height="9" rx="2" fill="' + W + '" stroke-width="2"/><rect x="98" y="62" width="14" height="9" rx="2" fill="' + W + '" stroke-width="2"/>' +
+      '<path d="M128 62h10q6 0 10 8h-20Z" fill="' + W + '" stroke-width="2"/><rect x="116" y="62" width="8" height="16" rx="1.5" fill="' + C + '" stroke-width="2"/>' +
+      '<path d="M-4 106h248v58H-4Z" fill="' + G + '"/>' +
+      '<path d="M100 124q50-10 112 0 10 6 0 12-56 10-112 0-10-6 0-12Z" fill="' + W + '"/><path d="M104 140q54 8 106-2" stroke="' + Y + '" stroke-width="5"/>' +
+      '<path d="M140 128q6-4 12 0M180 130q6-4 12 0" stroke="' + P + '"/>' +
+      palm(86, 140, 34) + palm(226, 126, 28) +
+      family(16, 152, .82) +
+      '<rect x="44" y="138" width="10" height="13" rx="2" fill="' + C + '" stroke-width="2"/><path d="M49 138v-6" stroke-width="1.8"/>');
+
+    // Day 13：CityCat 遊河——故事橋（懸臂桁架）、市區高樓、河岸上吹泡泡的科學小孩
+    ILLOS.brisbane = svg(D,
+      cloud(80, 10, .6, 'a-drift') + sun(24, 24, 9) + birds(170, 18) +
+      skyline(150, 90, [[14, 40], [18, 62], [14, 46], [20, 70], [14, 36]]) +
+      '<path d="M-4 90h160" stroke-width="2"/>' +
+      '<path d="M20 90V40M120 90V40" stroke-width="3.5"/>' +
+      '<path d="M20 40 70 74 120 40M20 40Q8 60-4 72M120 40q12 20 36 32M20 74h100" stroke-width="2.6"/>' +
+      '<path d="M30 74l10-18M50 74l-10-22M50 74l10-6M90 74l-10-6M90 74l10-22M110 74l-10-18" stroke-width="1.6"/>' +
+      '<rect x="-4" y="74" width="160" height="6" rx="2" fill="' + Y + '"/>' +
+      '<path class="a-flag" d="M120 40V28h10l-3 3 3 3h-10" fill="' + C + '" stroke-width="1.8"/>' +
+      sea(96, 240, 160) +
+      '<g class="a-bob"><path d="M64 122h80l-6 8H70Z" fill="' + W + '"/><path d="M72 130v6M136 130v6" stroke-width="3"/><path d="M66 136h76" stroke-width="2.4"/>' +
+      '<path d="M76 122v-12q0-6 6-6h44q8 0 12 8l4 10Z" fill="' + P + '"/><path d="M84 112h8M98 112h8M112 112h8M126 112h6" stroke="' + W + '" stroke-width="4"/>' +
+      '<path d="M76 118h64" stroke="' + C + '" stroke-width="2.6"/></g>' +
+      '<path d="M148 132q12 2 30 0M40 130q10 2 20 0" stroke="' + P + '"/>' +
+      '<path d="M156 164q20-22 88-24v24Z" fill="' + G + '"/>' +
+      person(186, 152, 30, C) + person(222, 152, 27, W) + person(202, 150, 18, Y, { cap: G, arm: true }) +
+      '<circle cx="213" cy="129" r="3" stroke-width="1.6"/>' +
+      '<circle class="a-twinkle" cx="198" cy="114" r="5" fill="' + W + '" fill-opacity=".5" stroke-width="1.8"/><circle class="a-twinkle d2" cx="214" cy="106" r="4" fill="' + W + '" fill-opacity=".5" stroke-width="1.8"/><circle class="a-twinkle d1" cx="186" cy="104" r="3" fill="' + W + '" fill-opacity=".5" stroke-width="1.8"/>');
 
     ILLOS.car = svg(D,
       cloud(12, 16, .7, 'a-drift') + sun(208, 30, 11) +
@@ -320,28 +474,28 @@
       '<circle cx="84" cy="124" r="12" fill="' + I + '"/><circle cx="84" cy="124" r="4.5" fill="' + P + '" stroke="none"/>' +
       '<circle cx="152" cy="124" r="12" fill="' + I + '"/><circle cx="152" cy="124" r="4.5" fill="' + P + '" stroke="none"/></g>');
 
+    // 首頁：雪梨港全景——市區天際線、港灣大橋、歌劇院、綠色渡輪、帆船、起飛的飛機、岸邊的一家人
     ILLOS.hero = svg('0 0 360 250',
-      cloud(20, 30, 1, 'a-drift') + cloud(196, 18, .75, 'a-drift2') +
-      sun(306, 56, 22) + gull(250, 96) + gull(272, 104) +
+      cloud(14, 26, .9, 'a-drift') + cloud(196, 14, .7, 'a-drift2') +
+      sun(316, 50, 20) + birds(250, 92) +
       '<g class="a-float"><path d="M118 74 110 60h7l11 14Z" fill="' + C + '" stroke-width="2.5"/><path d="M108 80q0-6 8-6h44q12 0 17 6-5 6-17 6h-44q-8 0-8-6Z" fill="' + P + '" stroke-width="2.5"/><path d="M134 80l-10 15h8l15-15Z" fill="' + W + '" stroke-width="2.5"/></g>' +
-      '<path d="M194 176Q265 92 336 176" stroke-width="4"/><path d="M206 176Q265 112 324 176"/>' +
-      '<path d="M221 176v-18M236 176v-26M250 176v-30M265 176v-32M280 176v-30M294 176v-26M309 176v-18" stroke-width="2"/>' +
-      '<rect x="166" y="172" width="210" height="10" rx="3" fill="' + Y + '"/>' +
+      skyline(168, 172, [[14, 46], [18, 70], [12, 52], [16, 84], [12, 40]]) +
       '<rect x="176" y="142" width="18" height="30" rx="3" fill="' + P + '"/><rect x="336" y="142" width="18" height="30" rx="3" fill="' + P + '"/>' +
-      '<circle class="a-twinkle" cx="215" cy="155" r="4" fill="' + C + '"/><circle class="a-twinkle d1" cx="237" cy="141" r="4" fill="' + Y + '"/><circle class="a-twinkle d2" cx="258" cy="134" r="4" fill="' + W + '"/><circle class="a-twinkle d3" cx="279" cy="136" r="4" fill="' + G + '"/><circle class="a-twinkle" cx="300" cy="144" r="4" fill="' + C + '"/><circle class="a-twinkle d1" cx="322" cy="161" r="4" fill="' + Y + '"/>' +
+      bridgeArch(194, 336, 172, 96) +
+      '<path d="M258 133V122M272 133V122" stroke-width="1.8"/><path class="a-flag" d="M258 122h9v5h-9Z" fill="' + C + '" stroke-width="1.6"/><path class="a-flag" d="M272 122h9v5h-9Z" fill="' + W + '" stroke-width="1.6"/>' +
+      '<rect x="166" y="170" width="210" height="10" rx="3" fill="' + Y + '"/>' +
       '<rect x="22" y="170" width="154" height="14" rx="3" fill="' + C + '"/>' +
       '<path d="M34 170q4-42 40-54-8 28-4 54Z" fill="' + P + '"/><path d="M44 168q4-26 24-42" stroke-width="2"/>' +
       '<path d="M64 170q8-54 52-70-12 38-8 70Z" fill="' + P + '"/><path d="M76 168q6-38 34-58" stroke-width="2"/>' +
       '<path d="M102 170q10-42 44-50-8 28-6 50Z" fill="' + P + '"/><path d="M112 168q6-26 28-40" stroke-width="2"/>' +
       '<path d="M136 170q8-26 28-30-4 18-2 30Z" fill="' + P + '"/>' +
       sea(188, 360, 250) +
-      '<g class="a-bob"><path d="M150 206h112l-8 16H158Z" fill="' + G + '"/><rect x="162" y="188" width="88" height="18" rx="5" fill="' + Y + '"/>' +
-      '<rect x="170" y="192" width="9" height="8" rx="2" fill="' + P + '" stroke-width="2"/><rect x="186" y="192" width="9" height="8" rx="2" fill="' + P + '" stroke-width="2"/><rect x="202" y="192" width="9" height="8" rx="2" fill="' + P + '" stroke-width="2"/><rect x="218" y="192" width="9" height="8" rx="2" fill="' + P + '" stroke-width="2"/><rect x="234" y="192" width="9" height="8" rx="2" fill="' + P + '" stroke-width="2"/>' +
-      '<rect x="190" y="177" width="30" height="11" rx="4" fill="' + P + '"/></g>' +
-      '<path d="M24 230q12-6 24 0M80 220q12-6 24 0M286 228q12-6 24 0M300 210q10-5 20 0" stroke="' + P + '"/>' +
+      '<g class="a-bob">' + sydFerry(196, 214).replace('translate(196 214)', 'translate(196 214) scale(1.2)') + '</g>' +
+      '<g class="a-bob2">' + sailboat(300, 206) + '</g>' +
+      '<path d="M-4 226q60-10 140 4V254H-4Z" fill="' + Y + '"/>' + family(30, 234) + person(100, 236, 28, G) +
+      '<path d="M150 236q12-6 24 0M290 232q12-6 24 0" stroke="' + P + '"/>' +
       (theme === 'aussie' ? lifeguard() : ''),
-      '雪梨港灣插畫：歌劇院、港灣大橋、渡輪與太陽');
-
+      '雪梨港灣插畫：歌劇院、港灣大橋、渡輪與岸邊的一家人');
     ILLOS.mission = svg('0 0 40 40',
       '<path d="M20 4l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L20 27.6l-9.3 4.9 1.8-10.3L5 14.9l10.4-1.5Z" fill="' + Y + '" stroke-width="2.5"/>');
 
